@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Về dự án — Living Heritage</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/css/theme.css" rel="stylesheet">
+  <link href="assets/css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="./assets/img/shared/Logo.png" alt="Living Heritage">
+        </a>
+        <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Trang chủ</a></li>
+            <li class="nav-item"><a class="nav-link" href="ve-du-an.html">Về dự án</a></li>
+            <li class="nav-item"><a class="nav-link" href="nhan-vat-di-san.html">Nhân vật di sản</a></li>
+            <li class="nav-item"><a class="nav-link" href="sach.html">Sách</a></li>
+            <li class="nav-item"><a class="nav-link" href="premium-wellbeing-tips.html">Premium Wellbeing Tips</a></li>
+            <li class="nav-item"><a class="nav-link" href="podcast.html">Podcast</a></li>
+            <li class="nav-item"><a class="nav-link" href="tin-tuc.html">Tin tức</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">VI</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/">Tiếng Việt</a></li>
+                <li><a class="dropdown-item" href="/en/">English</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand navbar-brand-logo" href="/">
+          <img src="./assets/img/shared/logogg.png" alt="GG Corporation">
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <div class="mobile-menu-header">
+        <div class="mobile-logo">
+          <img src="./assets/img/shared/Logo.png" alt="Living Heritage">
+        </div>
+        <button class="mobile-menu-close" id="mobileMenuClose">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="mobile-menu-body">
+        <ul class="mobile-menu-list">
+          <li><a href="ve-du-an.html">Về dự án<i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="nhan-vat-di-san.html">Nhân vật & di sản<i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="sach.html">Sách<i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="premium-wellbeing-tips.html">Premium Wellbeing Tips<i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="podcast.html">Podcast<i class="fas fa-chevron-right"></i></a></li>
+          <li><a href="tin-tuc.html">Tin tức<i class="fas fa-chevron-right"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-text-wrapper">
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-4 mb-md-0">
+          <h5 class="footer-title">GG CORPORATION</h5>
+          <div class="footer-contact">
+            <p class="mb-2">Mail: info@ggcvietnam.vn</p>
+            <p class="mb-2">Contact: (+84) 968 26 88 79</p>
+            <p class="mb-0">Address: 9ᵗʰ Floor, 233 Dong Khoi, SaiGon Ward,
+              HCMC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('mobileMenuToggle')?.addEventListener('click', function () {
+      document.getElementById('mobileMenuOverlay')?.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    document.getElementById('mobileMenuClose')?.addEventListener('click', function () {
+      document.getElementById('mobileMenuOverlay')?.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    document.getElementById('mobileMenuOverlay')?.addEventListener('click', function (e) {
+      if (e.target === this) {
+        this.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</body>
+
+</html>
