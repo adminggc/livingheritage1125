@@ -38,6 +38,41 @@
   z-index: 1;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero-text-wrapper {
+  text-align: left;
+  max-width: 800px;
+  padding-left: 4rem;
+  padding-bottom: 10%;
+}
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 5px;
+}
+
+.hero-subtitle {
+  font-size: 68px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+  padding-left: 4rem;
+}
+
 /* Info Bar */
 .info-text-wrapper {
   padding: 4rem 0;
@@ -558,10 +593,6 @@
     background-position: center;
   }
 
-  .hero-section .hero-slide[style*="bannerhome.png"] {
-    background-image: url("../img/vi/index/sp_banner.png?v=2") !important;
-  }
-
   .hero-carousel-control {
     width: 35px;
     height: 35px;
@@ -594,13 +625,21 @@
   }
 
   .hero-subtitle {
-    font-size: 16px;
+    font-size: 30px;
     letter-spacing: 1px;
+    padding-left: 1.5rem;
+  }
+
+  .hero-content {
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 1rem;
   }
 
   .hero-text-wrapper {
-    bottom: 30px;
-    width: 90%;
+    padding: 2rem 0.5rem;
+    padding-left: 1.5rem;
+    max-width: 100%;
   }
 
   .info-text-wrapper {
