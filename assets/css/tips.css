@@ -43,19 +43,19 @@
   background-position: center;
 }
 
-.content-section-jazz {
+.content-section-tips {
   padding: 2rem 0;
 }
 
-.content-section-disan {
+.section-tips-header {
   padding: 2rem 0;
 }
 
-.content-section-disan .section-title {
+.section-tips-header .section-title {
   padding: 2rem 0;
 }
 
-.content-section-jazz-content p.section-figure-quote {
+.section-tips-content-body p.section-figure-quote {
   font-style: italic;
   font-size: 32px;
   text-align: center;
@@ -65,7 +65,7 @@
   color: #000;
 }
 
-.content-section-jazz p {
+.content-section-tips p {
   font-size: 24px;
   color: #1b361b;
   font-weight: 400;
@@ -73,7 +73,7 @@
   text-align: justify;
 }
 
-.content-section-jazz-title h2 {
+.section-tips-content-title h2 {
   font-size: 50px;
   padding: 0rem 0 2rem 0;
   color: #1b361b;
@@ -81,7 +81,7 @@
   letter-spacing: 2px;
 }
 
-.content-section-jazz-title p {
+.section-tips-content-title p {
   font-size: 24px;
   color: #1b361b;
   font-weight: 800;
@@ -89,7 +89,7 @@
   padding: 2rem 0;
 }
 
-.content-section-jazz-content p {
+.section-tips-content-body p {
   font-size: 24px;
   color: #1b361b;
   font-weight: 400;
@@ -97,7 +97,7 @@
   text-align: justify;
 }
 
-.content-section-jazz-content h3 {
+.section-tips-content-body h3 {
   font-weight: 600;
   color: var(--dark-green);
 }
