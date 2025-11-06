@@ -1,3 +1,6 @@
+/* ==== PC base (mặc định) = xxl ≥1400px ==== */
+/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
+
 .news-header-section {
   padding: 2rem 0 1rem 0;
 }
@@ -29,9 +32,9 @@
 
 .news-main-title {
   color: #1b361b;
-  font-size: 50px;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 98px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   margin: 2rem 0;
   padding: 0;
@@ -43,11 +46,11 @@
 
 .news-text {
   color: #0d250f;
-  font-size: 26px;
+  /* font-size: 26px;
   font-weight: 300;
   letter-spacing: 1px;
   line-height: 1.8;
-  text-align: justify;
+  text-align: justify; */
   margin-bottom: 1.5rem;
 }
 
@@ -162,20 +165,32 @@
 .news-bottom-section .col-md-4 {
   padding: 0 15px;
 }
-@media (max-width: 768px) {
-  .news-page-title {
+
+
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+/* ≤1399.98 = xl & down */
+@media (max-width: 1399.98px){ /* override chung cho ≤xl */ }
+
+/* ≤1199.98 = lg & down */
+@media (max-width: 1199.98px){ /* override chung cho ≤lg */ }
+
+/* ≤991.98 = md & down (tablet & phone) */
+@media (max-width: 991.98px){  /* override chung cho ≤md */ }
+
+/* ≤767.98 = sm & down (phone) */
+@media (max-width: 767.98px){  /* override chung cho ≤sm */ 
+.news-page-title {
     font-size: 28px;
     letter-spacing: 2px;
   }
 
   .news-main-title {
-    font-size: 32px;
-    letter-spacing: 1px;
+    font-size: 40px;
   }
 
-  .news-text {
+  /* .news-text {
     font-size: 16px;
-  }
+  } */
 
   .news-bottom-title {
     font-size: 20px;
@@ -211,4 +226,38 @@
   .news-main-section {
     padding: 0rem 0 2rem 0;
   }
+}
+
+/* ≤575.98 = xs (phone nhỏ) */
+@media (max-width: 575.98px){  /* override chung cho ≤xs */ 
+  .news-main-title {
+    font-size: 36px;
+  }
+}
+
+
+/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
+/* xxl only: ≥1400 */
+@media (min-width: 1400px){
+  /* override riêng cho xxl nếu cần */
+}
+
+/* xl only: 1200–1399.98 */
+@media (min-width: 1200px) and (max-width: 1399.98px){
+  /* override chỉ xl */
+}
+
+/* lg only: 992–1199.98 */
+@media (min-width: 992px) and (max-width: 1199.98px){
+  /* override chỉ lg (laptop phổ biến) */
+}
+
+/* md only: 768–991.98 */
+@media (min-width: 768px) and (max-width: 991.98px){
+  /* override chỉ md (tablet) */
+}
+
+/* sm only: 576–767.98 */
+@media (min-width: 576px) and (max-width: 767.98px){
+  /* override chỉ sm (phone lớn) */
 }

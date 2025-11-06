@@ -474,6 +474,7 @@
   overflow: hidden;
   height: 100%;
   transition: transform 0.3s;
+  border-radius: 12px;
 }
 
 .media-card:hover {

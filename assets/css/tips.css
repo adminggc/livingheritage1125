@@ -1,4 +1,7 @@
 /* Premium Wellbeing Tips – page-specific overrides */
+/* ==== PC base (mặc định) = xxl ≥1400px ==== */
+/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
+
 .content-section-premium {
   padding: 2rem 0 2rem 0;
   color: #0d250f;
@@ -59,25 +62,38 @@
   font-style: italic;
   font-size: 32px;
   text-align: center;
-  font-weight: 500;
   letter-spacing: 0.01em;
   line-height: 1.2;
   color: #000;
 }
 
-.content-section-tips p {
+.content-section-tips,
+.content-section-tips * {
+  color: var(--dark-green);
+  text-align: justify;
+  letter-spacing: 0.01em;
+}
+
+
+/* .content-section-tips p {
   font-size: 24px;
   color: var(--dark-green);
-  font-weight: 400;
   letter-spacing: 0.01em;
   text-align: justify;
+} */
+
+.content-section-tips blockquote {
+  color: var(--dark-green);
+  border-left: 4px solid rgba(27, 54, 27, 0.35);
+  padding: .5rem 1rem;
+  margin: 1rem 0;
 }
 
 .section-tips-content-title h2 {
   font-size: 62px;
   padding: 0rem 0 2rem 0;
   color: var(--dark-green);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
 }
 
@@ -86,7 +102,7 @@
 }
 
 .section-tips-content-body h3 {
-  font-weight: 600;
+  font-weight: var(--fw-semibold);
   color: var(--dark-green);
 }
 
@@ -170,13 +186,9 @@ p.quote-author {
   height: 100%;
   border: 0;
 }
-
-@media (min-width: 992px) {
-  .tip-card .tip-img {
-    height: 190px;
-  }
+.media-card .media-img-premium {
+  border-radius: 12px;
 }
-
 /* Premium Carousel Styles */
 #neuroCarousel .media-card,
 #healthCarousel .media-card,
@@ -201,9 +213,37 @@ p.quote-author {
   padding: 6rem 0 0 0;
 }
 
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+/* ≤1399.98 = xl & down */
+@media (max-width: 1399.98px) {
+  /* override chung cho ≤xl */
+}
 
+/* ≤1199.98 = lg & down */
+@media (max-width: 1199.98px) {
+  /* override chung cho ≤lg */
+    .section-tips-content-title h2 {
+    font-size: 52px;
+  }
+}
 
-@media (max-width: 768px) {
+/* ≤991.98 = md & down (tablet & phone) */
+@media (max-width: 991.98px) {
+
+  /* override chung cho ≤md */
+  .tip-card .tip-img {
+    height: 190px;
+  }
+
+  .section-tips-content-title h2 {
+    font-size: 42px;
+  }
+}
+
+/* ≤767.98 = sm & down (phone) */
+@media (max-width: 767.98px) {
+
+  /* override chung cho ≤sm */
   .art-culture-carousel-wrapper {
     padding: 0.2rem 0 0.5rem 0;
   }
@@ -211,8 +251,6 @@ p.quote-author {
   .content-section-premium {
     padding: 0 0 1rem 0;
   }
-
-
 
   #neuroCarousel .carousel-inner,
   #healthCarousel .carousel-inner,
@@ -285,26 +323,43 @@ p.quote-author {
     margin: 1.25rem auto;
     border-radius: 10px;
   }
-}
 
-
-/* Tablet dọc & nhỏ hơn (≤992px) */
-@media (max-width: 992px){
-  .section-tips-content-title h2 {
-    font-size: 42px;
-  }
-}
-
-/* Tablet/điện thoại lớn (≤768px) */
-@media (max-width: 768px){
   .section-tips-content-title h2 {
     font-size: 40px;
   }
 }
 
-/* Điện thoại (≤576px) */
-@media (max-width: 576px){
+/* ≤575.98 = xs (phone nhỏ) */
+@media (max-width: 575.98px) {
+  /* override chung cho ≤xs */
   .section-tips-content-title h2 {
     font-size: 38px;
   }
+}
+
+
+/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
+/* xxl only: ≥1400 */
+@media (min-width: 1400px) {
+  /* override riêng cho xxl nếu cần */
+}
+
+/* xl only: 1200–1399.98 */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* override chỉ xl */
+}
+
+/* lg only: 992–1199.98 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* override chỉ lg (laptop phổ biến) */
+}
+
+/* md only: 768–991.98 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* override chỉ md (tablet) */
+}
+
+/* sm only: 576–767.98 */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* override chỉ sm (phone lớn) */
 }
