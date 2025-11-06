@@ -792,7 +792,7 @@
   }
 
   .book-title-small {
-    font-size: 22px;
+    font-size: 28px;
     letter-spacing: 0.01em;
     margin-top: 1rem;
     text-align: center;
@@ -804,14 +804,13 @@
     padding-bottom: 1.5rem;
   }
 
-  .btn-custom {
-    padding: 0.5rem 1.5rem;
-    font-size: 23px;
-    border-radius: 4px;
+  .content-book.sp {
+    text-align: center;
   }
 
-  .book-section .col-lg-8 {
-    text-align: center;
+  .btn-custom.sp {
+    font-size: 23px;
+    display: inline-flex;
   }
 
   .content-section-premium {

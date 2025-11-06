@@ -499,9 +499,6 @@ a {
   background-color: var(--light-gold);
 }
 
-
-
-
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
@@ -665,7 +662,6 @@ a {
   .category-text-small {
     font-size: 0.7rem;
   }
-
 
   .play-btn {
     width: 50px;

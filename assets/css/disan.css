@@ -40,6 +40,7 @@
 
 .profile-banner .hero-category {
   font-size: 52px;
+  text-transform: capitalize;
   color: var(--white);
   font-weight: var(--fw-light);
   letter-spacing: 0.01em;
