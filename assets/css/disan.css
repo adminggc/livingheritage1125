@@ -5,6 +5,28 @@
   background-size: cover;
   background-position: center;
   border-radius: 12px;
+  isolation: isolate;
+}
+
+/* Viền vàng dạng gradient, không che ảnh nền */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* phủ trọn khung */
+  border-radius: inherit;
+  padding: 2px;
+  /* độ dày viền */
+  background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
+  /* Chỉ hiển thị phần viền (mask thủ thuật) */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  /* không chặn click */
+  z-index: 0;
 }
 
 .profile-banner .hero-text-wrapper {
@@ -13,7 +35,7 @@
   right: 10%;
   transform: translateY(-50%);
   text-align: center;
-  z-index: 10;
+  z-index: 1;
 }
 
 .profile-banner .hero-category {
@@ -476,8 +498,9 @@ p.quote-author {
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
+
   /* override chung cho ≤xl */
-    .profile-banner .hero-category {
+  .profile-banner .hero-category {
     font-size: 35px;
   }
 
@@ -493,6 +516,7 @@ p.quote-author {
   .hero-banner {
     height: 50vh;
   }
+
   .profile-banner .hero-category {
     font-size: 30px;
   }
