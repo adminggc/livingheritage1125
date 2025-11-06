@@ -1,3 +1,6 @@
+/* ==== PC base (mặc định) = xxl ≥1400px ==== */
+/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
+
 .hero-section {
   position: relative;
   height: 85vh;
@@ -30,11 +33,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(26, 43, 26, 0.25),
-    rgba(26, 43, 26, 0.5)
-  );
+  background: linear-gradient(to bottom,
+      rgba(26, 43, 26, 0.25),
+      rgba(26, 43, 26, 0.5));
   z-index: 1;
 }
 
@@ -56,20 +57,20 @@
 }
 
 .hero-title {
-  font-size: 44px;
-  font-weight: 300;
-  color: #ffffff;
+  font-size: 60px;
+  font-weight: var(--fw-extralight);
+  color: var(--white);
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-  letter-spacing: 5px;
+  letter-spacing: 0.01em;
 }
 
 .hero-subtitle {
-  font-size: 68px;
-  font-weight: 700;
-  color: #ffffff;
+  font-size: 90px;
+  font-weight: var(--fw-bold);
+  color: var(--white);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  letter-spacing: 3px;
+  letter-spacing: 0.01em;
   padding-left: 4rem;
 }
 
@@ -78,31 +79,6 @@
   padding: 4rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-/* .info-text {
-  font-size: 22px;
-  line-height: 2.2;
-}
-
-.info-text strong {
-  font-weight: 700;
-} */
-
-/* Section Styles */
-/* .section-title {
-  font-size: 42px;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-align: left;
-  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-} */
 
 .section-title-container {
   padding: 40px 0;
@@ -118,14 +94,14 @@
 }
 
 .content-section p {
-  color: #ffffff;
+  color: var(--white);
   font-size: 22px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
 
 .section-description {
-  color: #ffffff;
+  color: var(--white);
   font-size: 22px;
   line-height: 1.8;
   margin-bottom: 1.5rem;
@@ -205,7 +181,7 @@
 }
 
 .category-label {
-  color: #ffffff;
+  color: var(--white);
   font-size: 34px;
   font-weight: 700;
   text-transform: uppercase;
@@ -215,7 +191,7 @@
 }
 
 .category-text-large {
-  color: #ffffff;
+  color: var(--white);
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -260,7 +236,7 @@
 }
 
 .profile-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
 }
 
 .profile-img-wrapper {
@@ -289,31 +265,29 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(
-    to top,
-    rgba(32, 48, 32, 0.95) 0%,
-    rgba(32, 48, 32, 0.8) 50%,
-    rgba(32, 48, 32, 0) 100%
-  );
+  background: linear-gradient(to top,
+      rgba(32, 48, 32, 0.95) 0%,
+      rgba(32, 48, 32, 0.8) 50%,
+      rgba(32, 48, 32, 0) 100%);
   z-index: 2;
 }
 
 .profile-title {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 400;
+  color: var(--white);
+  font-size: 23px;
+  font-weight: var(--fw-regular);
   margin: 0;
   text-transform: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.01em;
 }
 
 .profile-name {
-  font-size: 30px;
+  font-size: 44px;
   text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 1px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.01em;
   text-align: center;
-  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
+  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -439,9 +413,6 @@
 }
 
 .book-title {
-  /* color: #ffffff;
-  font-size: 24px;
-  font-weight: 600; */
   margin-bottom: 3.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -452,11 +423,11 @@
 }
 
 .book-title-small {
-  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
-  font-weight: 700;
+  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 44px;
+  letter-spacing: 0.01em;
   text-align: left;
   -webkit-background-clip: text;
   background-clip: text;
@@ -467,15 +438,18 @@
 }
 
 .btn-custom {
-  background-color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
   color: var(--dark-green);
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
   padding: 0.7rem 2rem;
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  font-size: 30px;
+  letter-spacing: 0.01em;
   transition: all 0.3s;
-  border-radius: 0;
+  border-radius: 6px;
 }
 
 .btn-custom:hover {
@@ -522,13 +496,13 @@
 }
 
 .media-content h3 {
-  color: #ffffff;
+  color: var(--white);
   font-size: 18px;
   font-weight: 700;
 }
 
 .media-title {
-  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
+  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 18px;
@@ -543,7 +517,7 @@
 }
 
 .media-text {
-  color: #ffffff;
+  color: var(--white);
   line-height: 1.2;
 }
 
@@ -570,7 +544,72 @@
   color: var(--dark-green);
 }
 
-@media (max-width: 768px) {
+/* Video wrapper cho Podcast */
+.embed-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* Giữ khung 16:9, tự co giãn */
+  background: var(--dark-green);
+  /* Đỡ lộ nền lúc iframe loading */
+  overflow: hidden;
+}
+
+.embed-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+/* ≤1399.98 = xl & down */
+@media (max-width: 1399.98px) {
+  /* override chung cho ≤xl */
+}
+
+/* ≤1199.98 = lg & down */
+@media (max-width: 1199.98px) {
+
+  /* override chung cho ≤lg */
+  .profile-title {
+    font-size: 22px;
+    font-weight: var(--fw-light);
+  }
+
+  .profile-name {
+    font-size: 32px;
+  }
+}
+
+/* ≤991.98 = md & down (tablet & phone) */
+@media (max-width: 991.98px) {
+
+  /* override chung cho ≤md */
+  .profile-title {
+    font-size: 18px;
+    font-weight: var(--fw-light);
+  }
+
+  .profile-name {
+    font-size: 26px;
+  }
+
+}
+
+/* ≤767.98 = sm & down (phone) */
+@media (max-width: 767.98px) {
+
+  /* override chung cho ≤sm */
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+
   .main-header {
     padding: 15px 0;
   }
@@ -650,11 +689,6 @@
     padding: 1.5rem 0;
   }
 
-  /* .info-text {
-    font-size: 16px;
-    line-height: 1.6;
-  } */
-
   .content-section {
     padding: 3rem 0;
   }
@@ -672,11 +706,6 @@
   .heritage-content p {
     padding: 0.2rem 0;
   }
-
-  /* .section-title {
-    font-size: 20px;
-    letter-spacing: 1px;
-  } */
 
   .heritage-content p:last-child {
     padding: 1rem 0 1rem 0;
@@ -714,9 +743,7 @@
   .profile-content {
     padding: 2rem 0 3rem 0;
     padding-left: 1.25rem;
-    /* = 20px */
     padding-right: 1.25rem;
-    /* = 20px */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
@@ -747,12 +774,12 @@
   }
 
   .profile-title {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: var(--fw-light);
   }
 
   .profile-name {
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 22px;
   }
 
   .book-section {
@@ -760,14 +787,13 @@
   }
 
   .book-title {
-    /* font-size: 18px; */
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
   }
 
   .book-title-small {
     font-size: 22px;
-    letter-spacing: 1px;
+    letter-spacing: 0.01em;
     margin-top: 1rem;
     text-align: center;
     display: block;
@@ -780,9 +806,12 @@
 
   .btn-custom {
     padding: 0.5rem 1.5rem;
-    font-size: 18px;
-    margin: 0 auto;
-    display: block;
+    font-size: 23px;
+    border-radius: 4px;
+  }
+
+  .book-section .col-lg-8 {
+    text-align: center;
   }
 
   .content-section-premium {
@@ -848,7 +877,10 @@
   }
 }
 
-@media (max-width: 576px) {
+/* ≤575.98 = xs (phone nhỏ) */
+@media (max-width: 575.98px) {
+
+  /* override chung cho ≤xs */
   .hero-category {
     font-size: 16px;
   }
@@ -857,10 +889,6 @@
     font-size: 20px;
     letter-spacing: 1px;
   }
-
-  /* .section-title {
-    font-size: 28px;
-  } */
 
   .profile-card {
     border-radius: 12px;
@@ -872,18 +900,35 @@
   }
 }
 
-/* Video wrapper cho Podcast */
-.embed-video {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* Giữ khung 16:9, tự co giãn */
-  background: #000; /* Đỡ lộ nền lúc iframe loading */
-  overflow: hidden;
+
+/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
+/* xxl only: ≥1400 */
+@media (min-width: 1400px) {
+  /* override riêng cho xxl nếu cần */
 }
-.embed-video iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+
+/* xl only: 1200–1399.98 */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* override chỉ xl */
+}
+
+/* lg only: 992–1199.98 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* override chỉ lg (laptop phổ biến) */
+  .profile-content {
+    padding: 2rem 0 3rem 0;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+
+/* md only: 768–991.98 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* override chỉ md (tablet) */
+}
+
+/* sm only: 576–767.98 */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* override chỉ sm (phone lớn) */
 }

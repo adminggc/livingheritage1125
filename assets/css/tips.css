@@ -60,41 +60,29 @@
   font-size: 32px;
   text-align: center;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   color: #000;
 }
 
 .content-section-tips p {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: justify;
 }
 
 .section-tips-content-title h2 {
-  font-size: 50px;
+  font-size: 62px;
   padding: 0rem 0 2rem 0;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.section-tips-content-title p {
-  font-size: 24px;
-  color: #1b361b;
-  font-weight: 800;
-  letter-spacing: 2px;
-  padding: 2rem 0;
+  letter-spacing: 0.01em;
 }
 
 .section-tips-content-body p {
-  font-size: 24px;
-  color: #1b361b;
-  font-weight: 400;
-  letter-spacing: 2px;
-  text-align: justify;
+  color: var(--dark-green);
 }
 
 .section-tips-content-body h3 {
@@ -104,9 +92,9 @@
 
 .section-figure-quote p.quote-title {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
 }
 
@@ -120,7 +108,7 @@
 p.quote-author {
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
   margin: 0px 0;
 }
@@ -145,9 +133,9 @@ p.quote-author {
 
 .content-representative h4 {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
   text-transform: uppercase;
   padding: 4rem 0 20px 0;
@@ -155,9 +143,9 @@ p.quote-author {
 
 .content-representative ul {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
 }
 
 .embed-video {
@@ -223,6 +211,8 @@ p.quote-author {
   .content-section-premium {
     padding: 0 0 1rem 0;
   }
+
+
 
   #neuroCarousel .carousel-inner,
   #healthCarousel .carousel-inner,
@@ -294,5 +284,27 @@ p.quote-author {
   .embed-video {
     margin: 1.25rem auto;
     border-radius: 10px;
+  }
+}
+
+
+/* Tablet dọc & nhỏ hơn (≤992px) */
+@media (max-width: 992px){
+  .section-tips-content-title h2 {
+    font-size: 42px;
+  }
+}
+
+/* Tablet/điện thoại lớn (≤768px) */
+@media (max-width: 768px){
+  .section-tips-content-title h2 {
+    font-size: 40px;
+  }
+}
+
+/* Điện thoại (≤576px) */
+@media (max-width: 576px){
+  .section-tips-content-title h2 {
+    font-size: 38px;
   }
 }

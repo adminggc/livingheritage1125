@@ -10,7 +10,8 @@
 /* 2) Variable ITALIC — dùng cho mọi trọng lượng 100–900 */
 @font-face {
   font-family: "Alumni Sans";
-  src: url("../fonts/AlumniSans-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/AlumniSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -19,75 +20,46 @@
 :root {
   --white: #fff;
   --dark-green: #0d1f17;
-  --dark-gold: #865d3e;
-  --gold: #B7947E;
-  --light-gold: #e1c191;
+  --gold: #d4af37;
+  --light-gold: #e8d4a0;
   --light-green: #a8d9a8;
-  --grad-start: #E8C4AB;
-  --grad-end: #865C3D;
-
-  --fw-thin: 100;
-  --fw-extralight: 200;
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-  --fw-extrabold: 800;
-  --fw-black: 900;
 }
-
-
-
-/* ==== PC base (mặc định) = xxl ≥1400px ==== */
-/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
-
 .pc {
   display: block;
-
-  @media (max-width: 767.98px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
-
 .sp {
   display: none;
-
-  @media (max-width: 767.98px) {
+  @media (max-width: 768px) {
     display: block;
   }
 }
-
 .page-content {
-  background-color: var(--white);
+  background-color: #fff;
 }
-
 body {
   font-family: "Alumni Sans", sans-serif;
   background-color: var(--dark-green);
   color: var(--white);
-  font-weight: var(--fw-light);
+  font-weight: 300;
   font-size: 26px;
   letter-spacing: 0.01em;
 }
 
 strong {
-  font-weight: var(--fw-semibold);
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
+  font-weight: 600;
 }
 
 /* Section Styles */
 .section-title {
   font-size: 42px;
   text-transform: uppercase;
-  font-weight: var(--fw-bold);
+  font-weight: 700;
   letter-spacing: 0.01em;
   text-align: left;
-  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -99,19 +71,16 @@ a {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
 }
-
 /* Utility class */
 .link-gradient {
-  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -119,7 +88,6 @@ a {
   text-decoration: none;
   transition: opacity 0.2s, border-color 0.2s;
 }
-
 .link-gradient:hover {
   opacity: 0.9;
   border-bottom-color: rgba(230, 195, 159, 1);
@@ -131,7 +99,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--light-green);
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
@@ -169,7 +137,7 @@ a {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 3px;
-  color: var(--light-gold);
+  color: #e8d4a0;
   margin-bottom: -5px;
 }
 
@@ -177,7 +145,7 @@ a {
   font-size: 28px;
   font-weight: 700;
   letter-spacing: 5px;
-  color: var(--light-gold);
+  color: #e8d4a0;
 }
 
 .mobile-menu-close {
@@ -223,7 +191,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 0;
-  color: var(--dark-gold);
+  color: #865d3e;
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -232,7 +200,7 @@ a {
 }
 
 .mobile-menu-list li a:hover {
-  color: var(--white);
+  color: #ffffff;
 }
 
 .mobile-menu-arrow {
@@ -245,6 +213,12 @@ a {
 
 .mobile-menu-list li a:hover .mobile-menu-arrow {
   opacity: 0.8;
+}
+
+@media (min-width: 992px) {
+  .mobile-menu-overlay {
+    display: none;
+  }
 }
 
 .section-description {
@@ -266,7 +240,7 @@ a {
 }
 
 .category-text-large {
-  color: var(--white);
+  color: #ffffff;
   font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -300,7 +274,6 @@ a {
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
-
 .media-img {
   width: 100%;
   height: 200px;
@@ -311,11 +284,9 @@ a {
   width: 100%;
   object-fit: cover;
 }
-
 .play-btn svg {
   color: var(--dark-green);
 }
-
 .main-header {
   background-color: #0d2716;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -329,6 +300,14 @@ a {
   gap: 10px;
 }
 
+@media (max-width: 991px) {
+  .main-header .container {
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 
 .navbar-brand img {
   height: 70px;
@@ -347,17 +326,17 @@ a {
 }
 
 .nav-link {
-  color: var(--gold);
+  color: #c8ab84;
   text-transform: none;
-  font-size: 25px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.01em;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--light-gold);
+  color: #e5c79a;
 }
 
 .nav-item.dropdown .nav-link {
@@ -369,8 +348,14 @@ a {
 .navbar-toggler {
   border: none;
   background: transparent;
-  color: var(--white);
+  color: #ffffff;
   font-size: 24px;
+}
+
+@media (min-width: 992px) {
+  .navbar-toggler {
+    display: none;
+  }
 }
 
 .navbar-collapse {
@@ -383,6 +368,41 @@ a {
   display: none;
 }
 
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none !important;
+  }
+  .navbar-brand {
+    display: none;
+  }
+  .navbar-brand-logo {
+    display: block;
+    flex: 0 0 auto;
+    order: 3;
+  }
+  .navbar-brand-logo img {
+    height: 45px;
+  }
+  .main-header {
+    padding: 10px 0;
+  }
+  .mobile-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+    order: 1;
+  }
+  .navbar-toggler {
+    color: #e8d4a0;
+    padding: 0.5rem;
+  }
+  .mobile-lang-switch {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .line {
   width: 100%;
   height: 1px;
@@ -391,15 +411,42 @@ a {
   margin: 3rem 0;
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  letter-spacing: 5px;
+}
+
+.hero-subtitle {
+  font-size: 36px;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 3px;
+  font-family: "Alumni Sans", sans-serif;
+}
+
 .hero-category {
   font-size: 20px;
-  color: var(--white);
+  color: #ffffff;
   font-weight: 400;
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
   font-family: "Alumni Sans", sans-serif;
 }
-
 .main-footer {
   background-color: #c5cbc6;
   padding: 60px 0;
@@ -413,7 +460,7 @@ a {
   text-transform: uppercase;
 
   margin-bottom: 40px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.5px;
 }
 
 .footer-contact {
@@ -436,7 +483,7 @@ a {
 }
 
 .footer-contact i {
-  background-color: var(--white);
+  background-color: #ffffff;
   color: #1b2e1f;
   width: 36px;
   height: 36px;
@@ -447,6 +494,17 @@ a {
   font-size: 16px;
 }
 
+@media (max-width: 768px) {
+  .footer-contact {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .main-footer {
+    padding: 40px 5px;
+  }
+}
+
 .footer-contact p::before {
   content: "";
   display: inline-flex;
@@ -454,7 +512,7 @@ a {
   align-items: center;
   width: 34px;
   height: 34px;
-  background-color: var(--white);
+  background-color: #ffffff;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -466,7 +524,6 @@ a {
   font-size: 16px;
   color: #1b2e1f;
 }
-
 .footer-contact p:nth-child(2)::before {
   content: "\f095";
   font-family: "Font Awesome 6 Free";
@@ -474,7 +531,6 @@ a {
   font-size: 16px;
   color: #1b2e1f;
 }
-
 .footer-contact p:nth-child(3)::before {
   content: "\f3c5";
   font-family: "Font Awesome 6 Free";
@@ -499,116 +555,10 @@ a {
   background-color: var(--light-gold);
 }
 
-
-
-
-/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
-/* ≤1399.98 = xl & down */
-@media (max-width: 1399.98px) {
-
-  /* override chung cho ≤xl */
-  .nav-link {
-    font-size: 18px;
-  }
-}
-
-/* ≤1199.98 = lg & down */
-@media (max-width: 1199.98px) {
-
-  /* override chung cho ≤lg */
+@media (max-width: 768px) {
   body {
     font-size: 24px;
-  }
-
-  .section-title {
-    font-size: 38px;
-  }
-
-}
-
-/* ≤991.98 = md & down (tablet & phone) */
-@media (max-width: 991.98px) {
-
-  /* override chung cho ≤md */
-
-  .main-header .container {
-    flex-wrap: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mobile-menu-overlay {
-    display: block;
-  }
-
-  .navbar-collapse {
-    display: none !important;
-  }
-
-  .navbar-brand {
-    display: none;
-  }
-
-  .navbar-brand-logo {
-    display: block;
-    flex: 0 0 auto;
-    order: 3;
-  }
-
-  .navbar-brand-logo img {
-    height: 45px;
-  }
-
-  .main-header {
-    padding: 10px 0;
-  }
-
-  .mobile-header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 0 0 auto;
-    order: 1;
-  }
-
-  .navbar-toggler {
-    color: var(--light-gold);
-    padding: 0.5rem;
-  }
-
-  .mobile-lang-switch {
-    display: flex;
-    align-items: center;
-  }
-
-  .section-title {
-    font-size: 34px;
-  }
-
-}
-
-@media (min-width: 992px) {
-  .navbar-collapse {
-    display: flex !important;
-  }
-
-  /* hiện menu desktop */
-  .navbar-toggler,
-  .mobile-menu-overlay {
-    display: none !important;
-  }
-
-  /* ẩn hamburger & overlay */
-}
-
-/* ≤767.98 = sm & down (phone) */
-@media (max-width: 767.98px) {
-
-  /* override chung cho ≤sm */
-  body {
-    font-size: 24px;
-    font-weight: var(--fw-regular);
+    font-weight: 400;
   }
 
   .main-header {
@@ -636,7 +586,7 @@ a {
 
   .hero-subtitle {
     font-size: 14px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.5px;
   }
 
   .hero-text-wrapper {
@@ -645,9 +595,13 @@ a {
   }
 
   .section-title {
-    font-size: 32px;
+    font-size: 18px;
   }
 
+  /* .info-text {
+    font-size: 13px;
+    line-height: 1.6;
+  } */
 
   .content-section {
     padding: 2.5rem 0;
@@ -666,6 +620,10 @@ a {
     font-size: 0.7rem;
   }
 
+  .nav-link {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
 
   .play-btn {
     width: 50px;
@@ -676,7 +634,6 @@ a {
     width: 20px;
     height: 20px;
   }
-
   .footer-title {
     font-size: 26px;
     margin-bottom: 20px;
@@ -685,25 +642,12 @@ a {
   .footer-contact p {
     font-size: 17px;
   }
-
-  .footer-contact {
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start;
-  }
-
-  .main-footer {
-    padding: 40px 5px;
-  }
 }
 
-/* ≤575.98 = xs (phone nhỏ) */
-@media (max-width: 575.98px) {
-
-  /* override chung cho ≤xs */
+@media (max-width: 576px) {
   body {
     font-size: 22px;
-    font-weight: var(--fw-regular);
+    font-weight: 400;
   }
 
   .section-title {
@@ -712,13 +656,18 @@ a {
 
   .hero-category {
     font-size: 12px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.5px;
   }
 
   .hero-title {
     font-size: 20px;
     letter-spacing: 1px;
   }
+
+  /* .info-text {
+    font-size: 12px;
+    line-height: 1.5;
+  } */
 
   .category-card {
     height: 150px;
@@ -737,46 +686,15 @@ a {
   }
 }
 
-
-/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
-/* xxl only: ≥1400 */
-@media (min-width: 1400px) {
-  /* override riêng cho xxl nếu cần */
-}
-
-/* xl only: 1200–1399.98 */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  /* override chỉ xl */
-}
-
-/* lg only: 992–1199.98 */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-
-  /* override chỉ lg (laptop phổ biến) */
-
+@media (min-width: 992px) and (max-width: 1200px) {
+  .nav-link {
+    font-size: 14px;
+  }
   .navbar-brand img {
     height: 50px;
     object-fit: contain;
   }
-
   .navbar-nav {
     gap: 5px;
   }
-}
-
-/* md only: 768–991.98 */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* override chỉ md (tablet) */
-
-  .site-header .container,
-  .navbar .container,
-  header .container {
-    padding-left: 0px;
-    padding-right: 16px;
-  }
-}
-
-/* sm only: 576–767.98 */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* override chỉ sm (phone lớn) */
 }
