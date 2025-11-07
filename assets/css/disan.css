@@ -1,33 +1,39 @@
-.hero-section {
+/* Hero as <img>: giữ nguyên tỉ lệ, không crop, vẫn có viền vàng */
+.hero-section{
   position: relative;
-  height: 50vh;
-  background-image: var(--hero-bg, none);
-  background-size: cover;
-  background-position: center;
   border-radius: 12px;
-  isolation: isolate;
+  isolation: isolate;            /* để viền pseudo không che nội dung */
+  background: none !important;   /* tắt nền cũ nếu có */
+  height: auto !important;       /* bỏ mọi chiều cao vh cũ */
+  overflow: hidden;              /* bo góc hình */
 }
 
-/* Viền vàng dạng gradient, không che ảnh nền */
-.hero-section::before {
-  content: "";
+/* Giữ viền vàng gradient đang có ::before */
+.hero-section::before{
+  content:"";
   position: absolute;
   inset: 0;
-  /* phủ trọn khung */
   border-radius: inherit;
-  padding: 2px;
-  /* độ dày viền */
+  padding: 2px; /* độ dày viền */
   background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
-  /* Chỉ hiển thị phần viền (mask thủ thuật) */
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
-  /* không chặn click */
   z-index: 0;
 }
+
+/* Ảnh tự co theo bề ngang, giữ tỉ lệ gốc */
+.hero-section .hero-media{
+  display: block;
+  width: 100%;
+  height: auto;        /* giữ tỉ lệ gốc */
+  border-radius: inherit;
+}
+
+/* Đảm bảo text đè lên ảnh */
+.profile-banner .hero-text-wrapper{ z-index: 1; }
+
 
 .profile-banner .hero-text-wrapper {
   position: absolute;
@@ -550,10 +556,9 @@ p.quote-author {
 
   /* override chung cho ≤sm */
   /* Hero Section Mobile */
-  .profile-banner .hero-section {
-    height: 28vh;
+  /* .profile-banner .hero-section {
     border-radius: 6px;
-  }
+  } */
 
   .profile-banner .section-title {
     padding: 0rem 0 1rem 0;
@@ -803,9 +808,6 @@ p.quote-author {
 @media (max-width: 575.98px) {
 
   /* override chung cho ≤xs */
-  .profile-banner .hero-section {
-    height: 20vh;
-  }
 
   .profile-banner .hero-category {
     font-size: 18px;
@@ -898,10 +900,7 @@ p.quote-author {
     text-align: center;
   }
 
-  .hero-section {
-    position: relative;
-    height: 25vh;
-  }
+
 }
 
 /* md only: 768–991.98 */
