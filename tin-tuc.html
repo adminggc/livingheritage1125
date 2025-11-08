@@ -246,9 +246,11 @@
       <div class="row g-4 d-none d-md-flex">
         <div class="col-md-4">
           <div class="news-bottom-card">
-            <a href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-trong-dem-nhac-living-heritage-jazz-concert-immersed.html">
-              <img src="assets/media/shared/news/huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-trong-dem-nhac-living-heritage-jazz-concert-immersed-4.jpg?v=7" alt="Đêm nhạc Khát vọng"
-                class="news-bottom-image img-fluid">
+            <a
+              href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-trong-dem-nhac-living-heritage-jazz-concert-immersed.html">
+              <img
+                src="assets/media/shared/news/huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-trong-dem-nhac-living-heritage-jazz-concert-immersed-4.jpg?v=7"
+                alt="Đêm nhạc Khát vọng" class="news-bottom-image img-fluid">
               <div class="news-bottom-content">
                 <h3 class="news-bottom-title">Huyền thoại Jazz Niels Lan Doky trở lại Việt Nam</h3>
                 <p class="news-bottom-subtitle">Trong đêm nhạc Living Heritage – Jazz Concert IMMERSED</p>
@@ -372,7 +374,33 @@
         document.body.style.overflow = '';
       }
     });
+
+    // Back to Top Button
+    document.addEventListener('DOMContentLoaded', function () {
+      const backToTopButton = document.getElementById('backToTop');
+
+      if (backToTopButton) {
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'block';
+          } else {
+            backToTopButton.style.display = 'none';
+          }
+        });
+
+        backToTopButton.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
   </script>
+  <button id="backToTop" class="btn btn-warning position-fixed"
+    style="bottom: 20px; right: 20px; z-index: 1000; display: none; border-radius: 50%; width: 50px; height: 50px;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 </body>
 
 </html>

@@ -447,7 +447,33 @@
         document.body.style.overflow = '';
       }
     });
+
+    // Back to Top Button
+    document.addEventListener('DOMContentLoaded', function () {
+      const backToTopButton = document.getElementById('backToTop');
+
+      if (backToTopButton) {
+        window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.style.display = 'block';
+          } else {
+            backToTopButton.style.display = 'none';
+          }
+        });
+
+        backToTopButton.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
   </script>
+  <button id="backToTop" class="btn btn-warning position-fixed"
+    style="bottom: 20px; right: 20px; z-index: 1000; display: none; border-radius: 50%; width: 50px; height: 50px;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 </body>
 
 </html>
