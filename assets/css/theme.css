@@ -10,7 +10,8 @@
 /* 2) Variable ITALIC — dùng cho mọi trọng lượng 100–900 */
 @font-face {
   font-family: "Alumni Sans";
-  src: url("../fonts/AlumniSans-Italic-VariableFont_wght.ttf") format("truetype");
+  src: url("../fonts/AlumniSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -20,11 +21,11 @@
   --white: #fff;
   --dark-green: #0d1f17;
   --dark-gold: #865d3e;
-  --gold: #B7947E;
+  --gold: #b7947e;
   --light-gold: #e1c191;
   --light-green: #a8d9a8;
-  --grad-start: #E8C4AB;
-  --grad-end: #865C3D;
+  --grad-start: #e8c4ab;
+  --grad-end: #865c3d;
 
   --fw-thin: 100;
   --fw-extralight: 200;
@@ -37,7 +38,23 @@
   --fw-black: 900;
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: #1a363f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9a573;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8945f;
+}
 
 /* ==== PC base (mặc định) = xxl ≥1400px ==== */
 /* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
@@ -87,7 +104,11 @@ a {
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: left;
-  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  background: linear-gradient(
+    -45deg,
+    var(--grad-start) 0%,
+    var(--grad-end) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,7 +132,11 @@ a {
 
 /* Utility class */
 .link-gradient {
-  background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
+  background: linear-gradient(
+    -45deg,
+    var(--grad-start) 0%,
+    var(--grad-end) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -329,7 +354,6 @@ a {
   gap: 10px;
 }
 
-
 .navbar-brand img {
   height: 70px;
   object-fit: contain;
@@ -502,7 +526,6 @@ a {
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
-
   /* override chung cho ≤xl */
   .nav-link {
     font-size: 18px;
@@ -511,7 +534,6 @@ a {
 
 /* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
-
   /* override chung cho ≤lg */
   body {
     font-size: 24px;
@@ -520,12 +542,10 @@ a {
   .section-title {
     font-size: 38px;
   }
-
 }
 
 /* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
-
   /* override chung cho ≤md */
 
   .main-header .container {
@@ -582,7 +602,6 @@ a {
   .section-title {
     font-size: 34px;
   }
-
 }
 
 @media (min-width: 992px) {
@@ -601,7 +620,6 @@ a {
 
 /* ≤767.98 = sm & down (phone) */
 @media (max-width: 767.98px) {
-
   /* override chung cho ≤sm */
   body {
     font-size: 24px;
@@ -644,7 +662,6 @@ a {
   .section-title {
     font-size: 32px;
   }
-
 
   .content-section {
     padding: 2.5rem 0;
@@ -695,7 +712,6 @@ a {
 
 /* ≤575.98 = xs (phone nhỏ) */
 @media (max-width: 575.98px) {
-
   /* override chung cho ≤xs */
   body {
     font-size: 22px;
@@ -733,7 +749,6 @@ a {
   }
 }
 
-
 /* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
 /* xxl only: ≥1400 */
 @media (min-width: 1400px) {
@@ -747,7 +762,6 @@ a {
 
 /* lg only: 992–1199.98 */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
   /* override chỉ lg (laptop phổ biến) */
 
   .navbar-brand img {
