@@ -192,7 +192,7 @@ a {
 
 .logo-text-1 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   letter-spacing: 3px;
   color: var(--light-gold);
   margin-bottom: -5px;
@@ -200,7 +200,7 @@ a {
 
 .logo-text-2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 5px;
   color: var(--light-gold);
 }
@@ -250,7 +250,7 @@ a {
   padding: 0.5rem 0;
   color: var(--dark-gold);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 1px;
   text-decoration: none;
   transition: color 0.3s;
@@ -303,7 +303,7 @@ a {
 .category-text-small {
   color: var(--light-green);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -418,7 +418,7 @@ a {
 .hero-category {
   font-size: 20px;
   color: var(--white);
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
   font-family: "Alumni Sans", sans-serif;
@@ -432,7 +432,7 @@ a {
 
 .footer-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   color: #1b2e1f;
   text-transform: uppercase;
 
@@ -455,7 +455,7 @@ a {
   align-items: center;
   margin: 0;
   gap: 12px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   font-size: 24px;
 }
 
@@ -486,7 +486,7 @@ a {
 .footer-contact p:nth-child(1)::before {
   content: "\f0e0";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }
@@ -494,7 +494,7 @@ a {
 .footer-contact p:nth-child(2)::before {
   content: "\f095";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }
@@ -502,7 +502,7 @@ a {
 .footer-contact p:nth-child(3)::before {
   content: "\f3c5";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }

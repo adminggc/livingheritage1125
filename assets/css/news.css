@@ -7,7 +7,7 @@
 
 .news-page-title {
   color: #0d250f;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-size: 42px;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -47,7 +47,7 @@
 .news-text {
   color: #0d250f;
   /* font-size: 26px;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 1px;
   line-height: 1.8;
   text-align: justify; */
@@ -144,7 +144,7 @@
 .news-bottom-title {
   color: #0d250f;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
@@ -153,7 +153,7 @@
 
 .news-bottom-subtitle {
   color: #0d250f;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 0.01em;
   line-height: 1.6;
   margin: 0;

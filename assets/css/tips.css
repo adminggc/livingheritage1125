@@ -13,14 +13,14 @@
 
 .content-section-premium .sub-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding: 2rem 0 1rem 0;
 }
 
 .media-content h3 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding-top: 10px;
 }
@@ -109,21 +109,21 @@
 .section-figure-quote p.quote-title {
   font-size: 24px;
   color: var(--dark-green);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: center;
 }
 
 .carousel-inner p {
   font-size: 34px;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 1px;
   text-align: center;
 }
 
 p.quote-author {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: center;
   margin: 0px 0;
@@ -150,7 +150,7 @@ p.quote-author {
 .content-representative h4 {
   font-size: 24px;
   color: var(--dark-green);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: center;
   text-transform: uppercase;
@@ -160,7 +160,7 @@ p.quote-author {
 .content-representative ul {
   font-size: 24px;
   color: var(--dark-green);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 0.01em;
 }
 

@@ -183,7 +183,7 @@
 .category-label {
   color: var(--white);
   font-size: 34px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -193,7 +193,7 @@
 .category-text-large {
   color: var(--white);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
@@ -204,7 +204,7 @@
 .category-text-small {
   color: var(--light-green);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -474,7 +474,6 @@
   overflow: hidden;
   height: 100%;
   transition: transform 0.3s;
-  border-radius: 12px;
 }
 
 .media-card:hover {
@@ -485,6 +484,8 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .content-section-podcast .media-img {
@@ -499,12 +500,12 @@
 .media-content h3 {
   color: var(--white);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .media-title {
   background: linear-gradient(-45deg, var(--grad-start) 0%, var(--grad-end) 100%);
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 1px;

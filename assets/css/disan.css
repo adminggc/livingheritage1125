@@ -1,20 +1,25 @@
 /* Hero as <img>: giữ nguyên tỉ lệ, không crop, vẫn có viền vàng */
-.hero-section{
+.hero-section {
   position: relative;
   border-radius: 12px;
-  isolation: isolate;            /* để viền pseudo không che nội dung */
-  background: none !important;   /* tắt nền cũ nếu có */
-  height: auto !important;       /* bỏ mọi chiều cao vh cũ */
-  overflow: hidden;              /* bo góc hình */
+  isolation: isolate;
+  /* để viền pseudo không che nội dung */
+  background: none !important;
+  /* tắt nền cũ nếu có */
+  height: auto !important;
+  /* bỏ mọi chiều cao vh cũ */
+  overflow: hidden;
+  /* bo góc hình */
 }
 
 /* Giữ viền vàng gradient đang có ::before */
-.hero-section::before{
-  content:"";
+.hero-section::before {
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 2px; /* độ dày viền */
+  padding: 2px;
+  /* độ dày viền */
   background: linear-gradient(135deg, var(--grad-start), var(--grad-end));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -24,15 +29,18 @@
 }
 
 /* Ảnh tự co theo bề ngang, giữ tỉ lệ gốc */
-.hero-section .hero-media{
+.hero-section .hero-media {
   display: block;
   width: 100%;
-  height: auto;        /* giữ tỉ lệ gốc */
+  height: auto;
+  /* giữ tỉ lệ gốc */
   border-radius: inherit;
 }
 
 /* Đảm bảo text đè lên ảnh */
-.profile-banner .hero-text-wrapper{ z-index: 1; }
+.profile-banner .hero-text-wrapper {
+  z-index: 1;
+}
 
 
 .profile-banner .hero-text-wrapper {
@@ -85,7 +93,7 @@
 
 .profile-title {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   font-size: 73px;
   letter-spacing: 0.01em;
   line-height: 1.1;
@@ -96,20 +104,26 @@
 
 .profile-content-section .profile-summary {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   font-size: 28px;
   letter-spacing: 0.01em;
   line-height: 1.35;
   color: var(--dark-green);
-  padding: 1rem 0 2rem;
+  padding: 1rem 0 1rem;
 }
 
 .profile-content-section .profile-summary strong {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
 }
 
 .profile-content-section .profile-content-body p {
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--dark-green);
+}
+
+.profile-content-section .profile-content-body li {
   font: inherit;
   letter-spacing: inherit;
   color: var(--dark-green);
@@ -122,14 +136,14 @@
 .profile-content-section-quote p.quote-title {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
 }
 
 .sub-title {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   margin-bottom: 10px;
   color: #1b361b;
 
@@ -138,14 +152,14 @@
 
 .carousel-inner p {
   font-size: 34px;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 1px;
   text-align: center;
 }
 
 p.quote-author {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
   margin: 0px 0;
@@ -172,7 +186,7 @@ p.quote-author {
 .content-representative h4 {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -182,7 +196,7 @@ p.quote-author {
 .content-representative ul {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 2px;
 }
 
@@ -218,7 +232,7 @@ p.quote-author {
 .media-content h3 {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 2px;
   padding: 10px 0;
   margin: 0;
@@ -227,19 +241,24 @@ p.quote-author {
 .media-content h3 span {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 800;
+  font-weight: var(--fw-extrabold);
   letter-spacing: 2px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   text-align: center;
 }
 
 .media-content p {
   font-size: 24px;
   color: #1b361b;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   letter-spacing: 2px;
   text-align: justify;
   line-height: 1.2;
+}
+
+.media-img {
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .content-section-heritage {
@@ -322,7 +341,7 @@ p.quote-author {
 .category-label {
   color: var(--white);
   font-size: 34px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -333,7 +352,7 @@ p.quote-author {
 .category-text-large {
   color: var(--white);
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
@@ -344,7 +363,7 @@ p.quote-author {
 .category-text-small {
   color: var(--light-green);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -407,7 +426,7 @@ p.quote-author {
 /* ===== Quote block (match design) ===== */
 .nhan-vat-di-san-detail .profile-content-section-quote p.quote-title {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   /* Bold */
   font-size: 37px;
   /* Hình 1 */
@@ -422,7 +441,7 @@ p.quote-author {
 /* Áp cho <p> thứ 2 (không có class) trong khối quote */
 .nhan-vat-di-san-detail .profile-content-section-quote>p:not(.quote-title) {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 300;
+  font-weight: var(--fw-light);
   /* Light */
   font-style: italic;
   /* Italic */
@@ -449,7 +468,7 @@ p.quote-author {
   font-family: "AlumniSans-Bold", sans-serif;
   font-size: 40px;
   letter-spacing: 0.01em;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   color: #1B361B;
   /* Green swatch */
@@ -459,19 +478,35 @@ p.quote-author {
   align-self: stretch;
 }
 
+
+.content-highlight .highlight-detail p {
+  font-family: "Alumni Sans", sans-serif;
+  font-weight: var(--fw-medium);
+  /* Medium */
+  font-style: italic;
+  /* Italic */
+  font-size: 27px;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: #1B361B;
+  /* Green */
+  margin: 10px 0;
+  padding-left: 10px;
+}
+
 /* Danh sách: Alumni Sans Medium Italic 37, Green, bullet chấm tròn */
-.content-highlight .highlight-list {
+.content-highlight .highlight-detail {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.content-highlight .highlight-list li {
+.content-highlight .highlight-detail li {
   position: relative;
   padding-left: 22px;
   margin: 10px 0;
   font-family: "Alumni Sans", sans-serif;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   /* Medium */
   font-style: italic;
   /* Italic */
@@ -483,7 +518,7 @@ p.quote-author {
   /* Green */
 }
 
-.content-highlight .highlight-list li::before {
+.content-highlight .highlight-detail li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -599,7 +634,7 @@ p.quote-author {
   .profile-content-section-quote p.quote-title {
     font-size: 20px;
     color: #1b361b;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 1.5rem;
@@ -616,7 +651,7 @@ p.quote-author {
 
   .profile-content-section-quote .carousel-inner p {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
     letter-spacing: 0.01em;
     text-align: center;
     color: #333333;
@@ -647,7 +682,7 @@ p.quote-author {
 
   p.quote-author {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
     letter-spacing: 0.01em;
     text-align: center;
     margin: 0;
@@ -657,7 +692,7 @@ p.quote-author {
   .content-representative h4 {
     font-size: 22px;
     color: #1b361b;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
@@ -668,7 +703,7 @@ p.quote-author {
   .content-representative ul {
     font-size: 20px;
     color: #333333;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
     letter-spacing: 0.01em;
     padding-left: 0;
     list-style: none;
@@ -687,7 +722,7 @@ p.quote-author {
     left: 0;
     color: #1b361b;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: var(--fw-bold);
   }
 
   .profile-content-section .row {
@@ -782,14 +817,23 @@ p.quote-author {
     /* cân đối trên mobile */
   }
 
-  .content-highlight .highlight-list li {
+  .content-highlight .highlight-detail p {
     font-size: 24px;
     /* tương đương bố cục hình cuối */
     margin: 8px 0;
     padding-left: 18px;
   }
 
-  .content-highlight .highlight-list li::before {
+  .content-highlight .highlight-detail li {
+    font-size: 24px;
+    /* tương đương bố cục hình cuối */
+    margin: 8px 0;
+    padding-left: 18px;
+  }
+
+
+
+  .content-highlight .highlight-detail li::before {
     font-size: 18px;
   }
 
@@ -883,7 +927,7 @@ p.quote-author {
   .media-content h3,
   .media-content h3 span {
     font-size: 24px;
-    margin-left: 4px;
+    /* margin-left: 4px; */
     letter-spacing: 1px;
   }
 

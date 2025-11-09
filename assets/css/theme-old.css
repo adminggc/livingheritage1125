@@ -43,7 +43,7 @@ body {
   font-family: "Alumni Sans", sans-serif;
   background-color: var(--dark-green);
   color: var(--white);
-  font-weight: 300;
+  font-weight: var(--fw-light);
   font-size: 26px;
   letter-spacing: 0.01em;
 }
@@ -56,7 +56,7 @@ strong {
 .section-title {
   font-size: 42px;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: left;
   background: linear-gradient(-45deg, #e6c39f 0%, #a1733a 100%);
@@ -135,7 +135,7 @@ strong {
 
 .logo-text-1 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   letter-spacing: 3px;
   color: #e8d4a0;
   margin-bottom: -5px;
@@ -143,7 +143,7 @@ strong {
 
 .logo-text-2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 5px;
   color: #e8d4a0;
 }
@@ -193,7 +193,7 @@ strong {
   padding: 0.5rem 0;
   color: #865d3e;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 1px;
   text-decoration: none;
   transition: color 0.3s;
@@ -252,7 +252,7 @@ strong {
 .category-text-small {
   color: var(--light-green);
   font-size: 0.85rem;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -329,7 +329,7 @@ strong {
   color: #c8ab84;
   text-transform: none;
   font-size: 22px;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   letter-spacing: 0.5px;
   padding: 0.5rem 1rem;
   transition: color 0.3s ease;
@@ -423,7 +423,7 @@ strong {
 
 .hero-title {
   font-size: 64px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   color: #ffffff;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
@@ -432,7 +432,7 @@ strong {
 
 .hero-subtitle {
   font-size: 36px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   color: #ffffff;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   letter-spacing: 3px;
@@ -442,7 +442,7 @@ strong {
 .hero-category {
   font-size: 20px;
   color: #ffffff;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   letter-spacing: 2px;
   margin-bottom: 0.5rem;
   font-family: "Alumni Sans", sans-serif;
@@ -455,7 +455,7 @@ strong {
 
 .footer-title {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   color: #1b2e1f;
   text-transform: uppercase;
 
@@ -478,7 +478,7 @@ strong {
   align-items: center;
   margin: 0;
   gap: 12px;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   font-size: 24px;
 }
 
@@ -520,21 +520,21 @@ strong {
 .footer-contact p:nth-child(1)::before {
   content: "\f0e0";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }
 .footer-contact p:nth-child(2)::before {
   content: "\f095";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }
 .footer-contact p:nth-child(3)::before {
   content: "\f3c5";
   font-family: "Font Awesome 6 Free";
-  font-weight: 900;
+  font-weight: var(--fw-black);
   font-size: 16px;
   color: #1b2e1f;
 }
@@ -558,7 +558,7 @@ strong {
 @media (max-width: 768px) {
   body {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
   }
 
   .main-header {
@@ -647,7 +647,7 @@ strong {
 @media (max-width: 576px) {
   body {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: var(--fw-regular);
   }
 
   .section-title {
