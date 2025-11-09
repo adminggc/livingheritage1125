@@ -44,6 +44,8 @@
   background-image: var(--hero-bg, none);
   background-size: cover;
   background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .content-section-tips {
@@ -186,9 +188,11 @@ p.quote-author {
   height: 100%;
   border: 0;
 }
+
 .media-card .media-img-premium {
   border-radius: 12px;
 }
+
 /* Premium Carousel Styles */
 #neuroCarousel .media-card,
 #healthCarousel .media-card,
@@ -221,8 +225,9 @@ p.quote-author {
 
 /* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
+
   /* override chung cho ≤lg */
-    .section-tips-content-title h2 {
+  .section-tips-content-title h2 {
     font-size: 52px;
   }
 }
@@ -331,6 +336,7 @@ p.quote-author {
 
 /* ≤575.98 = xs (phone nhỏ) */
 @media (max-width: 575.98px) {
+
   /* override chung cho ≤xs */
   .section-tips-content-title h2 {
     font-size: 38px;
