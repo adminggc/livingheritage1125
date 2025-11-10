@@ -45,11 +45,16 @@
 
 .profile-banner .hero-text-wrapper {
   position: absolute;
-  top: 50%;
+  bottom: 30%;
   right: 10%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   text-align: center;
   z-index: 1;
+}
+
+.profile-banner .hero-text-wrapper.longcontent {
+  bottom: 20% !important;
+  transition: bottom 0.3s ease;
 }
 
 .profile-banner .hero-category {
@@ -110,6 +115,7 @@
   line-height: 1.35;
   color: var(--dark-green);
   padding: 1rem 0 1rem;
+  text-align: justify;
 }
 
 .profile-content-section .profile-summary strong {
@@ -121,31 +127,43 @@
   font: inherit;
   letter-spacing: inherit;
   color: var(--dark-green);
+  text-align: justify;
 }
 
 .profile-content-section .profile-content-body li {
   font: inherit;
   letter-spacing: inherit;
   color: var(--dark-green);
+  text-align: justify;
 }
 
 .profile-content-section-quote {
   padding: 2rem 1rem 0rem 1rem;
 }
 
-.profile-content-section-quote p.quote-title {
-  font-size: 24px;
-  color: #1b361b;
+/* .profile-content-section-quote p.quote-title {
+  /* font-size: 24px;
+  color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
-  text-align: center;
+   */
+
+
+font-weight: var(--fw-medium);
+font-size: 24px;
+letter-spacing: 0.01em;
+line-height: 1.1;
+color: var(--dark-green);
+text-transform: uppercase;
+margin: 0;
+text-align: center;
 }
 
-.sub-title {
+*/ .sub-title {
   font-size: 32px;
   font-weight: var(--fw-regular);
   margin-bottom: 10px;
-  color: #1b361b;
+  color: var(--dark-green);
 
   padding: 2rem 0 1rem 0;
 }
@@ -185,7 +203,7 @@ p.quote-author {
 
 .content-representative h4 {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
@@ -195,7 +213,7 @@ p.quote-author {
 
 .content-representative ul {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 2px;
 }
@@ -231,7 +249,7 @@ p.quote-author {
 
 .media-content h3 {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 2px;
   padding: 10px 0;
@@ -240,7 +258,7 @@ p.quote-author {
 
 .media-content h3 span {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-extrabold);
   letter-spacing: 2px;
   /* margin-left: 10px; */
@@ -249,7 +267,7 @@ p.quote-author {
 
 .media-content p {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 2px;
   text-align: justify;
@@ -425,39 +443,40 @@ p.quote-author {
 
 /* ===== Quote block (match design) ===== */
 .nhan-vat-di-san-detail .profile-content-section-quote p.quote-title {
-  font-family: "Alumni Sans", sans-serif;
+  /* font-family: "Alumni Sans", sans-serif;
   font-weight: var(--fw-bold);
-  /* Bold */
   font-size: 37px;
-  /* Hình 1 */
-  color: #1b361b;
-  /* Green swatch */
+  color: var(--dark-green);
   letter-spacing: 0.01em;
-  /* ~1% */
   text-align: center;
-  font-style: normal;
+  text-transform: uppercase; */
+
+
+  font-weight: var(--fw-medium);
+  font-size: 37px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  color: var(--dark-green);
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
 }
 
 /* Áp cho <p> thứ 2 (không có class) trong khối quote */
 .nhan-vat-di-san-detail .profile-content-section-quote>p:not(.quote-title) {
   font-family: "Alumni Sans", sans-serif;
   font-weight: var(--fw-light);
-  /* Light */
   font-style: italic;
-  /* Italic */
-  font-size: 40px;
-  /* Hình 2 (desktop) */
   line-height: 1.2;
   letter-spacing: 0.01em;
-  /* ~1% */
-  color: #000000;
-  text-align: center;
+  color: var(--dark-green);
+  text-align: justify;
 }
 
 
 /* ===== Reusable highlight box for profile side panel ===== */
 .content-highlight {
-  background: #ECF3EC;
+  background: #ecf6ec;
   /* nền khối như mockup */
   border-radius: 6px;
   padding: 16px 18px 20px;
@@ -465,33 +484,33 @@ p.quote-author {
 
 /* Tiêu đề: Alumni Sans Bold 40, Green, letter-spacing ~1%  */
 .content-highlight .highlight-title {
-  font-family: "AlumniSans-Bold", sans-serif;
-  font-size: 40px;
-  letter-spacing: 0.01em;
+  /* font-family: "Alumni Sans", sans-serif;
   font-weight: var(--fw-bold);
-  text-transform: uppercase;
-  color: #1B361B;
-  /* Green swatch */
-  margin: 0 0 8px 0;
+  font-size: 37px;
+  color: var(--dark-green);
+  letter-spacing: 0.01em;
   text-align: center;
-  position: relative;
-  align-self: stretch;
+  text-transform: uppercase; */
+
+  font-weight: var(--fw-medium);
+  font-size: 37px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  color: var(--dark-green);
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
 }
 
 
 .content-highlight .highlight-detail p {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: var(--fw-medium);
-  /* Medium */
+  font-weight: var(--fw-light);
   font-style: italic;
-  /* Italic */
-  font-size: 27px;
+  line-height: 1.2;
   letter-spacing: 0.01em;
-  line-height: 1.25;
-  color: #1B361B;
-  /* Green */
-  margin: 10px 0;
-  padding-left: 10px;
+  color: var(--dark-green);
+  text-align: justify;
 }
 
 /* Danh sách: Alumni Sans Medium Italic 37, Green, bullet chấm tròn */
@@ -514,7 +533,7 @@ p.quote-author {
   letter-spacing: 0.01em;
   /* 1% */
   line-height: 1.25;
-  color: #1B361B;
+  color: var(--dark-green);
   /* Green */
 }
 
@@ -527,7 +546,7 @@ p.quote-author {
   /* canh bullet */
   font-size: 24px;
   /* kích thước chấm */
-  color: #1B361B;
+  color: var(--dark-green);
   line-height: 1.2;
 }
 
@@ -633,7 +652,7 @@ p.quote-author {
 
   .profile-content-section-quote p.quote-title {
     font-size: 20px;
-    color: #1b361b;
+    color: var(--dark-green);
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
     text-align: center;
@@ -654,7 +673,7 @@ p.quote-author {
     font-weight: var(--fw-regular);
     letter-spacing: 0.01em;
     text-align: center;
-    color: #333333;
+    color: var(--dark-gray);
     font-style: italic;
     line-height: 1.6;
     padding: 0 1rem;
@@ -686,12 +705,12 @@ p.quote-author {
     letter-spacing: 0.01em;
     text-align: center;
     margin: 0;
-    color: #333333;
+    color: var(--dark-gray);
   }
 
   .content-representative h4 {
     font-size: 22px;
-    color: #1b361b;
+    color: var(--dark-green);
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
     text-align: center;
@@ -702,7 +721,7 @@ p.quote-author {
 
   .content-representative ul {
     font-size: 20px;
-    color: #333333;
+    color: var(--dark-gray);
     font-weight: var(--fw-regular);
     letter-spacing: 0.01em;
     padding-left: 0;
@@ -720,7 +739,7 @@ p.quote-author {
     content: "•";
     position: absolute;
     left: 0;
-    color: #1b361b;
+    color: var(--dark-green);
     font-size: 20px;
     font-weight: var(--fw-bold);
   }
@@ -822,6 +841,7 @@ p.quote-author {
     /* tương đương bố cục hình cuối */
     margin: 8px 0;
     padding-left: 18px;
+    padding-right: 18px;
   }
 
   .content-highlight .highlight-detail li {
@@ -866,9 +886,13 @@ p.quote-author {
     padding: 1.5rem 0;
   }
 
+  .profile-banner .hero-text-wrapper.longcontent {
+    bottom: 8% !important;
+    transition: bottom 0.3s ease;
+  }
 
   .profile-title {
-    font-size: 45px;
+    font-size: 40px;
   }
 
 
@@ -934,7 +958,7 @@ p.quote-author {
   .media-content p {
     font-size: 20px;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: justify;
     line-height: 1.2;
   }
 

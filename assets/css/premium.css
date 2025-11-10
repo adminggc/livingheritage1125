@@ -1,7 +1,7 @@
 /* Premium Wellbeing Tips – page-specific overrides */
 .content-section-premium {
   padding: 2rem 0 2rem 0;
-  color: #0d250f;
+  color: var(--dark-green);
 }
 
 .content-section-premium .section-title {
@@ -35,7 +35,7 @@
 .hero-section {
   position: relative;
   height: 50vh;
-  background-image: url("../img/vi/premium/bannerdetail.png?v=9");
+  background-image: url("../img/vi/premium/bannerdetail.png?v=10");
   background-size: cover;
   background-position: center;
 }
@@ -60,7 +60,7 @@
 }
 .content-section-jazz p {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-regular);
   letter-spacing: 2px;
   text-align: justify;
@@ -68,14 +68,14 @@
 .content-section-jazz-title h2 {
   font-size: 50px;
   padding: 0rem 0 2rem 0;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
 }
 
 .content-section-jazz-title p {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-extrabold);
   letter-spacing: 2px;
   padding: 2rem 0;
@@ -83,7 +83,7 @@
 
 .content-section-jazz-content p {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-regular);
   letter-spacing: 2px;
   text-align: justify;
@@ -91,7 +91,7 @@
 
 .content-section-jazz-quote p.quote-title {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
@@ -132,7 +132,7 @@ p.quote-author {
 
 .content-representative h4 {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 2px;
   text-align: center;
@@ -142,7 +142,7 @@ p.quote-author {
 
 .content-representative ul {
   font-size: 24px;
-  color: #1b361b;
+  color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 2px;
 }
@@ -221,7 +221,7 @@ p.quote-author {
   #detailHealthCarousel .media-content p,
   #detailPsychologyCarousel .media-content p {
     font-size: 16px;
-    text-align: left;
+    text-align: justify;
   }
   .art-culture-carousel-control img {
     width: 26px;

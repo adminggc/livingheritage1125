@@ -4,7 +4,7 @@
 
 .content-section-premium {
   padding: 2rem 0 2rem 0;
-  color: #0d250f;
+  color: var(--dark-green);
 }
 
 .content-section-premium .section-title {
@@ -66,7 +66,7 @@
   text-align: center;
   letter-spacing: 0.01em;
   line-height: 1.2;
-  color: #000;
+  color: var(--dark-gray);
 }
 
 .content-section-tips,
@@ -316,7 +316,7 @@ p.quote-author {
   #detailHealthCarousel .media-content p,
   #detailPsychologyCarousel .media-content p {
     font-size: 16px;
-    text-align: left;
+    text-align: justify;
   }
 
   .art-culture-carousel-control img {
