@@ -217,6 +217,26 @@ p.quote-author {
   padding: 6rem 0 0 0;
 }
 
+.tips-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0;
+}
+
+.tips-centered-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tips-centered-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
