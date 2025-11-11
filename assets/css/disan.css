@@ -98,10 +98,10 @@
 
 .profile-title {
   font-family: "Alumni Sans", sans-serif;
-  font-weight: var(--fw-medium);
-  font-size: 73px;
+  font-weight: var(--fw-extrabold);
+  font-size: 78px;
   letter-spacing: 0.01em;
-  line-height: 1.1;
+  line-height: 1.5;
   color: var(--dark-green);
   text-transform: uppercase;
   margin: 0;
@@ -661,7 +661,7 @@ p.quote-author {
   }
 
   .profile-title {
-    font-size: 55px;
+    font-size: 65px;
   }
 
   .profile-content-section-quote {
@@ -911,7 +911,7 @@ p.quote-author {
   }
 
   .profile-title {
-    font-size: 40px;
+    font-size: 45px;
   }
 
 
