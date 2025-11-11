@@ -1,4 +1,4 @@
-/* Premium Wellbeing Tips – page-specific overrides */
+/* Premium Wellness Tips – page-specific overrides */
 /* ==== PC base (mặc định) = xxl ≥1400px ==== */
 /* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
 
@@ -36,7 +36,7 @@
   border-top: 1px solid rgba(27, 54, 27, 0.5);
 }
 
-/* Premium Wellbeing Tips Details */
+/* Premium Wellness Tips Details */
 
 .hero-section {
   position: relative;
