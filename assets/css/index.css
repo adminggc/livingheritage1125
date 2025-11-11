@@ -1012,7 +1012,7 @@
 
   .multi-carousel-item,
   .clone {
-    flex: 0 0 100%;
+    flex: 0 0 50%;
   }
   .home-profile-carousel-wrapper {
     padding: 0 18px;

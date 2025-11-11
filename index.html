@@ -246,8 +246,6 @@
   <section class="content-section-profile">
     <div class="container containersection-profile">
       <h2 class="section-title">NHÂN VẬT NỔI BẬT</h2>
-
-
       <div class="home-profile-carousel-wrapper">
         <div class="multi-carousel-container" id="multiCarousel">
           <div class="multi-carousel-inner" id="carouselInner">
@@ -618,9 +616,9 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       // Configuration - dynamic based on screen size
-      let itemsPerSlide = window.innerWidth < 720 ? 1 : 4; // Responsive items per slide
+      let itemsPerSlide = window.innerWidth < 720 ? 2 : 4; // Responsive items per slide
       const totalItems = 8; // Total real items (without clones)
-      let slideBy = window.innerWidth < 720 ? 1 : 1; // How many items to advance/retreat per click
+      let slideBy = window.innerWidth < 720 ? 2 : 1; // How many items to advance/retreat per click
 
       // DOM elements
       const carousel = document.getElementById("multiCarousel");
@@ -637,8 +635,8 @@
       // Function to update configuration based on screen size
       function updateConfig() {
         const isMobile = window.innerWidth < 720;
-        itemsPerSlide = isMobile ? 1 : 4;
-        slideBy = isMobile ? 1 : 1;
+        itemsPerSlide = isMobile ? 2 : 4;
+        slideBy = isMobile ? 2 : 2;
       }
 
       // Dynamically add clone elements
