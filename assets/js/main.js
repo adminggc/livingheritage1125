@@ -123,3 +123,4 @@ function toggleMobileMenu() {
     navbarCollapse.classList.toggle('show');
   }
 }
+

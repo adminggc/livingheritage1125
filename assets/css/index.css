@@ -446,7 +446,7 @@
   text-transform: uppercase;
   font-size: 44px;
   letter-spacing: 0.01em;
-  text-align: justify;
+  text-align: center;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -699,6 +699,85 @@
   -webkit-user-select: none;
 }
 
+/* ---------- Video thumbnail / play button ---------- */
+/* wrapper tỉ lệ 16:9, responsive */
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--dark-green); /* fallback */
+}
+
+/* ảnh thumbnail và iframe phủ toàn bộ khung */
+.video-thumbnail img,
+.video-thumbnail iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--dark-green); /* cho đều nền */
+}
+
+/* Play button chính giữa */
+.video-thumbnail .play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background: rgba(255,255,255,0.9);
+  color: var(--dark-green);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  transition: transform .14s ease, box-shadow .14s ease;
+  font-size: 22px;
+}
+
+/* icon trong nút (fontawesome) */
+.video-thumbnail .play-button i {
+  margin-left: 3px;
+}
+
+/* hover / active */
+.video-thumbnail .play-button:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+}
+
+/* khi đang load/iframe hiển thị thì ẩn nút (gọi bằng class 'playing' bên JS) */
+.video-thumbnail.playing .play-button {
+  display: none;
+}
+
+/* Podcast info (title dưới video) */
+.podcast-info {
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.podcast-title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 20px;
+  font-weight: var(--fw-bold);
+  color: var(--light-brown);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
@@ -719,6 +798,9 @@
   .home-profile-name {
     font-size: 32px;
   }
+    .book-title-small {
+    font-size: 38px;
+  }
 }
 
 /* ≤991.98 = md & down (tablet & phone) */
@@ -731,6 +813,10 @@
 
   .home-profile-name {
     font-size: 26px;
+  }
+
+  .book-title-small {
+    font-size: 32px;
   }
 }
 
@@ -1016,6 +1102,16 @@
   }
   .home-profile-carousel-wrapper {
     padding: 0 18px;
+  }
+
+    .video-thumbnail .play-button {
+    width: 54px;
+    height: 54px;
+    font-size: 18px;
+  }
+
+    .podcast-title {
+    font-size: 16px;
   }
 }
 
