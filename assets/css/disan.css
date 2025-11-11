@@ -149,7 +149,7 @@
    */
 
 
-font-weight: var(--fw-medium);
+/* font-weight: var(--fw-medium);
 font-size: 24px;
 letter-spacing: 0.01em;
 line-height: 1.1;
@@ -157,9 +157,9 @@ color: var(--dark-green);
 text-transform: uppercase;
 margin: 0;
 text-align: center;
-}
-
-*/ .sub-title {
+} */
+ 
+.sub-title {
   font-size: 32px;
   font-weight: var(--fw-regular);
   margin-bottom: 10px;
@@ -223,7 +223,7 @@ p.quote-author {
 }
 
 /* News Section */
-.content-section-new.art-culture .news-content {
+.section-content-heritage.art-culture .news-content {
   padding: 0rem 0 3em 0;
   border-bottom: 1px solid rgba(27, 54, 27, 0.5);
   border-top: 0px solid rgba(27, 54, 27, 0.5);
@@ -278,6 +278,23 @@ p.quote-author {
   border-radius: 8px;
   overflow: hidden;
 }
+
+.profile-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 896 / 472;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+}
+
 
 .content-section-heritage {
   padding: 4rem 0 5rem 0;
