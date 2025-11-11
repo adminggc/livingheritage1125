@@ -54,7 +54,7 @@
   font-size: 32px;
   text-align: center;
   font-weight: var(--fw-medium);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   color: #000;
 }
@@ -62,7 +62,7 @@
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-regular);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: justify;
 }
 .content-section-jazz-title h2 {
@@ -70,14 +70,14 @@
   padding: 0rem 0 2rem 0;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
 }
 
 .content-section-jazz-title p {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-extrabold);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   padding: 2rem 0;
 }
 
@@ -85,7 +85,7 @@
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-regular);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: justify;
 }
 
@@ -93,7 +93,7 @@
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
 }
 
@@ -107,7 +107,7 @@
 p.quote-author {
   font-size: 24px;
   font-weight: var(--fw-bold);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
   margin: 0px 0;
 }
@@ -134,7 +134,7 @@ p.quote-author {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
   text-transform: uppercase;
   padding: 4rem 0 20px 0;
@@ -144,7 +144,7 @@ p.quote-author {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-light);
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
 }
 @media (min-width: 992px) {
   .tip-card .tip-img {

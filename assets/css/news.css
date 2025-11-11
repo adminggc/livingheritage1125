@@ -235,7 +235,7 @@
   /* override chung cho ≤sm */
   .news-page-title {
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 0.01em;
   }
 
   .news-main-title {
