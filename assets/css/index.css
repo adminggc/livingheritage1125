@@ -114,13 +114,13 @@
   background-color: var(--dark-green);
 }
 
-.profile-content {
+.home-profile-content {
   padding: 3rem 0 5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Profile carousel wrapper */
-.profile-carousel-wrapper {
+.home-profile-carousel-wrapper {
   position: relative;
   width: 100%;
 }
@@ -193,7 +193,7 @@
   font-size: 34px;
   font-weight: var(--fw-bold);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 0.01em;
   text-align: center;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
@@ -220,7 +220,7 @@
 }
 
 /* Profile Cards */
-.profile-card {
+.home-profile-card {
   background-color: transparent;
   text-align: center;
   border-radius: 16px;
@@ -231,7 +231,7 @@
   position: relative;
 }
 
-.profile-card::before {
+.home-profile-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -243,18 +243,18 @@
   border-radius: inherit;
 }
 
-.profile-card:hover {
+.home-profile-card:hover {
   transform: translateY(-2px);
 }
 
-.profile-img-wrapper {
+.home-profile-img-wrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
   border-radius: inherit;
 }
 
-.profile-img {
+.home-profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -265,7 +265,7 @@
   border-radius: inherit;
 }
 
-.profile-info {
+.home-profile-info {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -282,7 +282,7 @@
   z-index: 2;
 }
 
-.profile-title {
+.home-profile-title {
   color: var(--white);
   font-size: 23px;
   font-weight: var(--fw-regular);
@@ -291,7 +291,7 @@
   letter-spacing: 0.01em;
 }
 
-.profile-name {
+.home-profile-name {
   font-size: 44px;
   text-transform: uppercase;
   font-weight: var(--fw-bold);
@@ -349,7 +349,7 @@
 }
 
 /* Profile Carousel Controls */
-.profile-carousel-control {
+.home-profile-carousel-control {
   width: 40px;
   height: 40px;
   top: 50%;
@@ -361,19 +361,19 @@
   z-index: 10;
 }
 
-.profile-carousel-control.carousel-control-prev {
+.home-profile-carousel-control.carousel-control-prev {
   left: -50px;
 }
 
-.profile-carousel-control.carousel-control-next {
+.home-profile-carousel-control.carousel-control-next {
   right: -50px;
 }
 
-.profile-carousel-control:hover:not(.disabled) {
+.home-profile-carousel-control:hover:not(.disabled) {
   opacity: 0.8;
 }
 
-.profile-carousel-control.disabled {
+.home-profile-carousel-control.disabled {
   opacity: 0.3;
   cursor: not-allowed;
   pointer-events: none;
@@ -615,7 +615,7 @@
   min-width: 0;
 }
 
-.multi-carousel-item .profile-card {
+.multi-carousel-item .home-profile-card {
   height: 100%;
 }
 
@@ -703,17 +703,20 @@
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
   /* override chung cho ≤xl */
+    .home-profile-name {
+    font-size: 40px;
+  }
 }
 
 /* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
   /* override chung cho ≤lg */
-  .profile-title {
+  .home-profile-title {
     font-size: 22px;
     font-weight: var(--fw-light);
   }
 
-  .profile-name {
+  .home-profile-name {
     font-size: 32px;
   }
 }
@@ -721,12 +724,12 @@
 /* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
   /* override chung cho ≤md */
-  .profile-title {
+  .home-profile-title {
     font-size: 18px;
     font-weight: var(--fw-light);
   }
 
-  .profile-name {
+  .home-profile-name {
     font-size: 26px;
   }
 }
@@ -792,7 +795,7 @@
 
   .hero-title {
     font-size: 24px;
-    letter-spacing: 2px;
+    letter-spacing: 0.01em;
   }
 
   .hero-subtitle {
@@ -857,7 +860,7 @@
 
   .category-label {
     font-size: 26px;
-    letter-spacing: 2px;
+    letter-spacing: 0.01em;
   }
 
   .category-text-large {
@@ -872,14 +875,14 @@
     padding: 1rem 0;
   }
 
-  .profile-content {
+  .home-profile-content {
     padding: 2rem 0 3rem 0;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .profile-carousel-control {
+  .home-profile-carousel-control {
     width: 40px;
     height: 40px;
   }
@@ -897,20 +900,20 @@
     height: 25px;
   }
 
-  .profile-card {
+  .home-profile-card {
     border-radius: 12px;
   }
 
-  .profile-img {
+  .home-profile-img {
     height: 100%;
   }
 
-  .profile-title {
+  .home-profile-title {
     font-size: 16px;
     font-weight: var(--fw-light);
   }
 
-  .profile-name {
+  .home-profile-name {
     font-size: 22px;
   }
 
@@ -1011,7 +1014,7 @@
   .clone {
     flex: 0 0 100%;
   }
-  .profile-carousel-wrapper {
+  .home-profile-carousel-wrapper {
     padding: 0 18px;
   }
 }
@@ -1028,7 +1031,7 @@
     letter-spacing: 1px;
   }
 
-  .profile-card {
+  .home-profile-card {
     border-radius: 12px;
   }
 
@@ -1052,7 +1055,7 @@
 /* lg only: 992–1199.98 */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* override chỉ lg (laptop phổ biến) */
-  .profile-content {
+  .home-profile-content {
     padding: 2rem 0 3rem 0;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
