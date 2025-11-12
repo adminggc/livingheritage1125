@@ -843,6 +843,16 @@
   .book-title-small {
     font-size: 38px;
   }
+  .multi-carousel-control-prev {
+    left: -35px;
+  }
+  .multi-carousel-control-next {
+    right: -35px;
+  }
+  .carousel-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 /* ≤991.98 = md & down (tablet & phone) */
