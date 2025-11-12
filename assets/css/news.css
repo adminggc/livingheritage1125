@@ -303,6 +303,10 @@
   .news-main-title {
     font-size: 66px;
   }
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev,
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    top: 25%;
+  }
 }
 
 /* ≤991.98 = md & down (tablet & phone) */
