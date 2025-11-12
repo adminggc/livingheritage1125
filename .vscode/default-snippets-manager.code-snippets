@@ -1,0 +1,26 @@
+{
+	"ytb": {
+		"prefix": "ytb",
+		"description": "ytb",
+		"scope": "html",
+		"body": [
+			"          <div class=\"ytb-embed-video\">\r",
+			"            <iframe src=\"https://www.youtube.com/embed/3ofr9PQSerE?rel=0&modestbranding=1&playsinline=1\" loading=\"lazy\"\r",
+			"              allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\"\r",
+			"              allowfullscreen></iframe>\r",
+			"          </div>"
+		]
+	},
+	"add-news-img": {
+		"prefix": "add-news-img",
+		"description": "add-news-img",
+		"scope": "html",
+		"body": [
+			"          <figure class=\"article-figure\">\r",
+			"            <img\r",
+			"              src=\"assets/media/shared/news/cung-nhin-lai-hinh-anh-khai-truong-cac-hoat-dong-cua-gg-corporation-hanh-trinh-ruc-ro-chinh-thuc-bat-dau-3.jpg?v=12\"\r",
+			"              alt=\"Tin tức Living Heritage\" class=\"article-image img-fluid\">\r",
+			"          </figure>"
+		]
+	}
+}

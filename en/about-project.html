@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <!-- Include Head Partial -->
   <div id="head-content"></div>
-</head>
-
-<body>
+</head><body>
   <!-- Include Header Partial -->
-  <div id="header-content"></div>
-
-  <!-- Page Content -->
+  <div id="header-content"></div>  <!-- Page Content -->
   <section class="main-content">
     <div class="container">
       <div class="row justify-content-center">
@@ -36,12 +30,8 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Include Footer Partial -->
-  <div id="footer-content"></div>
-
-  <!-- Load Partial Script -->
+  </section>  <!-- Include Footer Partial -->
+  <div id="footer-content"></div>  <!-- Load Partial Script -->
   <script src="../assets/js/partial-loader.js"></script>
   <script>
     // Update page title after partials are loaded
@@ -49,22 +39,16 @@
       setTimeout(() => {
         document.title = 'About Project - Living Heritage';
       }, 100);
-    });
-
-    // Back to Top Button
+    });    // Back to Top Button
     document.addEventListener('DOMContentLoaded', function () {
-      const backToTopButton = document.getElementById('backToTop');
-
-      if (backToTopButton) {
+      const backToTopButton = document.getElementById('backToTop');      if (backToTopButton) {
         window.addEventListener('scroll', function () {
           if (window.pageYOffset > 300) {
             backToTopButton.style.display = 'block';
           } else {
             backToTopButton.style.display = 'none';
           }
-        });
-
-        backToTopButton.addEventListener('click', function () {
+        });        backToTopButton.addEventListener('click', function () {
           window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -77,6 +61,4 @@
     style="bottom: 20px; right: 20px; z-index: 1000; display: none; border-radius: 50%; width: 50px; height: 50px;">
     <i class="fas fa-arrow-up"></i>
   </button>
-</body>
-
-</html>
+</body></html>
