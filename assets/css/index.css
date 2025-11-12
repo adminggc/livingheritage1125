@@ -416,6 +416,37 @@
   pointer-events: none;
 }
 
+/* Podcast Carousel Controls */
+.podcast-carousel-control {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  background: transparent;
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+.podcast-carousel-control.carousel-control-prev {
+  left: -50px;
+}
+
+.podcast-carousel-control.carousel-control-next {
+  right: -50px;
+}
+
+.podcast-carousel-control:hover:not(.disabled) {
+  opacity: 0.8;
+}
+
+.podcast-carousel-control.disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Book Section */
 .book-section {
   padding: 0rem 0 4rem 0;
@@ -615,6 +646,16 @@
   min-width: 0;
 }
 
+#podcastMultiCarousel .multi-carousel-item,
+#podcastMultiCarousel .clone {
+  flex: 0 0 50%;
+}
+
+#newsMultiCarousel .multi-carousel-item,
+#newsMultiCarousel .clone {
+  flex: 0 0 33.33333333333333%;
+}
+
 .multi-carousel-item .home-profile-card {
   height: 100%;
 }
@@ -735,11 +776,11 @@
   align-items: center;
   justify-content: center;
   z-index: 5;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: var(--dark-green);
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-  transition: transform .14s ease, box-shadow .14s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
   font-size: 22px;
 }
 
@@ -748,18 +789,15 @@
   margin-left: 3px;
 }
 
-/* hover / active */
 .video-thumbnail .play-button:hover {
   transform: translate(-50%, -50%) scale(1.06);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
 }
 
-/* khi đang load/iframe hiển thị thì ẩn nút (gọi bằng class 'playing' bên JS) */
 .video-thumbnail.playing .play-button {
   display: none;
 }
 
-/* Podcast info (title dưới video) */
 .podcast-info {
   text-align: left;
   padding-top: 1rem;
@@ -777,12 +815,11 @@
   margin: 0;
 }
 
-
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
   /* override chung cho ≤xl */
-    .home-profile-name {
+  .home-profile-name {
     font-size: 40px;
   }
 }
@@ -798,7 +835,7 @@
   .home-profile-name {
     font-size: 32px;
   }
-    .book-title-small {
+  .book-title-small {
     font-size: 38px;
   }
 }
@@ -1055,6 +1092,19 @@
     right: -15px;
   }
 
+  .podcast-carousel-control {
+    width: 40px;
+    height: 40px;
+  }
+
+  .podcast-carousel-control.carousel-control-prev {
+    left: -15px;
+  }
+
+  .podcast-carousel-control.carousel-control-next {
+    right: -15px;
+  }
+
   .media-content {
     padding: 1.5rem 0 0 0;
   }
@@ -1104,14 +1154,22 @@
     padding: 0 18px;
   }
 
-    .video-thumbnail .play-button {
+  .video-thumbnail .play-button {
     width: 54px;
     height: 54px;
     font-size: 18px;
   }
 
-    .podcast-title {
+  .podcast-title {
     font-size: 16px;
+  }
+  #podcastMultiCarousel .multi-carousel-item,
+  #podcastMultiCarousel .clone {
+    flex: 0 0 100%;
+  }
+  #newsMultiCarousel .multi-carousel-item,
+  #newsMultiCarousel .clone {
+    flex: 0 0 100%;
   }
 }
 
