@@ -126,6 +126,90 @@
   padding: 3rem 0 4rem 0;
 }
 
+.news-bottom-carousel-wrapper {
+  position: relative;
+  padding: 0;
+}
+
+/* Multi-carousel container for news bottom section */
+#newsBottomMultiCarousel {
+  cursor: grab;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#newsBottomMultiCarousel.dragging {
+  cursor: grabbing;
+}
+
+#newsBottomCarouselInner {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Desktop: 3 items per slide (33.33% each) */
+#newsBottomMultiCarousel .multi-carousel-item,
+#newsBottomMultiCarousel .clone {
+  box-sizing: border-box;
+  flex: 0 0 33.33333333333333%;
+  padding: 0 15px;
+  position: relative;
+}
+
+/* Carousel controls positioning - override art-culture-carousel-control */
+.news-bottom-carousel-wrapper .multi-carousel-control-prev,
+.news-bottom-carousel-wrapper .multi-carousel-control-next {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  width: 40px;
+  z-index: 10;
+  opacity: 1;
+  padding: 0;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-prev {
+  left: -50px;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-next {
+  right: -50px;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-prev:hover:not(.disabled),
+.news-bottom-carousel-wrapper
+  .multi-carousel-control-next:hover:not(.disabled) {
+  opacity: 0.8;
+}
+
+.news-bottom-carousel-wrapper .art-culture-carousel-control img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Desktop carousel controls positioning */
+@media (min-width: 768px) {
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev {
+    left: -50px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    right: -50px;
+  }
+}
+
 .news-bottom-card {
   position: relative;
 }
@@ -183,7 +267,7 @@
   text-align: center;
 }
 
-.article-figure+.article-figure {
+.article-figure + .article-figure {
   margin-top: 1.2rem;
   /* khoảng cách giữa 2 ảnh nếu có */
 }
@@ -216,7 +300,7 @@
 /* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
   /* override chung cho ≤lg */
-    .news-main-title {
+  .news-main-title {
     font-size: 66px;
   }
 }
@@ -224,14 +308,13 @@
 /* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
   /* override chung cho ≤md */
-    .news-main-title {
+  .news-main-title {
     font-size: 55px;
   }
 }
 
 /* ≤767.98 = sm & down (phone) */
 @media (max-width: 767.98px) {
-
   /* override chung cho ≤sm */
   .news-page-title {
     font-size: 28px;
@@ -267,19 +350,29 @@
     padding: 1rem 0 4rem 0;
   }
 
-  .carousel-inner {
+  /* Mobile: 1 item per slide (100%) */
+  #newsBottomMultiCarousel .multi-carousel-item,
+  #newsBottomMultiCarousel .clone {
+    flex: 0 0 100%;
     padding: 0 2rem;
   }
 
-  .art-culture-carousel-control img {
-    width: 26px;
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev,
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    width: 40px;
+    height: 40px;
   }
 
-  .carousel-control-prev {
+  .news-bottom-carousel-wrapper .art-culture-carousel-control img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev {
     left: -15px;
   }
 
-  .carousel-control-next {
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
     right: -15px;
   }
 
@@ -300,13 +393,11 @@
 
 /* ≤575.98 = xs (phone nhỏ) */
 @media (max-width: 575.98px) {
-
   /* override chung cho ≤xs */
   .news-main-title {
     font-size: 33px;
   }
 }
-
 
 /* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
 /* xxl only: ≥1400 */

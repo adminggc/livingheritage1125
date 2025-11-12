@@ -656,6 +656,11 @@
   flex: 0 0 33.33333333333333%;
 }
 
+#premiumMultiCarousel .multi-carousel-item,
+#premiumMultiCarousel .clone {
+  flex: 0 0 33.33333333333333%;
+}
+
 .multi-carousel-item .home-profile-card {
   height: 100%;
 }
@@ -1032,12 +1037,12 @@
   }
 
   .home-profile-title {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: var(--fw-light);
   }
 
   .home-profile-name {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .book-section {
@@ -1171,6 +1176,13 @@
   #newsMultiCarousel .clone {
     flex: 0 0 100%;
   }
+  #premiumMultiCarousel .multi-carousel-item,
+  #premiumMultiCarousel .clone {
+    flex: 0 0 100%;
+  }
+  .multi-carousel-inner {
+    align-items: center;
+  }
 }
 
 /* ≤575.98 = xs (phone nhỏ) */
@@ -1185,8 +1197,9 @@
     letter-spacing: 1px;
   }
 
-  .home-profile-card {
+  .multi-carousel-item .home-profile-card {
     border-radius: 12px;
+    height: auto;
   }
 
   .category-label {
