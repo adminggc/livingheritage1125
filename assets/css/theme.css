@@ -539,6 +539,67 @@ a {
   border: 0;
 }
 
+/* ---------- Video thumbnail / play button ---------- */
+/* wrapper tỉ lệ 16:9, responsive */
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 */
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--dark-green);
+  /* fallback */
+}
+
+/* ảnh thumbnail và iframe phủ toàn bộ khung */
+.video-thumbnail img,
+.video-thumbnail iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: var(--dark-green);
+  /* cho đều nền */
+}
+
+/* Play button chính giữa */
+.video-thumbnail .play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--dark-green);
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+  font-size: 22px;
+}
+
+/* icon trong nút (fontawesome) */
+.video-thumbnail .play-button i {
+  margin-left: 3px;
+}
+
+.video-thumbnail .play-button:hover {
+  transform: translate(-50%, -50%) scale(1.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+
+.video-thumbnail.playing .play-button {
+  display: none;
+}
+
 /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
@@ -620,6 +681,12 @@ a {
   .section-title {
     font-size: 34px;
   }
+
+  .video-thumbnail .play-button {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -627,13 +694,10 @@ a {
     display: flex !important;
   }
 
-  /* hiện menu desktop */
   .navbar-toggler,
   .mobile-menu-overlay {
     display: none !important;
   }
-
-  /* ẩn hamburger & overlay */
 }
 
 /* ≤767.98 = sm & down (phone) */
@@ -707,6 +771,12 @@ a {
   .play-btn svg {
     width: 20px;
     height: 20px;
+  }
+
+  .video-thumbnail .play-button {
+    width: 54px;
+    height: 54px;
+    font-size: 18px;
   }
 
   .footer-title {
