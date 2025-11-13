@@ -5,37 +5,44 @@
   padding: 2rem 0 2rem 0;
   color: var(--dark-green);
 }
+
 .content-section-premium .section-title {
   padding: 2rem 0 0 0;
 }
+
 .content-section-premium .sub-title {
   font-size: 32px;
   font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding: 2rem 0 1rem 0;
 }
+
 .media-content h3 {
   font-size: 28px;
   font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding-top: 10px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.4;
 }
+
 .content-section-premium.detail-science .container {
   border-top: 1px solid rgba(27, 54, 27, 0.5);
   padding: 2rem 15px 0rem 15px;
 }
+
 .content-section-premium.psychology .container {
   padding: 3rem 15px 2em 15px;
   border-bottom: 1px solid rgba(27, 54, 27, 0.5);
   border-top: 1px solid rgba(27, 54, 27, 0.5);
-} /* Wellness Tips Details */
+}
+
+/* Wellness Tips Details */
 .hero-section {
   position: relative;
   height: 50vh;
@@ -45,15 +52,19 @@
   border-radius: 12px;
   overflow: hidden;
 }
+
 .content-section-tips {
   padding: 2rem 0;
 }
+
 .section-tips-header {
   padding: 2rem 0;
 }
+
 .section-tips-header .section-title {
   padding: 2rem 0;
 }
+
 .section-tips-content-body p.section-figure-quote {
   font-style: italic;
   font-size: 32px;
@@ -62,12 +73,14 @@
   line-height: 1.2;
   color: var(--dark-gray);
 }
+
 .content-section-tips,
 .content-section-tips * {
   color: var(--dark-green);
   text-align: justify;
   letter-spacing: 0.01em;
 }
+
 /* .content-section-tips p {
   font-size: 24px;
   color: var(--dark-green);
@@ -80,6 +93,7 @@
   padding: 0.5rem 1rem;
   margin: 1rem 0;
 }
+
 .section-tips-content-title h2 {
   font-size: 62px;
   padding: 0rem 0 2rem 0;
@@ -87,13 +101,16 @@
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
 }
+
 .section-tips-content-body p {
   color: var(--dark-green);
 }
+
 .section-tips-content-body h3 {
   font-weight: var(--fw-semibold);
   color: var(--dark-green);
 }
+
 .section-figure-quote p.quote-title {
   font-size: 24px;
   color: var(--dark-green);
@@ -101,12 +118,14 @@
   letter-spacing: 0.01em;
   text-align: center;
 }
+
 .carousel-inner p {
   font-size: 34px;
   font-weight: var(--fw-light);
   letter-spacing: 1px;
   text-align: center;
 }
+
 p.quote-author {
   font-size: 24px;
   font-weight: var(--fw-bold);
@@ -114,21 +133,25 @@ p.quote-author {
   text-align: center;
   margin: 0px 0;
 }
+
 .quote-carousel-btn img {
   width: 20px;
 }
+
 .quote-carousel-btn {
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
+
 .quote-carousel-btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
+
 .content-representative h4 {
   font-size: 24px;
   color: var(--dark-green);
@@ -138,15 +161,19 @@ p.quote-author {
   text-transform: uppercase;
   padding: 4rem 0 20px 0;
 }
+
 .content-representative ul {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 0.01em;
 }
+
 .media-card .media-img-premium {
   border-radius: 12px;
-} /* Multi-Carousel Styles */
+}
+
+/* Multi-Carousel Styles */
 .art-culture-carousel-wrapper {
   position: relative;
 }
@@ -204,12 +231,14 @@ p.quote-author {
   width: 30px;
   z-index: 10;
 }
+
 .multi-carousel-control-prev img,
 .multi-carousel-control-next img {
   width: 34px;
   height: 34px;
   object-fit: contain;
 }
+
 .multi-carousel-control-prev {
   left: -50px;
 }
@@ -238,7 +267,9 @@ p.quote-author {
 #detailPsychologyCarousel .media-card {
   margin-bottom: 0;
   padding: 25px 10px;
+  height: 560px;
 }
+
 #neuroCarousel .media-img-premium,
 #healthCarousel .media-img-premium,
 #psychologyCarousel .media-img-premium,
@@ -248,15 +279,18 @@ p.quote-author {
   width: 100%;
   height: auto;
 }
+
 .content-representative {
   padding: 6rem 0 0 0;
 }
+
 .tips-image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2.5rem 0;
 }
+
 .tips-centered-image {
   max-width: 100%;
   height: auto;
@@ -264,58 +298,122 @@ p.quote-author {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .tips-centered-image:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-} /* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+}
+
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
 /* ≤1399.98 = xl & down */
 @media (max-width: 1399.98px) {
+
   /* override chung cho ≤xl */
-} /* ≤1199.98 = lg & down */
+  #neuroCarousel .media-card,
+  #healthCarousel .media-card,
+  #psychologyCarousel .media-card,
+  #detailNeuroCarousel .media-card,
+  #detailHealthCarousel .media-card,
+  #detailPsychologyCarousel .media-card {
+    height: 480px;
+  }
+
+.media-content h3 {
+    font-size: 25px;
+  }
+}
+
+/* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
+
   /* override chung cho ≤lg */
   .section-tips-content-title h2 {
     font-size: 52px;
   }
+
   .art-culture-carousel-control img {
     width: 26px;
   }
+
   .multi-carousel-control-prev {
     left: -28px;
   }
+
   .multi-carousel-control-next {
     right: -28px;
   }
+
   .multi-carousel-control-next,
   .multi-carousel-control-prev {
     top: 30%;
   }
-} /* ≤991.98 = md & down (tablet & phone) */
+
+  /* override chung cho ≤xl */
+  #neuroCarousel .media-card,
+  #healthCarousel .media-card,
+  #psychologyCarousel .media-card,
+  #detailNeuroCarousel .media-card,
+  #detailHealthCarousel .media-card,
+  #detailPsychologyCarousel .media-card {
+    height: 420px;
+  }
+
+.media-content h3 {
+    font-size: 23px;
+    font-weight: var(--fw-semibold);
+  }
+}
+
+/* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
+
   /* override chung cho ≤md */
   .tip-card .tip-img {
     height: 190px;
   }
+
   .section-tips-content-title h2 {
     font-size: 42px;
   }
-} /* ≤767.98 = sm & down (phone) */
+
+    /* override chung cho ≤xl */
+  #neuroCarousel .media-card,
+  #healthCarousel .media-card,
+  #psychologyCarousel .media-card,
+  #detailNeuroCarousel .media-card,
+  #detailHealthCarousel .media-card,
+  #detailPsychologyCarousel .media-card {
+    height: 340px;
+  }
+.media-content h3 {
+    font-size: 20px;
+    font-weight: var(--fw-semibold);
+  }
+
+}
+
+/* ≤767.98 = sm & down (phone) */
 @media (max-width: 767.98px) {
+
   /* override chung cho ≤sm */
   .art-culture-carousel-wrapper {
     padding: 0.2rem 1.5rem 0.5rem 1.5rem;
   }
+
   .content-section-premium {
     padding: 0 0 1rem 0;
   }
+
   #neuroCarousel .multi-carousel-item,
   #neuroCarousel .clone {
     flex: 0 0 50%;
   }
+
   #relatedArticlesCarousel .multi-carousel-item,
   #relatedArticlesCarousel .clone {
     flex: 0 0 50%;
   }
+
   .multi-carousel-control-prev img,
   .multi-carousel-control-next img {
     width: 24px;
@@ -323,14 +421,20 @@ p.quote-author {
     object-fit: contain;
   }
 
-  #neuroCarousel .media-content h3,
-  #healthCarousel .media-content h3,
-  #psychologyCarousel .media-content h3,
-  #detailNeuroCarousel .media-content h3,
-  #detailHealthCarousel .media-content h3,
-  #detailPsychologyCarousel .media-content h3 {
-    font-size: 20px;
+    /* override chung cho ≤xl */
+  #neuroCarousel .media-card,
+  #healthCarousel .media-card,
+  #psychologyCarousel .media-card,
+  #detailNeuroCarousel .media-card,
+  #detailHealthCarousel .media-card,
+  #detailPsychologyCarousel .media-card {
+    height: 390px;
   }
+.media-content h3 {
+    font-size: 20px;
+    font-weight: var(--fw-semibold);
+  }
+
   #neuroCarousel .media-content p,
   #healthCarousel .media-content p,
   #psychologyCarousel .media-content p,
@@ -340,49 +444,81 @@ p.quote-author {
     font-size: 16px;
     text-align: justify;
   }
+
   .art-culture-carousel-control img {
     width: 26px;
   }
+
   .multi-carousel-control-prev {
     left: -8px;
   }
+
   .multi-carousel-control-next {
     right: -8px;
   }
+
   .multi-carousel-control-next,
   .multi-carousel-control-prev {
     top: 40%;
   }
+
   .content-section-premium.psychology .container {
     padding: 1rem 15px 1em 15px;
   }
+
   .content-representative {
     padding: 0rem 0 0 0;
   }
+
   .section-tips-content-title h2 {
     font-size: 40px;
   }
-} /* ≤575.98 = xs (phone nhỏ) */
+}
+
+/* ≤575.98 = xs (phone nhỏ) */
 @media (max-width: 575.98px) {
+
   /* override chung cho ≤xs */
   .section-tips-content-title h2 {
     font-size: 38px;
   }
+      /* override chung cho ≤xl */
+  #neuroCarousel .media-card,
+  #healthCarousel .media-card,
+  #psychologyCarousel .media-card,
+  #detailNeuroCarousel .media-card,
+  #detailHealthCarousel .media-card,
+  #detailPsychologyCarousel .media-card {
+    height: 250px;
+  }
+.media-content h3 {
+    font-size: 16px;
+    font-weight: var(--fw-semibold);
+  }
 }
+
 /* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
 /* xxl only: ≥1400 */
 @media (min-width: 1400px) {
   /* override riêng cho xxl nếu cần */
-} /* xl only: 1200–1399.98 */
+}
+
+/* xl only: 1200–1399.98 */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   /* override chỉ xl */
-} /* lg only: 992–1199.98 */
+}
+
+/* lg only: 992–1199.98 */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   /* override chỉ lg (laptop phổ biến) */
-} /* md only: 768–991.98 */
+}
+
+/* md only: 768–991.98 */
 @media (min-width: 768px) and (max-width: 991.98px) {
   /* override chỉ md (tablet) */
-} /* sm only: 576–767.98 */
+}
+
+/* sm only: 576–767.98 */
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* override chỉ sm (phone lớn) */
 }
