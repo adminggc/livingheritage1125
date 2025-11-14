@@ -420,24 +420,188 @@
     document.getElementById('mobileMenuToggle')?.addEventListener('click', function () {
       document.getElementById('mobileMenuOverlay')?.classList.add('active');
       document.body.style.overflow = 'hidden';
-    }); document.getElementById('mobileMenuClose')?.addEventListener('click', function () {
+    });
+
+    document.getElementById('mobileMenuClose')?.addEventListener('click', function () {
       document.getElementById('mobileMenuOverlay')?.classList.remove('active');
       document.body.style.overflow = '';
-    }); document.getElementById('mobileMenuOverlay')?.addEventListener('click', function (e) {
+    });
+
+    document.getElementById('mobileMenuOverlay')?.addEventListener('click', function (e) {
       if (e.target === this) {
         this.classList.remove('active');
         document.body.style.overflow = '';
       }
-    });    // Back to Top Button
+    });
+
+    // News Bottom Multi-Carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      // Configuration for News Bottom Carousel
+      let newsBottomItemsPerSlide = window.innerWidth < 720 ? 1 : 3; // 1 item on mobile, 3 items on desktop
+      const newsBottomTotalItems = 15;
+      let newsBottomSlideBy = window.innerWidth < 720 ? 1 : 1; // Slide by 1 item at a time
+
+      const newsBottomCarousel = document.getElementById("newsBottomMultiCarousel");
+      const newsBottomCarouselInner = document.getElementById("newsBottomCarouselInner");
+      const newsBottomPrevBtn = document.getElementById("newsBottomPrevBtn");
+      const newsBottomNextBtn = document.getElementById("newsBottomNextBtn");
+
+      if (!newsBottomCarousel || !newsBottomCarouselInner || !newsBottomPrevBtn || !newsBottomNextBtn) {
+        return;
+      }
+
+      function updateNewsBottomConfig() {
+        const isMobile = window.innerWidth < 720;
+        newsBottomItemsPerSlide = isMobile ? 1 : 3;
+        newsBottomSlideBy = isMobile ? 1 : 1;
+        // Reinitialize clones when screen size changes
+        initializeNewsBottomClones();
+        // Reset position
+        newsBottomPosition = newsBottomItemsPerSlide;
+        updateNewsBottomCarouselPosition(false);
+      }
+
+      function initializeNewsBottomClones() {
+        const originalItems = Array.from(
+          newsBottomCarouselInner.querySelectorAll(".multi-carousel-item:not(.clone)")
+        );
+        newsBottomCarouselInner.querySelectorAll(".clone").forEach((clone) => clone.remove());
+
+        const lastClones = originalItems
+          .slice(-newsBottomItemsPerSlide)
+          .map((item) => {
+            const clone = item.cloneNode(true);
+            clone.classList.add("clone");
+            return clone;
+          })
+          .reverse();
+        lastClones.forEach((clone) => newsBottomCarouselInner.prepend(clone));
+
+        const firstClones = originalItems.slice(0, newsBottomItemsPerSlide).map((item) => {
+          const clone = item.cloneNode(true);
+          clone.classList.add("clone");
+          return clone;
+        });
+        firstClones.forEach((clone) => newsBottomCarouselInner.append(clone));
+      }
+
+      initializeNewsBottomClones();
+
+      let newsBottomCurrentIndex = 0;
+      let newsBottomPosition = newsBottomItemsPerSlide;
+      let newsBottomIsAnimating = false;
+
+      function updateNewsBottomCarouselPosition(animate = true) {
+        if (animate) {
+          newsBottomCarouselInner.style.transition = "transform 0.5s ease";
+        } else {
+          newsBottomCarouselInner.style.transition = "none";
+        }
+        const translateX = (newsBottomPosition * -100) / newsBottomItemsPerSlide;
+        newsBottomCarouselInner.style.transform = `translateX(${translateX}%)`;
+      }
+
+      updateNewsBottomCarouselPosition(false);
+
+      newsBottomCarouselInner.addEventListener("transitionend", function () {
+        newsBottomIsAnimating = false;
+        if (newsBottomPosition >= newsBottomTotalItems + newsBottomItemsPerSlide) {
+          newsBottomPosition = newsBottomItemsPerSlide + (newsBottomPosition - (newsBottomTotalItems + newsBottomItemsPerSlide));
+          updateNewsBottomCarouselPosition(false);
+        } else if (newsBottomPosition < newsBottomItemsPerSlide) {
+          newsBottomPosition = newsBottomTotalItems + newsBottomPosition;
+          updateNewsBottomCarouselPosition(false);
+        }
+        newsBottomCurrentIndex = (newsBottomPosition - newsBottomItemsPerSlide) % newsBottomTotalItems;
+      });
+
+      function newsBottomNext() {
+        if (newsBottomIsAnimating) return;
+        newsBottomIsAnimating = true;
+        newsBottomPosition += newsBottomSlideBy;
+        updateNewsBottomCarouselPosition();
+      }
+
+      function newsBottomPrev() {
+        if (newsBottomIsAnimating) return;
+        newsBottomIsAnimating = true;
+        newsBottomPosition -= newsBottomSlideBy;
+        updateNewsBottomCarouselPosition();
+      }
+
+      newsBottomNextBtn.addEventListener("click", newsBottomNext);
+      newsBottomPrevBtn.addEventListener("click", newsBottomPrev);
+
+      // Mouse drag functionality
+      let newsBottomIsDragging = false;
+      let newsBottomStartX = 0;
+      let newsBottomStartPosition = 0;
+
+      newsBottomCarousel.addEventListener("mousedown", (e) => {
+        if (newsBottomIsAnimating) return;
+        newsBottomIsDragging = true;
+        newsBottomStartX = e.clientX;
+        newsBottomStartPosition = newsBottomPosition;
+        newsBottomCarousel.classList.add("dragging");
+        newsBottomCarouselInner.style.transition = "none";
+      });
+
+      newsBottomCarousel.addEventListener("mousemove", (e) => {
+        if (!newsBottomIsDragging) return;
+        const x = e.clientX;
+        const walk = ((x - newsBottomStartX) / newsBottomCarousel.offsetWidth) * newsBottomItemsPerSlide;
+        const newPosition = newsBottomStartPosition - walk;
+        const translateX = (newPosition * -100) / newsBottomItemsPerSlide;
+        newsBottomCarouselInner.style.transform = `translateX(${translateX}%)`;
+      });
+
+      newsBottomCarousel.addEventListener("mouseup", (e) => {
+        if (!newsBottomIsDragging) return;
+        newsBottomIsDragging = false;
+        newsBottomCarousel.classList.remove("dragging");
+        newsBottomCarouselInner.style.transition = "transform 0.5s ease";
+        const walk = ((newsBottomStartX - e.clientX) / newsBottomCarousel.offsetWidth) * newsBottomItemsPerSlide;
+        if (Math.abs(walk) > 0.3) {
+          if (walk > 0) newsBottomNext();
+          else newsBottomPrev();
+        } else {
+          updateNewsBottomCarouselPosition();
+        }
+      });
+
+      newsBottomCarousel.addEventListener("mouseleave", () => {
+        if (newsBottomIsDragging) {
+          newsBottomIsDragging = false;
+          newsBottomCarousel.classList.remove("dragging");
+          newsBottomCarouselInner.style.transition = "transform 0.5s ease";
+          updateNewsBottomCarouselPosition();
+        }
+      });
+
+      // Handle window resize
+      let resizeTimeout;
+      window.addEventListener("resize", () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          updateNewsBottomConfig();
+        }, 250);
+      });
+    });
+
+    // Back to Top Button
     document.addEventListener('DOMContentLoaded', function () {
-      const backToTopButton = document.getElementById('backToTop'); if (backToTopButton) {
+      const backToTopButton = document.getElementById('backToTop');
+
+      if (backToTopButton) {
         window.addEventListener('scroll', function () {
           if (window.pageYOffset > 300) {
             backToTopButton.style.display = 'block';
           } else {
             backToTopButton.style.display = 'none';
           }
-        }); backToTopButton.addEventListener('click', function () {
+        });
+
+        backToTopButton.addEventListener('click', function () {
           window.scrollTo({
             top: 0,
             behavior: 'smooth'
