@@ -2,43 +2,58 @@
 .content-section-premium {
   padding: 2rem 0 2rem 0;
   color: var(--dark-green);
-}.content-section-premium .section-title {
+}
+
+.content-section-premium .section-title {
   padding: 2rem 0 0 0;
-}.content-section-premium .sub-title {
+}
+
+.content-section-premium .sub-title {
   font-size: 32px;
   font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding: 2rem 0 1rem 0;
-}.media-content h3 {
+}
+
+.media-content h3 {
   font-size: 28px;
   font-weight: var(--fw-bold);
   margin-bottom: 10px;
   padding-top: 10px;
 }
+
 .content-section-premium.detail-science .container {
   border-top: 1px solid rgba(27, 54, 27, 0.5);
   padding: 2rem 15px 0rem 15px;
 }
+
 .content-section-premium.psychology .container {
   padding: 3rem 15px 2em 15px;
   border-bottom: 1px solid rgba(27, 54, 27, 0.5);
   border-top: 1px solid rgba(27, 54, 27, 0.5);
 }
-/* Wellness Tips Details */.hero-section {
+
+/* Wellness Tips Details */
+.hero-section {
   position: relative;
   height: 50vh;
   background-image: url("../img/vi/premium/bannerdetail.png?v=1");
   background-size: cover;
   background-position: center;
 }
+
 .content-section-jazz {
   padding: 2rem 0;
 }
+
 .content-section-disan {
   padding: 2rem 0;
-}.content-section-disan .section-title {
+}
+
+.content-section-disan .section-title {
   padding: 2rem 0;
 }
+
 .content-section-jazz-content p.content-section-jazz-quote {
   font-style: italic;
   font-size: 32px;
@@ -48,6 +63,7 @@
   line-height: 1.2;
   color: #000;
 }
+
 .content-section-jazz p {
   font-size: 24px;
   color: var(--dark-green);
@@ -55,54 +71,73 @@
   letter-spacing: 0.01em;
   text-align: justify;
 }
+
 .content-section-jazz-title h2 {
   font-size: 50px;
   padding: 0rem 0 2rem 0;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
-}.content-section-jazz-title p {
+}
+
+.content-section-jazz-title p {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-extrabold);
   letter-spacing: 0.01em;
   padding: 2rem 0;
-}.content-section-jazz-content p {
+}
+
+.content-section-jazz-content p {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-regular);
   letter-spacing: 0.01em;
   text-align: justify;
-}.content-section-jazz-quote p.quote-title {
+}
+
+.content-section-jazz-quote p.quote-title {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: center;
-}.carousel-inner p {
+}
+
+.carousel-inner p {
   font-size: 34px;
   font-weight: var(--fw-light);
   letter-spacing: 1px;
   text-align: center;
-}p.quote-author {
+}
+
+p.quote-author {
   font-size: 24px;
   font-weight: var(--fw-bold);
   letter-spacing: 0.01em;
   text-align: center;
   margin: 0px 0;
-}.quote-carousel-btn img {
+}
+
+.quote-carousel-btn img {
   width: 20px;
-}.quote-carousel-btn {
+}
+
+.quote-carousel-btn {
   background-color: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
-}.quote-carousel-btn-wrapper {
+}
+
+.quote-carousel-btn-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-}.content-representative h4 {
+}
+
+.content-representative h4 {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-bold);
@@ -110,17 +145,22 @@
   text-align: center;
   text-transform: uppercase;
   padding: 4rem 0 20px 0;
-}.content-representative ul {
+}
+
+.content-representative ul {
   font-size: 24px;
   color: var(--dark-green);
   font-weight: var(--fw-light);
   letter-spacing: 0.01em;
 }
+
 @media (min-width: 992px) {
   .tip-card .tip-img {
     height: 190px;
   }
-}/* Premium Carousel Styles */
+}
+
+/* Premium Carousel Styles */
 #neuroCarousel .media-card,
 #healthCarousel .media-card,
 #psychologyCarousel .media-card,
@@ -128,7 +168,9 @@
 #detailHealthCarousel .media-card,
 #detailPsychologyCarousel .media-card {
   margin-bottom: 0;
-}#neuroCarousel .media-img-premium,
+}
+
+#neuroCarousel .media-img-premium,
 #healthCarousel .media-img-premium,
 #psychologyCarousel .media-img-premium,
 #detailNeuroCarousel .media-img-premium,
@@ -137,40 +179,53 @@
   width: 100%;
   height: auto;
 }
+
 .content-representative {
   padding: 6rem 0 0 0;
 }
+
 @media (max-width: 768px) {
   .art-culture-carousel-wrapper {
     padding: 0.2rem 0 0.5rem 0;
   }
+
   .content-section-premium {
     padding: 0 0 1rem 0;
-  }  #neuroCarousel .carousel-inner,
+  }
+
+  #neuroCarousel .carousel-inner,
   #healthCarousel .carousel-inner,
   #psychologyCarousel .carousel-inner,
   #detailNeuroCarousel .carousel-inner,
   #detailHealthCarousel .carousel-inner,
   #detailPsychologyCarousel .carousel-inner {
     padding: 0 2rem;
-  }  #neuroCarousel .carousel-item .row,
+  }
+
+  #neuroCarousel .carousel-item .row,
   #healthCarousel .carousel-item .row,
   #detailNeuroCarousel .carousel-item .row,
   #detailHealthCarousel .carousel-item .row {
     margin: 0;
-  }  #neuroCarousel .carousel-item .col-6,
+  }
+
+  #neuroCarousel .carousel-item .col-6,
   #healthCarousel .carousel-item .col-6,
   #detailNeuroCarousel .carousel-item .col-6,
   #detailHealthCarousel .carousel-item .col-6 {
     padding: 0 0.5rem;
-  }  #neuroCarousel .media-content h3,
+  }
+
+  #neuroCarousel .media-content h3,
   #healthCarousel .media-content h3,
   #psychologyCarousel .media-content h3,
   #detailNeuroCarousel .media-content h3,
   #detailHealthCarousel .media-content h3,
   #detailPsychologyCarousel .media-content h3 {
     font-size: 20px;
-  }  #neuroCarousel .media-content p,
+  }
+
+  #neuroCarousel .media-content p,
   #healthCarousel .media-content p,
   #psychologyCarousel .media-content p,
   #detailNeuroCarousel .media-content p,
@@ -179,22 +234,28 @@
     font-size: 16px;
     text-align: justify;
   }
+
   .art-culture-carousel-control img {
     width: 26px;
   }
+
   .carousel-control-prev {
     left: -15px;
   }
+
   .carousel-control-next {
     right: -15px;
   }
+
   .carousel-control-next,
   .carousel-control-prev {
     top: -40%;
   }
+
   .content-section-premium.psychology .container {
     padding: 1rem 15px 1em 15px;
   }
+
   .content-representative {
     padding: 0rem 0 0 0;
   }

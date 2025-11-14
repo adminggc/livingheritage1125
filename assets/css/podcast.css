@@ -32,8 +32,9 @@
 
 /* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
+
   /* override chung cho ≤md */
-    .podcast-title {
+  .podcast-title {
     font-size: 25px;
   }
 }

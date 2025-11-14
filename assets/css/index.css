@@ -557,8 +557,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  display: inline-block;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  
 }
 
 .media-text {

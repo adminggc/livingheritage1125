@@ -318,7 +318,7 @@ p.quote-author {
     height: 480px;
   }
 
-.media-content h3 {
+  .media-content h3 {
     font-size: 25px;
   }
 }
@@ -358,7 +358,7 @@ p.quote-author {
     height: 420px;
   }
 
-.media-content h3 {
+  .media-content h3 {
     font-size: 23px;
     font-weight: var(--fw-semibold);
   }
@@ -376,7 +376,7 @@ p.quote-author {
     font-size: 42px;
   }
 
-    /* override chung cho ≤xl */
+  /* override chung cho ≤xl */
   #neuroCarousel .media-card,
   #healthCarousel .media-card,
   #psychologyCarousel .media-card,
@@ -385,7 +385,8 @@ p.quote-author {
   #detailPsychologyCarousel .media-card {
     height: 340px;
   }
-.media-content h3 {
+
+  .media-content h3 {
     font-size: 20px;
     font-weight: var(--fw-semibold);
   }
@@ -421,7 +422,7 @@ p.quote-author {
     object-fit: contain;
   }
 
-    /* override chung cho ≤xl */
+  /* override chung cho ≤xl */
   #neuroCarousel .media-card,
   #healthCarousel .media-card,
   #psychologyCarousel .media-card,
@@ -430,7 +431,8 @@ p.quote-author {
   #detailPsychologyCarousel .media-card {
     height: 390px;
   }
-.media-content h3 {
+
+  .media-content h3 {
     font-size: 20px;
     font-weight: var(--fw-semibold);
   }
@@ -482,7 +484,8 @@ p.quote-author {
   .section-tips-content-title h2 {
     font-size: 38px;
   }
-      /* override chung cho ≤xl */
+
+  /* override chung cho ≤xl */
   #neuroCarousel .media-card,
   #healthCarousel .media-card,
   #psychologyCarousel .media-card,
@@ -491,7 +494,8 @@ p.quote-author {
   #detailPsychologyCarousel .media-card {
     height: 250px;
   }
-.media-content h3 {
+
+  .media-content h3 {
     font-size: 16px;
     font-weight: var(--fw-semibold);
   }

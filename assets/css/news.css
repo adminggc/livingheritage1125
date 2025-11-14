@@ -188,8 +188,7 @@
 }
 
 .news-bottom-carousel-wrapper .multi-carousel-control-prev:hover:not(.disabled),
-.news-bottom-carousel-wrapper
-  .multi-carousel-control-next:hover:not(.disabled) {
+.news-bottom-carousel-wrapper .multi-carousel-control-next:hover:not(.disabled) {
   opacity: 0.8;
 }
 
@@ -268,7 +267,7 @@
   text-align: center;
 }
 
-.article-figure + .article-figure {
+.article-figure+.article-figure {
   margin-top: 1.2rem;
   /* khoảng cách giữa 2 ảnh nếu có */
 }
@@ -300,10 +299,12 @@
 
 /* ≤1199.98 = lg & down */
 @media (max-width: 1199.98px) {
+
   /* override chung cho ≤lg */
   .news-main-title {
     font-size: 66px;
   }
+
   .news-bottom-carousel-wrapper .multi-carousel-control-prev,
   .news-bottom-carousel-wrapper .multi-carousel-control-next {
     top: 25%;
@@ -312,6 +313,7 @@
 
 /* ≤991.98 = md & down (tablet & phone) */
 @media (max-width: 991.98px) {
+
   /* override chung cho ≤md */
   .news-main-title {
     font-size: 55px;
@@ -320,6 +322,7 @@
 
 /* ≤767.98 = sm & down (phone) */
 @media (max-width: 767.98px) {
+
   /* override chung cho ≤sm */
   .news-page-title {
     font-size: 28px;
@@ -398,6 +401,7 @@
 
 /* ≤575.98 = xs (phone nhỏ) */
 @media (max-width: 575.98px) {
+
   /* override chung cho ≤xs */
   .news-main-title {
     font-size: 33px;
