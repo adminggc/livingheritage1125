@@ -71,8 +71,8 @@
           <button class="navbar-toggler" type="button" id="mobileMenuToggle">
             <i class="fas fa-bars"></i>
           </button>
-          <a href="#" class="langSwitch mobile-lang-switch" id="langLinkMobile" aria-label="Switch language">
-            <img id="langIconMobile" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
+          <a href="#" class="langSwitch mobile-lang-switch" aria-label="Switch language">
+            <img class="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
           </a>
         </div>
         <div class="collapse navbar-collapse" id="navbarMain">
@@ -83,10 +83,11 @@
             <li class="nav-item"><a class="nav-link" href="/#book">Sách</a></li>
             <li class="nav-item"><a class="nav-link" href="wellness-tips.html">Wellness Tips</a></li>
             <li class="nav-item"><a class="nav-link" href="podcast.html">Podcast</a></li>
-            <li class="nav-item"><a class="nav-link" href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed.html">Tin tức</a></li>
+            <li class="nav-item"><a class="nav-link"
+                href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed.html">Tin tức</a></li>
             <li class="nav-item ">
-              <a href="#" class="langSwitch" id="langLink" aria-label="Switch language">
-                <img id="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
+              <a href="#" class="langSwitch" aria-label="Switch language">
+                <img class="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
               </a>
             </li>
           </ul>
@@ -121,8 +122,8 @@
                 class="mobile-menu-arrow"></a></li>
           <li><a href="podcast.html">Podcast<img src="./assets/img/shared/icon-menu.png?v=1" alt="Next"
                 class="mobile-menu-arrow"></a></li>
-          <li><a href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed.html">Tin tức<img src="./assets/img/shared/icon-menu.png?v=1" alt="Next"
-                class="mobile-menu-arrow"></a></li>
+          <li><a href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed.html">Tin tức<img
+                src="./assets/img/shared/icon-menu.png?v=1" alt="Next" class="mobile-menu-arrow"></a></li>
         </ul>
       </div>
     </div>
@@ -137,8 +138,7 @@
     <div class="container">
       <div class="news-main-image-wrapper">
         <img src="assets/media/shared/news/chim-dam-nhu-pham-hoang-nam-1.jpg?v=1"
-          alt="&quot;Chìm đắm&quot; như Phạm Hoàng Nam"
-          class="news-main-image img-fluid banner-image">
+          alt="&quot;Chìm đắm&quot; như Phạm Hoàng Nam" class="news-main-image img-fluid banner-image">
       </div>
 
       <h2 class="news-main-title">
@@ -467,7 +467,8 @@
     </div>
   </footer>
   <script src="assets/js/bootstrap.bundle.min.js?v=1"></script>
-  <script src="assets/js/mobile-menu-autoclose.js?v=1" defer></script>
+    <script src="assets/js/mobile-menu-autoclose.js?v=1" defer></script>
+  <script src="assets/js/lang-switch.js?v=1" defer></script>
   <script>
     document.getElementById('mobileMenuToggle')?.addEventListener('click', function () {
       document.getElementById('mobileMenuOverlay')?.classList.add('active');

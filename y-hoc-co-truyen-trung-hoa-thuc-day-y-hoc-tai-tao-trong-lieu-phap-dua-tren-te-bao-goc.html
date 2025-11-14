@@ -70,8 +70,8 @@
           <button class="navbar-toggler" type="button" id="mobileMenuToggle">
             <i class="fas fa-bars"></i>
           </button>
-          <a href="#" class="langSwitch mobile-lang-switch" id="langLinkMobile" aria-label="Switch language">
-            <img id="langIconMobile" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
+          <a href="#" class="langSwitch mobile-lang-switch" aria-label="Switch language">
+            <img class="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
           </a>
         </div>
         <div class="collapse navbar-collapse" id="navbarMain">
@@ -85,8 +85,8 @@
             <li class="nav-item"><a class="nav-link"
                 href="huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed.html">Tin tức</a></li>
             <li class="nav-item ">
-              <a href="#" class="langSwitch" id="langLink" aria-label="Switch language">
-                <img id="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
+              <a href="#" class="langSwitch" aria-label="Switch language">
+                <img class="langIcon" src="./assets/img/shared/us-lang.png?v=1" alt="English" width="30" height="18" />
               </a>
             </li>
           </ul>
@@ -575,7 +575,8 @@
     </div>
   </footer>
   <script src="assets/js/bootstrap.bundle.min.js?v=1"></script>
-  <script src="assets/js/mobile-menu-autoclose.js?v=1" defer></script>
+    <script src="assets/js/mobile-menu-autoclose.js?v=1" defer></script>
+  <script src="assets/js/lang-switch.js?v=1" defer></script>
   <script>
     document.getElementById('mobileMenuToggle')?.addEventListener('click', function () {
       document.getElementById('mobileMenuOverlay')?.classList.add('active');
