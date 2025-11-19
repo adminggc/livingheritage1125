@@ -20,6 +20,8 @@ class AdminPanel {
     try {
       await this.loadNewsFromFile();
       await this.loadTipsFromFile();
+      await this.loadFiguresFromFile();
+      await this.loadBannersFromFile();
       this.updateStats();
     } catch (error) {
       console.log('Initializing with new data', error);
@@ -236,6 +238,106 @@ class AdminPanel {
     const a = document.createElement('a');
     a.href = url;
     a.download = `tips-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== HERITAGE FIGURES DATA LOADING =====
+  async loadFiguresFromFile() {
+    try {
+      const response = await fetch('/api/figures');
+      if (!response.ok) throw new Error('Failed to load figures from API');
+      const data = await response.json();
+      window.figuresData = data.heritageFigures || [];
+      console.log(`✓ Loaded ${window.figuresData.length} heritage figures from API`);
+      return data.heritageFigures;
+    } catch (error) {
+      console.error('Error loading figures from API:', error);
+      window.figuresData = [];
+      return [];
+    }
+  }
+
+  async saveFiguresToFile(figuresArray) {
+    try {
+      const response = await fetch('/api/save-figures', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ heritageFigures: figuresArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save figures');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving figures:', error);
+      this.showError('Auto-save figures failed. Using download backup.');
+      this.downloadFiguresAsJSON(figuresArray);
+      return false;
+    }
+  }
+
+  downloadFiguresAsJSON(figuresArray) {
+    const data = { heritageFigures: figuresArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `figures-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== BANNERS DATA LOADING =====
+  async loadBannersFromFile() {
+    try {
+      const response = await fetch('/api/banners');
+      if (!response.ok) throw new Error('Failed to load banners from API');
+      const data = await response.json();
+      window.bannersData = data.banners || [];
+      console.log(`✓ Loaded ${window.bannersData.length} banners from API`);
+      return data.banners;
+    } catch (error) {
+      console.error('Error loading banners from API:', error);
+      window.bannersData = [];
+      return [];
+    }
+  }
+
+  async saveBannersToFile(bannersArray) {
+    try {
+      const response = await fetch('/api/save-banners', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ banners: bannersArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save banners');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving banners:', error);
+      this.showError('Auto-save banners failed. Using download backup.');
+      this.downloadBannersAsJSON(bannersArray);
+      return false;
+    }
+  }
+
+  downloadBannersAsJSON(bannersArray) {
+    const data = { banners: bannersArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `banners-backup-${new Date().toISOString().split('T')[0]}.json`;
     a.click();
     window.URL.revokeObjectURL(url);
   }
@@ -462,11 +564,34 @@ class AdminPanel {
 
   loadProfiles() {
     const tbody = document.getElementById('profilesTableBody');
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No profiles yet.</td></tr>';
+
+    if (!window.figuresData || window.figuresData.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No profiles yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = window.figuresData.map(figure => `
+      <tr>
+        <td>${figure.fullName}</td>
+        <td>${figure.title}</td>
+        <td>${figure.urlSlug || '-'}</td>
+        <td><span class="badge badge-success" style="background-color: #28a745; color: white; padding: 4px 8px; border-radius: 3px;">${figure.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openProfileModal(${figure.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteProfile(${figure.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
   }
 
-  deleteProfile(id) {
-    console.log('Delete profile:', id);
+  async deleteProfile(id) {
+    if (confirm('Are you sure you want to delete this heritage figure?')) {
+      window.figuresData = window.figuresData.filter(f => f.id !== id);
+      await this.saveFiguresToFile(window.figuresData);
+      this.showSuccess('Heritage figure deleted');
+      this.loadProfiles();
+      this.updateStats();
+    }
   }
 
   // ===== TIPS CRUD =====
@@ -524,11 +649,34 @@ class AdminPanel {
 
   loadBanners() {
     const tbody = document.getElementById('bannersTableBody');
-    tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No banners yet.</td></tr>';
+
+    if (!window.bannersData || window.bannersData.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No banners yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = window.bannersData.map(banner => `
+      <tr>
+        <td>${banner.title || banner.name || '-'}</td>
+        <td>${banner.urlSlug || '-'}</td>
+        <td><span class="badge badge-success" style="background-color: #28a745; color: white; padding: 4px 8px; border-radius: 3px;">${banner.published ? 'Published' : 'Draft'}</span></td>
+        <td>${banner.displayOrder || 0}</td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openBannerModal(${banner.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteBanner(${banner.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
   }
 
-  deleteBanner(id) {
-    console.log('Delete banner:', id);
+  async deleteBanner(id) {
+    if (confirm('Are you sure you want to delete this banner?')) {
+      window.bannersData = window.bannersData.filter(b => b.id !== id);
+      await this.saveBannersToFile(window.bannersData);
+      this.showSuccess('Banner deleted');
+      this.loadBanners();
+      this.updateStats();
+    }
   }
 
   // ===== UTILITY METHODS =====
@@ -551,9 +699,9 @@ class AdminPanel {
 
   updateStats() {
     document.getElementById('statNews').textContent = (window.newsData || []).length;
-    document.getElementById('statProfiles').textContent = '0';
+    document.getElementById('statProfiles').textContent = (window.figuresData || []).length;
     document.getElementById('statTips').textContent = (window.tipsData || []).length;
-    document.getElementById('statBanners').textContent = '0';
+    document.getElementById('statBanners').textContent = (window.bannersData || []).length;
   }
 
   filterTable(type, searchTerm) {
