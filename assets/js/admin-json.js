@@ -548,7 +548,17 @@ class AdminPanel {
 
     if (id) {
       document.getElementById('profilesModalTitle').textContent = 'Edit Profile';
-      // Load from file or memory
+      // Load from memory
+      const figure = window.figuresData.find(f => f.id === id);
+      if (figure) {
+        document.getElementById('profileName').value = figure.fullName || '';
+        document.getElementById('profileTitle').value = figure.title || '';
+        document.getElementById('profileImage').value = figure.imageUrl || '';
+        document.getElementById('profileCategory').value = figure.category || '';
+        document.getElementById('profileBio').value = figure.description || '';
+        document.getElementById('profileAchievements').value = figure.achievements || '';
+        document.getElementById('profilePublished').checked = figure.published !== false;
+      }
     } else {
       document.getElementById('profilesModalTitle').textContent = 'Add Profile';
     }
@@ -556,10 +566,58 @@ class AdminPanel {
     this.openModal('profilesModal');
   }
 
-  saveProfile(e) {
+  async saveProfile(e) {
     e.preventDefault();
-    this.showSuccess('Profile save functionality similar to news');
+
+    const name = document.getElementById('profileName').value.trim();
+    const title = document.getElementById('profileTitle').value.trim();
+    const image = document.getElementById('profileImage').value.trim();
+    const bio = document.getElementById('profileBio').value.trim();
+    const achievements = document.getElementById('profileAchievements').value.trim();
+    const published = document.getElementById('profilePublished').checked;
+
+    if (!name || !title) {
+      this.showError('Name and Title are required');
+      return;
+    }
+
+    if (this.currentEditId) {
+      // Edit existing figure
+      const figure = window.figuresData.find(f => f.id === this.currentEditId);
+      if (figure) {
+        figure.fullName = name;
+        figure.title = title;
+        figure.imageUrl = image;
+        figure.description = bio;
+        figure.achievements = achievements;
+        figure.published = published;
+        figure.updatedAt = new Date().toISOString();
+      }
+      this.showSuccess('Profile updated successfully');
+    } else {
+      // Add new figure
+      const newId = Math.max(0, ...window.figuresData.map(f => f.id)) + 1;
+      const newFigure = {
+        id: newId,
+        fullName: name,
+        title: title,
+        imageUrl: image,
+        description: bio,
+        achievements: achievements,
+        published: published,
+        urlSlug: this.generateSlug(name) + '.html',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      window.figuresData.push(newFigure);
+      this.showSuccess('Profile created successfully');
+    }
+
+    // Save to file
+    await this.saveFiguresToFile(window.figuresData);
     this.closeModal('profilesModal');
+    this.loadProfiles();
+    this.updateStats();
   }
 
   loadProfiles() {
