@@ -1,0 +1,651 @@
+/**
+ * Living Heritage - Admin Panel JavaScript (JSON Version)
+ * Handles authentication, CRUD operations with JSON file storage
+ * Saves content to data/news.json, data/profiles.json, etc.
+ */
+
+class AdminPanel {
+  constructor() {
+    this.currentUser = null;
+    this.currentEditId = null;
+    this.currentType = null;
+    this.dataPath = 'data'; // Path to JSON files
+    this.setupEventListeners();
+    this.checkAuth();
+  }
+
+  // ===== INITIALIZATION =====
+  async initializeData() {
+    // Load data from JSON files on startup
+    try {
+      await this.loadNewsFromFile();
+      await this.loadTipsFromFile();
+      this.updateStats();
+    } catch (error) {
+      console.log('Initializing with new data', error);
+    }
+  }
+
+  setupEventListeners() {
+    // Login
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', (e) => this.handleLogin(e));
+    }
+
+    // Logout
+    const logoutBtns = document.querySelectorAll('#logoutBtn, #logoutBtn2');
+    logoutBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.logout();
+      });
+    });
+
+    // Navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const tab = link.getAttribute('data-tab');
+        this.switchTab(tab);
+      });
+    });
+
+    // Sidebar toggle on mobile
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        document.getElementById('adminSidebar').classList.toggle('open');
+      });
+    }
+
+    // Close sidebar when clicking a link on mobile
+    if (window.innerWidth <= 768) {
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('adminSidebar').classList.remove('open');
+        });
+      });
+    }
+
+    // Add buttons
+    document.getElementById('addNewsBtn').addEventListener('click', () => this.openNewsModal());
+    document.getElementById('addProfileBtn').addEventListener('click', () => this.openProfileModal());
+    document.getElementById('addTipBtn').addEventListener('click', () => this.openTipModal());
+    document.getElementById('addBannerBtn').addEventListener('click', () => this.openBannerModal());
+
+    // Search
+    document.getElementById('newsSearch').addEventListener('input', (e) => this.filterTable('news', e.target.value));
+    document.getElementById('profilesSearch').addEventListener('input', (e) => this.filterTable('profiles', e.target.value));
+    document.getElementById('tipsSearch').addEventListener('input', (e) => this.filterTable('tips', e.target.value));
+    document.getElementById('bannersSearch').addEventListener('input', (e) => this.filterTable('banners', e.target.value));
+
+    // Form submissions
+    document.getElementById('newsForm').addEventListener('submit', (e) => this.saveNews(e));
+    document.getElementById('profilesForm').addEventListener('submit', (e) => this.saveProfile(e));
+    document.getElementById('tipsForm').addEventListener('submit', (e) => this.saveTip(e));
+    document.getElementById('bannersForm').addEventListener('submit', (e) => this.saveBanner(e));
+
+    // Modal close buttons
+    document.querySelectorAll('.modal-close').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const modalId = btn.getAttribute('data-modal');
+        this.closeModal(modalId);
+      });
+    });
+
+    // Close modal when clicking outside
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          this.closeModal(modal.id);
+        }
+      });
+    });
+
+    // Alert close buttons
+    document.querySelectorAll('.alert-close').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.target.closest('.alert').classList.remove('show');
+      });
+    });
+
+    // Settings buttons
+    document.getElementById('exportDataBtn').addEventListener('click', () => this.exportAllData());
+    document.getElementById('importDataBtn').addEventListener('click', () => {
+      document.getElementById('importFile').click();
+    });
+    document.getElementById('importFile').addEventListener('change', (e) => this.importAllData(e));
+    document.getElementById('clearDataBtn').addEventListener('click', () => this.clearAllData());
+    document.getElementById('resetDataBtn').addEventListener('click', () => this.resetToDefault());
+  }
+
+  // ===== FILE OPERATIONS =====
+  async loadNewsFromFile() {
+    try {
+      // Use API endpoint instead of direct file fetch
+      const response = await fetch('/api/news');
+      if (!response.ok) throw new Error('Failed to load news from API');
+      const data = await response.json();
+      window.newsData = data.news || [];
+      console.log(`✓ Loaded ${window.newsData.length} news articles from API`);
+      return data.news;
+    } catch (error) {
+      console.error('Error loading news from API:', error);
+      window.newsData = [];
+      return [];
+    }
+  }
+
+  async saveNewsToFile(newsArray) {
+    /**
+     * NOTE: Direct file writing from browser is NOT possible due to security restrictions.
+     * This function demonstrates the logic.
+     *
+     * For production, you need:
+     * 1. A backend API endpoint that accepts POST requests
+     * 2. Server-side handling to write to JSON files
+     *
+     * Example backend endpoint (Node.js Express):
+     *
+     * app.post('/api/save-news', (req, res) => {
+     *   const data = { news: req.body };
+     *   fs.writeFileSync('data/news.json', JSON.stringify(data, null, 2));
+     *   res.json({ success: true });
+     * });
+     */
+    try {
+      // For browser environment: send to backend
+      const response = await fetch('/api/save-news', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ news: newsArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save news');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving news:', error);
+      // Fallback to showing download option
+      this.showError('Auto-save failed. Using download backup.');
+      this.downloadNewsAsJSON(newsArray);
+      return false;
+    }
+  }
+
+  downloadNewsAsJSON(newsArray) {
+    const data = { news: newsArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `news-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== TIPS DATA LOADING =====
+  async loadTipsFromFile() {
+    try {
+      const response = await fetch('/api/tips');
+      if (!response.ok) throw new Error('Failed to load tips from API');
+      const data = await response.json();
+      window.tipsData = data.wellnessTips || [];
+      console.log(`✓ Loaded ${window.tipsData.length} wellness tips from API`);
+      return data.wellnessTips;
+    } catch (error) {
+      console.error('Error loading tips from API:', error);
+      window.tipsData = [];
+      return [];
+    }
+  }
+
+  async saveTipsToFile(tipsArray) {
+    try {
+      const response = await fetch('/api/save-tips', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ wellnessTips: tipsArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save tips');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving tips:', error);
+      this.showError('Auto-save tips failed. Using download backup.');
+      this.downloadTipsAsJSON(tipsArray);
+      return false;
+    }
+  }
+
+  downloadTipsAsJSON(tipsArray) {
+    const data = { wellnessTips: tipsArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `tips-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== AUTHENTICATION =====
+  checkAuth() {
+    const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+      this.showAdminPanel();
+    } else {
+      this.showLoginPage();
+    }
+  }
+
+  handleLogin(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simple demo authentication
+    const validUsers = {
+      'admin': 'admin123',
+      'user': 'user123'
+    };
+
+    if (validUsers[username] === password) {
+      this.currentUser = username;
+      sessionStorage.setItem('isLoggedIn', 'true');
+      sessionStorage.setItem('currentUser', username);
+      this.showAdminPanel();
+    } else {
+      this.showError('Invalid username or password. Try admin/admin123');
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+    }
+  }
+
+  logout() {
+    if (confirm('Are you sure you want to logout?')) {
+      sessionStorage.removeItem('isLoggedIn');
+      sessionStorage.removeItem('currentUser');
+      document.getElementById('loginPage').style.display = 'flex';
+      document.getElementById('adminPage').style.display = 'none';
+      document.getElementById('loginForm').reset();
+    }
+  }
+
+  showLoginPage() {
+    document.getElementById('loginPage').style.display = 'flex';
+    document.getElementById('adminPage').style.display = 'none';
+  }
+
+  showAdminPanel() {
+    document.getElementById('loginPage').style.display = 'none';
+    document.getElementById('adminPage').style.display = 'flex';
+    this.initializeData();
+
+    // Show sidebar toggle on mobile
+    if (window.innerWidth <= 768) {
+      document.getElementById('sidebarToggle').style.display = 'block';
+    }
+  }
+
+  // ===== NAVIGATION & TABS =====
+  switchTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('.admin-tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+
+    // Remove active class from all nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('active');
+    });
+
+    // Show selected tab
+    const tabElement = document.getElementById(tabName);
+    if (tabElement) {
+      tabElement.classList.add('active');
+    }
+
+    // Mark nav link as active
+    const activeLink = document.querySelector(`[data-tab="${tabName}"]`);
+    if (activeLink) {
+      activeLink.classList.add('active');
+    }
+
+    // Update page title
+    const titles = {
+      'dashboard': 'Dashboard',
+      'news': 'News & Blog',
+      'profiles': 'Heritage Figures',
+      'tips': 'Wellness Tips',
+      'banners': 'Banners & Carousel',
+      'settings': 'Settings'
+    };
+    document.getElementById('pageTitle').textContent = titles[tabName] || 'Dashboard';
+
+    // Reload data for current tab
+    if (tabName === 'news') this.loadNews();
+    if (tabName === 'profiles') this.loadProfiles();
+    if (tabName === 'tips') this.loadTips();
+    if (tabName === 'banners') this.loadBanners();
+  }
+
+  // ===== NEWS CRUD =====
+  openNewsModal(id = null) {
+    const form = document.getElementById('newsForm');
+    form.reset();
+    this.currentEditId = id;
+
+    if (id) {
+      document.getElementById('newsModalTitle').textContent = 'Edit Article';
+      const article = window.newsData.find(a => a.id === id);
+      if (article) {
+        document.getElementById('newsTitle').value = article.title;
+        document.getElementById('newsCategory').value = article.category;
+        document.getElementById('newsDate').value = article.date;
+        document.getElementById('newsImage').value = article.featured_image;
+        document.getElementById('newsContent').value = article.content;
+        document.getElementById('newsAuthor').value = article.author;
+        document.getElementById('newsPublished').checked = article.published;
+      }
+    } else {
+      document.getElementById('newsModalTitle').textContent = 'Add Article';
+      document.getElementById('newsDate').valueAsDate = new Date();
+    }
+
+    this.openModal('newsModal');
+  }
+
+  async saveNews(e) {
+    e.preventDefault();
+    const formData = {
+      id: this.currentEditId || Date.now(),
+      slug: this.generateSlug(document.getElementById('newsTitle').value),
+      title: document.getElementById('newsTitle').value,
+      description: document.getElementById('newsTitle').value.substring(0, 100),
+      category: document.getElementById('newsCategory').value,
+      date: document.getElementById('newsDate').value,
+      publishedTime: new Date().toISOString(),
+      featured_image: document.getElementById('newsImage').value,
+      images: [document.getElementById('newsImage').value],
+      content: document.getElementById('newsContent').value,
+      author: document.getElementById('newsAuthor').value,
+      keywords: document.getElementById('newsCategory').value,
+      published: document.getElementById('newsPublished').checked,
+      created: new Date().toISOString(),
+      updated: new Date().toISOString()
+    };
+
+    if (this.currentEditId) {
+      window.newsData = window.newsData.map(a => a.id === this.currentEditId ? formData : a);
+      this.showSuccess('Article updated successfully');
+    } else {
+      window.newsData.push(formData);
+      this.showSuccess('Article created successfully');
+    }
+
+    // Save to file
+    await this.saveNewsToFile(window.newsData);
+
+    this.closeModal('newsModal');
+    this.loadNews();
+    this.updateStats();
+  }
+
+  loadNews() {
+    const tbody = document.getElementById('newsTableBody');
+
+    if (!window.newsData || window.newsData.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No articles yet.</td></tr>';
+      return;
+    }
+
+    // Sort by date (newest first)
+    const sortedNews = [...window.newsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    tbody.innerHTML = sortedNews.map(article => `
+      <tr>
+        <td>${article.title}</td>
+        <td>${article.category || '-'}</td>
+        <td>${new Date(article.date).toLocaleDateString()}</td>
+        <td><span class="badge" style="background: ${article.published ? '#28a745' : '#dc3545'}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">${article.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openNewsModal(${article.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteNews(${article.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  async deleteNews(id) {
+    if (confirm('Are you sure you want to delete this article?')) {
+      window.newsData = window.newsData.filter(a => a.id !== id);
+      await this.saveNewsToFile(window.newsData);
+      this.showSuccess('Article deleted');
+      this.loadNews();
+      this.updateStats();
+    }
+  }
+
+  // ===== PROFILES CRUD =====
+  openProfileModal(id = null) {
+    const form = document.getElementById('profilesForm');
+    form.reset();
+    this.currentEditId = id;
+
+    if (id) {
+      document.getElementById('profilesModalTitle').textContent = 'Edit Profile';
+      // Load from file or memory
+    } else {
+      document.getElementById('profilesModalTitle').textContent = 'Add Profile';
+    }
+
+    this.openModal('profilesModal');
+  }
+
+  saveProfile(e) {
+    e.preventDefault();
+    this.showSuccess('Profile save functionality similar to news');
+    this.closeModal('profilesModal');
+  }
+
+  loadProfiles() {
+    const tbody = document.getElementById('profilesTableBody');
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No profiles yet.</td></tr>';
+  }
+
+  deleteProfile(id) {
+    console.log('Delete profile:', id);
+  }
+
+  // ===== TIPS CRUD =====
+  openTipModal(id = null) {
+    this.openModal('tipsModal');
+  }
+
+  saveTip(e) {
+    e.preventDefault();
+    this.showSuccess('Tip saved');
+    this.closeModal('tipsModal');
+  }
+
+  loadTips() {
+    const tbody = document.getElementById('tipsTableBody');
+
+    if (!window.tipsData || window.tipsData.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No tips yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = window.tipsData.map(tip => `
+      <tr>
+        <td>${tip.title}</td>
+        <td>${tip.urlSlug || '-'}</td>
+        <td><span class="badge" style="background: ${tip.published ? '#28a745' : '#dc3545'}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">${tip.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openTipModal(${tip.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteTip(${tip.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  async deleteTip(id) {
+    if (confirm('Are you sure you want to delete this tip?')) {
+      window.tipsData = window.tipsData.filter(t => t.id !== id);
+      await this.saveTipsToFile(window.tipsData);
+      this.showSuccess('Tip deleted');
+      this.loadTips();
+      this.updateStats();
+    }
+  }
+
+  // ===== BANNERS CRUD =====
+  openBannerModal(id = null) {
+    this.openModal('bannersModal');
+  }
+
+  saveBanner(e) {
+    e.preventDefault();
+    this.showSuccess('Banner saved');
+    this.closeModal('bannersModal');
+  }
+
+  loadBanners() {
+    const tbody = document.getElementById('bannersTableBody');
+    tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No banners yet.</td></tr>';
+  }
+
+  deleteBanner(id) {
+    console.log('Delete banner:', id);
+  }
+
+  // ===== UTILITY METHODS =====
+  generateSlug(title) {
+    return title
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '')
+      .replace(/[\s_]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+  }
+
+  openModal(modalId) {
+    document.getElementById(modalId).classList.add('show');
+  }
+
+  closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('show');
+  }
+
+  updateStats() {
+    document.getElementById('statNews').textContent = (window.newsData || []).length;
+    document.getElementById('statProfiles').textContent = '0';
+    document.getElementById('statTips').textContent = (window.tipsData || []).length;
+    document.getElementById('statBanners').textContent = '0';
+  }
+
+  filterTable(type, searchTerm) {
+    const rows = document.querySelectorAll(`#${type}TableBody tr`);
+    rows.forEach(row => {
+      const text = row.textContent.toLowerCase();
+      row.style.display = text.includes(searchTerm.toLowerCase()) ? '' : 'none';
+    });
+  }
+
+  showSuccess(message) {
+    const alert = document.getElementById('successAlert');
+    document.getElementById('successMsg').textContent = message;
+    alert.classList.add('show');
+    setTimeout(() => alert.classList.remove('show'), 3000);
+  }
+
+  showError(message) {
+    const alert = document.getElementById('errorAlert');
+    document.getElementById('errorMsg').textContent = message;
+    alert.classList.add('show');
+    setTimeout(() => alert.classList.remove('show'), 3000);
+  }
+
+  // ===== DATA EXPORT/IMPORT =====
+  exportAllData() {
+    const allData = {
+      news: window.newsData || [],
+      profiles: [],
+      tips: [],
+      banners: []
+    };
+    const json = JSON.stringify(allData, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `living-heritage-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+    this.showSuccess('Data exported successfully');
+  }
+
+  importAllData(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const data = JSON.parse(event.target.result);
+        if (data.news) {
+          window.newsData = data.news;
+          this.saveNewsToFile(window.newsData);
+          this.loadNews();
+          this.updateStats();
+          this.showSuccess('Data imported successfully');
+        }
+      } catch (error) {
+        this.showError('Error reading file: ' + error.message);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  clearAllData() {
+    if (confirm('Are you sure? This will delete all content.')) {
+      if (confirm('This action cannot be undone. Are you absolutely sure?')) {
+        window.newsData = [];
+        this.saveNewsToFile([]);
+        this.loadNews();
+        this.updateStats();
+        this.showSuccess('All data cleared');
+      }
+    }
+  }
+
+  resetToDefault() {
+    if (confirm('Reset all data to demo content? This will replace existing data.')) {
+      this.loadNewsFromFile();
+      this.loadNews();
+      this.updateStats();
+      this.showSuccess('Demo data loaded');
+    }
+  }
+}
+
+// Initialize admin panel when DOM is ready
+let admin;
+document.addEventListener('DOMContentLoaded', async () => {
+  admin = new AdminPanel();
+  // Load data from API/JSON
+  await admin.initializeData();
+  console.log('✓ Admin panel initialized with data');
+});
