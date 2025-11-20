@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living Heritage - Admin Panel</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/admin.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Login Page -->
+<div id="loginPage">
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Living Heritage</h1>
+      <h3 style="text-align: center; color: #666; margin-bottom: 20px; font-size: 14px;">Admin Panel</h3>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+          <div class="login-error" id="usernameError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter password" required>
+          <div class="login-error" id="passwordError"></div>
+        </div>
+
+        <div id="loginErrorMsg" class="alert alert-danger" style="margin-bottom: 20px;"></div>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+      <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; font-size: 12px; color: #999;">
+        <p><strong>Demo Credentials:</strong></p>
+        <p>Username: <strong>admin</strong><br>Password: <strong>admin123</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Admin Dashboard -->
+<div id="adminPage" class="admin-wrapper" style="display: none;">
+  <!-- Sidebar -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-sidebar-header">
+      <h2>Living Heritage</h2>
+      <p style="margin: 5px 0 0; font-size: 12px; color: #a1d8a1;">Admin Panel</p>
+    </div>
+
+    <ul class="admin-nav">
+      <li>
+        <a href="#" class="nav-link active" data-tab="dashboard">
+          <i class="fas fa-chart-line"></i> Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="news">
+          <i class="fas fa-newspaper"></i> News/Blog
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="profiles">
+          <i class="fas fa-users"></i> Heritage Figures
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="tips">
+          <i class="fas fa-lightbulb"></i> Wellness Tips
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="banners">
+          <i class="fas fa-image"></i> Banners/Carousel
+        </a>
+      </li>
+      <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+        <p style="padding: 0 15px; font-size: 12px; color: #a1d8a1; margin: 10px 0 5px 0; text-transform: uppercase;"><strong>English Content</strong></p>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="news-en">
+          <i class="fas fa-newspaper"></i> News (English)
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="profiles-en">
+          <i class="fas fa-users"></i> Heritage Figures (EN)
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="tips-en">
+          <i class="fas fa-lightbulb"></i> Wellness Tips (EN)
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link" data-tab="settings">
+          <i class="fas fa-cog"></i> Settings
+        </a>
+      </li>
+      <li style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+        <a href="#" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="admin-main">
+    <!-- Header -->
+    <header class="admin-header">
+      <div style="display: flex; align-items: center;">
+        <button class="admin-header-toggler" id="sidebarToggle" style="display: none;">
+          <i class="fas fa-bars"></i>
+        </button>
+        <h1 id="pageTitle">Dashboard</h1>
+      </div>
+
+      <div class="admin-user">
+        <div class="admin-user-avatar" title="Admin">A</div>
+        <span class="admin-user-name">Admin</span>
+        <button class="btn-logout" id="logoutBtn2">Logout</button>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <div class="admin-content">
+
+      <!-- Alert Messages -->
+      <div id="successAlert" class="alert alert-success">
+        <i class="fas fa-check-circle"></i> <span id="successMsg"></span>
+        <button class="alert-close">&times;</button>
+      </div>
+      <div id="errorAlert" class="alert alert-danger">
+        <i class="fas fa-exclamation-circle"></i> <span id="errorMsg"></span>
+        <button class="alert-close">&times;</button>
+      </div>
+
+      <!-- ===== DASHBOARD ===== -->
+      <div id="dashboard" class="admin-tab-content active">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">Dashboard Overview</h2>
+
+        <div class="dashboard-stats">
+          <div class="stat-card news">
+            <div class="stat-label">News Articles</div>
+            <div class="stat-value" id="statNews">0</div>
+          </div>
+          <div class="stat-card profiles">
+            <div class="stat-label">Heritage Figures</div>
+            <div class="stat-value" id="statProfiles">0</div>
+          </div>
+          <div class="stat-card tips">
+            <div class="stat-label">Wellness Tips</div>
+            <div class="stat-value" id="statTips">0</div>
+          </div>
+          <div class="stat-card banners">
+            <div class="stat-label">Banners</div>
+            <div class="stat-value" id="statBanners">0</div>
+          </div>
+        </div>
+
+        <div class="admin-form" style="background: #f8f9fa; border-left: 4px solid var(--admin-accent);">
+          <h3 style="color: var(--admin-primary); margin-bottom: 15px;">Quick Info</h3>
+          <p><strong>Welcome to Living Heritage Admin Panel!</strong></p>
+          <p style="margin: 10px 0; font-size: 14px; color: #666;">
+            Use the sidebar menu to manage all content types. You can create, read, update, and delete articles, profiles, tips, and banners.
+            All data is stored locally in your browser.
+          </p>
+        </div>
+      </div>
+
+      <!-- ===== NEWS/BLOG ===== -->
+      <div id="news" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">News & Blog Articles</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="newsSearch" placeholder="Search articles...">
+          </div>
+          <button class="btn btn-secondary" id="addNewsBtn">
+            <i class="fas fa-plus"></i> Add Article
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="newsTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No articles yet. Click "Add Article" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== PROFILES ===== -->
+      <div id="profiles" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">Heritage Figures</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="profilesSearch" placeholder="Search profiles...">
+          </div>
+          <button class="btn btn-secondary" id="addProfileBtn">
+            <i class="fas fa-plus"></i> Add Profile
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Title/Role</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="profilesTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No profiles yet. Click "Add Profile" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== WELLNESS TIPS ===== -->
+      <div id="tips" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">Wellness Tips</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="tipsSearch" placeholder="Search tips...">
+          </div>
+          <button class="btn btn-secondary" id="addTipBtn">
+            <i class="fas fa-plus"></i> Add Tip
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tipsTableBody">
+            <tr>
+              <td colspan="4" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No tips yet. Click "Add Tip" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== BANNERS ===== -->
+      <div id="banners" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">Banners & Carousel</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="bannersSearch" placeholder="Search banners...">
+          </div>
+          <button class="btn btn-secondary" id="addBannerBtn">
+            <i class="fas fa-plus"></i> Add Banner
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Image</th>
+              <th>Position</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bannersTableBody">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No banners yet. Click "Add Banner" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== ENGLISH NEWS ===== -->
+      <div id="news-en" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">English News & Blog Articles</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="newsSearchEn" placeholder="Search English articles...">
+          </div>
+          <button class="btn btn-secondary" id="addNewsBtnEn">
+            <i class="fas fa-plus"></i> Add Article (EN)
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="newsTableBodyEn">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No English articles yet. Click "Add Article (EN)" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== ENGLISH HERITAGE FIGURES ===== -->
+      <div id="profiles-en" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">English Heritage Figures</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="profilesSearchEn" placeholder="Search English profiles...">
+          </div>
+          <button class="btn btn-secondary" id="addProfileBtnEn">
+            <i class="fas fa-plus"></i> Add Profile (EN)
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Title/Role</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="profilesTableBodyEn">
+            <tr>
+              <td colspan="5" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No English profiles yet. Click "Add Profile (EN)" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== ENGLISH WELLNESS TIPS ===== -->
+      <div id="tips-en" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">English Wellness Tips</h2>
+
+        <div class="admin-controls">
+          <div class="admin-search">
+            <input type="text" id="tipsSearchEn" placeholder="Search English tips...">
+          </div>
+          <button class="btn btn-secondary" id="addTipBtnEn">
+            <i class="fas fa-plus"></i> Add Tip (EN)
+          </button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tipsTableBodyEn">
+            <tr>
+              <td colspan="4" style="text-align: center; padding: 30px; color: #999;">
+                <i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+                No English tips yet. Click "Add Tip (EN)" to create one.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ===== SETTINGS ===== -->
+      <div id="settings" class="admin-tab-content">
+        <h2 style="color: var(--admin-primary); margin-bottom: 20px;">Settings</h2>
+
+        <div class="admin-form">
+          <h3 style="color: var(--admin-primary); margin-bottom: 15px;">Data Management</h3>
+
+          <div class="btn-group">
+            <button class="btn btn-warning" id="exportDataBtn">
+              <i class="fas fa-download"></i> Export All Data
+            </button>
+            <button class="btn btn-info" id="importDataBtn" style="background: var(--admin-info);">
+              <i class="fas fa-upload"></i> Import Data
+            </button>
+            <input type="file" id="importFile" accept=".json" style="display: none;">
+            <button class="btn btn-danger" id="clearDataBtn">
+              <i class="fas fa-trash"></i> Clear All Data
+            </button>
+          </div>
+        </div>
+
+        <div class="admin-form">
+          <h3 style="color: var(--admin-primary); margin-bottom: 15px;">Account</h3>
+
+          <div class="form-group">
+            <label>Change Password</label>
+            <input type="password" id="newPassword" placeholder="New password" style="margin-bottom: 10px;">
+            <button class="btn btn-primary">Update Password</button>
+          </div>
+        </div>
+
+        <div class="admin-form">
+          <h3 style="color: var(--admin-primary); margin-bottom: 15px;">Danger Zone</h3>
+          <p style="color: #666; font-size: 14px; margin-bottom: 15px;">
+            These actions cannot be undone. Please proceed with caution.
+          </p>
+          <button class="btn btn-danger" id="resetDataBtn">
+            <i class="fas fa-redo"></i> Reset to Default Demo Data
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<!-- Modals -->
+
+<!-- News Modal -->
+<div id="newsModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="newsModalTitle">Add News Article</h2>
+      <button class="modal-close" data-modal="newsModal">&times;</button>
+    </div>
+    <form id="newsForm" class="admin-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newsTitle">Title *</label>
+          <input type="text" id="newsTitle" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="newsCategory">Category</label>
+          <select id="newsCategory" name="category">
+            <option value="">Select a category</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Culture">Culture</option>
+            <option value="Science">Science</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Event">Event</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="newsDate">Publish Date</label>
+          <input type="date" id="newsDate" name="date">
+        </div>
+
+        <div class="form-group">
+          <label for="newsImage">Featured Image URL</label>
+          <input type="text" id="newsImage" name="image" placeholder="assets/media/shared/news/image-name.jpg" required>
+        </div>
+
+        <div class="form-group">
+          <label for="newsDescription">Description</label>
+          <textarea id="newsDescription" name="description" placeholder="Brief description of the article..." style="min-height: 60px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="newsContent">Content (HTML)</label>
+          <textarea id="newsContent" name="content" placeholder="Full article content (can be HTML)..." style="min-height: 120px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="newsAuthor">Author</label>
+          <input type="text" id="newsAuthor" name="author" placeholder="Author name">
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="newsPublished" name="published" checked>
+            Publish this article
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="newsModal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Article</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Profile Modal -->
+<div id="profilesModal" class="modal-overlay">
+  <div class="modal-content" style="max-width: 900px; max-height: 90vh; overflow-y: auto;">
+    <div class="modal-header">
+      <h2 id="profilesModalTitle">Add Heritage Figure</h2>
+      <button class="modal-close" data-modal="profilesModal">&times;</button>
+    </div>
+    <form id="profilesForm" class="admin-form">
+      <div class="modal-body" style="padding: 20px;">
+
+        <!-- Basic Information -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Basic Information</h4>
+
+        <div class="form-group">
+          <label for="profileName">Full Name *</label>
+          <input type="text" id="profileName" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profileTitle">Title/Role *</label>
+          <input type="text" id="profileTitle" name="title" placeholder="e.g., Jazz Legend, Director" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profileCategory">Category</label>
+          <select id="profileCategory" name="category">
+            <option value="">Select a category</option>
+            <option value="Music">Music</option>
+            <option value="Arts">Arts</option>
+            <option value="Business">Business</option>
+            <option value="Science">Science</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="profileHeaderLetter">Header Letter (single word)</label>
+          <input type="text" id="profileHeaderLetter" name="headerLetter" placeholder="e.g., PHƯƠNG" style="max-width: 150px;">
+        </div>
+
+        <!-- Images -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Images</h4>
+
+        <div class="form-group">
+          <label for="profileImage">Profile Image URL</label>
+          <input type="text" id="profileImage" name="image" placeholder="assets/media/people-heritage/image.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="profileSmallImage">Small Image URL</label>
+          <input type="text" id="profileSmallImage" name="smallImage" placeholder="assets/media/people-heritage/small.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="profileHeroImage">Hero Image URL</label>
+          <input type="text" id="profileHeroImage" name="heroImage" placeholder="assets/media/people-heritage/hero.jpg">
+        </div>
+
+        <!-- Summary and Introduction -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Summary & Introduction</h4>
+
+        <div class="form-group">
+          <label>Summary Paragraphs (one per line)</label>
+          <textarea id="profileSummary" name="summary" placeholder="Paragraph 1&#10;Paragraph 2&#10;Paragraph 3" style="min-height: 100px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Introduction</label>
+          <textarea id="profileIntroduction" name="introduction" placeholder="Introduction text..."></textarea>
+        </div>
+
+        <!-- Content Sections -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Content Sections</h4>
+        <div id="sectionsContainer"></div>
+        <button type="button" id="addSectionBtn" class="btn btn-secondary" style="margin-top: 10px; margin-bottom: 20px;">
+          <i class="fas fa-plus"></i> Add Section
+        </button>
+
+        <!-- Quote -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Quote</h4>
+
+        <div class="form-group">
+          <label>Featured Quote</label>
+          <textarea id="profileQuote" name="quote" placeholder="Enter a notable quote..."></textarea>
+        </div>
+
+        <!-- Highlights (Q&A) -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Interview Highlights (Q&A)</h4>
+        <div id="highlightsContainer"></div>
+        <button type="button" id="addHighlightBtn" class="btn btn-secondary" style="margin-top: 10px; margin-bottom: 20px;">
+          <i class="fas fa-plus"></i> Add Q&A
+        </button>
+
+        <!-- Status -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Status</h4>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="profilePublished" name="published" checked>
+            Publish this profile
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="profilesModal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Profile</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Tips Modal -->
+<div id="tipsModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="tipsModalTitle">Add Wellness Tip</h2>
+      <button class="modal-close" data-modal="tipsModal">&times;</button>
+    </div>
+    <form id="tipsForm" class="admin-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tipTitle">Title *</label>
+          <input type="text" id="tipTitle" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipCategory">Category</label>
+          <select id="tipCategory" name="category">
+            <option value="">Select a category</option>
+            <option value="Health">Health</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Mindfulness">Mindfulness</option>
+            <option value="Nutrition">Nutrition</option>
+            <option value="Science">Science</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tipImage">Tip Image URL</label>
+          <input type="text" id="tipImage" name="image" placeholder="assets/media/tips/example.jpg or https://example.com/image.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="tipContent">Content</label>
+          <textarea id="tipContent" name="content" placeholder="Tip content..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="tipPublished" name="published" checked>
+            Publish this tip
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="tipsModal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Tip</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Banner Modal -->
+<div id="bannersModal" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="bannersModalTitle">Add Banner</h2>
+      <button class="modal-close" data-modal="bannersModal">&times;</button>
+    </div>
+    <form id="bannersForm" class="admin-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="bannerTitle">Title *</label>
+          <input type="text" id="bannerTitle" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bannerImage">Image URL *</label>
+          <input type="url" id="bannerImage" name="image" placeholder="https://example.com/image.jpg" required>
+        </div>
+
+        <div class="form-group">
+          <label for="bannerLink">Link URL</label>
+          <input type="url" id="bannerLink" name="link" placeholder="https://example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="bannerPosition">Position/Order</label>
+          <input type="number" id="bannerPosition" name="position" value="0" min="0">
+        </div>
+
+        <div class="form-group">
+          <label for="bannerText">Banner Text</label>
+          <textarea id="bannerText" name="text" placeholder="Optional text to display on banner..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="bannerActive" name="active" checked>
+            Activate this banner
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="bannersModal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Banner</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- English News Modal -->
+<div id="newsModalEn" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="newsModalTitleEn">Add English News Article</h2>
+      <button class="modal-close" data-modal="newsModalEn">&times;</button>
+    </div>
+    <form id="newsFormEn" class="admin-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="newsTitleEn">Title *</label>
+          <input type="text" id="newsTitleEn" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="newsCategoryEn">Category</label>
+          <select id="newsCategoryEn" name="category">
+            <option value="">Select a category</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Culture">Culture</option>
+            <option value="Science">Science</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Event">Event</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="newsDateEn">Publish Date</label>
+          <input type="date" id="newsDateEn" name="date">
+        </div>
+
+        <div class="form-group">
+          <label for="newsImageEn">Featured Image</label>
+          <input type="text" id="newsImageEn" name="featured_image" placeholder="assets/media/shared/news/example.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="newsDescriptionEn">Description</label>
+          <textarea id="newsDescriptionEn" name="description" style="min-height: 60px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="newsContentEn">Content (HTML)</label>
+          <textarea id="newsContentEn" name="content" style="min-height: 120px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="newsAuthorEn">Author</label>
+          <input type="text" id="newsAuthorEn" name="author" placeholder="Living Heritage">
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="newsPublishedEn" name="published" checked>
+            Publish this article
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="newsModalEn">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Article</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- English Heritage Figures Modal -->
+<div id="profilesModalEn" class="modal-overlay">
+  <div class="modal-content" style="max-width: 900px; max-height: 90vh; overflow-y: auto;">
+    <div class="modal-header">
+      <h2 id="profilesModalTitleEn">Add English Heritage Figure</h2>
+      <button class="modal-close" data-modal="profilesModalEn">&times;</button>
+    </div>
+    <form id="profilesFormEn" class="admin-form">
+      <div class="modal-body" style="padding: 20px;">
+
+        <!-- Basic Information -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Basic Information</h4>
+
+        <div class="form-group">
+          <label for="profileFullNameEn">Full Name *</label>
+          <input type="text" id="profileFullNameEn" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profileTitleEn">Title/Role *</label>
+          <input type="text" id="profileTitleEn" name="title" placeholder="e.g., Jazz Legend, Director" required>
+        </div>
+
+        <div class="form-group">
+          <label for="profileCategoryEn">Category</label>
+          <select id="profileCategoryEn" name="category">
+            <option value="">Select a category</option>
+            <option value="Music">Music</option>
+            <option value="Arts & Culture">Arts & Culture</option>
+            <option value="Science">Science</option>
+            <option value="Literature">Literature</option>
+            <option value="Social Business">Social Business</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="profileHeaderLetterEn">Header Letter (single word)</label>
+          <input type="text" id="profileHeaderLetterEn" name="headerLetter" placeholder="e.g., NIELS" style="max-width: 150px;">
+        </div>
+
+        <!-- Images -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Images</h4>
+
+        <div class="form-group">
+          <label for="profileImageEn">Profile Image URL</label>
+          <input type="text" id="profileImageEn" name="image" placeholder="assets/media/people-heritage/image.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="profileSmallImageEn">Small Image URL</label>
+          <input type="text" id="profileSmallImageEn" name="smallImage" placeholder="assets/media/people-heritage/small.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="profileHeroImageEn">Hero Image URL</label>
+          <input type="text" id="profileHeroImageEn" name="heroImage" placeholder="assets/media/people-heritage/hero.jpg">
+        </div>
+
+        <!-- Summary and Introduction -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Summary & Introduction</h4>
+
+        <div class="form-group">
+          <label>Summary Paragraphs (one per line)</label>
+          <textarea id="profileSummaryEn" name="summary" placeholder="Paragraph 1&#10;Paragraph 2&#10;Paragraph 3" style="min-height: 100px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Introduction</label>
+          <textarea id="profileIntroductionEn" name="introduction" placeholder="Introduction text..."></textarea>
+        </div>
+
+        <!-- Content Sections -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Content Sections</h4>
+        <div id="sectionsContainerEn"></div>
+        <button type="button" id="addSectionBtnEn" class="btn btn-secondary" style="margin-top: 10px; margin-bottom: 20px;">
+          <i class="fas fa-plus"></i> Add Section
+        </button>
+
+        <!-- Quote -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Quote</h4>
+
+        <div class="form-group">
+          <label>Featured Quote</label>
+          <textarea id="profileQuoteEn" name="quote" placeholder="Enter a notable quote..."></textarea>
+        </div>
+
+        <!-- Highlights (Q&A) -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Interview Highlights (Q&A)</h4>
+        <div id="highlightsContainerEn"></div>
+        <button type="button" id="addHighlightBtnEn" class="btn btn-secondary" style="margin-top: 10px; margin-bottom: 20px;">
+          <i class="fas fa-plus"></i> Add Q&A
+        </button>
+
+        <!-- Status -->
+        <h4 style="color: var(--admin-primary); margin-top: 20px; margin-bottom: 15px; border-bottom: 2px solid var(--admin-primary); padding-bottom: 10px;">Status</h4>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="profilePublishedEn" name="published" checked>
+            Publish this profile
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="profilesModalEn">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Profile</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- English Wellness Tips Modal -->
+<div id="tipsModalEn" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="tipsModalTitleEn">Add English Wellness Tip</h2>
+      <button class="modal-close" data-modal="tipsModalEn">&times;</button>
+    </div>
+    <form id="tipsFormEn" class="admin-form">
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="tipTitleEn">Title *</label>
+          <input type="text" id="tipTitleEn" name="title" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tipDescriptionEn">Description</label>
+          <textarea id="tipDescriptionEn" name="description" placeholder="Short description..." style="min-height: 60px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="tipCategoryEn">Category</label>
+          <select id="tipCategoryEn" name="category">
+            <option value="">Select a category</option>
+            <option value="Health">Health</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Mental Health">Mental Health</option>
+            <option value="Science">Science</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="tipImageEn">Tip Image URL</label>
+          <input type="text" id="tipImageEn" name="image" placeholder="assets/media/tips/example.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="tipContentEn">Content</label>
+          <textarea id="tipContentEn" name="content" placeholder="Tip content..." style="min-height: 120px;"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="tipPublishedEn" name="published" checked>
+            Publish this tip
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-modal="tipsModalEn">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Tip</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="confirmModal" class="modal-overlay">
+  <div class="modal-content" style="max-width: 400px;">
+    <div class="modal-header">
+      <h2 id="confirmTitle">Confirm Action</h2>
+      <button class="modal-close" data-modal="confirmModal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p id="confirmMessage"></p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-modal="confirmModal">Cancel</button>
+      <button type="button" class="btn btn-danger" id="confirmBtn">Delete</button>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/admin-db.js"></script>
+</body>
+</html>
