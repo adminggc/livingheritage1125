@@ -42,6 +42,39 @@ class LivingHeritageAdminDB {
       .replace(/^-+|-+$/g, '');
   }
 
+  addHighlight(language = 'vi') {
+    const containerId = language === 'en' ? 'highlightsContainerEn' : 'highlightsContainer';
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const highlightId = `highlight-${Date.now()}`;
+    const highlightDiv = document.createElement('div');
+    highlightDiv.className = 'highlight-item';
+    highlightDiv.id = highlightId;
+    highlightDiv.style.cssText = 'border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px; background: #f9f9f9;';
+
+    highlightDiv.innerHTML = `
+      <div class="form-group">
+        <label>Question</label>
+        <input type="text" class="highlight-question" placeholder="e.g., What is your role?" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;">
+      </div>
+      <div class="form-group">
+        <label>Answer</label>
+        <textarea class="highlight-answer" placeholder="Enter the answer (use line breaks for multiple paragraphs)" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box; min-height: 80px; resize: vertical;"></textarea>
+      </div>
+      <button type="button" class="btn btn-danger btn-sm" onclick="adminPanel.removeHighlight('${highlightId}')">Remove Q&A</button>
+    `;
+
+    container.appendChild(highlightDiv);
+  }
+
+  removeHighlight(highlightId) {
+    const highlightDiv = document.getElementById(highlightId);
+    if (highlightDiv) {
+      highlightDiv.remove();
+    }
+  }
+
   // ===== INITIALIZATION =====
   async init() {
     this.initEventListeners();
@@ -96,8 +129,8 @@ class LivingHeritageAdminDB {
       });
     }
 
-    // Modal close buttons
-    document.querySelectorAll('.modal-overlay .modal-close, .modal-overlay .btn-secondary').forEach(btn => {
+    // Modal close buttons (only the close X button and Cancel buttons)
+    document.querySelectorAll('.modal-overlay .modal-close, .modal-overlay .modal-footer .btn-secondary').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         this.closeAllModals();
@@ -133,6 +166,23 @@ class LivingHeritageAdminDB {
     const tipsFormEn = document.getElementById('tipsFormEn');
     if (tipsFormEn) {
       tipsFormEn.addEventListener('submit', (e) => this.saveTip(e));
+    }
+
+    // Add Q&A buttons for Heritage Figures (VI & EN)
+    const addHighlightBtn = document.getElementById('addHighlightBtn');
+    if (addHighlightBtn) {
+      addHighlightBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.addHighlight();
+      });
+    }
+
+    const addHighlightBtnEn = document.getElementById('addHighlightBtnEn');
+    if (addHighlightBtnEn) {
+      addHighlightBtnEn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.addHighlight('en');
+      });
     }
   }
 
@@ -260,9 +310,9 @@ class LivingHeritageAdminDB {
   async loadDashboard() {
     try {
       const [viFigures, viNews, viTips] = await Promise.all([
-        fetch(`${this.API_BASE}/figures`).then(r => r.json()),
-        fetch(`${this.API_BASE}/news`).then(r => r.json()),
-        fetch(`${this.API_BASE}/tips`).then(r => r.json())
+        fetch(`${this.API_BASE}/admin/figures`).then(r => r.json()),
+        fetch(`${this.API_BASE}/admin/news`).then(r => r.json()),
+        fetch(`${this.API_BASE}/admin/tips`).then(r => r.json())
       ]);
 
       document.getElementById('statProfiles').textContent = viFigures.heritageFigures?.length || 0;
@@ -277,7 +327,7 @@ class LivingHeritageAdminDB {
   // ===== HERITAGE FIGURES =====
   async loadProfiles(language = 'vi') {
     try {
-      const endpoint = language === 'en' ? `${this.API_BASE}/figures-en` : `${this.API_BASE}/figures`;
+      const endpoint = language === 'en' ? `${this.API_BASE}/admin/figures-en` : `${this.API_BASE}/admin/figures`;
       const response = await fetch(endpoint);
       const data = await response.json();
       const profiles = data.heritageFigures || [];
@@ -321,7 +371,7 @@ class LivingHeritageAdminDB {
     if (id) {
       document.getElementById('profilesModalTitle').textContent = 'Edit Heritage Figure';
       try {
-        const endpoint = language === 'en' ? `${this.API_BASE}/figures-en` : `${this.API_BASE}/figures`;
+        const endpoint = language === 'en' ? `${this.API_BASE}/admin/figures-en` : `${this.API_BASE}/admin/figures`;
         const response = await fetch(endpoint);
         const data = await response.json();
         const profile = data.heritageFigures.find(p => p.id === id);
@@ -350,6 +400,29 @@ class LivingHeritageAdminDB {
           document.getElementById(introductionId).value = profile.introduction || '';
           document.getElementById(quoteId).value = profile.quote || '';
           document.getElementById(publishedId).checked = profile.published !== false;
+
+          // Populate highlights
+          const containerId = language === 'en' ? 'highlightsContainerEn' : 'highlightsContainer';
+          const highlightsContainer = document.getElementById(containerId);
+          if (highlightsContainer) {
+            highlightsContainer.innerHTML = ''; // Clear existing highlights
+            if (profile.highlights && Array.isArray(profile.highlights)) {
+              profile.highlights.forEach(highlight => {
+                this.addHighlight(language);
+                const lastHighlight = highlightsContainer.lastElementChild;
+                const questionInput = lastHighlight.querySelector('.highlight-question');
+                const answerInput = lastHighlight.querySelector('.highlight-answer');
+                if (questionInput) questionInput.value = highlight.question || '';
+                if (answerInput) {
+                  // Convert answer array to newline-separated string
+                  const answerText = Array.isArray(highlight.answer)
+                    ? highlight.answer.join('\n')
+                    : (highlight.answer || '');
+                  answerInput.value = answerText;
+                }
+              });
+            }
+          }
         }
       } catch (error) {
         console.error('Error loading profile:', error);
@@ -372,10 +445,33 @@ class LivingHeritageAdminDB {
     const titleId = language === 'en' ? 'profileTitleEn' : 'profileTitle';
     const categoryId = language === 'en' ? 'profileCategoryEn' : 'profileCategory';
     const imageId = language === 'en' ? 'profileImageEn' : 'profileImage';
+    const smallImageId = language === 'en' ? 'profileSmallImageEn' : 'profileSmallImage';
+    const heroImageId = language === 'en' ? 'profileHeroImageEn' : 'profileHeroImage';
     const summaryId = language === 'en' ? 'profileSummaryEn' : 'profileSummary';
     const introductionId = language === 'en' ? 'profileIntroductionEn' : 'profileIntroduction';
     const quoteId = language === 'en' ? 'profileQuoteEn' : 'profileQuote';
     const publishedId = language === 'en' ? 'profilePublishedEn' : 'profilePublished';
+    const headerLetterId = language === 'en' ? 'profileHeaderLetterEn' : 'profileHeaderLetter';
+
+    // Collect highlights from form
+    const containerId = language === 'en' ? 'highlightsContainerEn' : 'highlightsContainer';
+    const highlightsContainer = document.getElementById(containerId);
+    const highlights = [];
+    if (highlightsContainer) {
+      const highlightItems = highlightsContainer.querySelectorAll('.highlight-item');
+      highlightItems.forEach(item => {
+        const question = item.querySelector('.highlight-question')?.value || '';
+        const answerText = item.querySelector('.highlight-answer')?.value || '';
+        if (question.trim()) {
+          // Split answer by newlines to create array of paragraphs
+          const answer = answerText.split('\n').filter(p => p.trim());
+          highlights.push({
+            question: question.trim(),
+            answer: answer.length > 0 ? answer : answerText.trim()
+          });
+        }
+      });
+    }
 
     const profileData = {
       full_name: document.getElementById(nameId).value,
@@ -383,13 +479,16 @@ class LivingHeritageAdminDB {
       category: document.getElementById(categoryId).value,
       url_slug: this.generateSlug(document.getElementById(nameId).value) + '.html',
       image_url: document.getElementById(imageId).value,
+      small_image_url: document.getElementById(smallImageId).value,
+      hero_image_url: document.getElementById(heroImageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
       introduction: document.getElementById(introductionId).value,
       quote: document.getElementById(quoteId).value,
+      header_letter: document.getElementById(headerLetterId).value,
       summary: (document.getElementById(summaryId).value || '').split('\n').filter(p => p.trim()),
       sections: [],
-      highlights: []
+      highlights: highlights
     };
 
     try {
@@ -453,7 +552,7 @@ class LivingHeritageAdminDB {
     if (id) {
       document.getElementById('newsModalTitle').textContent = 'Edit News Article';
       try {
-        const endpoint = language === 'en' ? `${this.API_BASE}/news-en` : `${this.API_BASE}/news`;
+        const endpoint = language === 'en' ? `${this.API_BASE}/admin/news-en` : `${this.API_BASE}/admin/news`;
         const response = await fetch(endpoint);
         const data = await response.json();
         const article = data.news.find(a => a.id === id);
@@ -533,7 +632,7 @@ class LivingHeritageAdminDB {
 
   async loadNews(language = 'vi') {
     try {
-      const endpoint = language === 'en' ? `${this.API_BASE}/news-en` : `${this.API_BASE}/news`;
+      const endpoint = language === 'en' ? `${this.API_BASE}/admin/news-en` : `${this.API_BASE}/admin/news`;
       const response = await fetch(endpoint);
       const data = await response.json();
       const articles = data.news || [];
@@ -601,7 +700,7 @@ class LivingHeritageAdminDB {
     if (id) {
       document.getElementById('tipsModalTitle').textContent = 'Edit Wellness Tip';
       try {
-        const endpoint = language === 'en' ? `${this.API_BASE}/tips-en` : `${this.API_BASE}/tips`;
+        const endpoint = language === 'en' ? `${this.API_BASE}/admin/tips-en` : `${this.API_BASE}/admin/tips`;
         const response = await fetch(endpoint);
         if (!response.ok) {
           throw new Error(`API returned status ${response.status}`);
@@ -616,14 +715,16 @@ class LivingHeritageAdminDB {
           const descId = language === 'en' ? 'tipDescriptionEn' : 'tipDescription';
           const contentId = language === 'en' ? 'tipContentEn' : 'tipContent';
           const imageId = language === 'en' ? 'tipImageEn' : 'tipImage';
+          const heroImageId = language === 'en' ? 'tipHeroImageEn' : 'tipHeroImage';
           const publishedId = language === 'en' ? 'tipPublishedEn' : 'tipPublished';
 
-          console.log('Setting form fields with IDs:', { titleId, descId, contentId, imageId, publishedId });
+          console.log('Setting form fields with IDs:', { titleId, descId, contentId, imageId, heroImageId, publishedId });
 
           const titleField = document.getElementById(titleId);
           const descField = document.getElementById(descId);
           const contentField = document.getElementById(contentId);
           const imageField = document.getElementById(imageId);
+          const heroImageField = document.getElementById(heroImageId);
           const publishedField = document.getElementById(publishedId);
 
           console.log('Fields found:', {
@@ -631,13 +732,15 @@ class LivingHeritageAdminDB {
             descField: !!descField,
             contentField: !!contentField,
             imageField: !!imageField,
+            heroImageField: !!heroImageField,
             publishedField: !!publishedField
           });
 
           if (titleField) titleField.value = tip.title || '';
-          if (descField) descField.value = tip.description || '';
+          if (descField && tip.description) descField.value = tip.description || '';
           if (contentField) contentField.value = tip.content || '';
           if (imageField) imageField.value = tip.imageUrl || '';
+          if (heroImageField) heroImageField.value = tip.heroImageUrl || '';
           if (publishedField) publishedField.checked = tip.published !== false;
 
           console.log('Form fields populated successfully');
@@ -664,13 +767,16 @@ class LivingHeritageAdminDB {
     const descId = language === 'en' ? 'tipDescriptionEn' : 'tipDescription';
     const contentId = language === 'en' ? 'tipContentEn' : 'tipContent';
     const imageId = language === 'en' ? 'tipImageEn' : 'tipImage';
+    const heroImageId = language === 'en' ? 'tipHeroImageEn' : 'tipHeroImage';
     const publishedId = language === 'en' ? 'tipPublishedEn' : 'tipPublished';
 
+    const descField = document.getElementById(descId);
     const tipData = {
       title: document.getElementById(titleId).value,
-      description: document.getElementById(descId).value,
+      description: descField ? descField.value : '',
       content: document.getElementById(contentId).value,
       image_url: document.getElementById(imageId).value,
+      hero_image_url: document.getElementById(heroImageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
       url_slug: this.generateSlug(document.getElementById(titleId).value) + '.html'
@@ -705,7 +811,7 @@ class LivingHeritageAdminDB {
 
   async loadTips(language = 'vi') {
     try {
-      const endpoint = language === 'en' ? `${this.API_BASE}/tips-en` : `${this.API_BASE}/tips`;
+      const endpoint = language === 'en' ? `${this.API_BASE}/admin/tips-en` : `${this.API_BASE}/admin/tips`;
       const response = await fetch(endpoint);
       const data = await response.json();
       const tips = data.wellnessTips || [];
