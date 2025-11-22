@@ -2,20 +2,6 @@
   "news": [
     {
       "id": 1,
-      "urlSlug": "bo-nao-cua-ban-cam-nhan-duoc-dieu-gi-se-xay-ra-trong-tuong-lai",
-      "title": "Your mind senses what’s coming next",
-      "summary": "Neuroscience reveals that the human brain can anticipate future events by processing patterns, memories, and sensory signals—explaining intuition, rapid reflexe",
-      "description": "Neuroscience reveals that the human brain can anticipate future events by processing patterns, memories, and sensory signals—explaining intuition, rapid reflexes, and predictive awareness.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/bo-nao-cua-ban-cam-nhan-duoc-dieu-gi-se-xay-ra-trong-tuong-lai-1.jpg",
-      "content": "Neuroscience reveals that the human brain can anticipate future events by processing patterns, memories, and sensory signals—explaining intuition, rapid reflexes, and predictive awareness.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.483Z",
-      "updatedAt": "2025-11-22T12:24:48.484Z"
-    },
-    {
-      "id": 2,
       "urlSlug": "bo-suu-tap-glamour-green-tinh-yeu-ngoc-luc-bao",
       "title": "Glamour Green Collection – The Love of Emerald",
       "summary": "Glamour Green — The Love of Emerald: a signature Aroma Therapy collection that awakens emotion through four fragrance families linked to the happiness hormones ",
@@ -25,25 +11,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.484Z",
-      "updatedAt": "2025-11-22T12:24:48.484Z"
+      "createdAt": "2025-11-22T13:20:50.395Z",
+      "updatedAt": "2025-11-22T13:20:50.395Z"
     },
     {
-      "id": 3,
-      "urlSlug": "bui-cong-duy",
-      "title": "Bui Cong Duy — People's Artist, Keeper of the Flame of Music",
-      "summary": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and q",
-      "description": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and quiet reflection.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/bui-cong-duy-hero.png",
-      "content": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and quiet reflection.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.484Z",
-      "updatedAt": "2025-11-22T12:24:48.484Z"
-    },
-    {
-      "id": 4,
+      "id": 2,
       "urlSlug": "chim-dam-nhu-pham-hoang-nam",
       "title": "Immersed – The Way of Phạm Hoàng Nam",
       "summary": "Phạm Hoàng Nam discusses his artistic philosophy and immersive stagecraft for the Jazz Concert – IMMERSED, blending technology, music and Vietnamese spirit.",
@@ -53,11 +25,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.484Z",
-      "updatedAt": "2025-11-22T12:24:48.484Z"
+      "createdAt": "2025-11-22T13:20:50.396Z",
+      "updatedAt": "2025-11-22T13:20:50.396Z"
     },
     {
-      "id": 5,
+      "id": 3,
       "urlSlug": "cung-nhin-lai-hinh-anh-khai-truong-cac-hoat-dong-cua-gg-corporation-hanh-trinh-ruc-ro-chinh-thuc-bat-dau",
       "title": "Grand Opening of GG Corporation – A Brilliant Journey Officially Begins",
       "summary": "On August 8, 2025 GG Corporation officially opened a new chapter, launching its mission to create sustainable value and lead innovation for a more prosperous co",
@@ -67,11 +39,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.484Z",
-      "updatedAt": "2025-11-22T12:24:48.484Z"
+      "createdAt": "2025-11-22T13:20:50.397Z",
+      "updatedAt": "2025-11-22T13:20:50.397Z"
     },
     {
-      "id": 6,
+      "id": 4,
       "urlSlug": "dao-dien-pham-hoang-nam-niels-lan-doky-hoi-ngo-thanh-lam-se-bung-no",
       "title": "Director Phạm Hoàng Nam: “The Reunion of Niels Lan Doky and Thanh Lam Will Be Explosive”",
       "summary": "Director Phạm Hoàng Nam discusses his thirty-year career, the creative philosophy behind IMMERSED and the highly anticipated reunion of Niels Lan Doky and Thanh",
@@ -81,25 +53,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.485Z",
-      "updatedAt": "2025-11-22T12:24:48.485Z"
+      "createdAt": "2025-11-22T13:20:50.397Z",
+      "updatedAt": "2025-11-22T13:20:50.397Z"
     },
     {
-      "id": 7,
-      "urlSlug": "di-bo-bi-quyet-danh-thuc-tri-nao-va-tinh-than-minh-man",
-      "title": "Why Walking Boosts Brain Power",
-      "summary": "Walking increases blood circulation to the brain, enhancing oxygen flow and stimulating neural activity—boosting focus, creativity, alertness, and overall cogni",
-      "description": "Walking increases blood circulation to the brain, enhancing oxygen flow and stimulating neural activity—boosting focus, creativity, alertness, and overall cognitive performance.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/di-bo-bi-quyet-danh-thuc-tri-nao-va-tinh-than-minh-man-1.jpg",
-      "content": "Walking increases blood circulation to the brain, enhancing oxygen flow and stimulating neural activity—boosting focus, creativity, alertness, and overall cognitive performance.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.485Z",
-      "updatedAt": "2025-11-22T12:24:48.485Z"
-    },
-    {
-      "id": 8,
+      "id": 5,
       "urlSlug": "du-an-living-heritage-va-jazz-concert-dong-chay-am-nhac-cua-the-gioi",
       "title": "Living Heritage Project and Jazz Concert: The Flow of Global Music",
       "summary": "GG Corporation officially launches the Living Heritage project and the world-class Jazz Concert – Immersed, celebrating Vietnamese global heritage and the unive",
@@ -109,11 +67,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.485Z",
-      "updatedAt": "2025-11-22T12:24:48.485Z"
+      "createdAt": "2025-11-22T13:20:50.397Z",
+      "updatedAt": "2025-11-22T13:20:50.397Z"
     },
     {
-      "id": 9,
+      "id": 6,
       "urlSlug": "g79-auto-chinh-thuc-khai-truong-showroom-dau-tien-tai-ha-noi",
       "title": "G79 Auto Officially Opens Its First Showroom in Hanoi",
       "summary": "On June 14, 2025 G79 Auto inaugurated its first showroom in Hanoi, offering premium automotive services and a bespoke perfume collection inspired by Nordic land",
@@ -123,11 +81,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.485Z",
-      "updatedAt": "2025-11-22T12:24:48.485Z"
+      "createdAt": "2025-11-22T13:20:50.398Z",
+      "updatedAt": "2025-11-22T13:20:50.398Z"
     },
     {
-      "id": 10,
+      "id": 7,
       "urlSlug": "gg-corporation-nha-tai-tro-chinh-dem-nhac-khat-vong",
       "title": "GG CORPORATION – Main Sponsor of the Concert “Khát Vọng” (Aspiration)",
       "summary": "GG CORPORATION proudly supported the 'Khát Vọng' concert at Ho Guom Opera House on October 4, 2025 — celebrating the music of composer Phú Quang and honoring Vi",
@@ -137,11 +95,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.486Z",
-      "updatedAt": "2025-11-22T12:24:48.486Z"
+      "createdAt": "2025-11-22T13:20:50.398Z",
+      "updatedAt": "2025-11-22T13:20:50.398Z"
     },
     {
-      "id": 11,
+      "id": 8,
       "urlSlug": "hiep-si-jazz-niels-lan-doky-den-viet-nam-cuoc-gap-sau-20-nam-cho-doi",
       "title": "“Jazz Knight” Niels Lan Doky Returns to Vietnam: A Reunion Two Decades in the Making",
       "summary": "After 20 years, Niels Lan Doky returns to Vietnam for Jazz Concert IMMERSED on November 15 — a heartfelt reunion and a celebration of Living Heritage with leadi",
@@ -151,11 +109,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.486Z",
-      "updatedAt": "2025-11-22T12:24:48.486Z"
+      "createdAt": "2025-11-22T13:20:50.399Z",
+      "updatedAt": "2025-11-22T13:20:50.399Z"
     },
     {
-      "id": 12,
+      "id": 9,
       "urlSlug": "huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-trong-dem-nhac-living-heritage-jazz-concert-immersed",
       "title": "Jazz Legend Niels Lan Doky Returns to Vietnam for the Living Heritage – Jazz Concert IMMERSED",
       "summary": "GG Corporation presents Living Heritage and Jazz Concert IMMERSED (Nov 15, 2025) featuring Sir Niels Lan Doky — a cultural milestone celebrating Vietnamese heri",
@@ -165,11 +123,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.486Z",
-      "updatedAt": "2025-11-22T12:24:48.486Z"
+      "createdAt": "2025-11-22T13:20:50.399Z",
+      "updatedAt": "2025-11-22T13:20:50.399Z"
     },
     {
-      "id": 13,
+      "id": 10,
       "urlSlug": "huyen-thoai-jazz-niels-lan-doky-tro-lai-viet-nam-voi-dem-nhac-immersed",
       "title": "Jazz Legend Niels Lan Doky Returns to Vietnam for 'Immersed' Concert",
       "summary": "Sir Niels Lan Doky returns to Vietnam for the one-night-only 'Immersed' concert — launching Living Heritage, a cultural initiative celebrating Vietnamese intell",
@@ -179,67 +137,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.486Z",
-      "updatedAt": "2025-11-22T12:24:48.486Z"
+      "createdAt": "2025-11-22T13:20:50.400Z",
+      "updatedAt": "2025-11-22T13:20:50.400Z"
     },
     {
-      "id": 14,
-      "urlSlug": "khi-doi-mat-biet-noi-khoa-hoc-giai-ma-bi-an-cua-giao-tiep-khong-loi",
-      "title": "When Eyes Speak: The Science Behind Human Connection",
-      "summary": "Neuroscience reveals how eye contact communicates emotion, intention, and human connection—activating the brain’s social processing networks in milliseconds.",
-      "description": "Neuroscience reveals how eye contact communicates emotion, intention, and human connection—activating the brain’s social processing networks in milliseconds.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/khi-doi-mat-biet-noi-khoa-hoc-giai-ma-bi-an-cua-giao-tiep-khong-loi-1.jpg",
-      "content": "Neuroscience reveals how eye contact communicates emotion, intention, and human connection—activating the brain’s social processing networks in milliseconds.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.486Z",
-      "updatedAt": "2025-11-22T12:24:48.486Z"
-    },
-    {
-      "id": 15,
-      "urlSlug": "khi-dong-y-bat-tay-cung-am-thuc-va-cau-chuyen-hoi-sinh-cua-dong-y-trung-hoa",
-      "title": "Fancy a wolfberry gelato or herbal cocktail? In China, TCM meets F&B amid wellness boom",
-      "summary": "Traditional Chinese Medicine is blending with modern food and beverage trends in China, from herbal cocktails to ginseng bubble tea—reflecting a new wellness-dr",
-      "description": "Traditional Chinese Medicine is blending with modern food and beverage trends in China, from herbal cocktails to ginseng bubble tea—reflecting a new wellness-driven lifestyle embraced by young consumers.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/khi-dong-y-bat-tay-cung-am-thuc-va-cau-chuyen-hoi-sinh-cua-dong-y-trung-hoa-1.png",
-      "content": "Traditional Chinese Medicine is blending with modern food and beverage trends in China, from herbal cocktails to ginseng bubble tea—reflecting a new wellness-driven lifestyle embraced by young consumers.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 16,
-      "urlSlug": "khoa-hoc-chung-min-kiem-soat-con-gian-giup-nao-bo-manh-me-va-tot-hon",
-      "title": "From Anger to Patience: How Self-Control Strengthens Your Brain",
-      "summary": "Neuroscience shows that managing anger strengthens neural pathways responsible for emotional regulation, resilience, and long-term brain health—transforming imp",
-      "description": "Neuroscience shows that managing anger strengthens neural pathways responsible for emotional regulation, resilience, and long-term brain health—transforming impulsive reactions into calm, conscious responses.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/khoa-hoc-chung-min-kiem-soat-con-gian-giup-nao-bo-manh-me-va-tot-hon-1.jpg",
-      "content": "Neuroscience shows that managing anger strengthens neural pathways responsible for emotional regulation, resilience, and long-term brain health—transforming impulsive reactions into calm, conscious responses.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 17,
-      "urlSlug": "lieu-phap-te-bao-goc-giup-giam-nguy-co-suy-tim-sau-nhoi-mau-co-tim",
-      "title": "Stem cell therapy lowers risk of heart failure after a heart attack",
-      "summary": "A major clinical trial shows that umbilical cord-derived mesenchymal stem cell infusions significantly reduce the risk of heart failure after a heart attack, im",
-      "description": "A major clinical trial shows that umbilical cord-derived mesenchymal stem cell infusions significantly reduce the risk of heart failure after a heart attack, improving cardiac function and promoting tissue repair.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/lieu-phap-te-bao-goc-giup-giam-nguy-co-suy-tim-sau-nhoi-mau-co-tim-1.png",
-      "content": "A major clinical trial shows that umbilical cord-derived mesenchymal stem cell infusions significantly reduce the risk of heart failure after a heart attack, improving cardiac function and promoting tissue repair.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 18,
+      "id": 11,
       "urlSlug": "mot-thoi-de-nho-trong-dem-nhac-phu-quang",
       "title": "A Time to Remember – The Music of Phú Quang Lives On",
       "summary": "A special Phú Quang concert, 'Khát Vọng' (Aspiration), returns to Ho Guom Opera House on October 4, 2025 — honoring his timeless melodies through the largest sy",
@@ -249,25 +151,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
+      "createdAt": "2025-11-22T13:20:50.401Z",
+      "updatedAt": "2025-11-22T13:20:50.401Z"
     },
     {
-      "id": 19,
-      "urlSlug": "nam-2030-cuoc-dua-tai-sinh-cua-nhat-ban",
-      "title": "Why 2030? Japan’s Race for Regeneration",
-      "summary": "Japan is accelerating regenerative medicine as a national strategy, aiming for major breakthroughs by 2030 to confront aging, healthcare strain, and the future ",
-      "description": "Japan is accelerating regenerative medicine as a national strategy, aiming for major breakthroughs by 2030 to confront aging, healthcare strain, and the future of longevity innovation.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/nam-2030-cuoc-dua-tai-sinh-cua-nhat-ban-1.png",
-      "content": "Japan is accelerating regenerative medicine as a national strategy, aiming for major breakthroughs by 2030 to confront aging, healthcare strain, and the future of longevity innovation.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 20,
+      "id": 12,
       "urlSlug": "nguoi-viet-gan-nhau-hon-nho-di-san-cho-tuong-lai",
       "title": "Vietnamese People Becoming Closer Through “Heritage for the Future”",
       "summary": "Living Heritage connects the global Vietnamese community through art and heritage—celebrating inspiring figures and strengthening ties between overseas Vietname",
@@ -277,81 +165,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
+      "createdAt": "2025-11-22T13:20:50.401Z",
+      "updatedAt": "2025-11-22T13:20:50.401Z"
     },
     {
-      "id": 21,
-      "urlSlug": "nguyen-phuong-lam",
-      "title": "Nguyen Phuong Lam — Philanthropist & Advocate for Inner Transformation",
-      "summary": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia.",
-      "description": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/nguyen-phuong-lam-hero.png",
-      "content": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 22,
-      "urlSlug": "nguyen-tuong-bach",
-      "title": "Nguyen Tuong Bach — Author & Translator, A Bridge of Eastern and Western Wisdom",
-      "summary": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading",
-      "description": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading voice in Vietnam’s contemporary spiritual life.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/nguyen-tuong-bach-hero.png",
-      "content": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading voice in Vietnam’s contemporary spiritual life.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 23,
-      "urlSlug": "nguyen-xuan-phuong",
-      "title": "Xuan Phuong — Journalist & Author, A Timeless Spirit of Vietnamese Womanhood",
-      "summary": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and",
-      "description": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and extraordinary Vietnamese womanhood.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/nguyen-xuan-phuong-hero.png",
-      "content": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and extraordinary Vietnamese womanhood.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 24,
-      "urlSlug": "pham-hoang-nam",
-      "title": "Pham Hoang Nam — Director, Master of Visual Storytelling",
-      "summary": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporar",
-      "description": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporary performing arts.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/pham-hoang-nam-hero.png",
-      "content": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporary performing arts.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 25,
-      "urlSlug": "phan-toan-thang",
-      "title": "Phan Toan Thang — Pioneer of Stem Cell Science & Regenerative Medicine",
-      "summary": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing t",
-      "description": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing transformative breakthroughs to regenerative and longevity medicine.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/phan-toan-thang-hero.png",
-      "content": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing transformative breakthroughs to regenerative and longevity medicine.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.487Z",
-      "updatedAt": "2025-11-22T12:24:48.487Z"
-    },
-    {
-      "id": 26,
+      "id": 13,
       "urlSlug": "phan-ung-cua-diva-thanh-lam-truoc-y-kien-ai-hat-hay-hon-ca-si",
       "title": "Diva Thanh Lam Responds to the Claim: “AI Sings Better Than Singers”",
       "summary": "Diva Thanh Lam shares her thoughts on AI in music, affirming that technology can never replace the emotion and creativity of the human heart. She will perform a",
@@ -361,81 +179,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
+      "createdAt": "2025-11-22T13:20:50.401Z",
+      "updatedAt": "2025-11-22T13:20:50.401Z"
     },
     {
-      "id": 27,
-      "urlSlug": "quoc-trung",
-      "title": "Quoc Trung — Musician & Cultural Innovator",
-      "summary": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemp",
-      "description": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemporary musical legacy.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/quoc-trung-hero.png",
-      "content": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemporary musical legacy.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
-    },
-    {
-      "id": 28,
-      "urlSlug": "sir-niels-lan-doky",
-      "title": "Sir Niels Lan Doky — Knight of Jazz & World-Class Pianist",
-      "summary": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvi",
-      "description": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvisational mastery, and timeless musical legacy.",
-      "imageUrl": "https://livingheritage.vn/assets/media/people-heritage/niels-lan-doky-hero.png",
-      "content": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvisational mastery, and timeless musical legacy.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
-    },
-    {
-      "id": 29,
-      "urlSlug": "su-thay-doi-ky-dieu-cua-nao-bo-sau-72-gio-khong-dien-thoai",
-      "title": "The Remarkable Change in Your Brain After 72 Hours Without a Phone",
-      "summary": "Neuroscience shows that just 72 hours without smartphone stimulation can restore dopamine balance, reduce anxiety, sharpen focus, and significantly boost creati",
-      "description": "Neuroscience shows that just 72 hours without smartphone stimulation can restore dopamine balance, reduce anxiety, sharpen focus, and significantly boost creativity.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/su-thay-doi-ky-dieu-cua-nao-bo-sau-72-gio-khong-dien-thoai-1.jpg",
-      "content": "Neuroscience shows that just 72 hours without smartphone stimulation can restore dopamine balance, reduce anxiety, sharpen focus, and significantly boost creativity.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
-    },
-    {
-      "id": 30,
-      "urlSlug": "tai-sao-chung-ta-lai-hop-ca-voi-mot-so-nguoi-khoa-hoc-than-kinh-giai-thich-su-ket-noi-ngay-tu-cai-nhin-dau-tien",
-      "title": "Why We “Click” With Certain People – Neuroscience Explains the Instant Connection",
-      "summary": "Neuroscience reveals why we instantly “click” with some people: when two minds connect, their brainwaves synchronize, creating natural rapport, trust, and emoti",
-      "description": "Neuroscience reveals why we instantly “click” with some people: when two minds connect, their brainwaves synchronize, creating natural rapport, trust, and emotional alignment.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/tai-sao-chung-ta-lai-hop-ca-voi-mot-so-nguoi-khoa-hoc-than-kinh-giai-thich-su-ket-noi-ngay-tu-cai-nhin-dau-tien-1.jpg",
-      "content": "Neuroscience reveals why we instantly “click” with some people: when two minds connect, their brainwaves synchronize, creating natural rapport, trust, and emotional alignment.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
-    },
-    {
-      "id": 31,
-      "urlSlug": "tai-sao-hoc-nhac-giup-tre-phat-trien-nao-bo-hon-lap-trinh",
-      "title": "How Musical Training Boosts Kids’ Brain Power More Than Coding",
-      "summary": "MIT research shows that musical training activates more brain regions than coding—enhancing memory, focus, creativity, language ability, and long-term learning ",
-      "description": "MIT research shows that musical training activates more brain regions than coding—enhancing memory, focus, creativity, language ability, and long-term learning capacity in children.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/tai-sao-hoc-nhac-giup-tre-phat-trien-nao-bo-hon-lap-trinh-1.jpg",
-      "content": "MIT research shows that musical training activates more brain regions than coding—enhancing memory, focus, creativity, language ability, and long-term learning capacity in children.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
-    },
-    {
-      "id": 32,
+      "id": 14,
       "urlSlug": "trung-thu-sum-vay-gan-ket-dai-gia-dinh-g79-auto",
       "title": "A Joyful Mid-Autumn Gathering – Celebrating the G79 Auto Family Spirit",
       "summary": "G79 Auto hosted a heartwarming Mid-Autumn Family Gathering celebrating staff and their families — an evening of lanterns, music, gifts and a shared moment of to",
@@ -445,25 +193,11 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.488Z",
-      "updatedAt": "2025-11-22T12:24:48.488Z"
+      "createdAt": "2025-11-22T13:20:50.401Z",
+      "updatedAt": "2025-11-22T13:20:50.401Z"
     },
     {
-      "id": 33,
-      "urlSlug": "ty-the-nguon-suc-manh-co-the-chua-lanh",
-      "title": "Chinese Medicine Boosts Regenerative Medicine in Stem Cell-Based Therapy",
-      "summary": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth fa",
-      "description": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth factors, and strengthening regenerative potential.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/y-hoc-co-truyen-trung-hoa-thuc-day-y-hoc-tai-tao-trong-lieu-phap-dua-tren-te-bao-goc-1.png",
-      "content": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth factors, and strengthening regenerative potential.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.489Z",
-      "updatedAt": "2025-11-22T12:24:48.489Z"
-    },
-    {
-      "id": 34,
+      "id": 15,
       "urlSlug": "wellness-care-song-chu-dong-tai-tao-va-can-bang-cung-gg-young",
       "title": "Wellness Care – Live Proactively, Rejuvenate and Rebalance with GG Young",
       "summary": "Wellness Care by GG Young — Nordic and North American inspired treatment programs combining globally certified technologies to purify, rejuvenate and rebalance ",
@@ -473,22 +207,8 @@
       "author": "Living Heritage",
       "language": "en",
       "published": true,
-      "createdAt": "2025-11-22T12:24:48.489Z",
-      "updatedAt": "2025-11-22T12:24:48.489Z"
-    },
-    {
-      "id": 35,
-      "urlSlug": "y-hoc-co-truyen-trung-hoa-thuc-day-y-hoc-tai-tao-trong-lieu-phap-dua-tren-te-bao-goc",
-      "title": "Chinese Medicine Boosts Regenerative Medicine in Stem Cell-Based Therapy",
-      "summary": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth fa",
-      "description": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth factors, and strengthening regenerative potential.",
-      "imageUrl": "https://livingheritage.vn/assets/media/tips/y-hoc-co-truyen-trung-hoa-thuc-day-y-hoc-tai-tao-trong-lieu-phap-dua-tren-te-bao-goc-1.png",
-      "content": "A comprehensive scientific review reveals how Chinese medicine enhances stem cell therapy by improving cell survival, delaying senescence, stimulating growth factors, and strengthening regenerative potential.",
-      "author": "Living Heritage",
-      "language": "en",
-      "published": true,
-      "createdAt": "2025-11-22T12:24:48.490Z",
-      "updatedAt": "2025-11-22T12:24:48.490Z"
+      "createdAt": "2025-11-22T13:20:50.401Z",
+      "updatedAt": "2025-11-22T13:20:50.401Z"
     }
   ]
 }
