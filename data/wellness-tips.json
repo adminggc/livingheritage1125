@@ -1,3 +1,70 @@
 {
-  "wellnessTips": []
+  "wellnessTips": [
+    {
+      "id": 30,
+      "urlSlug": "premium-wellbeing-tips-details.html",
+      "title": "Living Heritage — Di sản tinh tuyển cho tương lai",
+      "summary": "Explore the structure and function of the body's major systems.",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.268Z",
+      "updatedAt": "2025-11-22T10:24:19.268Z"
+    },
+    {
+      "id": 31,
+      "urlSlug": "premium-wellbeing-tips-full.html",
+      "title": "Living Heritage — Di sản tinh tuyển cho tương lai",
+      "summary": "Explore the structure and function of the body's major systems.",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.268Z",
+      "updatedAt": "2025-11-22T10:24:19.268Z"
+    },
+    {
+      "id": 39,
+      "urlSlug": "wellness-care-song-chu-dong-tai-tao-va-can-bang-cung-gg-young.html",
+      "title": "Wellness Care – Sống chủ động, tái tạo và cân bằng cùng GG Young",
+      "summary": "Địa chỉ: Tầng 9, số 233 Đồng Khởi, Phường Sài Gòn, TP. Hồ Chí Minh",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.269Z",
+      "updatedAt": "2025-11-22T10:24:19.269Z"
+    },
+    {
+      "id": 40,
+      "urlSlug": "wellness-tips.html",
+      "title": "Wellness Tips — Sống tinh hoa cùng Living Heritage",
+      "summary": "Địa chỉ: Tầng 9, số 233 Đồng Khởi, Phường Sài Gòn, TP. Hồ Chí Minh",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.270Z",
+      "updatedAt": "2025-11-22T10:24:19.270Z"
+    },
+    {
+      "id": 41,
+      "urlSlug": "wellness-tips_backup.html",
+      "title": "Wellness Tips — Sống tinh hoa cùng Living Heritage",
+      "summary": "Địa chỉ: Tầng 9, số 233 Đồng Khởi, Phường Sài Gòn, TP. Hồ Chí Minh",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.270Z",
+      "updatedAt": "2025-11-22T10:24:19.270Z"
+    },
+    {
+      "id": 43,
+      "urlSlug": "z_tips_template.html",
+      "title": "Y học cổ truyền Trung Hoa thúc đẩy y học tái tạo trong liệu pháp tế bào gốc",
+      "summary": "Phát hiện này nhấn mạnh rằng ý thức con người chỉ là phần nổi của tảng băng dự đoán—bộ não luôn đi trước\r\n              một bước, chuẩn bị cho tương lai trước khi chúng ta kịp nhận ra.",
+      "content": "Article content from HTML",
+      "imageUrl": "assets/media/shared/news/default.jpg",
+      "published": true,
+      "createdAt": "2025-11-22T10:24:19.270Z",
+      "updatedAt": "2025-11-22T10:24:19.270Z"
+    }
+  ]
 }
