@@ -381,7 +381,7 @@ class LivingHeritageAdminDB {
       document.getElementById('profilesModalTitle').textContent = 'Edit Heritage Figure';
       try {
         const endpoint = language === 'en' ? `${this.API_BASE}/admin/figures-en` : `${this.API_BASE}/admin/figures`;
-        const response = await fetch(endpoint);
+        const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
         const data = await response.json();
         const profile = data.heritageFigures.find(p => p.id === id);
 
@@ -563,7 +563,7 @@ class LivingHeritageAdminDB {
       document.getElementById('newsModalTitle').textContent = 'Edit News Article';
       try {
         const endpoint = language === 'en' ? `${this.API_BASE}/admin/news-en` : `${this.API_BASE}/admin/news`;
-        const response = await fetch(endpoint);
+        const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
         const data = await response.json();
         const article = data.news.find(a => a.id === id);
 
@@ -712,7 +712,7 @@ class LivingHeritageAdminDB {
       document.getElementById('tipsModalTitle').textContent = 'Edit Wellness Tip';
       try {
         const endpoint = language === 'en' ? `${this.API_BASE}/admin/tips-en` : `${this.API_BASE}/admin/tips`;
-        const response = await fetch(endpoint);
+        const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
         if (!response.ok) {
           throw new Error(`API returned status ${response.status}`);
         }
