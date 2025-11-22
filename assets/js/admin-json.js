@@ -18,10 +18,17 @@ class AdminPanel {
   async initializeData() {
     // Load data from JSON files on startup
     try {
+      // Load Vietnamese data
       await this.loadNewsFromFile();
       await this.loadTipsFromFile();
       await this.loadFiguresFromFile();
       await this.loadBannersFromFile();
+
+      // Load English data
+      await this.loadNewsFromFileEn();
+      await this.loadTipsFromFileEn();
+      await this.loadFiguresFromFileEn();
+
       this.updateStats();
     } catch (error) {
       console.log('Initializing with new data', error);
@@ -71,23 +78,38 @@ class AdminPanel {
       });
     }
 
-    // Add buttons
+    // Add buttons - Vietnamese
     document.getElementById('addNewsBtn').addEventListener('click', () => this.openNewsModal());
     document.getElementById('addProfileBtn').addEventListener('click', () => this.openProfileModal());
     document.getElementById('addTipBtn').addEventListener('click', () => this.openTipModal());
     document.getElementById('addBannerBtn').addEventListener('click', () => this.openBannerModal());
 
-    // Search
+    // Add buttons - English
+    document.getElementById('addNewsBtnEn').addEventListener('click', () => this.openNewsModalEn());
+    document.getElementById('addProfileBtnEn').addEventListener('click', () => this.openProfileModalEn());
+    document.getElementById('addTipBtnEn').addEventListener('click', () => this.openTipModalEn());
+
+    // Search - Vietnamese
     document.getElementById('newsSearch').addEventListener('input', (e) => this.filterTable('news', e.target.value));
     document.getElementById('profilesSearch').addEventListener('input', (e) => this.filterTable('profiles', e.target.value));
     document.getElementById('tipsSearch').addEventListener('input', (e) => this.filterTable('tips', e.target.value));
     document.getElementById('bannersSearch').addEventListener('input', (e) => this.filterTable('banners', e.target.value));
 
-    // Form submissions
+    // Search - English
+    document.getElementById('newsSearchEn').addEventListener('input', (e) => this.filterTable('newsEn', e.target.value));
+    document.getElementById('profilesSearchEn').addEventListener('input', (e) => this.filterTable('profilesEn', e.target.value));
+    document.getElementById('tipsSearchEn').addEventListener('input', (e) => this.filterTable('tipsEn', e.target.value));
+
+    // Form submissions - Vietnamese
     document.getElementById('newsForm').addEventListener('submit', (e) => this.saveNews(e));
     document.getElementById('profilesForm').addEventListener('submit', (e) => this.saveProfile(e));
     document.getElementById('tipsForm').addEventListener('submit', (e) => this.saveTip(e));
     document.getElementById('bannersForm').addEventListener('submit', (e) => this.saveBanner(e));
+
+    // Form submissions - English
+    document.getElementById('newsFormEn').addEventListener('submit', (e) => this.saveNewsEn(e));
+    document.getElementById('profilesFormEn').addEventListener('submit', (e) => this.saveProfileEn(e));
+    document.getElementById('tipsFormEn').addEventListener('submit', (e) => this.saveTipEn(e));
 
     // Modal close buttons
     document.querySelectorAll('.modal-close').forEach(btn => {
@@ -453,13 +475,14 @@ class AdminPanel {
       document.getElementById('newsModalTitle').textContent = 'Edit Article';
       const article = window.newsData.find(a => a.id === id);
       if (article) {
-        document.getElementById('newsTitle').value = article.title;
-        document.getElementById('newsCategory').value = article.category;
-        document.getElementById('newsDate').value = article.date;
-        document.getElementById('newsImage').value = article.featured_image;
-        document.getElementById('newsContent').value = article.content;
-        document.getElementById('newsAuthor').value = article.author;
-        document.getElementById('newsPublished').checked = article.published;
+        document.getElementById('newsTitle').value = article.title || '';
+        document.getElementById('newsCategory').value = article.category || '';
+        document.getElementById('newsDate').value = article.date || '';
+        document.getElementById('newsImage').value = article.featured_image || '';
+        document.getElementById('newsDescription').value = article.description || '';
+        document.getElementById('newsContent').value = article.content || '';
+        document.getElementById('newsAuthor').value = article.author || '';
+        document.getElementById('newsPublished').checked = article.published !== false;
       }
     } else {
       document.getElementById('newsModalTitle').textContent = 'Add Article';
@@ -471,21 +494,36 @@ class AdminPanel {
 
   async saveNews(e) {
     e.preventDefault();
+
+    const title = document.getElementById('newsTitle').value.trim();
+    const category = document.getElementById('newsCategory').value.trim();
+    const date = document.getElementById('newsDate').value.trim();
+    const featured_image = document.getElementById('newsImage').value.trim();
+    const description = document.getElementById('newsDescription').value.trim();
+    const content = document.getElementById('newsContent').value.trim();
+    const author = document.getElementById('newsAuthor').value.trim();
+    const published = document.getElementById('newsPublished').checked;
+
+    if (!title) {
+      this.showError('Title is required');
+      return;
+    }
+
     const formData = {
       id: this.currentEditId || Date.now(),
-      slug: this.generateSlug(document.getElementById('newsTitle').value),
-      title: document.getElementById('newsTitle').value,
-      description: document.getElementById('newsTitle').value.substring(0, 100),
-      category: document.getElementById('newsCategory').value,
-      date: document.getElementById('newsDate').value,
+      slug: this.generateSlug(title),
+      title: title,
+      description: description || title.substring(0, 100),
+      category: category,
+      date: date || new Date().toISOString().split('T')[0],
       publishedTime: new Date().toISOString(),
-      featured_image: document.getElementById('newsImage').value,
-      images: [document.getElementById('newsImage').value],
-      content: document.getElementById('newsContent').value,
-      author: document.getElementById('newsAuthor').value,
-      keywords: document.getElementById('newsCategory').value,
-      published: document.getElementById('newsPublished').checked,
-      created: new Date().toISOString(),
+      featured_image: featured_image,
+      images: featured_image ? [featured_image] : [],
+      content: content,
+      author: author || 'Living Heritage',
+      keywords: category,
+      published: published,
+      created: this.currentEditId ? (window.newsData.find(a => a.id === this.currentEditId)?.created || new Date().toISOString()) : new Date().toISOString(),
       updated: new Date().toISOString()
     };
 
@@ -546,24 +584,122 @@ class AdminPanel {
     form.reset();
     this.currentEditId = id;
 
+    // Clear dynamic containers
+    document.getElementById('sectionsContainer').innerHTML = '';
+    document.getElementById('highlightsContainer').innerHTML = '';
+
     if (id) {
       document.getElementById('profilesModalTitle').textContent = 'Edit Profile';
-      // Load from memory
       const figure = window.figuresData.find(f => f.id === id);
       if (figure) {
+        // Basic info
         document.getElementById('profileName').value = figure.fullName || '';
         document.getElementById('profileTitle').value = figure.title || '';
-        document.getElementById('profileImage').value = figure.imageUrl || '';
         document.getElementById('profileCategory').value = figure.category || '';
-        document.getElementById('profileBio').value = figure.description || '';
-        document.getElementById('profileAchievements').value = figure.achievements || '';
+        document.getElementById('profileHeaderLetter').value = figure.headerLetter || '';
+
+        // Images
+        document.getElementById('profileImage').value = figure.imageUrl || '';
+        document.getElementById('profileSmallImage').value = figure.smallImageUrl || '';
+        document.getElementById('profileHeroImage').value = figure.heroImageUrl || '';
+
+        // Summary & Introduction
+        if (figure.summary && Array.isArray(figure.summary)) {
+          document.getElementById('profileSummary').value = figure.summary.join('\n');
+        }
+        document.getElementById('profileIntroduction').value = figure.introduction || '';
+
+        // Quote
+        document.getElementById('profileQuote').value = figure.quote || '';
+
+        // Sections
+        if (figure.sections && Array.isArray(figure.sections)) {
+          figure.sections.forEach(section => {
+            this.addSectionField(section.title, section.type, section.content || section.items?.join('\n') || '');
+          });
+        }
+
+        // Highlights
+        if (figure.highlights && Array.isArray(figure.highlights)) {
+          figure.highlights.forEach(highlight => {
+            const answerText = Array.isArray(highlight.answer) ? highlight.answer.join('\n') : highlight.answer;
+            this.addHighlightField(highlight.question, answerText);
+          });
+        }
+
         document.getElementById('profilePublished').checked = figure.published !== false;
       }
     } else {
       document.getElementById('profilesModalTitle').textContent = 'Add Profile';
     }
 
+    // Setup event listeners for dynamic buttons
+    document.getElementById('addSectionBtn').onclick = (e) => {
+      e.preventDefault();
+      this.addSectionField('', 'text', '');
+    };
+
+    document.getElementById('addHighlightBtn').onclick = (e) => {
+      e.preventDefault();
+      this.addHighlightField('', '');
+    };
+
     this.openModal('profilesModal');
+  }
+
+  addSectionField(title = '', type = 'text', content = '') {
+    const container = document.getElementById('sectionsContainer');
+    const index = container.children.length;
+    const sectionHtml = `
+      <div class="form-group section-field" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <label style="font-weight: bold; margin: 0;">Section ${index + 1}</label>
+          <button type="button" class="btn btn-small btn-danger" onclick="this.closest('.section-field').remove()">
+            <i class="fas fa-times"></i> Remove
+          </button>
+        </div>
+        <div class="form-group">
+          <label>Section Title</label>
+          <input type="text" class="section-title" placeholder="e.g., Education, Career" value="${title}">
+        </div>
+        <div class="form-group">
+          <label>Content Type</label>
+          <select class="section-type">
+            <option value="text" ${type === 'text' ? 'selected' : ''}>Text Paragraphs</option>
+            <option value="list" ${type === 'list' ? 'selected' : ''}>Bullet List</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Content (one per line for lists)</label>
+          <textarea class="section-content" placeholder="Enter content..." style="min-height: 80px;">${content}</textarea>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', sectionHtml);
+  }
+
+  addHighlightField(question = '', answer = '') {
+    const container = document.getElementById('highlightsContainer');
+    const index = container.children.length;
+    const highlightHtml = `
+      <div class="form-group highlight-field" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <label style="font-weight: bold; margin: 0;">Q&A ${index + 1}</label>
+          <button type="button" class="btn btn-small btn-danger" onclick="this.closest('.highlight-field').remove()">
+            <i class="fas fa-times"></i> Remove
+          </button>
+        </div>
+        <div class="form-group">
+          <label>Question</label>
+          <input type="text" class="highlight-question" placeholder="What is your question?" value="${question}">
+        </div>
+        <div class="form-group">
+          <label>Answer (one paragraph per line)</label>
+          <textarea class="highlight-answer" placeholder="Enter answer paragraphs..." style="min-height: 80px;">${answer}</textarea>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', highlightHtml);
   }
 
   async saveProfile(e) {
@@ -571,10 +707,60 @@ class AdminPanel {
 
     const name = document.getElementById('profileName').value.trim();
     const title = document.getElementById('profileTitle').value.trim();
+    const category = document.getElementById('profileCategory').value.trim();
+    const headerLetter = document.getElementById('profileHeaderLetter').value.trim();
     const image = document.getElementById('profileImage').value.trim();
-    const bio = document.getElementById('profileBio').value.trim();
-    const achievements = document.getElementById('profileAchievements').value.trim();
+    const smallImage = document.getElementById('profileSmallImage').value.trim();
+    const heroImage = document.getElementById('profileHeroImage').value.trim();
     const published = document.getElementById('profilePublished').checked;
+
+    // Summary (split by lines)
+    const summaryText = document.getElementById('profileSummary').value.trim();
+    const summary = summaryText ? summaryText.split('\n').map(s => s.trim()).filter(s => s) : [];
+
+    // Introduction
+    const introduction = document.getElementById('profileIntroduction').value.trim();
+
+    // Quote
+    const quote = document.getElementById('profileQuote').value.trim();
+
+    // Sections
+    const sections = [];
+    document.querySelectorAll('.section-field').forEach(field => {
+      const sectionTitle = field.querySelector('.section-title').value.trim();
+      const sectionType = field.querySelector('.section-type').value;
+      const sectionContent = field.querySelector('.section-content').value.trim();
+
+      if (sectionTitle && sectionContent) {
+        if (sectionType === 'list') {
+          sections.push({
+            title: sectionTitle,
+            type: 'list',
+            items: sectionContent.split('\n').map(s => s.trim()).filter(s => s)
+          });
+        } else {
+          sections.push({
+            title: sectionTitle,
+            type: 'text',
+            content: sectionContent
+          });
+        }
+      }
+    });
+
+    // Highlights
+    const highlights = [];
+    document.querySelectorAll('.highlight-field').forEach(field => {
+      const question = field.querySelector('.highlight-question').value.trim();
+      const answerText = field.querySelector('.highlight-answer').value.trim();
+
+      if (question && answerText) {
+        highlights.push({
+          question: question,
+          answer: answerText.split('\n').map(s => s.trim()).filter(s => s)
+        });
+      }
+    });
 
     if (!name || !title) {
       this.showError('Name and Title are required');
@@ -587,9 +773,16 @@ class AdminPanel {
       if (figure) {
         figure.fullName = name;
         figure.title = title;
+        figure.category = category;
+        figure.headerLetter = headerLetter;
         figure.imageUrl = image;
-        figure.description = bio;
-        figure.achievements = achievements;
+        figure.smallImageUrl = smallImage;
+        figure.heroImageUrl = heroImage;
+        figure.summary = summary;
+        figure.introduction = introduction;
+        figure.sections = sections;
+        figure.quote = quote;
+        figure.highlights = highlights;
         figure.published = published;
         figure.updatedAt = new Date().toISOString();
       }
@@ -601,11 +794,18 @@ class AdminPanel {
         id: newId,
         fullName: name,
         title: title,
+        category: category,
+        headerLetter: headerLetter,
         imageUrl: image,
-        description: bio,
-        achievements: achievements,
+        smallImageUrl: smallImage,
+        heroImageUrl: heroImage,
+        summary: summary,
+        introduction: introduction,
+        sections: sections,
+        quote: quote,
+        highlights: highlights,
         published: published,
-        urlSlug: this.generateSlug(name) + '.html',
+        urlSlug: this.generateSlug(name),
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
       };
@@ -654,13 +854,70 @@ class AdminPanel {
 
   // ===== TIPS CRUD =====
   openTipModal(id = null) {
+    if (id) {
+      const tip = window.tipsData.find(t => t.id === id);
+      if (tip) {
+        document.getElementById('tipsModalTitle').textContent = 'Edit Wellness Tip';
+        document.getElementById('tipTitle').value = tip.title || '';
+        document.getElementById('tipCategory').value = tip.category || '';
+        document.getElementById('tipImage').value = tip.imageUrl || '';
+        document.getElementById('tipContent').value = tip.content || '';
+        document.getElementById('tipPublished').checked = tip.published !== false;
+        this.currentEditId = id;
+      }
+    } else {
+      document.getElementById('tipsModalTitle').textContent = 'Add Wellness Tip';
+      document.getElementById('tipTitle').value = '';
+      document.getElementById('tipCategory').value = '';
+      document.getElementById('tipImage').value = '';
+      document.getElementById('tipContent').value = '';
+      document.getElementById('tipPublished').checked = true;
+      this.currentEditId = null;
+    }
     this.openModal('tipsModal');
   }
 
   saveTip(e) {
     e.preventDefault();
-    this.showSuccess('Tip saved');
+    const title = document.getElementById('tipTitle').value.trim();
+    const category = document.getElementById('tipCategory').value.trim();
+    const imageUrl = document.getElementById('tipImage').value.trim();
+    const content = document.getElementById('tipContent').value.trim();
+    const published = document.getElementById('tipPublished').checked;
+
+    if (!title) {
+      this.showError('Title is required');
+      return;
+    }
+
+    const formData = {
+      id: this.currentEditId || Date.now(),
+      title: title,
+      category: category,
+      imageUrl: imageUrl,
+      content: content,
+      urlSlug: this.generateSlug(title),
+      published: published,
+      created: this.currentEditId ? (window.tipsData.find(t => t.id === this.currentEditId)?.created || new Date().toISOString()) : new Date().toISOString(),
+      updated: new Date().toISOString()
+    };
+
+    if (this.currentEditId) {
+      // Update existing tip
+      const index = window.tipsData.findIndex(t => t.id === this.currentEditId);
+      if (index !== -1) {
+        window.tipsData[index] = formData;
+      }
+    } else {
+      // Add new tip
+      window.tipsData.push(formData);
+    }
+
+    this.saveTipsToFile(window.tipsData);
+    this.showSuccess('Tip saved successfully');
     this.closeModal('tipsModal');
+    this.loadTips();
+    this.updateStats();
   }
 
   loadTips() {
@@ -843,6 +1100,641 @@ class AdminPanel {
       this.loadNews();
       this.updateStats();
       this.showSuccess('Demo data loaded');
+    }
+  }
+
+  // ===== ENGLISH CONTENT MANAGEMENT =====
+
+  // ===== ENGLISH NEWS DATA LOADING =====
+  async loadNewsFromFileEn() {
+    try {
+      const response = await fetch('/api/news-en');
+      if (!response.ok) throw new Error('Failed to load English news from API');
+      const data = await response.json();
+      window.newsDataEn = data.news || [];
+      console.log(`✓ Loaded ${window.newsDataEn.length} English news articles from API`);
+      this.loadNewsEn();
+      return data.news;
+    } catch (error) {
+      console.error('Error loading English news from API:', error);
+      window.newsDataEn = [];
+      return [];
+    }
+  }
+
+  async saveNewsToFileEn(newsArray) {
+    try {
+      const response = await fetch('/api/save-news-en', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ news: newsArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save English news');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving English news:', error);
+      this.showError('Auto-save English news failed. Using download backup.');
+      this.downloadNewsAsJSONEn(newsArray);
+      return false;
+    }
+  }
+
+  downloadNewsAsJSONEn(newsArray) {
+    const data = { news: newsArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `news-en-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== ENGLISH TIPS DATA LOADING =====
+  async loadTipsFromFileEn() {
+    try {
+      const response = await fetch('/api/tips-en');
+      if (!response.ok) throw new Error('Failed to load English tips from API');
+      const data = await response.json();
+      window.tipsDataEn = data.wellnessTips || [];
+      console.log(`✓ Loaded ${window.tipsDataEn.length} English wellness tips from API`);
+      this.loadTipsEn();
+      return data.wellnessTips;
+    } catch (error) {
+      console.error('Error loading English tips from API:', error);
+      window.tipsDataEn = [];
+      return [];
+    }
+  }
+
+  async saveTipsToFileEn(tipsArray) {
+    try {
+      const response = await fetch('/api/save-tips-en', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ wellnessTips: tipsArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save English tips');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving English tips:', error);
+      this.showError('Auto-save English tips failed. Using download backup.');
+      this.downloadTipsAsJSONEn(tipsArray);
+      return false;
+    }
+  }
+
+  downloadTipsAsJSONEn(tipsArray) {
+    const data = { wellnessTips: tipsArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `tips-en-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== ENGLISH HERITAGE FIGURES DATA LOADING =====
+  async loadFiguresFromFileEn() {
+    try {
+      const response = await fetch('/api/figures-en');
+      if (!response.ok) throw new Error('Failed to load English figures from API');
+      const data = await response.json();
+      window.figuresDataEn = data.heritageFigures || [];
+      console.log(`✓ Loaded ${window.figuresDataEn.length} English heritage figures from API`);
+      this.loadProfilesEn();
+      return data.heritageFigures;
+    } catch (error) {
+      console.error('Error loading English figures from API:', error);
+      window.figuresDataEn = [];
+      return [];
+    }
+  }
+
+  async saveFiguresToFileEn(figuresArray) {
+    try {
+      const response = await fetch('/api/save-figures-en', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ heritageFigures: figuresArray })
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save English figures');
+      }
+
+      const result = await response.json();
+      return result.success;
+    } catch (error) {
+      console.error('Error saving English figures:', error);
+      this.showError('Auto-save English figures failed. Using download backup.');
+      this.downloadFiguresAsJSONEn(figuresArray);
+      return false;
+    }
+  }
+
+  downloadFiguresAsJSONEn(figuresArray) {
+    const data = { heritageFigures: figuresArray };
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `figures-en-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
+  // ===== ENGLISH NEWS CRUD =====
+  openNewsModalEn(id = null) {
+    const form = document.getElementById('newsFormEn');
+    form.reset();
+    this.currentEditId = id;
+
+    if (id) {
+      document.getElementById('newsModalTitleEn').textContent = 'Edit Article';
+      const article = window.newsDataEn.find(a => a.id === id);
+      if (article) {
+        document.getElementById('newsTitleEn').value = article.title || '';
+        document.getElementById('newsCategoryEn').value = article.category || '';
+        document.getElementById('newsDateEn').value = article.date || '';
+        document.getElementById('newsImageEn').value = article.featured_image || '';
+        document.getElementById('newsDescriptionEn').value = article.description || '';
+        document.getElementById('newsContentEn').value = article.content || '';
+        document.getElementById('newsAuthorEn').value = article.author || '';
+        document.getElementById('newsPublishedEn').checked = article.published !== false;
+      }
+    } else {
+      document.getElementById('newsModalTitleEn').textContent = 'Add Article';
+      document.getElementById('newsDateEn').valueAsDate = new Date();
+    }
+
+    this.openModal('newsModalEn');
+  }
+
+  async saveNewsEn(e) {
+    e.preventDefault();
+
+    const title = document.getElementById('newsTitleEn').value.trim();
+    const category = document.getElementById('newsCategoryEn').value.trim();
+    const date = document.getElementById('newsDateEn').value.trim();
+    const featured_image = document.getElementById('newsImageEn').value.trim();
+    const description = document.getElementById('newsDescriptionEn').value.trim();
+    const content = document.getElementById('newsContentEn').value.trim();
+    const author = document.getElementById('newsAuthorEn').value.trim();
+    const published = document.getElementById('newsPublishedEn').checked;
+
+    if (!title) {
+      this.showError('Title is required');
+      return;
+    }
+
+    const formData = {
+      id: this.currentEditId || Date.now(),
+      slug: this.generateSlug(title),
+      title: title,
+      description: description || title.substring(0, 100),
+      category: category,
+      date: date || new Date().toISOString().split('T')[0],
+      publishedTime: new Date().toISOString(),
+      featured_image: featured_image,
+      images: featured_image ? [featured_image] : [],
+      content: content,
+      author: author || 'Living Heritage',
+      keywords: category,
+      published: published,
+      created: this.currentEditId ? (window.newsDataEn.find(a => a.id === this.currentEditId)?.created || new Date().toISOString()) : new Date().toISOString(),
+      updated: new Date().toISOString()
+    };
+
+    if (this.currentEditId) {
+      window.newsDataEn = window.newsDataEn.map(a => a.id === this.currentEditId ? formData : a);
+      this.showSuccess('English article updated successfully');
+    } else {
+      window.newsDataEn.push(formData);
+      this.showSuccess('English article created successfully');
+    }
+
+    await this.saveNewsToFileEn(window.newsDataEn);
+    this.closeModal('newsModalEn');
+    this.loadNewsEn();
+    this.updateStats();
+  }
+
+  loadNewsEn() {
+    const tbody = document.getElementById('newsTableBodyEn');
+
+    if (!window.newsDataEn || window.newsDataEn.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No English articles yet.</td></tr>';
+      return;
+    }
+
+    const sortedNews = [...window.newsDataEn].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    tbody.innerHTML = sortedNews.map(article => `
+      <tr>
+        <td>${article.title}</td>
+        <td>${article.category || '-'}</td>
+        <td>${new Date(article.date).toLocaleDateString()}</td>
+        <td><span class="badge" style="background: ${article.published ? '#28a745' : '#dc3545'}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">${article.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openNewsModalEn(${article.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteNewsEn(${article.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  async deleteNewsEn(id) {
+    if (confirm('Are you sure you want to delete this English article?')) {
+      window.newsDataEn = window.newsDataEn.filter(a => a.id !== id);
+      await this.saveNewsToFileEn(window.newsDataEn);
+      this.showSuccess('English article deleted');
+      this.loadNewsEn();
+      this.updateStats();
+    }
+  }
+
+  // ===== ENGLISH PROFILES CRUD =====
+  openProfileModalEn(id = null) {
+    const form = document.getElementById('profilesFormEn');
+    form.reset();
+    this.currentEditId = id;
+
+    // Clear dynamic containers
+    document.getElementById('sectionsContainerEn').innerHTML = '';
+    document.getElementById('highlightsContainerEn').innerHTML = '';
+
+    if (id) {
+      document.getElementById('profilesModalTitleEn').textContent = 'Edit Profile';
+      const figure = window.figuresDataEn.find(f => f.id === id);
+      if (figure) {
+        // Basic info
+        document.getElementById('profileFullNameEn').value = figure.fullName || '';
+        document.getElementById('profileTitleEn').value = figure.title || '';
+        document.getElementById('profileCategoryEn').value = figure.category || '';
+        document.getElementById('profileHeaderLetterEn').value = figure.headerLetter || '';
+
+        // Images
+        document.getElementById('profileImageEn').value = figure.imageUrl || '';
+        document.getElementById('profileSmallImageEn').value = figure.smallImageUrl || '';
+        document.getElementById('profileHeroImageEn').value = figure.heroImageUrl || '';
+
+        // Summary & Introduction
+        if (figure.summary && Array.isArray(figure.summary)) {
+          document.getElementById('profileSummaryEn').value = figure.summary.join('\n');
+        }
+        document.getElementById('profileIntroductionEn').value = figure.introduction || '';
+
+        // Quote
+        document.getElementById('profileQuoteEn').value = figure.quote || '';
+
+        // Sections
+        if (figure.sections && Array.isArray(figure.sections)) {
+          figure.sections.forEach(section => {
+            this.addSectionFieldEn(section.title, section.type, section.content || section.items?.join('\n') || '');
+          });
+        }
+
+        // Highlights
+        if (figure.highlights && Array.isArray(figure.highlights)) {
+          figure.highlights.forEach(highlight => {
+            const answerText = Array.isArray(highlight.answer) ? highlight.answer.join('\n') : highlight.answer;
+            this.addHighlightFieldEn(highlight.question, answerText);
+          });
+        }
+
+        document.getElementById('profilePublishedEn').checked = figure.published !== false;
+      }
+    } else {
+      document.getElementById('profilesModalTitleEn').textContent = 'Add Profile';
+    }
+
+    // Setup event listeners for dynamic buttons
+    document.getElementById('addSectionBtnEn').onclick = (e) => {
+      e.preventDefault();
+      this.addSectionFieldEn('', 'text', '');
+    };
+
+    document.getElementById('addHighlightBtnEn').onclick = (e) => {
+      e.preventDefault();
+      this.addHighlightFieldEn('', '');
+    };
+
+    this.openModal('profilesModalEn');
+  }
+
+  async saveProfileEn(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('profileFullNameEn').value.trim();
+    const title = document.getElementById('profileTitleEn').value.trim();
+    const category = document.getElementById('profileCategoryEn').value.trim();
+    const headerLetter = document.getElementById('profileHeaderLetterEn').value.trim();
+    const image = document.getElementById('profileImageEn').value.trim();
+    const smallImage = document.getElementById('profileSmallImageEn').value.trim();
+    const heroImage = document.getElementById('profileHeroImageEn').value.trim();
+    const published = document.getElementById('profilePublishedEn').checked;
+
+    // Summary (split by lines)
+    const summaryText = document.getElementById('profileSummaryEn').value.trim();
+    const summary = summaryText ? summaryText.split('\n').map(s => s.trim()).filter(s => s) : [];
+
+    // Introduction
+    const introduction = document.getElementById('profileIntroductionEn').value.trim();
+
+    // Quote
+    const quote = document.getElementById('profileQuoteEn').value.trim();
+
+    // Sections
+    const sections = [];
+    document.querySelectorAll('.section-field-en').forEach(field => {
+      const sectionTitle = field.querySelector('.section-title-en').value.trim();
+      const sectionType = field.querySelector('.section-type-en').value;
+      const sectionContent = field.querySelector('.section-content-en').value.trim();
+
+      if (sectionTitle && sectionContent) {
+        if (sectionType === 'list') {
+          sections.push({
+            title: sectionTitle,
+            type: 'list',
+            items: sectionContent.split('\n').map(s => s.trim()).filter(s => s)
+          });
+        } else {
+          sections.push({
+            title: sectionTitle,
+            type: 'text',
+            content: sectionContent
+          });
+        }
+      }
+    });
+
+    // Highlights
+    const highlights = [];
+    document.querySelectorAll('.highlight-field-en').forEach(field => {
+      const question = field.querySelector('.highlight-question-en').value.trim();
+      const answerText = field.querySelector('.highlight-answer-en').value.trim();
+
+      if (question && answerText) {
+        highlights.push({
+          question: question,
+          answer: answerText.split('\n').map(s => s.trim()).filter(s => s)
+        });
+      }
+    });
+
+    if (!name || !title) {
+      this.showError('Name and Title are required');
+      return;
+    }
+
+    if (this.currentEditId) {
+      // Edit existing figure
+      const figure = window.figuresDataEn.find(f => f.id === this.currentEditId);
+      if (figure) {
+        figure.fullName = name;
+        figure.title = title;
+        figure.category = category;
+        figure.headerLetter = headerLetter;
+        figure.imageUrl = image;
+        figure.smallImageUrl = smallImage;
+        figure.heroImageUrl = heroImage;
+        figure.summary = summary;
+        figure.introduction = introduction;
+        figure.sections = sections;
+        figure.quote = quote;
+        figure.highlights = highlights;
+        figure.published = published;
+        figure.updatedAt = new Date().toISOString();
+      }
+      this.showSuccess('English profile updated successfully');
+    } else {
+      // Add new figure
+      const newId = Math.max(0, ...window.figuresDataEn.map(f => f.id)) + 1;
+      const newFigure = {
+        id: newId,
+        fullName: name,
+        title: title,
+        category: category,
+        headerLetter: headerLetter,
+        imageUrl: image,
+        smallImageUrl: smallImage,
+        heroImageUrl: heroImage,
+        summary: summary,
+        introduction: introduction,
+        sections: sections,
+        quote: quote,
+        highlights: highlights,
+        urlSlug: this.generateSlug(name),
+        published: published,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+      window.figuresDataEn.push(newFigure);
+      this.showSuccess('English profile created successfully');
+    }
+
+    await this.saveFiguresToFileEn(window.figuresDataEn);
+    this.closeModal('profilesModalEn');
+    this.loadProfilesEn();
+    this.updateStats();
+  }
+
+  loadProfilesEn() {
+    const tbody = document.getElementById('profilesTableBodyEn');
+
+    if (!window.figuresDataEn || window.figuresDataEn.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No English profiles yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = window.figuresDataEn.map(figure => `
+      <tr>
+        <td>${figure.fullName}</td>
+        <td>${figure.title}</td>
+        <td>${figure.urlSlug || '-'}</td>
+        <td><span class="badge" style="background: ${figure.published ? '#28a745' : '#dc3545'}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">${figure.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openProfileModalEn(${figure.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteProfileEn(${figure.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  async deleteProfileEn(id) {
+    if (confirm('Are you sure you want to delete this English heritage figure?')) {
+      window.figuresDataEn = window.figuresDataEn.filter(f => f.id !== id);
+      await this.saveFiguresToFileEn(window.figuresDataEn);
+      this.showSuccess('English heritage figure deleted');
+      this.loadProfilesEn();
+      this.updateStats();
+    }
+  }
+
+  addSectionFieldEn(title = '', type = 'text', content = '') {
+    const container = document.getElementById('sectionsContainerEn');
+    const index = container.children.length;
+    const sectionHtml = `
+      <div class="form-group section-field-en" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <label style="font-weight: bold; margin: 0;">Section ${index + 1}</label>
+          <button type="button" class="btn btn-small btn-danger" onclick="this.closest('.section-field-en').remove()">
+            <i class="fas fa-times"></i> Remove
+          </button>
+        </div>
+        <div class="form-group">
+          <label>Section Title</label>
+          <input type="text" class="section-title-en" placeholder="e.g., Education, Career" value="${title}">
+        </div>
+        <div class="form-group">
+          <label>Content Type</label>
+          <select class="section-type-en">
+            <option value="text" ${type === 'text' ? 'selected' : ''}>Text Paragraphs</option>
+            <option value="list" ${type === 'list' ? 'selected' : ''}>Bullet List</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Content (one per line for lists)</label>
+          <textarea class="section-content-en" placeholder="Enter content..." style="min-height: 80px;">${content}</textarea>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', sectionHtml);
+  }
+
+  addHighlightFieldEn(question = '', answer = '') {
+    const container = document.getElementById('highlightsContainerEn');
+    const index = container.children.length;
+    const highlightHtml = `
+      <div class="form-group highlight-field-en" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+          <label style="font-weight: bold; margin: 0;">Q&A ${index + 1}</label>
+          <button type="button" class="btn btn-small btn-danger" onclick="this.closest('.highlight-field-en').remove()">
+            <i class="fas fa-times"></i> Remove
+          </button>
+        </div>
+        <div class="form-group">
+          <label>Question</label>
+          <input type="text" class="highlight-question-en" placeholder="What is your question?" value="${question}">
+        </div>
+        <div class="form-group">
+          <label>Answer (one paragraph per line)</label>
+          <textarea class="highlight-answer-en" placeholder="Enter answer paragraphs..." style="min-height: 80px;">${answer}</textarea>
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', highlightHtml);
+  }
+
+  // ===== ENGLISH TIPS CRUD =====
+  openTipModalEn(id = null) {
+    const form = document.getElementById('tipsFormEn');
+    form.reset();
+    this.currentEditId = id;
+
+    if (id) {
+      document.getElementById('tipsModalTitleEn').textContent = 'Edit Wellness Tip';
+      const tip = window.tipsDataEn.find(t => t.id === id);
+      if (tip) {
+        document.getElementById('tipTitleEn').value = tip.title || '';
+        document.getElementById('tipDescriptionEn').value = tip.description || '';
+        document.getElementById('tipCategoryEn').value = tip.category || '';
+        document.getElementById('tipImageEn').value = tip.imageUrl || '';
+        document.getElementById('tipContentEn').value = tip.content || '';
+        document.getElementById('tipPublishedEn').checked = tip.published !== false;
+      }
+    } else {
+      document.getElementById('tipsModalTitleEn').textContent = 'Add Wellness Tip';
+    }
+
+    this.openModal('tipsModalEn');
+  }
+
+  async saveTipEn(e) {
+    e.preventDefault();
+    const title = document.getElementById('tipTitleEn').value.trim();
+    const description = document.getElementById('tipDescriptionEn').value.trim();
+    const category = document.getElementById('tipCategoryEn').value.trim();
+    const imageUrl = document.getElementById('tipImageEn').value.trim();
+    const content = document.getElementById('tipContentEn').value.trim();
+    const published = document.getElementById('tipPublishedEn').checked;
+
+    if (!title) {
+      this.showError('Title is required');
+      return;
+    }
+
+    const formData = {
+      id: this.currentEditId || Date.now(),
+      title: title,
+      description: description,
+      category: category,
+      imageUrl: imageUrl,
+      content: content,
+      urlSlug: this.generateSlug(title),
+      altText: title,
+      published: published,
+      createdAt: this.currentEditId ? (window.tipsDataEn.find(t => t.id === this.currentEditId)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+
+    if (this.currentEditId) {
+      window.tipsDataEn = window.tipsDataEn.map(t => t.id === this.currentEditId ? formData : t);
+      this.showSuccess('English tip updated successfully');
+    } else {
+      window.tipsDataEn.push(formData);
+      this.showSuccess('English tip created successfully');
+    }
+
+    await this.saveTipsToFileEn(window.tipsDataEn);
+    this.closeModal('tipsModalEn');
+    this.loadTipsEn();
+    this.updateStats();
+  }
+
+  loadTipsEn() {
+    const tbody = document.getElementById('tipsTableBodyEn');
+
+    if (!window.tipsDataEn || window.tipsDataEn.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 30px; color: #999;"><i class="fas fa-inbox" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>No English tips yet.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = window.tipsDataEn.map(tip => `
+      <tr>
+        <td>${tip.title}</td>
+        <td>${tip.category || '-'}</td>
+        <td><span class="badge" style="background: ${tip.published ? '#28a745' : '#dc3545'}; color: white; padding: 4px 8px; border-radius: 3px; font-size: 11px;">${tip.published ? 'Published' : 'Draft'}</span></td>
+        <td class="admin-table-actions">
+          <button class="btn btn-small btn-secondary" onclick="admin.openTipModalEn(${tip.id})"><i class="fas fa-edit"></i> Edit</button>
+          <button class="btn btn-small btn-danger" onclick="admin.deleteTipEn(${tip.id})"><i class="fas fa-trash"></i> Delete</button>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  async deleteTipEn(id) {
+    if (confirm('Are you sure you want to delete this English tip?')) {
+      window.tipsDataEn = window.tipsDataEn.filter(t => t.id !== id);
+      await this.saveTipsToFileEn(window.tipsDataEn);
+      this.showSuccess('English tip deleted');
+      this.loadTipsEn();
+      this.updateStats();
     }
   }
 }

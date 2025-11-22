@@ -84,6 +84,26 @@ body {
   font-weight: var(--fw-light);
   font-size: 26px;
   letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
 }
 
 strong {
@@ -884,4 +904,135 @@ a {
 /* sm only: 576–767.98 */
 @media (min-width: 576px) and (max-width: 767.98px) {
   /* override chỉ sm (phone lớn) */
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+
+/* Tablet & Mobile improvements */
+@media (max-width: 991.98px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .footer-title {
+    font-size: 24px;
+  }
+
+  .footer-contact {
+    gap: 30px;
+  }
+
+  .footer-contact p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile specific improvements */
+@media (max-width: 767.98px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+
+  .navbar-brand-logo img {
+    height: 40px;
+  }
+
+  .footer-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-contact {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-contact p {
+    font-size: 14px;
+  }
+
+  .main-footer {
+    padding: 40px 0;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mobile-menu-list li a {
+    font-size: 18px;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Small mobile improvements */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 20px;
+  }
+
+  .hero-category {
+    font-size: 14px;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .footer-contact i {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .main-footer {
+    padding: 30px 0;
+  }
+
+  .line {
+    margin: 2rem 0;
+  }
+
+  .navbar-nav {
+    gap: 5px;
+  }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  .nav-link,
+  .mobile-menu-list li a {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play-btn {
+    width: 70px;
+    height: 70px;
+  }
 }

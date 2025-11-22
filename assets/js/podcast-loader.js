@@ -58,10 +58,16 @@ class PodcastLoader {
    * Uses video-thumbnail structure to match existing CSS styling
    */
   createPodcastCard(podcast) {
+    // Use hqdefault.jpg instead of maxresdefault.jpg for better compatibility
+    const youtubeId = podcast.youtubeId || podcast.videoId;
+    const thumbnailUrl = youtubeId
+      ? `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`
+      : podcast.imageUrl || 'assets/media/shared/default-video.jpg';
+
     return `
       <div class="col-md-4 mt-4" data-id="${podcast.id}">
-        <div class="video-thumbnail" data-video-id="${podcast.videoId}">
-          <img src="${podcast.imageUrl}"
+        <div class="video-thumbnail" data-video-id="${youtubeId}">
+          <img src="${thumbnailUrl}"
                alt="${podcast.altText || podcast.title}"
                class="img-fluid rounded-3"
                loading="lazy"
