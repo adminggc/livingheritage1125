@@ -222,3 +222,4051 @@
 [2025-11-22T09:31:50.829Z]   └─ End of message
 
 [2025-11-22T09:31:50.830Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T09:55:51.007Z] 
+🔍 Polling for new messages...
+[2025-11-22T09:55:51.008Z] 
+📬 Found 1 new message(s)
+[2025-11-22T09:55:51.008Z] 
+  ┌─ Message ID: 2
+[2025-11-22T09:55:51.009Z]   │  Type: TEST_RESULT
+[2025-11-22T09:55:51.009Z]   │  From: TEST_AGENT
+[2025-11-22T09:55:51.009Z]   │  Status: COMPLETED
+[2025-11-22T09:55:51.009Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T09:55:51.009Z]   │  Result Status: PASS
+[2025-11-22T09:55:51.009Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T09:55:51.009Z]   │  Execution Time: 117ms
+[2025-11-22T09:55:51.009Z]   └─ End of message
+
+[2025-11-22T09:55:51.010Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T09:56:51.019Z] 
+🔍 Polling for new messages...
+[2025-11-22T09:56:51.020Z] 
+📬 Found 1 new message(s)
+[2025-11-22T09:56:51.021Z] 
+  ┌─ Message ID: 2
+[2025-11-22T09:56:51.021Z]   │  Type: TEST_RESULT
+[2025-11-22T09:56:51.021Z]   │  From: TEST_AGENT
+[2025-11-22T09:56:51.021Z]   │  Status: COMPLETED
+[2025-11-22T09:56:51.021Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T09:56:51.021Z]   │  Result Status: PASS
+[2025-11-22T09:56:51.021Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T09:56:51.022Z]   │  Execution Time: 117ms
+[2025-11-22T09:56:51.022Z]   └─ End of message
+
+[2025-11-22T09:56:51.023Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T09:57:51.025Z] 
+🔍 Polling for new messages...
+[2025-11-22T09:57:51.027Z] 
+📬 Found 1 new message(s)
+[2025-11-22T09:57:51.027Z] 
+  ┌─ Message ID: 2
+[2025-11-22T09:57:51.027Z]   │  Type: TEST_RESULT
+[2025-11-22T09:57:51.027Z]   │  From: TEST_AGENT
+[2025-11-22T09:57:51.027Z]   │  Status: COMPLETED
+[2025-11-22T09:57:51.027Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T09:57:51.027Z]   │  Result Status: PASS
+[2025-11-22T09:57:51.027Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T09:57:51.027Z]   │  Execution Time: 117ms
+[2025-11-22T09:57:51.028Z]   └─ End of message
+
+[2025-11-22T09:57:51.028Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T09:58:51.036Z] 
+🔍 Polling for new messages...
+[2025-11-22T09:58:51.038Z] 
+📬 Found 1 new message(s)
+[2025-11-22T09:58:51.038Z] 
+  ┌─ Message ID: 2
+[2025-11-22T09:58:51.038Z]   │  Type: TEST_RESULT
+[2025-11-22T09:58:51.038Z]   │  From: TEST_AGENT
+[2025-11-22T09:58:51.038Z]   │  Status: COMPLETED
+[2025-11-22T09:58:51.038Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T09:58:51.039Z]   │  Result Status: PASS
+[2025-11-22T09:58:51.039Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T09:58:51.039Z]   │  Execution Time: 117ms
+[2025-11-22T09:58:51.039Z]   └─ End of message
+
+[2025-11-22T09:58:51.040Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T09:59:51.036Z] 
+🔍 Polling for new messages...
+[2025-11-22T09:59:51.037Z] 
+📬 Found 1 new message(s)
+[2025-11-22T09:59:51.037Z] 
+  ┌─ Message ID: 2
+[2025-11-22T09:59:51.037Z]   │  Type: TEST_RESULT
+[2025-11-22T09:59:51.038Z]   │  From: TEST_AGENT
+[2025-11-22T09:59:51.038Z]   │  Status: COMPLETED
+[2025-11-22T09:59:51.038Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T09:59:51.038Z]   │  Result Status: PASS
+[2025-11-22T09:59:51.038Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T09:59:51.038Z]   │  Execution Time: 117ms
+[2025-11-22T09:59:51.038Z]   └─ End of message
+
+[2025-11-22T09:59:51.039Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:00:51.050Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:00:51.052Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:00:51.052Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:00:51.052Z]   │  Type: TEST_RESULT
+[2025-11-22T10:00:51.052Z]   │  From: TEST_AGENT
+[2025-11-22T10:00:51.052Z]   │  Status: COMPLETED
+[2025-11-22T10:00:51.052Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:00:51.052Z]   │  Result Status: PASS
+[2025-11-22T10:00:51.053Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:00:51.053Z]   │  Execution Time: 117ms
+[2025-11-22T10:00:51.053Z]   └─ End of message
+
+[2025-11-22T10:00:51.053Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:01:51.054Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:01:51.055Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:01:51.055Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:01:51.055Z]   │  Type: TEST_RESULT
+[2025-11-22T10:01:51.055Z]   │  From: TEST_AGENT
+[2025-11-22T10:01:51.055Z]   │  Status: COMPLETED
+[2025-11-22T10:01:51.055Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:01:51.055Z]   │  Result Status: PASS
+[2025-11-22T10:01:51.055Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:01:51.055Z]   │  Execution Time: 117ms
+[2025-11-22T10:01:51.055Z]   └─ End of message
+
+[2025-11-22T10:01:51.056Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:02:51.064Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:02:51.065Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:02:51.065Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:02:51.066Z]   │  Type: TEST_RESULT
+[2025-11-22T10:02:51.066Z]   │  From: TEST_AGENT
+[2025-11-22T10:02:51.066Z]   │  Status: COMPLETED
+[2025-11-22T10:02:51.066Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:02:51.066Z]   │  Result Status: PASS
+[2025-11-22T10:02:51.066Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:02:51.066Z]   │  Execution Time: 117ms
+[2025-11-22T10:02:51.066Z]   └─ End of message
+
+[2025-11-22T10:02:51.067Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:03:51.064Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:03:51.065Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:03:51.066Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:03:51.066Z]   │  Type: TEST_RESULT
+[2025-11-22T10:03:51.066Z]   │  From: TEST_AGENT
+[2025-11-22T10:03:51.066Z]   │  Status: COMPLETED
+[2025-11-22T10:03:51.066Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:03:51.066Z]   │  Result Status: PASS
+[2025-11-22T10:03:51.066Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:03:51.066Z]   │  Execution Time: 117ms
+[2025-11-22T10:03:51.067Z]   └─ End of message
+
+[2025-11-22T10:03:51.068Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:04:51.070Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:04:51.071Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:04:51.071Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:04:51.071Z]   │  Type: TEST_RESULT
+[2025-11-22T10:04:51.071Z]   │  From: TEST_AGENT
+[2025-11-22T10:04:51.071Z]   │  Status: COMPLETED
+[2025-11-22T10:04:51.072Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:04:51.072Z]   │  Result Status: PASS
+[2025-11-22T10:04:51.072Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:04:51.072Z]   │  Execution Time: 117ms
+[2025-11-22T10:04:51.072Z]   └─ End of message
+
+[2025-11-22T10:04:51.073Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:05:51.085Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:05:51.088Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:05:51.088Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:05:51.088Z]   │  Type: TEST_RESULT
+[2025-11-22T10:05:51.088Z]   │  From: TEST_AGENT
+[2025-11-22T10:05:51.088Z]   │  Status: COMPLETED
+[2025-11-22T10:05:51.088Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:05:51.088Z]   │  Result Status: PASS
+[2025-11-22T10:05:51.088Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:05:51.089Z]   │  Execution Time: 117ms
+[2025-11-22T10:05:51.089Z]   └─ End of message
+
+[2025-11-22T10:05:51.090Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:06:51.093Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:06:51.095Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:06:51.095Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:06:51.095Z]   │  Type: TEST_RESULT
+[2025-11-22T10:06:51.095Z]   │  From: TEST_AGENT
+[2025-11-22T10:06:51.095Z]   │  Status: COMPLETED
+[2025-11-22T10:06:51.095Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:06:51.095Z]   │  Result Status: PASS
+[2025-11-22T10:06:51.095Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:06:51.095Z]   │  Execution Time: 117ms
+[2025-11-22T10:06:51.096Z]   └─ End of message
+
+[2025-11-22T10:06:51.096Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:07:51.097Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:07:51.098Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:07:51.098Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:07:51.098Z]   │  Type: TEST_RESULT
+[2025-11-22T10:07:51.098Z]   │  From: TEST_AGENT
+[2025-11-22T10:07:51.098Z]   │  Status: COMPLETED
+[2025-11-22T10:07:51.098Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:07:51.098Z]   │  Result Status: PASS
+[2025-11-22T10:07:51.098Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:07:51.099Z]   │  Execution Time: 117ms
+[2025-11-22T10:07:51.099Z]   └─ End of message
+
+[2025-11-22T10:07:51.100Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:08:51.103Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:08:51.105Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:08:51.105Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:08:51.105Z]   │  Type: TEST_RESULT
+[2025-11-22T10:08:51.105Z]   │  From: TEST_AGENT
+[2025-11-22T10:08:51.105Z]   │  Status: COMPLETED
+[2025-11-22T10:08:51.106Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:08:51.106Z]   │  Result Status: PASS
+[2025-11-22T10:08:51.106Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:08:51.106Z]   │  Execution Time: 117ms
+[2025-11-22T10:08:51.106Z]   └─ End of message
+
+[2025-11-22T10:08:51.107Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:09:51.104Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:09:51.106Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:09:51.106Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:09:51.106Z]   │  Type: TEST_RESULT
+[2025-11-22T10:09:51.106Z]   │  From: TEST_AGENT
+[2025-11-22T10:09:51.106Z]   │  Status: COMPLETED
+[2025-11-22T10:09:51.106Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:09:51.106Z]   │  Result Status: PASS
+[2025-11-22T10:09:51.106Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:09:51.107Z]   │  Execution Time: 117ms
+[2025-11-22T10:09:51.107Z]   └─ End of message
+
+[2025-11-22T10:09:51.109Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:10:51.114Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:10:51.116Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:10:51.116Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:10:51.116Z]   │  Type: TEST_RESULT
+[2025-11-22T10:10:51.116Z]   │  From: TEST_AGENT
+[2025-11-22T10:10:51.116Z]   │  Status: COMPLETED
+[2025-11-22T10:10:51.116Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:10:51.116Z]   │  Result Status: PASS
+[2025-11-22T10:10:51.116Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:10:51.117Z]   │  Execution Time: 117ms
+[2025-11-22T10:10:51.117Z]   └─ End of message
+
+[2025-11-22T10:10:51.117Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:11:51.130Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:11:51.131Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:11:51.131Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:11:51.131Z]   │  Type: TEST_RESULT
+[2025-11-22T10:11:51.131Z]   │  From: TEST_AGENT
+[2025-11-22T10:11:51.131Z]   │  Status: COMPLETED
+[2025-11-22T10:11:51.132Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:11:51.132Z]   │  Result Status: PASS
+[2025-11-22T10:11:51.132Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:11:51.132Z]   │  Execution Time: 117ms
+[2025-11-22T10:11:51.132Z]   └─ End of message
+
+[2025-11-22T10:11:51.133Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:12:51.137Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:12:51.139Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:12:51.139Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:12:51.139Z]   │  Type: TEST_RESULT
+[2025-11-22T10:12:51.139Z]   │  From: TEST_AGENT
+[2025-11-22T10:12:51.139Z]   │  Status: COMPLETED
+[2025-11-22T10:12:51.139Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:12:51.139Z]   │  Result Status: PASS
+[2025-11-22T10:12:51.139Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:12:51.140Z]   │  Execution Time: 117ms
+[2025-11-22T10:12:51.140Z]   └─ End of message
+
+[2025-11-22T10:12:51.140Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:13:51.140Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:13:51.142Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:13:51.142Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:13:51.142Z]   │  Type: TEST_RESULT
+[2025-11-22T10:13:51.142Z]   │  From: TEST_AGENT
+[2025-11-22T10:13:51.142Z]   │  Status: COMPLETED
+[2025-11-22T10:13:51.142Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:13:51.142Z]   │  Result Status: PASS
+[2025-11-22T10:13:51.142Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:13:51.143Z]   │  Execution Time: 117ms
+[2025-11-22T10:13:51.143Z]   └─ End of message
+
+[2025-11-22T10:13:51.144Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:14:51.142Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:14:51.143Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:14:51.143Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:14:51.143Z]   │  Type: TEST_RESULT
+[2025-11-22T10:14:51.143Z]   │  From: TEST_AGENT
+[2025-11-22T10:14:51.144Z]   │  Status: COMPLETED
+[2025-11-22T10:14:51.144Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:14:51.144Z]   │  Result Status: PASS
+[2025-11-22T10:14:51.144Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:14:51.144Z]   │  Execution Time: 117ms
+[2025-11-22T10:14:51.144Z]   └─ End of message
+
+[2025-11-22T10:14:51.145Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:15:51.156Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:15:51.158Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:15:51.158Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:15:51.158Z]   │  Type: TEST_RESULT
+[2025-11-22T10:15:51.158Z]   │  From: TEST_AGENT
+[2025-11-22T10:15:51.158Z]   │  Status: COMPLETED
+[2025-11-22T10:15:51.158Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:15:51.158Z]   │  Result Status: PASS
+[2025-11-22T10:15:51.158Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:15:51.158Z]   │  Execution Time: 117ms
+[2025-11-22T10:15:51.158Z]   └─ End of message
+
+[2025-11-22T10:15:51.161Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:16:51.157Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:16:51.159Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:16:51.159Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:16:51.159Z]   │  Type: TEST_RESULT
+[2025-11-22T10:16:51.159Z]   │  From: TEST_AGENT
+[2025-11-22T10:16:51.159Z]   │  Status: COMPLETED
+[2025-11-22T10:16:51.159Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:16:51.159Z]   │  Result Status: PASS
+[2025-11-22T10:16:51.159Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:16:51.160Z]   │  Execution Time: 117ms
+[2025-11-22T10:16:51.160Z]   └─ End of message
+
+[2025-11-22T10:16:51.160Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:17:51.166Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:17:51.167Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:17:51.167Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:17:51.168Z]   │  Type: TEST_RESULT
+[2025-11-22T10:17:51.168Z]   │  From: TEST_AGENT
+[2025-11-22T10:17:51.168Z]   │  Status: COMPLETED
+[2025-11-22T10:17:51.168Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:17:51.168Z]   │  Result Status: PASS
+[2025-11-22T10:17:51.168Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:17:51.169Z]   │  Execution Time: 117ms
+[2025-11-22T10:17:51.169Z]   └─ End of message
+
+[2025-11-22T10:17:51.170Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:18:51.167Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:18:51.168Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:18:51.168Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:18:51.169Z]   │  Type: TEST_RESULT
+[2025-11-22T10:18:51.169Z]   │  From: TEST_AGENT
+[2025-11-22T10:18:51.169Z]   │  Status: COMPLETED
+[2025-11-22T10:18:51.169Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:18:51.169Z]   │  Result Status: PASS
+[2025-11-22T10:18:51.169Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:18:51.169Z]   │  Execution Time: 117ms
+[2025-11-22T10:18:51.169Z]   └─ End of message
+
+[2025-11-22T10:18:51.170Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:19:51.172Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:19:51.174Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:19:51.174Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:19:51.174Z]   │  Type: TEST_RESULT
+[2025-11-22T10:19:51.174Z]   │  From: TEST_AGENT
+[2025-11-22T10:19:51.174Z]   │  Status: COMPLETED
+[2025-11-22T10:19:51.174Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:19:51.174Z]   │  Result Status: PASS
+[2025-11-22T10:19:51.174Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:19:51.174Z]   │  Execution Time: 117ms
+[2025-11-22T10:19:51.174Z]   └─ End of message
+
+[2025-11-22T10:19:51.176Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:20:51.179Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:20:51.181Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:20:51.181Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:20:51.181Z]   │  Type: TEST_RESULT
+[2025-11-22T10:20:51.181Z]   │  From: TEST_AGENT
+[2025-11-22T10:20:51.182Z]   │  Status: COMPLETED
+[2025-11-22T10:20:51.182Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:20:51.182Z]   │  Result Status: PASS
+[2025-11-22T10:20:51.182Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:20:51.182Z]   │  Execution Time: 117ms
+[2025-11-22T10:20:51.182Z]   └─ End of message
+
+[2025-11-22T10:20:51.185Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:21:51.179Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:21:51.180Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:21:51.180Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:21:51.181Z]   │  Type: TEST_RESULT
+[2025-11-22T10:21:51.181Z]   │  From: TEST_AGENT
+[2025-11-22T10:21:51.181Z]   │  Status: COMPLETED
+[2025-11-22T10:21:51.181Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:21:51.181Z]   │  Result Status: PASS
+[2025-11-22T10:21:51.181Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:21:51.181Z]   │  Execution Time: 117ms
+[2025-11-22T10:21:51.181Z]   └─ End of message
+
+[2025-11-22T10:21:51.182Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:22:51.187Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:22:51.189Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:22:51.189Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:22:51.189Z]   │  Type: TEST_RESULT
+[2025-11-22T10:22:51.189Z]   │  From: TEST_AGENT
+[2025-11-22T10:22:51.189Z]   │  Status: COMPLETED
+[2025-11-22T10:22:51.189Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:22:51.189Z]   │  Result Status: PASS
+[2025-11-22T10:22:51.189Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:22:51.189Z]   │  Execution Time: 117ms
+[2025-11-22T10:22:51.189Z]   └─ End of message
+
+[2025-11-22T10:22:51.190Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:23:51.191Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:23:51.198Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:23:51.198Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:23:51.198Z]   │  Type: TEST_RESULT
+[2025-11-22T10:23:51.198Z]   │  From: TEST_AGENT
+[2025-11-22T10:23:51.198Z]   │  Status: COMPLETED
+[2025-11-22T10:23:51.198Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:23:51.198Z]   │  Result Status: PASS
+[2025-11-22T10:23:51.199Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:23:51.199Z]   │  Execution Time: 117ms
+[2025-11-22T10:23:51.199Z]   └─ End of message
+
+[2025-11-22T10:23:51.206Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:24:51.206Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:24:51.209Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:24:51.209Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:24:51.209Z]   │  Type: TEST_RESULT
+[2025-11-22T10:24:51.209Z]   │  From: TEST_AGENT
+[2025-11-22T10:24:51.209Z]   │  Status: COMPLETED
+[2025-11-22T10:24:51.209Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:24:51.209Z]   │  Result Status: PASS
+[2025-11-22T10:24:51.209Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:24:51.209Z]   │  Execution Time: 117ms
+[2025-11-22T10:24:51.209Z]   └─ End of message
+
+[2025-11-22T10:24:51.210Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:25:51.208Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:25:51.210Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:25:51.210Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:25:51.210Z]   │  Type: TEST_RESULT
+[2025-11-22T10:25:51.210Z]   │  From: TEST_AGENT
+[2025-11-22T10:25:51.210Z]   │  Status: COMPLETED
+[2025-11-22T10:25:51.210Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:25:51.210Z]   │  Result Status: PASS
+[2025-11-22T10:25:51.210Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:25:51.211Z]   │  Execution Time: 117ms
+[2025-11-22T10:25:51.211Z]   └─ End of message
+
+[2025-11-22T10:25:51.212Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:26:51.220Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:26:51.222Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:26:51.222Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:26:51.222Z]   │  Type: TEST_RESULT
+[2025-11-22T10:26:51.222Z]   │  From: TEST_AGENT
+[2025-11-22T10:26:51.222Z]   │  Status: COMPLETED
+[2025-11-22T10:26:51.222Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:26:51.222Z]   │  Result Status: PASS
+[2025-11-22T10:26:51.222Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:26:51.222Z]   │  Execution Time: 117ms
+[2025-11-22T10:26:51.222Z]   └─ End of message
+
+[2025-11-22T10:26:51.223Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:27:51.230Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:27:51.231Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:27:51.231Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:27:51.232Z]   │  Type: TEST_RESULT
+[2025-11-22T10:27:51.232Z]   │  From: TEST_AGENT
+[2025-11-22T10:27:51.232Z]   │  Status: COMPLETED
+[2025-11-22T10:27:51.232Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:27:51.232Z]   │  Result Status: PASS
+[2025-11-22T10:27:51.232Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:27:51.232Z]   │  Execution Time: 117ms
+[2025-11-22T10:27:51.233Z]   └─ End of message
+
+[2025-11-22T10:27:51.233Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:28:51.242Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:28:51.246Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:28:51.246Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:28:51.247Z]   │  Type: TEST_RESULT
+[2025-11-22T10:28:51.247Z]   │  From: TEST_AGENT
+[2025-11-22T10:28:51.247Z]   │  Status: COMPLETED
+[2025-11-22T10:28:51.247Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:28:51.247Z]   │  Result Status: PASS
+[2025-11-22T10:28:51.247Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:28:51.247Z]   │  Execution Time: 117ms
+[2025-11-22T10:28:51.248Z]   └─ End of message
+
+[2025-11-22T10:28:51.249Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:29:51.246Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:29:51.248Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:29:51.248Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:29:51.248Z]   │  Type: TEST_RESULT
+[2025-11-22T10:29:51.248Z]   │  From: TEST_AGENT
+[2025-11-22T10:29:51.248Z]   │  Status: COMPLETED
+[2025-11-22T10:29:51.248Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:29:51.248Z]   │  Result Status: PASS
+[2025-11-22T10:29:51.248Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:29:51.248Z]   │  Execution Time: 117ms
+[2025-11-22T10:29:51.249Z]   └─ End of message
+
+[2025-11-22T10:29:51.249Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:30:51.262Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:30:51.264Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:30:51.264Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:30:51.264Z]   │  Type: TEST_RESULT
+[2025-11-22T10:30:51.264Z]   │  From: TEST_AGENT
+[2025-11-22T10:30:51.264Z]   │  Status: COMPLETED
+[2025-11-22T10:30:51.264Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:30:51.264Z]   │  Result Status: PASS
+[2025-11-22T10:30:51.264Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:30:51.264Z]   │  Execution Time: 117ms
+[2025-11-22T10:30:51.264Z]   └─ End of message
+
+[2025-11-22T10:30:51.266Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:31:51.274Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:31:51.276Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:31:51.276Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:31:51.276Z]   │  Type: TEST_RESULT
+[2025-11-22T10:31:51.276Z]   │  From: TEST_AGENT
+[2025-11-22T10:31:51.277Z]   │  Status: COMPLETED
+[2025-11-22T10:31:51.277Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:31:51.277Z]   │  Result Status: PASS
+[2025-11-22T10:31:51.277Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:31:51.277Z]   │  Execution Time: 117ms
+[2025-11-22T10:31:51.277Z]   └─ End of message
+
+[2025-11-22T10:31:51.278Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:32:51.289Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:32:51.301Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:32:51.301Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:32:51.302Z]   │  Type: TEST_RESULT
+[2025-11-22T10:32:51.302Z]   │  From: TEST_AGENT
+[2025-11-22T10:32:51.302Z]   │  Status: COMPLETED
+[2025-11-22T10:32:51.302Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:32:51.302Z]   │  Result Status: PASS
+[2025-11-22T10:32:51.302Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:32:51.302Z]   │  Execution Time: 117ms
+[2025-11-22T10:32:51.302Z]   └─ End of message
+
+[2025-11-22T10:32:51.311Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:33:51.303Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:33:51.307Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:33:51.307Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:33:51.307Z]   │  Type: TEST_RESULT
+[2025-11-22T10:33:51.308Z]   │  From: TEST_AGENT
+[2025-11-22T10:33:51.308Z]   │  Status: COMPLETED
+[2025-11-22T10:33:51.308Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:33:51.308Z]   │  Result Status: PASS
+[2025-11-22T10:33:51.308Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:33:51.308Z]   │  Execution Time: 117ms
+[2025-11-22T10:33:51.309Z]   └─ End of message
+
+[2025-11-22T10:33:51.319Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:34:51.305Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:34:51.316Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:34:51.316Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:34:51.317Z]   │  Type: TEST_RESULT
+[2025-11-22T10:34:51.317Z]   │  From: TEST_AGENT
+[2025-11-22T10:34:51.317Z]   │  Status: COMPLETED
+[2025-11-22T10:34:51.317Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:34:51.317Z]   │  Result Status: PASS
+[2025-11-22T10:34:51.317Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:34:51.319Z]   │  Execution Time: 117ms
+[2025-11-22T10:34:51.319Z]   └─ End of message
+
+[2025-11-22T10:34:51.321Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:35:51.312Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:35:51.314Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:35:51.314Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:35:51.314Z]   │  Type: TEST_RESULT
+[2025-11-22T10:35:51.314Z]   │  From: TEST_AGENT
+[2025-11-22T10:35:51.314Z]   │  Status: COMPLETED
+[2025-11-22T10:35:51.314Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:35:51.315Z]   │  Result Status: PASS
+[2025-11-22T10:35:51.315Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:35:51.315Z]   │  Execution Time: 117ms
+[2025-11-22T10:35:51.315Z]   └─ End of message
+
+[2025-11-22T10:35:51.316Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:36:51.320Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:36:51.322Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:36:51.322Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:36:51.322Z]   │  Type: TEST_RESULT
+[2025-11-22T10:36:51.322Z]   │  From: TEST_AGENT
+[2025-11-22T10:36:51.322Z]   │  Status: COMPLETED
+[2025-11-22T10:36:51.322Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:36:51.322Z]   │  Result Status: PASS
+[2025-11-22T10:36:51.322Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:36:51.322Z]   │  Execution Time: 117ms
+[2025-11-22T10:36:51.322Z]   └─ End of message
+
+[2025-11-22T10:36:51.323Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:37:51.325Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:37:51.331Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:37:51.331Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:37:51.331Z]   │  Type: TEST_RESULT
+[2025-11-22T10:37:51.331Z]   │  From: TEST_AGENT
+[2025-11-22T10:37:51.331Z]   │  Status: COMPLETED
+[2025-11-22T10:37:51.331Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:37:51.331Z]   │  Result Status: PASS
+[2025-11-22T10:37:51.331Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:37:51.331Z]   │  Execution Time: 117ms
+[2025-11-22T10:37:51.331Z]   └─ End of message
+
+[2025-11-22T10:37:51.334Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:38:51.339Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:38:51.340Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:38:51.341Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:38:51.341Z]   │  Type: TEST_RESULT
+[2025-11-22T10:38:51.341Z]   │  From: TEST_AGENT
+[2025-11-22T10:38:51.341Z]   │  Status: COMPLETED
+[2025-11-22T10:38:51.341Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:38:51.341Z]   │  Result Status: PASS
+[2025-11-22T10:38:51.341Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:38:51.341Z]   │  Execution Time: 117ms
+[2025-11-22T10:38:51.341Z]   └─ End of message
+
+[2025-11-22T10:38:51.342Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:39:51.345Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:39:51.349Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:39:51.350Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:39:51.350Z]   │  Type: TEST_RESULT
+[2025-11-22T10:39:51.350Z]   │  From: TEST_AGENT
+[2025-11-22T10:39:51.350Z]   │  Status: COMPLETED
+[2025-11-22T10:39:51.350Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:39:51.350Z]   │  Result Status: PASS
+[2025-11-22T10:39:51.350Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:39:51.350Z]   │  Execution Time: 117ms
+[2025-11-22T10:39:51.350Z]   └─ End of message
+
+[2025-11-22T10:39:51.351Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:40:51.347Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:40:51.348Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:40:51.348Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:40:51.348Z]   │  Type: TEST_RESULT
+[2025-11-22T10:40:51.348Z]   │  From: TEST_AGENT
+[2025-11-22T10:40:51.348Z]   │  Status: COMPLETED
+[2025-11-22T10:40:51.348Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:40:51.349Z]   │  Result Status: PASS
+[2025-11-22T10:40:51.349Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:40:51.349Z]   │  Execution Time: 117ms
+[2025-11-22T10:40:51.349Z]   └─ End of message
+
+[2025-11-22T10:40:51.349Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:41:51.349Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:41:51.351Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:41:51.351Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:41:51.351Z]   │  Type: TEST_RESULT
+[2025-11-22T10:41:51.351Z]   │  From: TEST_AGENT
+[2025-11-22T10:41:51.351Z]   │  Status: COMPLETED
+[2025-11-22T10:41:51.351Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:41:51.351Z]   │  Result Status: PASS
+[2025-11-22T10:41:51.352Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:41:51.352Z]   │  Execution Time: 117ms
+[2025-11-22T10:41:51.352Z]   └─ End of message
+
+[2025-11-22T10:41:51.353Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:42:51.364Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:42:51.365Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:42:51.366Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:42:51.366Z]   │  Type: TEST_RESULT
+[2025-11-22T10:42:51.366Z]   │  From: TEST_AGENT
+[2025-11-22T10:42:51.366Z]   │  Status: COMPLETED
+[2025-11-22T10:42:51.366Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:42:51.366Z]   │  Result Status: PASS
+[2025-11-22T10:42:51.366Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:42:51.366Z]   │  Execution Time: 117ms
+[2025-11-22T10:42:51.366Z]   └─ End of message
+
+[2025-11-22T10:42:51.367Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:43:51.372Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:43:51.374Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:43:51.374Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:43:51.374Z]   │  Type: TEST_RESULT
+[2025-11-22T10:43:51.374Z]   │  From: TEST_AGENT
+[2025-11-22T10:43:51.374Z]   │  Status: COMPLETED
+[2025-11-22T10:43:51.374Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:43:51.374Z]   │  Result Status: PASS
+[2025-11-22T10:43:51.374Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:43:51.374Z]   │  Execution Time: 117ms
+[2025-11-22T10:43:51.374Z]   └─ End of message
+
+[2025-11-22T10:43:51.375Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:44:51.378Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:44:51.379Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:44:51.379Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:44:51.379Z]   │  Type: TEST_RESULT
+[2025-11-22T10:44:51.379Z]   │  From: TEST_AGENT
+[2025-11-22T10:44:51.379Z]   │  Status: COMPLETED
+[2025-11-22T10:44:51.379Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:44:51.380Z]   │  Result Status: PASS
+[2025-11-22T10:44:51.380Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:44:51.380Z]   │  Execution Time: 117ms
+[2025-11-22T10:44:51.380Z]   └─ End of message
+
+[2025-11-22T10:44:51.381Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:45:51.377Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:45:51.380Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:45:51.380Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:45:51.380Z]   │  Type: TEST_RESULT
+[2025-11-22T10:45:51.380Z]   │  From: TEST_AGENT
+[2025-11-22T10:45:51.380Z]   │  Status: COMPLETED
+[2025-11-22T10:45:51.380Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:45:51.380Z]   │  Result Status: PASS
+[2025-11-22T10:45:51.380Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:45:51.380Z]   │  Execution Time: 117ms
+[2025-11-22T10:45:51.381Z]   └─ End of message
+
+[2025-11-22T10:45:51.382Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:46:51.387Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:46:51.395Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:46:51.396Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:46:51.396Z]   │  Type: TEST_RESULT
+[2025-11-22T10:46:51.396Z]   │  From: TEST_AGENT
+[2025-11-22T10:46:51.396Z]   │  Status: COMPLETED
+[2025-11-22T10:46:51.396Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:46:51.396Z]   │  Result Status: PASS
+[2025-11-22T10:46:51.396Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:46:51.396Z]   │  Execution Time: 117ms
+[2025-11-22T10:46:51.396Z]   └─ End of message
+
+[2025-11-22T10:46:51.398Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:47:51.391Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:47:51.394Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:47:51.394Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:47:51.394Z]   │  Type: TEST_RESULT
+[2025-11-22T10:47:51.395Z]   │  From: TEST_AGENT
+[2025-11-22T10:47:51.395Z]   │  Status: COMPLETED
+[2025-11-22T10:47:51.395Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:47:51.395Z]   │  Result Status: PASS
+[2025-11-22T10:47:51.395Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:47:51.395Z]   │  Execution Time: 117ms
+[2025-11-22T10:47:51.396Z]   └─ End of message
+
+[2025-11-22T10:47:51.397Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:48:51.395Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:48:51.399Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:48:51.399Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:48:51.399Z]   │  Type: TEST_RESULT
+[2025-11-22T10:48:51.399Z]   │  From: TEST_AGENT
+[2025-11-22T10:48:51.400Z]   │  Status: COMPLETED
+[2025-11-22T10:48:51.400Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:48:51.400Z]   │  Result Status: PASS
+[2025-11-22T10:48:51.400Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:48:51.400Z]   │  Execution Time: 117ms
+[2025-11-22T10:48:51.400Z]   └─ End of message
+
+[2025-11-22T10:48:51.402Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:49:51.400Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:49:51.404Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:49:51.404Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:49:51.404Z]   │  Type: TEST_RESULT
+[2025-11-22T10:49:51.404Z]   │  From: TEST_AGENT
+[2025-11-22T10:49:51.404Z]   │  Status: COMPLETED
+[2025-11-22T10:49:51.405Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:49:51.405Z]   │  Result Status: PASS
+[2025-11-22T10:49:51.405Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:49:51.405Z]   │  Execution Time: 117ms
+[2025-11-22T10:49:51.405Z]   └─ End of message
+
+[2025-11-22T10:49:51.412Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:50:51.408Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:50:51.411Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:50:51.411Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:50:51.411Z]   │  Type: TEST_RESULT
+[2025-11-22T10:50:51.411Z]   │  From: TEST_AGENT
+[2025-11-22T10:50:51.411Z]   │  Status: COMPLETED
+[2025-11-22T10:50:51.411Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:50:51.411Z]   │  Result Status: PASS
+[2025-11-22T10:50:51.411Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:50:51.411Z]   │  Execution Time: 117ms
+[2025-11-22T10:50:51.411Z]   └─ End of message
+
+[2025-11-22T10:50:51.412Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:51:51.413Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:51:51.417Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:51:51.417Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:51:51.418Z]   │  Type: TEST_RESULT
+[2025-11-22T10:51:51.418Z]   │  From: TEST_AGENT
+[2025-11-22T10:51:51.418Z]   │  Status: COMPLETED
+[2025-11-22T10:51:51.418Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:51:51.418Z]   │  Result Status: PASS
+[2025-11-22T10:51:51.418Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:51:51.418Z]   │  Execution Time: 117ms
+[2025-11-22T10:51:51.418Z]   └─ End of message
+
+[2025-11-22T10:51:51.419Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:52:51.416Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:52:51.418Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:52:51.418Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:52:51.418Z]   │  Type: TEST_RESULT
+[2025-11-22T10:52:51.418Z]   │  From: TEST_AGENT
+[2025-11-22T10:52:51.418Z]   │  Status: COMPLETED
+[2025-11-22T10:52:51.419Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:52:51.419Z]   │  Result Status: PASS
+[2025-11-22T10:52:51.419Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:52:51.419Z]   │  Execution Time: 117ms
+[2025-11-22T10:52:51.419Z]   └─ End of message
+
+[2025-11-22T10:52:51.420Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:53:51.430Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:53:51.434Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:53:51.434Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:53:51.434Z]   │  Type: TEST_RESULT
+[2025-11-22T10:53:51.434Z]   │  From: TEST_AGENT
+[2025-11-22T10:53:51.434Z]   │  Status: COMPLETED
+[2025-11-22T10:53:51.434Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:53:51.434Z]   │  Result Status: PASS
+[2025-11-22T10:53:51.434Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:53:51.434Z]   │  Execution Time: 117ms
+[2025-11-22T10:53:51.435Z]   └─ End of message
+
+[2025-11-22T10:53:51.435Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:54:51.442Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:54:51.445Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:54:51.445Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:54:51.445Z]   │  Type: TEST_RESULT
+[2025-11-22T10:54:51.445Z]   │  From: TEST_AGENT
+[2025-11-22T10:54:51.445Z]   │  Status: COMPLETED
+[2025-11-22T10:54:51.445Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:54:51.445Z]   │  Result Status: PASS
+[2025-11-22T10:54:51.445Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:54:51.446Z]   │  Execution Time: 117ms
+[2025-11-22T10:54:51.446Z]   └─ End of message
+
+[2025-11-22T10:54:51.447Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:55:51.449Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:55:51.451Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:55:51.452Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:55:51.452Z]   │  Type: TEST_RESULT
+[2025-11-22T10:55:51.452Z]   │  From: TEST_AGENT
+[2025-11-22T10:55:51.452Z]   │  Status: COMPLETED
+[2025-11-22T10:55:51.452Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:55:51.452Z]   │  Result Status: PASS
+[2025-11-22T10:55:51.452Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:55:51.452Z]   │  Execution Time: 117ms
+[2025-11-22T10:55:51.452Z]   └─ End of message
+
+[2025-11-22T10:55:51.453Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:56:51.465Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:56:51.469Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:56:51.469Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:56:51.469Z]   │  Type: TEST_RESULT
+[2025-11-22T10:56:51.469Z]   │  From: TEST_AGENT
+[2025-11-22T10:56:51.470Z]   │  Status: COMPLETED
+[2025-11-22T10:56:51.470Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:56:51.470Z]   │  Result Status: PASS
+[2025-11-22T10:56:51.470Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:56:51.470Z]   │  Execution Time: 117ms
+[2025-11-22T10:56:51.470Z]   └─ End of message
+
+[2025-11-22T10:56:51.471Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:57:51.474Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:57:51.477Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:57:51.477Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:57:51.478Z]   │  Type: TEST_RESULT
+[2025-11-22T10:57:51.478Z]   │  From: TEST_AGENT
+[2025-11-22T10:57:51.478Z]   │  Status: COMPLETED
+[2025-11-22T10:57:51.478Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:57:51.478Z]   │  Result Status: PASS
+[2025-11-22T10:57:51.478Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:57:51.478Z]   │  Execution Time: 117ms
+[2025-11-22T10:57:51.479Z]   └─ End of message
+
+[2025-11-22T10:57:51.480Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:58:51.485Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:58:51.488Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:58:51.488Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:58:51.488Z]   │  Type: TEST_RESULT
+[2025-11-22T10:58:51.488Z]   │  From: TEST_AGENT
+[2025-11-22T10:58:51.488Z]   │  Status: COMPLETED
+[2025-11-22T10:58:51.488Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:58:51.489Z]   │  Result Status: PASS
+[2025-11-22T10:58:51.489Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:58:51.489Z]   │  Execution Time: 117ms
+[2025-11-22T10:58:51.489Z]   └─ End of message
+
+[2025-11-22T10:58:51.490Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T10:59:51.486Z] 
+🔍 Polling for new messages...
+[2025-11-22T10:59:51.487Z] 
+📬 Found 1 new message(s)
+[2025-11-22T10:59:51.487Z] 
+  ┌─ Message ID: 2
+[2025-11-22T10:59:51.488Z]   │  Type: TEST_RESULT
+[2025-11-22T10:59:51.488Z]   │  From: TEST_AGENT
+[2025-11-22T10:59:51.488Z]   │  Status: COMPLETED
+[2025-11-22T10:59:51.488Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T10:59:51.488Z]   │  Result Status: PASS
+[2025-11-22T10:59:51.488Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T10:59:51.488Z]   │  Execution Time: 117ms
+[2025-11-22T10:59:51.488Z]   └─ End of message
+
+[2025-11-22T10:59:51.489Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:00:51.491Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:00:51.496Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:00:51.496Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:00:51.496Z]   │  Type: TEST_RESULT
+[2025-11-22T11:00:51.496Z]   │  From: TEST_AGENT
+[2025-11-22T11:00:51.496Z]   │  Status: COMPLETED
+[2025-11-22T11:00:51.496Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:00:51.496Z]   │  Result Status: PASS
+[2025-11-22T11:00:51.496Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:00:51.496Z]   │  Execution Time: 117ms
+[2025-11-22T11:00:51.496Z]   └─ End of message
+
+[2025-11-22T11:00:51.497Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:01:51.502Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:01:51.504Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:01:51.504Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:01:51.504Z]   │  Type: TEST_RESULT
+[2025-11-22T11:01:51.504Z]   │  From: TEST_AGENT
+[2025-11-22T11:01:51.504Z]   │  Status: COMPLETED
+[2025-11-22T11:01:51.504Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:01:51.504Z]   │  Result Status: PASS
+[2025-11-22T11:01:51.505Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:01:51.505Z]   │  Execution Time: 117ms
+[2025-11-22T11:01:51.505Z]   └─ End of message
+
+[2025-11-22T11:01:51.506Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:02:51.506Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:02:51.508Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:02:51.508Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:02:51.508Z]   │  Type: TEST_RESULT
+[2025-11-22T11:02:51.509Z]   │  From: TEST_AGENT
+[2025-11-22T11:02:51.509Z]   │  Status: COMPLETED
+[2025-11-22T11:02:51.509Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:02:51.509Z]   │  Result Status: PASS
+[2025-11-22T11:02:51.509Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:02:51.509Z]   │  Execution Time: 117ms
+[2025-11-22T11:02:51.509Z]   └─ End of message
+
+[2025-11-22T11:02:51.510Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:03:51.511Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:03:51.513Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:03:51.513Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:03:51.513Z]   │  Type: TEST_RESULT
+[2025-11-22T11:03:51.513Z]   │  From: TEST_AGENT
+[2025-11-22T11:03:51.513Z]   │  Status: COMPLETED
+[2025-11-22T11:03:51.514Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:03:51.514Z]   │  Result Status: PASS
+[2025-11-22T11:03:51.514Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:03:51.514Z]   │  Execution Time: 117ms
+[2025-11-22T11:03:51.514Z]   └─ End of message
+
+[2025-11-22T11:03:51.515Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:04:51.526Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:04:51.527Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:04:51.527Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:04:51.527Z]   │  Type: TEST_RESULT
+[2025-11-22T11:04:51.527Z]   │  From: TEST_AGENT
+[2025-11-22T11:04:51.528Z]   │  Status: COMPLETED
+[2025-11-22T11:04:51.528Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:04:51.528Z]   │  Result Status: PASS
+[2025-11-22T11:04:51.528Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:04:51.528Z]   │  Execution Time: 117ms
+[2025-11-22T11:04:51.528Z]   └─ End of message
+
+[2025-11-22T11:04:51.530Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:05:51.533Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:05:51.543Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:05:51.543Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:05:51.543Z]   │  Type: TEST_RESULT
+[2025-11-22T11:05:51.544Z]   │  From: TEST_AGENT
+[2025-11-22T11:05:51.544Z]   │  Status: COMPLETED
+[2025-11-22T11:05:51.544Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:05:51.544Z]   │  Result Status: PASS
+[2025-11-22T11:05:51.544Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:05:51.544Z]   │  Execution Time: 117ms
+[2025-11-22T11:05:51.545Z]   └─ End of message
+
+[2025-11-22T11:05:51.558Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:06:51.542Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:06:51.543Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:06:51.543Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:06:51.544Z]   │  Type: TEST_RESULT
+[2025-11-22T11:06:51.544Z]   │  From: TEST_AGENT
+[2025-11-22T11:06:51.544Z]   │  Status: COMPLETED
+[2025-11-22T11:06:51.544Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:06:51.544Z]   │  Result Status: PASS
+[2025-11-22T11:06:51.544Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:06:51.544Z]   │  Execution Time: 117ms
+[2025-11-22T11:06:51.544Z]   └─ End of message
+
+[2025-11-22T11:06:51.545Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:07:51.553Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:07:51.554Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:07:51.554Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:07:51.554Z]   │  Type: TEST_RESULT
+[2025-11-22T11:07:51.555Z]   │  From: TEST_AGENT
+[2025-11-22T11:07:51.555Z]   │  Status: COMPLETED
+[2025-11-22T11:07:51.555Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:07:51.555Z]   │  Result Status: PASS
+[2025-11-22T11:07:51.555Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:07:51.555Z]   │  Execution Time: 117ms
+[2025-11-22T11:07:51.555Z]   └─ End of message
+
+[2025-11-22T11:07:51.556Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:08:51.558Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:08:51.560Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:08:51.560Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:08:51.560Z]   │  Type: TEST_RESULT
+[2025-11-22T11:08:51.560Z]   │  From: TEST_AGENT
+[2025-11-22T11:08:51.560Z]   │  Status: COMPLETED
+[2025-11-22T11:08:51.560Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:08:51.560Z]   │  Result Status: PASS
+[2025-11-22T11:08:51.560Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:08:51.560Z]   │  Execution Time: 117ms
+[2025-11-22T11:08:51.560Z]   └─ End of message
+
+[2025-11-22T11:08:51.561Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:09:51.562Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:09:51.564Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:09:51.564Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:09:51.564Z]   │  Type: TEST_RESULT
+[2025-11-22T11:09:51.564Z]   │  From: TEST_AGENT
+[2025-11-22T11:09:51.564Z]   │  Status: COMPLETED
+[2025-11-22T11:09:51.565Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:09:51.565Z]   │  Result Status: PASS
+[2025-11-22T11:09:51.565Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:09:51.565Z]   │  Execution Time: 117ms
+[2025-11-22T11:09:51.565Z]   └─ End of message
+
+[2025-11-22T11:09:51.566Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:10:51.576Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:10:51.578Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:10:51.578Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:10:51.578Z]   │  Type: TEST_RESULT
+[2025-11-22T11:10:51.578Z]   │  From: TEST_AGENT
+[2025-11-22T11:10:51.579Z]   │  Status: COMPLETED
+[2025-11-22T11:10:51.579Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:10:51.579Z]   │  Result Status: PASS
+[2025-11-22T11:10:51.579Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:10:51.579Z]   │  Execution Time: 117ms
+[2025-11-22T11:10:51.579Z]   └─ End of message
+
+[2025-11-22T11:10:51.580Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:11:51.590Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:11:51.592Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:11:51.592Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:11:51.592Z]   │  Type: TEST_RESULT
+[2025-11-22T11:11:51.592Z]   │  From: TEST_AGENT
+[2025-11-22T11:11:51.592Z]   │  Status: COMPLETED
+[2025-11-22T11:11:51.592Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:11:51.592Z]   │  Result Status: PASS
+[2025-11-22T11:11:51.592Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:11:51.592Z]   │  Execution Time: 117ms
+[2025-11-22T11:11:51.592Z]   └─ End of message
+
+[2025-11-22T11:11:51.593Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:12:51.605Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:12:51.607Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:12:51.607Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:12:51.607Z]   │  Type: TEST_RESULT
+[2025-11-22T11:12:51.607Z]   │  From: TEST_AGENT
+[2025-11-22T11:12:51.607Z]   │  Status: COMPLETED
+[2025-11-22T11:12:51.607Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:12:51.607Z]   │  Result Status: PASS
+[2025-11-22T11:12:51.607Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:12:51.607Z]   │  Execution Time: 117ms
+[2025-11-22T11:12:51.607Z]   └─ End of message
+
+[2025-11-22T11:12:51.608Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:13:51.612Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:13:51.614Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:13:51.614Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:13:51.614Z]   │  Type: TEST_RESULT
+[2025-11-22T11:13:51.614Z]   │  From: TEST_AGENT
+[2025-11-22T11:13:51.614Z]   │  Status: COMPLETED
+[2025-11-22T11:13:51.614Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:13:51.614Z]   │  Result Status: PASS
+[2025-11-22T11:13:51.615Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:13:51.615Z]   │  Execution Time: 117ms
+[2025-11-22T11:13:51.615Z]   └─ End of message
+
+[2025-11-22T11:13:51.615Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:14:51.612Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:14:51.613Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:14:51.613Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:14:51.613Z]   │  Type: TEST_RESULT
+[2025-11-22T11:14:51.613Z]   │  From: TEST_AGENT
+[2025-11-22T11:14:51.613Z]   │  Status: COMPLETED
+[2025-11-22T11:14:51.613Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:14:51.613Z]   │  Result Status: PASS
+[2025-11-22T11:14:51.613Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:14:51.614Z]   │  Execution Time: 117ms
+[2025-11-22T11:14:51.614Z]   └─ End of message
+
+[2025-11-22T11:14:51.614Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:15:51.621Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:15:51.622Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:15:51.623Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:15:51.623Z]   │  Type: TEST_RESULT
+[2025-11-22T11:15:51.623Z]   │  From: TEST_AGENT
+[2025-11-22T11:15:51.623Z]   │  Status: COMPLETED
+[2025-11-22T11:15:51.623Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:15:51.624Z]   │  Result Status: PASS
+[2025-11-22T11:15:51.624Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:15:51.624Z]   │  Execution Time: 117ms
+[2025-11-22T11:15:51.624Z]   └─ End of message
+
+[2025-11-22T11:15:51.625Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:16:51.625Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:16:51.626Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:16:51.626Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:16:51.626Z]   │  Type: TEST_RESULT
+[2025-11-22T11:16:51.626Z]   │  From: TEST_AGENT
+[2025-11-22T11:16:51.626Z]   │  Status: COMPLETED
+[2025-11-22T11:16:51.626Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:16:51.627Z]   │  Result Status: PASS
+[2025-11-22T11:16:51.627Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:16:51.627Z]   │  Execution Time: 117ms
+[2025-11-22T11:16:51.627Z]   └─ End of message
+
+[2025-11-22T11:16:51.628Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:17:51.632Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:17:51.634Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:17:51.634Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:17:51.634Z]   │  Type: TEST_RESULT
+[2025-11-22T11:17:51.634Z]   │  From: TEST_AGENT
+[2025-11-22T11:17:51.634Z]   │  Status: COMPLETED
+[2025-11-22T11:17:51.635Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:17:51.635Z]   │  Result Status: PASS
+[2025-11-22T11:17:51.635Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:17:51.635Z]   │  Execution Time: 117ms
+[2025-11-22T11:17:51.635Z]   └─ End of message
+
+[2025-11-22T11:17:51.636Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:18:51.639Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:18:51.641Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:18:51.641Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:18:51.641Z]   │  Type: TEST_RESULT
+[2025-11-22T11:18:51.641Z]   │  From: TEST_AGENT
+[2025-11-22T11:18:51.641Z]   │  Status: COMPLETED
+[2025-11-22T11:18:51.641Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:18:51.641Z]   │  Result Status: PASS
+[2025-11-22T11:18:51.641Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:18:51.641Z]   │  Execution Time: 117ms
+[2025-11-22T11:18:51.641Z]   └─ End of message
+
+[2025-11-22T11:18:51.642Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:19:51.639Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:19:51.640Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:19:51.640Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:19:51.640Z]   │  Type: TEST_RESULT
+[2025-11-22T11:19:51.640Z]   │  From: TEST_AGENT
+[2025-11-22T11:19:51.641Z]   │  Status: COMPLETED
+[2025-11-22T11:19:51.641Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:19:51.641Z]   │  Result Status: PASS
+[2025-11-22T11:19:51.641Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:19:51.641Z]   │  Execution Time: 117ms
+[2025-11-22T11:19:51.641Z]   └─ End of message
+
+[2025-11-22T11:19:51.642Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:20:51.653Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:20:51.655Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:20:51.655Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:20:51.655Z]   │  Type: TEST_RESULT
+[2025-11-22T11:20:51.655Z]   │  From: TEST_AGENT
+[2025-11-22T11:20:51.655Z]   │  Status: COMPLETED
+[2025-11-22T11:20:51.655Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:20:51.655Z]   │  Result Status: PASS
+[2025-11-22T11:20:51.655Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:20:51.655Z]   │  Execution Time: 117ms
+[2025-11-22T11:20:51.655Z]   └─ End of message
+
+[2025-11-22T11:20:51.656Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:21:51.656Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:21:51.658Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:21:51.658Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:21:51.658Z]   │  Type: TEST_RESULT
+[2025-11-22T11:21:51.658Z]   │  From: TEST_AGENT
+[2025-11-22T11:21:51.658Z]   │  Status: COMPLETED
+[2025-11-22T11:21:51.658Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:21:51.658Z]   │  Result Status: PASS
+[2025-11-22T11:21:51.658Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:21:51.658Z]   │  Execution Time: 117ms
+[2025-11-22T11:21:51.658Z]   └─ End of message
+
+[2025-11-22T11:21:51.659Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:22:51.659Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:22:51.661Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:22:51.661Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:22:51.661Z]   │  Type: TEST_RESULT
+[2025-11-22T11:22:51.661Z]   │  From: TEST_AGENT
+[2025-11-22T11:22:51.661Z]   │  Status: COMPLETED
+[2025-11-22T11:22:51.661Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:22:51.661Z]   │  Result Status: PASS
+[2025-11-22T11:22:51.661Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:22:51.662Z]   │  Execution Time: 117ms
+[2025-11-22T11:22:51.662Z]   └─ End of message
+
+[2025-11-22T11:22:51.662Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:23:51.667Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:23:51.668Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:23:51.668Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:23:51.668Z]   │  Type: TEST_RESULT
+[2025-11-22T11:23:51.668Z]   │  From: TEST_AGENT
+[2025-11-22T11:23:51.668Z]   │  Status: COMPLETED
+[2025-11-22T11:23:51.669Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:23:51.669Z]   │  Result Status: PASS
+[2025-11-22T11:23:51.669Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:23:51.669Z]   │  Execution Time: 117ms
+[2025-11-22T11:23:51.669Z]   └─ End of message
+
+[2025-11-22T11:23:51.670Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:24:51.675Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:24:51.677Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:24:51.677Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:24:51.678Z]   │  Type: TEST_RESULT
+[2025-11-22T11:24:51.678Z]   │  From: TEST_AGENT
+[2025-11-22T11:24:51.678Z]   │  Status: COMPLETED
+[2025-11-22T11:24:51.678Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:24:51.678Z]   │  Result Status: PASS
+[2025-11-22T11:24:51.678Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:24:51.678Z]   │  Execution Time: 117ms
+[2025-11-22T11:24:51.678Z]   └─ End of message
+
+[2025-11-22T11:24:51.680Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:25:51.677Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:25:51.678Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:25:51.679Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:25:51.679Z]   │  Type: TEST_RESULT
+[2025-11-22T11:25:51.679Z]   │  From: TEST_AGENT
+[2025-11-22T11:25:51.679Z]   │  Status: COMPLETED
+[2025-11-22T11:25:51.679Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:25:51.679Z]   │  Result Status: PASS
+[2025-11-22T11:25:51.679Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:25:51.680Z]   │  Execution Time: 117ms
+[2025-11-22T11:25:51.680Z]   └─ End of message
+
+[2025-11-22T11:25:51.680Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:26:51.685Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:26:51.687Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:26:51.687Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:26:51.687Z]   │  Type: TEST_RESULT
+[2025-11-22T11:26:51.687Z]   │  From: TEST_AGENT
+[2025-11-22T11:26:51.687Z]   │  Status: COMPLETED
+[2025-11-22T11:26:51.687Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:26:51.687Z]   │  Result Status: PASS
+[2025-11-22T11:26:51.687Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:26:51.687Z]   │  Execution Time: 117ms
+[2025-11-22T11:26:51.688Z]   └─ End of message
+
+[2025-11-22T11:26:51.689Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:27:51.694Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:27:51.695Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:27:51.696Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:27:51.696Z]   │  Type: TEST_RESULT
+[2025-11-22T11:27:51.696Z]   │  From: TEST_AGENT
+[2025-11-22T11:27:51.696Z]   │  Status: COMPLETED
+[2025-11-22T11:27:51.696Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:27:51.696Z]   │  Result Status: PASS
+[2025-11-22T11:27:51.696Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:27:51.696Z]   │  Execution Time: 117ms
+[2025-11-22T11:27:51.696Z]   └─ End of message
+
+[2025-11-22T11:27:51.697Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:28:51.697Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:28:51.698Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:28:51.698Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:28:51.698Z]   │  Type: TEST_RESULT
+[2025-11-22T11:28:51.699Z]   │  From: TEST_AGENT
+[2025-11-22T11:28:51.699Z]   │  Status: COMPLETED
+[2025-11-22T11:28:51.699Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:28:51.699Z]   │  Result Status: PASS
+[2025-11-22T11:28:51.699Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:28:51.699Z]   │  Execution Time: 117ms
+[2025-11-22T11:28:51.699Z]   └─ End of message
+
+[2025-11-22T11:28:51.700Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:29:51.705Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:29:51.706Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:29:51.706Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:29:51.706Z]   │  Type: TEST_RESULT
+[2025-11-22T11:29:51.706Z]   │  From: TEST_AGENT
+[2025-11-22T11:29:51.706Z]   │  Status: COMPLETED
+[2025-11-22T11:29:51.706Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:29:51.706Z]   │  Result Status: PASS
+[2025-11-22T11:29:51.706Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:29:51.707Z]   │  Execution Time: 117ms
+[2025-11-22T11:29:51.707Z]   └─ End of message
+
+[2025-11-22T11:29:51.708Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:30:51.716Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:30:51.717Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:30:51.718Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:30:51.718Z]   │  Type: TEST_RESULT
+[2025-11-22T11:30:51.718Z]   │  From: TEST_AGENT
+[2025-11-22T11:30:51.718Z]   │  Status: COMPLETED
+[2025-11-22T11:30:51.718Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:30:51.718Z]   │  Result Status: PASS
+[2025-11-22T11:30:51.719Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:30:51.719Z]   │  Execution Time: 117ms
+[2025-11-22T11:30:51.719Z]   └─ End of message
+
+[2025-11-22T11:30:51.720Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:31:51.731Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:31:51.733Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:31:51.733Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:31:51.733Z]   │  Type: TEST_RESULT
+[2025-11-22T11:31:51.733Z]   │  From: TEST_AGENT
+[2025-11-22T11:31:51.733Z]   │  Status: COMPLETED
+[2025-11-22T11:31:51.733Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:31:51.734Z]   │  Result Status: PASS
+[2025-11-22T11:31:51.734Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:31:51.734Z]   │  Execution Time: 117ms
+[2025-11-22T11:31:51.734Z]   └─ End of message
+
+[2025-11-22T11:31:51.735Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:32:51.735Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:32:51.737Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:32:51.737Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:32:51.737Z]   │  Type: TEST_RESULT
+[2025-11-22T11:32:51.737Z]   │  From: TEST_AGENT
+[2025-11-22T11:32:51.737Z]   │  Status: COMPLETED
+[2025-11-22T11:32:51.738Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:32:51.738Z]   │  Result Status: PASS
+[2025-11-22T11:32:51.738Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:32:51.738Z]   │  Execution Time: 117ms
+[2025-11-22T11:32:51.738Z]   └─ End of message
+
+[2025-11-22T11:32:51.739Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:33:51.741Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:33:51.742Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:33:51.743Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:33:51.743Z]   │  Type: TEST_RESULT
+[2025-11-22T11:33:51.743Z]   │  From: TEST_AGENT
+[2025-11-22T11:33:51.743Z]   │  Status: COMPLETED
+[2025-11-22T11:33:51.743Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:33:51.743Z]   │  Result Status: PASS
+[2025-11-22T11:33:51.743Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:33:51.743Z]   │  Execution Time: 117ms
+[2025-11-22T11:33:51.744Z]   └─ End of message
+
+[2025-11-22T11:33:51.745Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:34:51.754Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:34:51.755Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:34:51.755Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:34:51.755Z]   │  Type: TEST_RESULT
+[2025-11-22T11:34:51.756Z]   │  From: TEST_AGENT
+[2025-11-22T11:34:51.756Z]   │  Status: COMPLETED
+[2025-11-22T11:34:51.756Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:34:51.756Z]   │  Result Status: PASS
+[2025-11-22T11:34:51.756Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:34:51.756Z]   │  Execution Time: 117ms
+[2025-11-22T11:34:51.756Z]   └─ End of message
+
+[2025-11-22T11:34:51.757Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:35:51.757Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:35:51.758Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:35:51.758Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:35:51.759Z]   │  Type: TEST_RESULT
+[2025-11-22T11:35:51.759Z]   │  From: TEST_AGENT
+[2025-11-22T11:35:51.759Z]   │  Status: COMPLETED
+[2025-11-22T11:35:51.759Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:35:51.759Z]   │  Result Status: PASS
+[2025-11-22T11:35:51.759Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:35:51.759Z]   │  Execution Time: 117ms
+[2025-11-22T11:35:51.759Z]   └─ End of message
+
+[2025-11-22T11:35:51.760Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:36:51.757Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:36:51.759Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:36:51.759Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:36:51.759Z]   │  Type: TEST_RESULT
+[2025-11-22T11:36:51.759Z]   │  From: TEST_AGENT
+[2025-11-22T11:36:51.760Z]   │  Status: COMPLETED
+[2025-11-22T11:36:51.760Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:36:51.760Z]   │  Result Status: PASS
+[2025-11-22T11:36:51.760Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:36:51.760Z]   │  Execution Time: 117ms
+[2025-11-22T11:36:51.760Z]   └─ End of message
+
+[2025-11-22T11:36:51.762Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:37:51.768Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:37:51.769Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:37:51.770Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:37:51.770Z]   │  Type: TEST_RESULT
+[2025-11-22T11:37:51.770Z]   │  From: TEST_AGENT
+[2025-11-22T11:37:51.770Z]   │  Status: COMPLETED
+[2025-11-22T11:37:51.770Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:37:51.771Z]   │  Result Status: PASS
+[2025-11-22T11:37:51.771Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:37:51.771Z]   │  Execution Time: 117ms
+[2025-11-22T11:37:51.771Z]   └─ End of message
+
+[2025-11-22T11:37:51.772Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:38:51.774Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:38:51.779Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:38:51.780Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:38:51.781Z]   │  Type: TEST_RESULT
+[2025-11-22T11:38:51.782Z]   │  From: TEST_AGENT
+[2025-11-22T11:38:51.783Z]   │  Status: COMPLETED
+[2025-11-22T11:38:51.783Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:38:51.783Z]   │  Result Status: PASS
+[2025-11-22T11:38:51.783Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:38:51.784Z]   │  Execution Time: 117ms
+[2025-11-22T11:38:51.784Z]   └─ End of message
+
+[2025-11-22T11:38:51.785Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:39:51.786Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:39:51.787Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:39:51.787Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:39:51.788Z]   │  Type: TEST_RESULT
+[2025-11-22T11:39:51.788Z]   │  From: TEST_AGENT
+[2025-11-22T11:39:51.788Z]   │  Status: COMPLETED
+[2025-11-22T11:39:51.788Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:39:51.788Z]   │  Result Status: PASS
+[2025-11-22T11:39:51.788Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:39:51.788Z]   │  Execution Time: 117ms
+[2025-11-22T11:39:51.789Z]   └─ End of message
+
+[2025-11-22T11:39:51.790Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:40:51.787Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:40:51.790Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:40:51.792Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:40:51.792Z]   │  Type: TEST_RESULT
+[2025-11-22T11:40:51.793Z]   │  From: TEST_AGENT
+[2025-11-22T11:40:51.793Z]   │  Status: COMPLETED
+[2025-11-22T11:40:51.794Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:40:51.794Z]   │  Result Status: PASS
+[2025-11-22T11:40:51.795Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:40:51.795Z]   │  Execution Time: 117ms
+[2025-11-22T11:40:51.796Z]   └─ End of message
+
+[2025-11-22T11:40:51.797Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:41:51.794Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:41:51.797Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:41:51.798Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:41:51.798Z]   │  Type: TEST_RESULT
+[2025-11-22T11:41:51.799Z]   │  From: TEST_AGENT
+[2025-11-22T11:41:51.800Z]   │  Status: COMPLETED
+[2025-11-22T11:41:51.801Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:41:51.801Z]   │  Result Status: PASS
+[2025-11-22T11:41:51.802Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:41:51.802Z]   │  Execution Time: 117ms
+[2025-11-22T11:41:51.803Z]   └─ End of message
+
+[2025-11-22T11:41:51.804Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:42:51.804Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:42:51.806Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:42:51.806Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:42:51.807Z]   │  Type: TEST_RESULT
+[2025-11-22T11:42:51.807Z]   │  From: TEST_AGENT
+[2025-11-22T11:42:51.807Z]   │  Status: COMPLETED
+[2025-11-22T11:42:51.807Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:42:51.808Z]   │  Result Status: PASS
+[2025-11-22T11:42:51.808Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:42:51.808Z]   │  Execution Time: 117ms
+[2025-11-22T11:42:51.808Z]   └─ End of message
+
+[2025-11-22T11:42:51.810Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:43:51.807Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:43:51.810Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:43:51.810Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:43:51.810Z]   │  Type: TEST_RESULT
+[2025-11-22T11:43:51.810Z]   │  From: TEST_AGENT
+[2025-11-22T11:43:51.811Z]   │  Status: COMPLETED
+[2025-11-22T11:43:51.811Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:43:51.812Z]   │  Result Status: PASS
+[2025-11-22T11:43:51.812Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:43:51.813Z]   │  Execution Time: 117ms
+[2025-11-22T11:43:51.813Z]   └─ End of message
+
+[2025-11-22T11:43:51.818Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:44:51.822Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:44:51.823Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:44:51.824Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:44:51.824Z]   │  Type: TEST_RESULT
+[2025-11-22T11:44:51.824Z]   │  From: TEST_AGENT
+[2025-11-22T11:44:51.824Z]   │  Status: COMPLETED
+[2025-11-22T11:44:51.824Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:44:51.825Z]   │  Result Status: PASS
+[2025-11-22T11:44:51.825Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:44:51.825Z]   │  Execution Time: 117ms
+[2025-11-22T11:44:51.825Z]   └─ End of message
+
+[2025-11-22T11:44:51.826Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:45:51.831Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:45:51.833Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:45:51.833Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:45:51.833Z]   │  Type: TEST_RESULT
+[2025-11-22T11:45:51.833Z]   │  From: TEST_AGENT
+[2025-11-22T11:45:51.834Z]   │  Status: COMPLETED
+[2025-11-22T11:45:51.834Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:45:51.834Z]   │  Result Status: PASS
+[2025-11-22T11:45:51.834Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:45:51.834Z]   │  Execution Time: 117ms
+[2025-11-22T11:45:51.834Z]   └─ End of message
+
+[2025-11-22T11:45:51.835Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:46:51.840Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:46:51.842Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:46:51.842Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:46:51.842Z]   │  Type: TEST_RESULT
+[2025-11-22T11:46:51.842Z]   │  From: TEST_AGENT
+[2025-11-22T11:46:51.843Z]   │  Status: COMPLETED
+[2025-11-22T11:46:51.843Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:46:51.843Z]   │  Result Status: PASS
+[2025-11-22T11:46:51.843Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:46:51.843Z]   │  Execution Time: 117ms
+[2025-11-22T11:46:51.843Z]   └─ End of message
+
+[2025-11-22T11:46:51.844Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:47:51.849Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:47:51.851Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:47:51.851Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:47:51.851Z]   │  Type: TEST_RESULT
+[2025-11-22T11:47:51.851Z]   │  From: TEST_AGENT
+[2025-11-22T11:47:51.851Z]   │  Status: COMPLETED
+[2025-11-22T11:47:51.851Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:47:51.852Z]   │  Result Status: PASS
+[2025-11-22T11:47:51.852Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:47:51.852Z]   │  Execution Time: 117ms
+[2025-11-22T11:47:51.852Z]   └─ End of message
+
+[2025-11-22T11:47:51.853Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:48:51.862Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:48:51.865Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:48:51.865Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:48:51.865Z]   │  Type: TEST_RESULT
+[2025-11-22T11:48:51.865Z]   │  From: TEST_AGENT
+[2025-11-22T11:48:51.865Z]   │  Status: COMPLETED
+[2025-11-22T11:48:51.866Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:48:51.866Z]   │  Result Status: PASS
+[2025-11-22T11:48:51.866Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:48:51.866Z]   │  Execution Time: 117ms
+[2025-11-22T11:48:51.866Z]   └─ End of message
+
+[2025-11-22T11:48:51.868Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:49:51.865Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:49:51.867Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:49:51.867Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:49:51.867Z]   │  Type: TEST_RESULT
+[2025-11-22T11:49:51.867Z]   │  From: TEST_AGENT
+[2025-11-22T11:49:51.867Z]   │  Status: COMPLETED
+[2025-11-22T11:49:51.867Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:49:51.868Z]   │  Result Status: PASS
+[2025-11-22T11:49:51.868Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:49:51.868Z]   │  Execution Time: 117ms
+[2025-11-22T11:49:51.868Z]   └─ End of message
+
+[2025-11-22T11:49:51.869Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:50:51.877Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:50:51.879Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:50:51.879Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:50:51.879Z]   │  Type: TEST_RESULT
+[2025-11-22T11:50:51.879Z]   │  From: TEST_AGENT
+[2025-11-22T11:50:51.879Z]   │  Status: COMPLETED
+[2025-11-22T11:50:51.880Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:50:51.880Z]   │  Result Status: PASS
+[2025-11-22T11:50:51.880Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:50:51.880Z]   │  Execution Time: 117ms
+[2025-11-22T11:50:51.880Z]   └─ End of message
+
+[2025-11-22T11:50:51.881Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:51:51.891Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:51:51.893Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:51:51.893Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:51:51.893Z]   │  Type: TEST_RESULT
+[2025-11-22T11:51:51.893Z]   │  From: TEST_AGENT
+[2025-11-22T11:51:51.894Z]   │  Status: COMPLETED
+[2025-11-22T11:51:51.894Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:51:51.894Z]   │  Result Status: PASS
+[2025-11-22T11:51:51.894Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:51:51.894Z]   │  Execution Time: 117ms
+[2025-11-22T11:51:51.894Z]   └─ End of message
+
+[2025-11-22T11:51:51.896Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:52:51.900Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:52:51.902Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:52:51.902Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:52:51.902Z]   │  Type: TEST_RESULT
+[2025-11-22T11:52:51.902Z]   │  From: TEST_AGENT
+[2025-11-22T11:52:51.902Z]   │  Status: COMPLETED
+[2025-11-22T11:52:51.903Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:52:51.903Z]   │  Result Status: PASS
+[2025-11-22T11:52:51.903Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:52:51.903Z]   │  Execution Time: 117ms
+[2025-11-22T11:52:51.903Z]   └─ End of message
+
+[2025-11-22T11:52:51.904Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:53:51.901Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:53:51.903Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:53:51.903Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:53:51.903Z]   │  Type: TEST_RESULT
+[2025-11-22T11:53:51.903Z]   │  From: TEST_AGENT
+[2025-11-22T11:53:51.903Z]   │  Status: COMPLETED
+[2025-11-22T11:53:51.903Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:53:51.904Z]   │  Result Status: PASS
+[2025-11-22T11:53:51.904Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:53:51.904Z]   │  Execution Time: 117ms
+[2025-11-22T11:53:51.904Z]   └─ End of message
+
+[2025-11-22T11:53:51.905Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:54:51.913Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:54:51.915Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:54:51.915Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:54:51.915Z]   │  Type: TEST_RESULT
+[2025-11-22T11:54:51.915Z]   │  From: TEST_AGENT
+[2025-11-22T11:54:51.916Z]   │  Status: COMPLETED
+[2025-11-22T11:54:51.916Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:54:51.916Z]   │  Result Status: PASS
+[2025-11-22T11:54:51.916Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:54:51.916Z]   │  Execution Time: 117ms
+[2025-11-22T11:54:51.916Z]   └─ End of message
+
+[2025-11-22T11:54:51.917Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:55:51.918Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:55:51.921Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:55:51.921Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:55:51.921Z]   │  Type: TEST_RESULT
+[2025-11-22T11:55:51.921Z]   │  From: TEST_AGENT
+[2025-11-22T11:55:51.921Z]   │  Status: COMPLETED
+[2025-11-22T11:55:51.922Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:55:51.922Z]   │  Result Status: PASS
+[2025-11-22T11:55:51.922Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:55:51.922Z]   │  Execution Time: 117ms
+[2025-11-22T11:55:51.922Z]   └─ End of message
+
+[2025-11-22T11:55:51.923Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:56:51.927Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:56:51.928Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:56:51.929Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:56:51.929Z]   │  Type: TEST_RESULT
+[2025-11-22T11:56:51.929Z]   │  From: TEST_AGENT
+[2025-11-22T11:56:51.929Z]   │  Status: COMPLETED
+[2025-11-22T11:56:51.929Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:56:51.929Z]   │  Result Status: PASS
+[2025-11-22T11:56:51.929Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:56:51.929Z]   │  Execution Time: 117ms
+[2025-11-22T11:56:51.930Z]   └─ End of message
+
+[2025-11-22T11:56:51.931Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:57:51.932Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:57:51.936Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:57:51.937Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:57:51.938Z]   │  Type: TEST_RESULT
+[2025-11-22T11:57:51.938Z]   │  From: TEST_AGENT
+[2025-11-22T11:57:51.939Z]   │  Status: COMPLETED
+[2025-11-22T11:57:51.939Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:57:51.940Z]   │  Result Status: PASS
+[2025-11-22T11:57:51.941Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:57:51.941Z]   │  Execution Time: 117ms
+[2025-11-22T11:57:51.942Z]   └─ End of message
+
+[2025-11-22T11:57:51.943Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:58:51.935Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:58:51.937Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:58:51.937Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:58:51.937Z]   │  Type: TEST_RESULT
+[2025-11-22T11:58:51.937Z]   │  From: TEST_AGENT
+[2025-11-22T11:58:51.937Z]   │  Status: COMPLETED
+[2025-11-22T11:58:51.938Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:58:51.938Z]   │  Result Status: PASS
+[2025-11-22T11:58:51.938Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:58:51.938Z]   │  Execution Time: 117ms
+[2025-11-22T11:58:51.938Z]   └─ End of message
+
+[2025-11-22T11:58:51.939Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T11:59:51.949Z] 
+🔍 Polling for new messages...
+[2025-11-22T11:59:51.951Z] 
+📬 Found 1 new message(s)
+[2025-11-22T11:59:51.951Z] 
+  ┌─ Message ID: 2
+[2025-11-22T11:59:51.951Z]   │  Type: TEST_RESULT
+[2025-11-22T11:59:51.951Z]   │  From: TEST_AGENT
+[2025-11-22T11:59:51.951Z]   │  Status: COMPLETED
+[2025-11-22T11:59:51.952Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T11:59:51.952Z]   │  Result Status: PASS
+[2025-11-22T11:59:51.952Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T11:59:51.952Z]   │  Execution Time: 117ms
+[2025-11-22T11:59:51.952Z]   └─ End of message
+
+[2025-11-22T11:59:51.953Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:00:51.949Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:00:51.952Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:00:51.952Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:00:51.952Z]   │  Type: TEST_RESULT
+[2025-11-22T12:00:51.953Z]   │  From: TEST_AGENT
+[2025-11-22T12:00:51.954Z]   │  Status: COMPLETED
+[2025-11-22T12:00:51.954Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:00:51.954Z]   │  Result Status: PASS
+[2025-11-22T12:00:51.954Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:00:51.955Z]   │  Execution Time: 117ms
+[2025-11-22T12:00:51.955Z]   └─ End of message
+
+[2025-11-22T12:00:51.957Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:01:51.962Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:01:51.963Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:01:51.964Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:01:51.964Z]   │  Type: TEST_RESULT
+[2025-11-22T12:01:51.964Z]   │  From: TEST_AGENT
+[2025-11-22T12:01:51.964Z]   │  Status: COMPLETED
+[2025-11-22T12:01:51.964Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:01:51.964Z]   │  Result Status: PASS
+[2025-11-22T12:01:51.965Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:01:51.965Z]   │  Execution Time: 117ms
+[2025-11-22T12:01:51.965Z]   └─ End of message
+
+[2025-11-22T12:01:51.966Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:02:51.967Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:02:51.969Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:02:51.969Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:02:51.969Z]   │  Type: TEST_RESULT
+[2025-11-22T12:02:51.969Z]   │  From: TEST_AGENT
+[2025-11-22T12:02:51.969Z]   │  Status: COMPLETED
+[2025-11-22T12:02:51.970Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:02:51.970Z]   │  Result Status: PASS
+[2025-11-22T12:02:51.970Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:02:51.970Z]   │  Execution Time: 117ms
+[2025-11-22T12:02:51.970Z]   └─ End of message
+
+[2025-11-22T12:02:51.971Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:03:51.983Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:03:51.985Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:03:51.985Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:03:51.985Z]   │  Type: TEST_RESULT
+[2025-11-22T12:03:51.985Z]   │  From: TEST_AGENT
+[2025-11-22T12:03:51.985Z]   │  Status: COMPLETED
+[2025-11-22T12:03:51.985Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:03:51.986Z]   │  Result Status: PASS
+[2025-11-22T12:03:51.986Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:03:51.986Z]   │  Execution Time: 117ms
+[2025-11-22T12:03:51.986Z]   └─ End of message
+
+[2025-11-22T12:03:51.987Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:04:51.995Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:04:51.997Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:04:51.997Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:04:51.997Z]   │  Type: TEST_RESULT
+[2025-11-22T12:04:51.997Z]   │  From: TEST_AGENT
+[2025-11-22T12:04:51.998Z]   │  Status: COMPLETED
+[2025-11-22T12:04:51.998Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:04:51.998Z]   │  Result Status: PASS
+[2025-11-22T12:04:51.998Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:04:51.998Z]   │  Execution Time: 117ms
+[2025-11-22T12:04:51.999Z]   └─ End of message
+
+[2025-11-22T12:04:52.000Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:05:52.003Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:05:52.005Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:05:52.005Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:05:52.005Z]   │  Type: TEST_RESULT
+[2025-11-22T12:05:52.005Z]   │  From: TEST_AGENT
+[2025-11-22T12:05:52.005Z]   │  Status: COMPLETED
+[2025-11-22T12:05:52.005Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:05:52.005Z]   │  Result Status: PASS
+[2025-11-22T12:05:52.006Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:05:52.006Z]   │  Execution Time: 117ms
+[2025-11-22T12:05:52.006Z]   └─ End of message
+
+[2025-11-22T12:05:52.006Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:06:52.005Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:06:52.006Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:06:52.006Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:06:52.006Z]   │  Type: TEST_RESULT
+[2025-11-22T12:06:52.006Z]   │  From: TEST_AGENT
+[2025-11-22T12:06:52.006Z]   │  Status: COMPLETED
+[2025-11-22T12:06:52.006Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:06:52.007Z]   │  Result Status: PASS
+[2025-11-22T12:06:52.007Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:06:52.007Z]   │  Execution Time: 117ms
+[2025-11-22T12:06:52.007Z]   └─ End of message
+
+[2025-11-22T12:06:52.007Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:07:52.009Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:07:52.010Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:07:52.011Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:07:52.011Z]   │  Type: TEST_RESULT
+[2025-11-22T12:07:52.011Z]   │  From: TEST_AGENT
+[2025-11-22T12:07:52.011Z]   │  Status: COMPLETED
+[2025-11-22T12:07:52.011Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:07:52.011Z]   │  Result Status: PASS
+[2025-11-22T12:07:52.011Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:07:52.011Z]   │  Execution Time: 117ms
+[2025-11-22T12:07:52.011Z]   └─ End of message
+
+[2025-11-22T12:07:52.012Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:08:52.017Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:08:52.019Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:08:52.019Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:08:52.019Z]   │  Type: TEST_RESULT
+[2025-11-22T12:08:52.019Z]   │  From: TEST_AGENT
+[2025-11-22T12:08:52.019Z]   │  Status: COMPLETED
+[2025-11-22T12:08:52.019Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:08:52.019Z]   │  Result Status: PASS
+[2025-11-22T12:08:52.019Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:08:52.019Z]   │  Execution Time: 117ms
+[2025-11-22T12:08:52.019Z]   └─ End of message
+
+[2025-11-22T12:08:52.020Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:09:52.020Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:09:52.021Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:09:52.021Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:09:52.021Z]   │  Type: TEST_RESULT
+[2025-11-22T12:09:52.022Z]   │  From: TEST_AGENT
+[2025-11-22T12:09:52.022Z]   │  Status: COMPLETED
+[2025-11-22T12:09:52.022Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:09:52.022Z]   │  Result Status: PASS
+[2025-11-22T12:09:52.022Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:09:52.022Z]   │  Execution Time: 117ms
+[2025-11-22T12:09:52.022Z]   └─ End of message
+
+[2025-11-22T12:09:52.023Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:10:52.032Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:10:52.033Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:10:52.033Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:10:52.033Z]   │  Type: TEST_RESULT
+[2025-11-22T12:10:52.033Z]   │  From: TEST_AGENT
+[2025-11-22T12:10:52.033Z]   │  Status: COMPLETED
+[2025-11-22T12:10:52.034Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:10:52.034Z]   │  Result Status: PASS
+[2025-11-22T12:10:52.034Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:10:52.034Z]   │  Execution Time: 117ms
+[2025-11-22T12:10:52.034Z]   └─ End of message
+
+[2025-11-22T12:10:52.035Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:11:52.039Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:11:52.040Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:11:52.041Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:11:52.041Z]   │  Type: TEST_RESULT
+[2025-11-22T12:11:52.041Z]   │  From: TEST_AGENT
+[2025-11-22T12:11:52.041Z]   │  Status: COMPLETED
+[2025-11-22T12:11:52.041Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:11:52.041Z]   │  Result Status: PASS
+[2025-11-22T12:11:52.041Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:11:52.041Z]   │  Execution Time: 117ms
+[2025-11-22T12:11:52.041Z]   └─ End of message
+
+[2025-11-22T12:11:52.042Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:12:52.042Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:12:52.044Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:12:52.044Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:12:52.044Z]   │  Type: TEST_RESULT
+[2025-11-22T12:12:52.044Z]   │  From: TEST_AGENT
+[2025-11-22T12:12:52.044Z]   │  Status: COMPLETED
+[2025-11-22T12:12:52.044Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:12:52.045Z]   │  Result Status: PASS
+[2025-11-22T12:12:52.045Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:12:52.045Z]   │  Execution Time: 117ms
+[2025-11-22T12:12:52.045Z]   └─ End of message
+
+[2025-11-22T12:12:52.046Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:13:52.043Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:13:52.045Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:13:52.045Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:13:52.045Z]   │  Type: TEST_RESULT
+[2025-11-22T12:13:52.045Z]   │  From: TEST_AGENT
+[2025-11-22T12:13:52.045Z]   │  Status: COMPLETED
+[2025-11-22T12:13:52.045Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:13:52.045Z]   │  Result Status: PASS
+[2025-11-22T12:13:52.045Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:13:52.045Z]   │  Execution Time: 117ms
+[2025-11-22T12:13:52.045Z]   └─ End of message
+
+[2025-11-22T12:13:52.046Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:14:52.055Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:14:52.056Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:14:52.056Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:14:52.056Z]   │  Type: TEST_RESULT
+[2025-11-22T12:14:52.056Z]   │  From: TEST_AGENT
+[2025-11-22T12:14:52.056Z]   │  Status: COMPLETED
+[2025-11-22T12:14:52.056Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:14:52.056Z]   │  Result Status: PASS
+[2025-11-22T12:14:52.056Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:14:52.056Z]   │  Execution Time: 117ms
+[2025-11-22T12:14:52.057Z]   └─ End of message
+
+[2025-11-22T12:14:52.057Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:15:52.069Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:15:52.071Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:15:52.071Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:15:52.071Z]   │  Type: TEST_RESULT
+[2025-11-22T12:15:52.071Z]   │  From: TEST_AGENT
+[2025-11-22T12:15:52.071Z]   │  Status: COMPLETED
+[2025-11-22T12:15:52.071Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:15:52.071Z]   │  Result Status: PASS
+[2025-11-22T12:15:52.071Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:15:52.071Z]   │  Execution Time: 117ms
+[2025-11-22T12:15:52.071Z]   └─ End of message
+
+[2025-11-22T12:15:52.072Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:16:52.082Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:16:52.084Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:16:52.084Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:16:52.084Z]   │  Type: TEST_RESULT
+[2025-11-22T12:16:52.084Z]   │  From: TEST_AGENT
+[2025-11-22T12:16:52.084Z]   │  Status: COMPLETED
+[2025-11-22T12:16:52.084Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:16:52.084Z]   │  Result Status: PASS
+[2025-11-22T12:16:52.084Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:16:52.084Z]   │  Execution Time: 117ms
+[2025-11-22T12:16:52.084Z]   └─ End of message
+
+[2025-11-22T12:16:52.085Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:17:52.097Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:17:52.099Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:17:52.099Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:17:52.099Z]   │  Type: TEST_RESULT
+[2025-11-22T12:17:52.099Z]   │  From: TEST_AGENT
+[2025-11-22T12:17:52.099Z]   │  Status: COMPLETED
+[2025-11-22T12:17:52.099Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:17:52.100Z]   │  Result Status: PASS
+[2025-11-22T12:17:52.100Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:17:52.100Z]   │  Execution Time: 117ms
+[2025-11-22T12:17:52.100Z]   └─ End of message
+
+[2025-11-22T12:17:52.101Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:18:52.112Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:18:52.113Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:18:52.113Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:18:52.113Z]   │  Type: TEST_RESULT
+[2025-11-22T12:18:52.113Z]   │  From: TEST_AGENT
+[2025-11-22T12:18:52.113Z]   │  Status: COMPLETED
+[2025-11-22T12:18:52.113Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:18:52.113Z]   │  Result Status: PASS
+[2025-11-22T12:18:52.114Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:18:52.114Z]   │  Execution Time: 117ms
+[2025-11-22T12:18:52.114Z]   └─ End of message
+
+[2025-11-22T12:18:52.114Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:19:52.120Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:19:52.122Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:19:52.122Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:19:52.123Z]   │  Type: TEST_RESULT
+[2025-11-22T12:19:52.123Z]   │  From: TEST_AGENT
+[2025-11-22T12:19:52.123Z]   │  Status: COMPLETED
+[2025-11-22T12:19:52.123Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:19:52.123Z]   │  Result Status: PASS
+[2025-11-22T12:19:52.123Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:19:52.123Z]   │  Execution Time: 117ms
+[2025-11-22T12:19:52.123Z]   └─ End of message
+
+[2025-11-22T12:19:52.124Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:20:52.128Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:20:52.131Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:20:52.132Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:20:52.132Z]   │  Type: TEST_RESULT
+[2025-11-22T12:20:52.132Z]   │  From: TEST_AGENT
+[2025-11-22T12:20:52.133Z]   │  Status: COMPLETED
+[2025-11-22T12:20:52.133Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:20:52.133Z]   │  Result Status: PASS
+[2025-11-22T12:20:52.133Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:20:52.133Z]   │  Execution Time: 117ms
+[2025-11-22T12:20:52.134Z]   └─ End of message
+
+[2025-11-22T12:20:52.135Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:21:52.138Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:21:52.139Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:21:52.139Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:21:52.139Z]   │  Type: TEST_RESULT
+[2025-11-22T12:21:52.140Z]   │  From: TEST_AGENT
+[2025-11-22T12:21:52.140Z]   │  Status: COMPLETED
+[2025-11-22T12:21:52.140Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:21:52.140Z]   │  Result Status: PASS
+[2025-11-22T12:21:52.140Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:21:52.140Z]   │  Execution Time: 117ms
+[2025-11-22T12:21:52.140Z]   └─ End of message
+
+[2025-11-22T12:21:52.140Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:22:52.150Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:22:52.151Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:22:52.151Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:22:52.151Z]   │  Type: TEST_RESULT
+[2025-11-22T12:22:52.151Z]   │  From: TEST_AGENT
+[2025-11-22T12:22:52.151Z]   │  Status: COMPLETED
+[2025-11-22T12:22:52.151Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:22:52.151Z]   │  Result Status: PASS
+[2025-11-22T12:22:52.151Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:22:52.151Z]   │  Execution Time: 117ms
+[2025-11-22T12:22:52.152Z]   └─ End of message
+
+[2025-11-22T12:22:52.152Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:23:52.159Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:23:52.160Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:23:52.161Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:23:52.161Z]   │  Type: TEST_RESULT
+[2025-11-22T12:23:52.161Z]   │  From: TEST_AGENT
+[2025-11-22T12:23:52.161Z]   │  Status: COMPLETED
+[2025-11-22T12:23:52.161Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:23:52.161Z]   │  Result Status: PASS
+[2025-11-22T12:23:52.161Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:23:52.161Z]   │  Execution Time: 117ms
+[2025-11-22T12:23:52.161Z]   └─ End of message
+
+[2025-11-22T12:23:52.162Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:24:52.160Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:24:52.162Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:24:52.162Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:24:52.162Z]   │  Type: TEST_RESULT
+[2025-11-22T12:24:52.162Z]   │  From: TEST_AGENT
+[2025-11-22T12:24:52.162Z]   │  Status: COMPLETED
+[2025-11-22T12:24:52.162Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:24:52.162Z]   │  Result Status: PASS
+[2025-11-22T12:24:52.162Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:24:52.162Z]   │  Execution Time: 117ms
+[2025-11-22T12:24:52.162Z]   └─ End of message
+
+[2025-11-22T12:24:52.163Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:25:52.172Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:25:52.174Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:25:52.174Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:25:52.174Z]   │  Type: TEST_RESULT
+[2025-11-22T12:25:52.174Z]   │  From: TEST_AGENT
+[2025-11-22T12:25:52.174Z]   │  Status: COMPLETED
+[2025-11-22T12:25:52.174Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:25:52.174Z]   │  Result Status: PASS
+[2025-11-22T12:25:52.174Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:25:52.174Z]   │  Execution Time: 117ms
+[2025-11-22T12:25:52.175Z]   └─ End of message
+
+[2025-11-22T12:25:52.175Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:26:52.179Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:26:52.180Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:26:52.180Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:26:52.181Z]   │  Type: TEST_RESULT
+[2025-11-22T12:26:52.181Z]   │  From: TEST_AGENT
+[2025-11-22T12:26:52.181Z]   │  Status: COMPLETED
+[2025-11-22T12:26:52.181Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:26:52.181Z]   │  Result Status: PASS
+[2025-11-22T12:26:52.181Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:26:52.181Z]   │  Execution Time: 117ms
+[2025-11-22T12:26:52.181Z]   └─ End of message
+
+[2025-11-22T12:26:52.182Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:27:52.185Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:27:52.186Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:27:52.186Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:27:52.186Z]   │  Type: TEST_RESULT
+[2025-11-22T12:27:52.186Z]   │  From: TEST_AGENT
+[2025-11-22T12:27:52.186Z]   │  Status: COMPLETED
+[2025-11-22T12:27:52.186Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:27:52.186Z]   │  Result Status: PASS
+[2025-11-22T12:27:52.186Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:27:52.186Z]   │  Execution Time: 117ms
+[2025-11-22T12:27:52.186Z]   └─ End of message
+
+[2025-11-22T12:27:52.187Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:28:52.187Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:28:52.190Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:28:52.190Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:28:52.190Z]   │  Type: TEST_RESULT
+[2025-11-22T12:28:52.190Z]   │  From: TEST_AGENT
+[2025-11-22T12:28:52.190Z]   │  Status: COMPLETED
+[2025-11-22T12:28:52.190Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:28:52.190Z]   │  Result Status: PASS
+[2025-11-22T12:28:52.191Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:28:52.191Z]   │  Execution Time: 117ms
+[2025-11-22T12:28:52.191Z]   └─ End of message
+
+[2025-11-22T12:28:52.192Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:29:52.202Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:29:52.204Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:29:52.204Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:29:52.204Z]   │  Type: TEST_RESULT
+[2025-11-22T12:29:52.204Z]   │  From: TEST_AGENT
+[2025-11-22T12:29:52.204Z]   │  Status: COMPLETED
+[2025-11-22T12:29:52.204Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:29:52.204Z]   │  Result Status: PASS
+[2025-11-22T12:29:52.204Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:29:52.204Z]   │  Execution Time: 117ms
+[2025-11-22T12:29:52.205Z]   └─ End of message
+
+[2025-11-22T12:29:52.205Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:30:52.216Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:30:52.217Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:30:52.217Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:30:52.217Z]   │  Type: TEST_RESULT
+[2025-11-22T12:30:52.218Z]   │  From: TEST_AGENT
+[2025-11-22T12:30:52.218Z]   │  Status: COMPLETED
+[2025-11-22T12:30:52.218Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:30:52.218Z]   │  Result Status: PASS
+[2025-11-22T12:30:52.218Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:30:52.218Z]   │  Execution Time: 117ms
+[2025-11-22T12:30:52.218Z]   └─ End of message
+
+[2025-11-22T12:30:52.219Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:31:52.218Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:31:52.219Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:31:52.219Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:31:52.219Z]   │  Type: TEST_RESULT
+[2025-11-22T12:31:52.220Z]   │  From: TEST_AGENT
+[2025-11-22T12:31:52.220Z]   │  Status: COMPLETED
+[2025-11-22T12:31:52.220Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:31:52.220Z]   │  Result Status: PASS
+[2025-11-22T12:31:52.220Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:31:52.220Z]   │  Execution Time: 117ms
+[2025-11-22T12:31:52.220Z]   └─ End of message
+
+[2025-11-22T12:31:52.221Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:32:52.227Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:32:52.229Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:32:52.229Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:32:52.229Z]   │  Type: TEST_RESULT
+[2025-11-22T12:32:52.229Z]   │  From: TEST_AGENT
+[2025-11-22T12:32:52.229Z]   │  Status: COMPLETED
+[2025-11-22T12:32:52.229Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:32:52.229Z]   │  Result Status: PASS
+[2025-11-22T12:32:52.229Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:32:52.229Z]   │  Execution Time: 117ms
+[2025-11-22T12:32:52.230Z]   └─ End of message
+
+[2025-11-22T12:32:52.230Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:33:52.227Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:33:52.229Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:33:52.229Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:33:52.229Z]   │  Type: TEST_RESULT
+[2025-11-22T12:33:52.229Z]   │  From: TEST_AGENT
+[2025-11-22T12:33:52.229Z]   │  Status: COMPLETED
+[2025-11-22T12:33:52.229Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:33:52.229Z]   │  Result Status: PASS
+[2025-11-22T12:33:52.229Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:33:52.229Z]   │  Execution Time: 117ms
+[2025-11-22T12:33:52.230Z]   └─ End of message
+
+[2025-11-22T12:33:52.230Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:34:52.243Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:34:52.244Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:34:52.244Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:34:52.244Z]   │  Type: TEST_RESULT
+[2025-11-22T12:34:52.244Z]   │  From: TEST_AGENT
+[2025-11-22T12:34:52.245Z]   │  Status: COMPLETED
+[2025-11-22T12:34:52.245Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:34:52.245Z]   │  Result Status: PASS
+[2025-11-22T12:34:52.245Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:34:52.245Z]   │  Execution Time: 117ms
+[2025-11-22T12:34:52.245Z]   └─ End of message
+
+[2025-11-22T12:34:52.246Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:35:52.247Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:35:52.248Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:35:52.248Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:35:52.248Z]   │  Type: TEST_RESULT
+[2025-11-22T12:35:52.248Z]   │  From: TEST_AGENT
+[2025-11-22T12:35:52.249Z]   │  Status: COMPLETED
+[2025-11-22T12:35:52.249Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:35:52.249Z]   │  Result Status: PASS
+[2025-11-22T12:35:52.249Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:35:52.249Z]   │  Execution Time: 117ms
+[2025-11-22T12:35:52.249Z]   └─ End of message
+
+[2025-11-22T12:35:52.249Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:36:52.259Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:36:52.260Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:36:52.260Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:36:52.260Z]   │  Type: TEST_RESULT
+[2025-11-22T12:36:52.261Z]   │  From: TEST_AGENT
+[2025-11-22T12:36:52.261Z]   │  Status: COMPLETED
+[2025-11-22T12:36:52.261Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:36:52.261Z]   │  Result Status: PASS
+[2025-11-22T12:36:52.261Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:36:52.261Z]   │  Execution Time: 117ms
+[2025-11-22T12:36:52.261Z]   └─ End of message
+
+[2025-11-22T12:36:52.262Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:37:52.260Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:37:52.262Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:37:52.262Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:37:52.262Z]   │  Type: TEST_RESULT
+[2025-11-22T12:37:52.262Z]   │  From: TEST_AGENT
+[2025-11-22T12:37:52.262Z]   │  Status: COMPLETED
+[2025-11-22T12:37:52.263Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:37:52.263Z]   │  Result Status: PASS
+[2025-11-22T12:37:52.263Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:37:52.263Z]   │  Execution Time: 117ms
+[2025-11-22T12:37:52.263Z]   └─ End of message
+
+[2025-11-22T12:37:52.264Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:38:52.269Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:38:52.270Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:38:52.270Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:38:52.270Z]   │  Type: TEST_RESULT
+[2025-11-22T12:38:52.270Z]   │  From: TEST_AGENT
+[2025-11-22T12:38:52.270Z]   │  Status: COMPLETED
+[2025-11-22T12:38:52.271Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:38:52.271Z]   │  Result Status: PASS
+[2025-11-22T12:38:52.271Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:38:52.271Z]   │  Execution Time: 117ms
+[2025-11-22T12:38:52.271Z]   └─ End of message
+
+[2025-11-22T12:38:52.272Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:39:52.274Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:39:52.276Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:39:52.276Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:39:52.276Z]   │  Type: TEST_RESULT
+[2025-11-22T12:39:52.276Z]   │  From: TEST_AGENT
+[2025-11-22T12:39:52.276Z]   │  Status: COMPLETED
+[2025-11-22T12:39:52.276Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:39:52.276Z]   │  Result Status: PASS
+[2025-11-22T12:39:52.276Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:39:52.276Z]   │  Execution Time: 117ms
+[2025-11-22T12:39:52.277Z]   └─ End of message
+
+[2025-11-22T12:39:52.278Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:40:52.276Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:40:52.281Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:40:52.281Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:40:52.281Z]   │  Type: TEST_RESULT
+[2025-11-22T12:40:52.282Z]   │  From: TEST_AGENT
+[2025-11-22T12:40:52.282Z]   │  Status: COMPLETED
+[2025-11-22T12:40:52.282Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:40:52.283Z]   │  Result Status: PASS
+[2025-11-22T12:40:52.283Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:40:52.283Z]   │  Execution Time: 117ms
+[2025-11-22T12:40:52.283Z]   └─ End of message
+
+[2025-11-22T12:40:52.284Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:41:52.290Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:41:52.292Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:41:52.293Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:41:52.293Z]   │  Type: TEST_RESULT
+[2025-11-22T12:41:52.293Z]   │  From: TEST_AGENT
+[2025-11-22T12:41:52.293Z]   │  Status: COMPLETED
+[2025-11-22T12:41:52.293Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:41:52.293Z]   │  Result Status: PASS
+[2025-11-22T12:41:52.293Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:41:52.293Z]   │  Execution Time: 117ms
+[2025-11-22T12:41:52.294Z]   └─ End of message
+
+[2025-11-22T12:41:52.295Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:42:52.302Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:42:52.304Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:42:52.304Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:42:52.304Z]   │  Type: TEST_RESULT
+[2025-11-22T12:42:52.305Z]   │  From: TEST_AGENT
+[2025-11-22T12:42:52.305Z]   │  Status: COMPLETED
+[2025-11-22T12:42:52.305Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:42:52.305Z]   │  Result Status: PASS
+[2025-11-22T12:42:52.305Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:42:52.305Z]   │  Execution Time: 117ms
+[2025-11-22T12:42:52.305Z]   └─ End of message
+
+[2025-11-22T12:42:52.306Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:43:52.308Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:43:52.309Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:43:52.310Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:43:52.310Z]   │  Type: TEST_RESULT
+[2025-11-22T12:43:52.310Z]   │  From: TEST_AGENT
+[2025-11-22T12:43:52.310Z]   │  Status: COMPLETED
+[2025-11-22T12:43:52.310Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:43:52.310Z]   │  Result Status: PASS
+[2025-11-22T12:43:52.310Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:43:52.310Z]   │  Execution Time: 117ms
+[2025-11-22T12:43:52.310Z]   └─ End of message
+
+[2025-11-22T12:43:52.311Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:44:52.315Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:44:52.320Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:44:52.320Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:44:52.321Z]   │  Type: TEST_RESULT
+[2025-11-22T12:44:52.321Z]   │  From: TEST_AGENT
+[2025-11-22T12:44:52.321Z]   │  Status: COMPLETED
+[2025-11-22T12:44:52.321Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:44:52.321Z]   │  Result Status: PASS
+[2025-11-22T12:44:52.322Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:44:52.322Z]   │  Execution Time: 117ms
+[2025-11-22T12:44:52.323Z]   └─ End of message
+
+[2025-11-22T12:44:52.324Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:45:52.331Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:45:52.332Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:45:52.332Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:45:52.332Z]   │  Type: TEST_RESULT
+[2025-11-22T12:45:52.332Z]   │  From: TEST_AGENT
+[2025-11-22T12:45:52.332Z]   │  Status: COMPLETED
+[2025-11-22T12:45:52.332Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:45:52.332Z]   │  Result Status: PASS
+[2025-11-22T12:45:52.332Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:45:52.332Z]   │  Execution Time: 117ms
+[2025-11-22T12:45:52.332Z]   └─ End of message
+
+[2025-11-22T12:45:52.333Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:46:52.337Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:46:52.339Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:46:52.339Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:46:52.339Z]   │  Type: TEST_RESULT
+[2025-11-22T12:46:52.339Z]   │  From: TEST_AGENT
+[2025-11-22T12:46:52.339Z]   │  Status: COMPLETED
+[2025-11-22T12:46:52.339Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:46:52.339Z]   │  Result Status: PASS
+[2025-11-22T12:46:52.339Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:46:52.339Z]   │  Execution Time: 117ms
+[2025-11-22T12:46:52.339Z]   └─ End of message
+
+[2025-11-22T12:46:52.340Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:47:52.343Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:47:52.348Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:47:52.348Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:47:52.349Z]   │  Type: TEST_RESULT
+[2025-11-22T12:47:52.349Z]   │  From: TEST_AGENT
+[2025-11-22T12:47:52.349Z]   │  Status: COMPLETED
+[2025-11-22T12:47:52.350Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:47:52.350Z]   │  Result Status: PASS
+[2025-11-22T12:47:52.350Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:47:52.351Z]   │  Execution Time: 117ms
+[2025-11-22T12:47:52.351Z]   └─ End of message
+
+[2025-11-22T12:47:52.352Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:48:52.351Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:48:52.354Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:48:52.354Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:48:52.354Z]   │  Type: TEST_RESULT
+[2025-11-22T12:48:52.354Z]   │  From: TEST_AGENT
+[2025-11-22T12:48:52.355Z]   │  Status: COMPLETED
+[2025-11-22T12:48:52.355Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:48:52.355Z]   │  Result Status: PASS
+[2025-11-22T12:48:52.355Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:48:52.356Z]   │  Execution Time: 117ms
+[2025-11-22T12:48:52.356Z]   └─ End of message
+
+[2025-11-22T12:48:52.358Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:49:52.365Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:49:52.366Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:49:52.367Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:49:52.367Z]   │  Type: TEST_RESULT
+[2025-11-22T12:49:52.367Z]   │  From: TEST_AGENT
+[2025-11-22T12:49:52.367Z]   │  Status: COMPLETED
+[2025-11-22T12:49:52.367Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:49:52.368Z]   │  Result Status: PASS
+[2025-11-22T12:49:52.368Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:49:52.368Z]   │  Execution Time: 117ms
+[2025-11-22T12:49:52.368Z]   └─ End of message
+
+[2025-11-22T12:49:52.369Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:50:52.370Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:50:52.373Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:50:52.373Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:50:52.373Z]   │  Type: TEST_RESULT
+[2025-11-22T12:50:52.373Z]   │  From: TEST_AGENT
+[2025-11-22T12:50:52.373Z]   │  Status: COMPLETED
+[2025-11-22T12:50:52.374Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:50:52.374Z]   │  Result Status: PASS
+[2025-11-22T12:50:52.374Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:50:52.374Z]   │  Execution Time: 117ms
+[2025-11-22T12:50:52.374Z]   └─ End of message
+
+[2025-11-22T12:50:52.375Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:51:52.373Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:51:52.375Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:51:52.375Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:51:52.375Z]   │  Type: TEST_RESULT
+[2025-11-22T12:51:52.375Z]   │  From: TEST_AGENT
+[2025-11-22T12:51:52.375Z]   │  Status: COMPLETED
+[2025-11-22T12:51:52.375Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:51:52.375Z]   │  Result Status: PASS
+[2025-11-22T12:51:52.376Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:51:52.376Z]   │  Execution Time: 117ms
+[2025-11-22T12:51:52.376Z]   └─ End of message
+
+[2025-11-22T12:51:52.377Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:52:52.383Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:52:52.387Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:52:52.388Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:52:52.388Z]   │  Type: TEST_RESULT
+[2025-11-22T12:52:52.388Z]   │  From: TEST_AGENT
+[2025-11-22T12:52:52.388Z]   │  Status: COMPLETED
+[2025-11-22T12:52:52.388Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:52:52.389Z]   │  Result Status: PASS
+[2025-11-22T12:52:52.389Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:52:52.389Z]   │  Execution Time: 117ms
+[2025-11-22T12:52:52.389Z]   └─ End of message
+
+[2025-11-22T12:52:52.391Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:53:52.385Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:53:52.389Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:53:52.390Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:53:52.390Z]   │  Type: TEST_RESULT
+[2025-11-22T12:53:52.390Z]   │  From: TEST_AGENT
+[2025-11-22T12:53:52.390Z]   │  Status: COMPLETED
+[2025-11-22T12:53:52.391Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:53:52.391Z]   │  Result Status: PASS
+[2025-11-22T12:53:52.391Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:53:52.392Z]   │  Execution Time: 117ms
+[2025-11-22T12:53:52.392Z]   └─ End of message
+
+[2025-11-22T12:53:52.394Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:54:52.393Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:54:52.396Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:54:52.396Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:54:52.396Z]   │  Type: TEST_RESULT
+[2025-11-22T12:54:52.397Z]   │  From: TEST_AGENT
+[2025-11-22T12:54:52.397Z]   │  Status: COMPLETED
+[2025-11-22T12:54:52.397Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:54:52.397Z]   │  Result Status: PASS
+[2025-11-22T12:54:52.397Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:54:52.398Z]   │  Execution Time: 117ms
+[2025-11-22T12:54:52.398Z]   └─ End of message
+
+[2025-11-22T12:54:52.399Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:55:52.399Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:55:52.400Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:55:52.401Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:55:52.401Z]   │  Type: TEST_RESULT
+[2025-11-22T12:55:52.401Z]   │  From: TEST_AGENT
+[2025-11-22T12:55:52.401Z]   │  Status: COMPLETED
+[2025-11-22T12:55:52.401Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:55:52.401Z]   │  Result Status: PASS
+[2025-11-22T12:55:52.402Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:55:52.402Z]   │  Execution Time: 117ms
+[2025-11-22T12:55:52.402Z]   └─ End of message
+
+[2025-11-22T12:55:52.403Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:56:52.414Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:56:52.416Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:56:52.416Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:56:52.416Z]   │  Type: TEST_RESULT
+[2025-11-22T12:56:52.416Z]   │  From: TEST_AGENT
+[2025-11-22T12:56:52.416Z]   │  Status: COMPLETED
+[2025-11-22T12:56:52.416Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:56:52.416Z]   │  Result Status: PASS
+[2025-11-22T12:56:52.417Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:56:52.417Z]   │  Execution Time: 117ms
+[2025-11-22T12:56:52.417Z]   └─ End of message
+
+[2025-11-22T12:56:52.418Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:57:52.419Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:57:52.420Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:57:52.421Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:57:52.421Z]   │  Type: TEST_RESULT
+[2025-11-22T12:57:52.421Z]   │  From: TEST_AGENT
+[2025-11-22T12:57:52.421Z]   │  Status: COMPLETED
+[2025-11-22T12:57:52.421Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:57:52.421Z]   │  Result Status: PASS
+[2025-11-22T12:57:52.421Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:57:52.421Z]   │  Execution Time: 117ms
+[2025-11-22T12:57:52.421Z]   └─ End of message
+
+[2025-11-22T12:57:52.422Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:58:52.429Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:58:52.430Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:58:52.431Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:58:52.431Z]   │  Type: TEST_RESULT
+[2025-11-22T12:58:52.431Z]   │  From: TEST_AGENT
+[2025-11-22T12:58:52.431Z]   │  Status: COMPLETED
+[2025-11-22T12:58:52.431Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:58:52.431Z]   │  Result Status: PASS
+[2025-11-22T12:58:52.431Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:58:52.431Z]   │  Execution Time: 117ms
+[2025-11-22T12:58:52.431Z]   └─ End of message
+
+[2025-11-22T12:58:52.432Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T12:59:52.443Z] 
+🔍 Polling for new messages...
+[2025-11-22T12:59:52.447Z] 
+📬 Found 1 new message(s)
+[2025-11-22T12:59:52.448Z] 
+  ┌─ Message ID: 2
+[2025-11-22T12:59:52.448Z]   │  Type: TEST_RESULT
+[2025-11-22T12:59:52.448Z]   │  From: TEST_AGENT
+[2025-11-22T12:59:52.448Z]   │  Status: COMPLETED
+[2025-11-22T12:59:52.449Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T12:59:52.449Z]   │  Result Status: PASS
+[2025-11-22T12:59:52.449Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T12:59:52.449Z]   │  Execution Time: 117ms
+[2025-11-22T12:59:52.450Z]   └─ End of message
+
+[2025-11-22T12:59:52.451Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:00:52.451Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:00:52.452Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:00:52.452Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:00:52.453Z]   │  Type: TEST_RESULT
+[2025-11-22T13:00:52.453Z]   │  From: TEST_AGENT
+[2025-11-22T13:00:52.453Z]   │  Status: COMPLETED
+[2025-11-22T13:00:52.453Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:00:52.453Z]   │  Result Status: PASS
+[2025-11-22T13:00:52.453Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:00:52.454Z]   │  Execution Time: 117ms
+[2025-11-22T13:00:52.454Z]   └─ End of message
+
+[2025-11-22T13:00:52.455Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:01:52.461Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:01:52.462Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:01:52.463Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:01:52.463Z]   │  Type: TEST_RESULT
+[2025-11-22T13:01:52.463Z]   │  From: TEST_AGENT
+[2025-11-22T13:01:52.463Z]   │  Status: COMPLETED
+[2025-11-22T13:01:52.464Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:01:52.464Z]   │  Result Status: PASS
+[2025-11-22T13:01:52.464Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:01:52.464Z]   │  Execution Time: 117ms
+[2025-11-22T13:01:52.464Z]   └─ End of message
+
+[2025-11-22T13:01:52.465Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:02:52.475Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:02:52.476Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:02:52.476Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:02:52.477Z]   │  Type: TEST_RESULT
+[2025-11-22T13:02:52.477Z]   │  From: TEST_AGENT
+[2025-11-22T13:02:52.477Z]   │  Status: COMPLETED
+[2025-11-22T13:02:52.477Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:02:52.477Z]   │  Result Status: PASS
+[2025-11-22T13:02:52.477Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:02:52.477Z]   │  Execution Time: 117ms
+[2025-11-22T13:02:52.478Z]   └─ End of message
+
+[2025-11-22T13:02:52.478Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:03:52.485Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:03:52.486Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:03:52.486Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:03:52.486Z]   │  Type: TEST_RESULT
+[2025-11-22T13:03:52.486Z]   │  From: TEST_AGENT
+[2025-11-22T13:03:52.486Z]   │  Status: COMPLETED
+[2025-11-22T13:03:52.486Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:03:52.486Z]   │  Result Status: PASS
+[2025-11-22T13:03:52.486Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:03:52.487Z]   │  Execution Time: 117ms
+[2025-11-22T13:03:52.487Z]   └─ End of message
+
+[2025-11-22T13:03:52.487Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:04:52.490Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:04:52.491Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:04:52.491Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:04:52.491Z]   │  Type: TEST_RESULT
+[2025-11-22T13:04:52.491Z]   │  From: TEST_AGENT
+[2025-11-22T13:04:52.491Z]   │  Status: COMPLETED
+[2025-11-22T13:04:52.492Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:04:52.492Z]   │  Result Status: PASS
+[2025-11-22T13:04:52.492Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:04:52.492Z]   │  Execution Time: 117ms
+[2025-11-22T13:04:52.492Z]   └─ End of message
+
+[2025-11-22T13:04:52.493Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:05:52.506Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:05:52.507Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:05:52.507Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:05:52.507Z]   │  Type: TEST_RESULT
+[2025-11-22T13:05:52.507Z]   │  From: TEST_AGENT
+[2025-11-22T13:05:52.507Z]   │  Status: COMPLETED
+[2025-11-22T13:05:52.507Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:05:52.507Z]   │  Result Status: PASS
+[2025-11-22T13:05:52.508Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:05:52.508Z]   │  Execution Time: 117ms
+[2025-11-22T13:05:52.508Z]   └─ End of message
+
+[2025-11-22T13:05:52.509Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:06:52.513Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:06:52.514Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:06:52.514Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:06:52.514Z]   │  Type: TEST_RESULT
+[2025-11-22T13:06:52.514Z]   │  From: TEST_AGENT
+[2025-11-22T13:06:52.514Z]   │  Status: COMPLETED
+[2025-11-22T13:06:52.514Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:06:52.514Z]   │  Result Status: PASS
+[2025-11-22T13:06:52.514Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:06:52.514Z]   │  Execution Time: 117ms
+[2025-11-22T13:06:52.515Z]   └─ End of message
+
+[2025-11-22T13:06:52.515Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:07:52.522Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:07:52.523Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:07:52.523Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:07:52.523Z]   │  Type: TEST_RESULT
+[2025-11-22T13:07:52.524Z]   │  From: TEST_AGENT
+[2025-11-22T13:07:52.524Z]   │  Status: COMPLETED
+[2025-11-22T13:07:52.524Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:07:52.524Z]   │  Result Status: PASS
+[2025-11-22T13:07:52.524Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:07:52.524Z]   │  Execution Time: 117ms
+[2025-11-22T13:07:52.524Z]   └─ End of message
+
+[2025-11-22T13:07:52.525Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:08:52.532Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:08:52.534Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:08:52.534Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:08:52.534Z]   │  Type: TEST_RESULT
+[2025-11-22T13:08:52.534Z]   │  From: TEST_AGENT
+[2025-11-22T13:08:52.534Z]   │  Status: COMPLETED
+[2025-11-22T13:08:52.534Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:08:52.534Z]   │  Result Status: PASS
+[2025-11-22T13:08:52.534Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:08:52.534Z]   │  Execution Time: 117ms
+[2025-11-22T13:08:52.534Z]   └─ End of message
+
+[2025-11-22T13:08:52.535Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:09:52.537Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:09:52.538Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:09:52.539Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:09:52.539Z]   │  Type: TEST_RESULT
+[2025-11-22T13:09:52.539Z]   │  From: TEST_AGENT
+[2025-11-22T13:09:52.539Z]   │  Status: COMPLETED
+[2025-11-22T13:09:52.539Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:09:52.539Z]   │  Result Status: PASS
+[2025-11-22T13:09:52.539Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:09:52.539Z]   │  Execution Time: 117ms
+[2025-11-22T13:09:52.539Z]   └─ End of message
+
+[2025-11-22T13:09:52.541Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:10:52.543Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:10:52.545Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:10:52.545Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:10:52.545Z]   │  Type: TEST_RESULT
+[2025-11-22T13:10:52.545Z]   │  From: TEST_AGENT
+[2025-11-22T13:10:52.545Z]   │  Status: COMPLETED
+[2025-11-22T13:10:52.545Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:10:52.545Z]   │  Result Status: PASS
+[2025-11-22T13:10:52.545Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:10:52.546Z]   │  Execution Time: 117ms
+[2025-11-22T13:10:52.546Z]   └─ End of message
+
+[2025-11-22T13:10:52.547Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:11:52.554Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:11:52.556Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:11:52.556Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:11:52.556Z]   │  Type: TEST_RESULT
+[2025-11-22T13:11:52.557Z]   │  From: TEST_AGENT
+[2025-11-22T13:11:52.557Z]   │  Status: COMPLETED
+[2025-11-22T13:11:52.557Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:11:52.557Z]   │  Result Status: PASS
+[2025-11-22T13:11:52.557Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:11:52.557Z]   │  Execution Time: 117ms
+[2025-11-22T13:11:52.557Z]   └─ End of message
+
+[2025-11-22T13:11:52.558Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:12:52.563Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:12:52.564Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:12:52.564Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:12:52.565Z]   │  Type: TEST_RESULT
+[2025-11-22T13:12:52.565Z]   │  From: TEST_AGENT
+[2025-11-22T13:12:52.565Z]   │  Status: COMPLETED
+[2025-11-22T13:12:52.565Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:12:52.565Z]   │  Result Status: PASS
+[2025-11-22T13:12:52.565Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:12:52.566Z]   │  Execution Time: 117ms
+[2025-11-22T13:12:52.566Z]   └─ End of message
+
+[2025-11-22T13:12:52.567Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:13:52.572Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:13:52.575Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:13:52.576Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:13:52.576Z]   │  Type: TEST_RESULT
+[2025-11-22T13:13:52.576Z]   │  From: TEST_AGENT
+[2025-11-22T13:13:52.577Z]   │  Status: COMPLETED
+[2025-11-22T13:13:52.577Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:13:52.578Z]   │  Result Status: PASS
+[2025-11-22T13:13:52.578Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:13:52.578Z]   │  Execution Time: 117ms
+[2025-11-22T13:13:52.579Z]   └─ End of message
+
+[2025-11-22T13:13:52.580Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:14:52.581Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:14:52.582Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:14:52.582Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:14:52.583Z]   │  Type: TEST_RESULT
+[2025-11-22T13:14:52.583Z]   │  From: TEST_AGENT
+[2025-11-22T13:14:52.583Z]   │  Status: COMPLETED
+[2025-11-22T13:14:52.583Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:14:52.583Z]   │  Result Status: PASS
+[2025-11-22T13:14:52.583Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:14:52.583Z]   │  Execution Time: 117ms
+[2025-11-22T13:14:52.583Z]   └─ End of message
+
+[2025-11-22T13:14:52.585Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:15:52.586Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:15:52.587Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:15:52.587Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:15:52.587Z]   │  Type: TEST_RESULT
+[2025-11-22T13:15:52.588Z]   │  From: TEST_AGENT
+[2025-11-22T13:15:52.588Z]   │  Status: COMPLETED
+[2025-11-22T13:15:52.588Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:15:52.588Z]   │  Result Status: PASS
+[2025-11-22T13:15:52.588Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:15:52.588Z]   │  Execution Time: 117ms
+[2025-11-22T13:15:52.588Z]   └─ End of message
+
+[2025-11-22T13:15:52.590Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:16:52.595Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:16:52.596Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:16:52.596Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:16:52.596Z]   │  Type: TEST_RESULT
+[2025-11-22T13:16:52.596Z]   │  From: TEST_AGENT
+[2025-11-22T13:16:52.596Z]   │  Status: COMPLETED
+[2025-11-22T13:16:52.596Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:16:52.596Z]   │  Result Status: PASS
+[2025-11-22T13:16:52.597Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:16:52.597Z]   │  Execution Time: 117ms
+[2025-11-22T13:16:52.597Z]   └─ End of message
+
+[2025-11-22T13:16:52.597Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:17:52.599Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:17:52.601Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:17:52.601Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:17:52.601Z]   │  Type: TEST_RESULT
+[2025-11-22T13:17:52.601Z]   │  From: TEST_AGENT
+[2025-11-22T13:17:52.601Z]   │  Status: COMPLETED
+[2025-11-22T13:17:52.601Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:17:52.601Z]   │  Result Status: PASS
+[2025-11-22T13:17:52.601Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:17:52.601Z]   │  Execution Time: 117ms
+[2025-11-22T13:17:52.602Z]   └─ End of message
+
+[2025-11-22T13:17:52.602Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:18:52.611Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:18:52.612Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:18:52.612Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:18:52.613Z]   │  Type: TEST_RESULT
+[2025-11-22T13:18:52.613Z]   │  From: TEST_AGENT
+[2025-11-22T13:18:52.613Z]   │  Status: COMPLETED
+[2025-11-22T13:18:52.613Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:18:52.613Z]   │  Result Status: PASS
+[2025-11-22T13:18:52.613Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:18:52.613Z]   │  Execution Time: 117ms
+[2025-11-22T13:18:52.613Z]   └─ End of message
+
+[2025-11-22T13:18:52.614Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:19:52.620Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:19:52.622Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:19:52.622Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:19:52.622Z]   │  Type: TEST_RESULT
+[2025-11-22T13:19:52.622Z]   │  From: TEST_AGENT
+[2025-11-22T13:19:52.622Z]   │  Status: COMPLETED
+[2025-11-22T13:19:52.622Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:19:52.622Z]   │  Result Status: PASS
+[2025-11-22T13:19:52.622Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:19:52.622Z]   │  Execution Time: 117ms
+[2025-11-22T13:19:52.622Z]   └─ End of message
+
+[2025-11-22T13:19:52.623Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:20:52.628Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:20:52.630Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:20:52.630Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:20:52.630Z]   │  Type: TEST_RESULT
+[2025-11-22T13:20:52.630Z]   │  From: TEST_AGENT
+[2025-11-22T13:20:52.630Z]   │  Status: COMPLETED
+[2025-11-22T13:20:52.631Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:20:52.631Z]   │  Result Status: PASS
+[2025-11-22T13:20:52.631Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:20:52.631Z]   │  Execution Time: 117ms
+[2025-11-22T13:20:52.631Z]   └─ End of message
+
+[2025-11-22T13:20:52.632Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:21:52.631Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:21:52.633Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:21:52.633Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:21:52.633Z]   │  Type: TEST_RESULT
+[2025-11-22T13:21:52.633Z]   │  From: TEST_AGENT
+[2025-11-22T13:21:52.634Z]   │  Status: COMPLETED
+[2025-11-22T13:21:52.634Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:21:52.634Z]   │  Result Status: PASS
+[2025-11-22T13:21:52.634Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:21:52.634Z]   │  Execution Time: 117ms
+[2025-11-22T13:21:52.634Z]   └─ End of message
+
+[2025-11-22T13:21:52.636Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:22:52.633Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:22:52.635Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:22:52.635Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:22:52.635Z]   │  Type: TEST_RESULT
+[2025-11-22T13:22:52.635Z]   │  From: TEST_AGENT
+[2025-11-22T13:22:52.636Z]   │  Status: COMPLETED
+[2025-11-22T13:22:52.636Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:22:52.636Z]   │  Result Status: PASS
+[2025-11-22T13:22:52.636Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:22:52.636Z]   │  Execution Time: 117ms
+[2025-11-22T13:22:52.636Z]   └─ End of message
+
+[2025-11-22T13:22:52.637Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:23:52.638Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:23:52.640Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:23:52.640Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:23:52.640Z]   │  Type: TEST_RESULT
+[2025-11-22T13:23:52.640Z]   │  From: TEST_AGENT
+[2025-11-22T13:23:52.641Z]   │  Status: COMPLETED
+[2025-11-22T13:23:52.641Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:23:52.641Z]   │  Result Status: PASS
+[2025-11-22T13:23:52.641Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:23:52.641Z]   │  Execution Time: 117ms
+[2025-11-22T13:23:52.641Z]   └─ End of message
+
+[2025-11-22T13:23:52.642Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:24:52.645Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:24:52.647Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:24:52.647Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:24:52.648Z]   │  Type: TEST_RESULT
+[2025-11-22T13:24:52.648Z]   │  From: TEST_AGENT
+[2025-11-22T13:24:52.648Z]   │  Status: COMPLETED
+[2025-11-22T13:24:52.648Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:24:52.648Z]   │  Result Status: PASS
+[2025-11-22T13:24:52.648Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:24:52.648Z]   │  Execution Time: 117ms
+[2025-11-22T13:24:52.649Z]   └─ End of message
+
+[2025-11-22T13:24:52.650Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:25:52.654Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:25:52.658Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:25:52.658Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:25:52.658Z]   │  Type: TEST_RESULT
+[2025-11-22T13:25:52.659Z]   │  From: TEST_AGENT
+[2025-11-22T13:25:52.659Z]   │  Status: COMPLETED
+[2025-11-22T13:25:52.659Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:25:52.659Z]   │  Result Status: PASS
+[2025-11-22T13:25:52.659Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:25:52.659Z]   │  Execution Time: 117ms
+[2025-11-22T13:25:52.659Z]   └─ End of message
+
+[2025-11-22T13:25:52.660Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:26:52.655Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:26:52.657Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:26:52.657Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:26:52.657Z]   │  Type: TEST_RESULT
+[2025-11-22T13:26:52.658Z]   │  From: TEST_AGENT
+[2025-11-22T13:26:52.658Z]   │  Status: COMPLETED
+[2025-11-22T13:26:52.658Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:26:52.658Z]   │  Result Status: PASS
+[2025-11-22T13:26:52.658Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:26:52.658Z]   │  Execution Time: 117ms
+[2025-11-22T13:26:52.659Z]   └─ End of message
+
+[2025-11-22T13:26:52.660Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:27:52.662Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:27:52.664Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:27:52.664Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:27:52.664Z]   │  Type: TEST_RESULT
+[2025-11-22T13:27:52.664Z]   │  From: TEST_AGENT
+[2025-11-22T13:27:52.664Z]   │  Status: COMPLETED
+[2025-11-22T13:27:52.665Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:27:52.665Z]   │  Result Status: PASS
+[2025-11-22T13:27:52.665Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:27:52.665Z]   │  Execution Time: 117ms
+[2025-11-22T13:27:52.665Z]   └─ End of message
+
+[2025-11-22T13:27:52.666Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:28:52.668Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:28:52.670Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:28:52.670Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:28:52.670Z]   │  Type: TEST_RESULT
+[2025-11-22T13:28:52.670Z]   │  From: TEST_AGENT
+[2025-11-22T13:28:52.670Z]   │  Status: COMPLETED
+[2025-11-22T13:28:52.670Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:28:52.671Z]   │  Result Status: PASS
+[2025-11-22T13:28:52.671Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:28:52.671Z]   │  Execution Time: 117ms
+[2025-11-22T13:28:52.671Z]   └─ End of message
+
+[2025-11-22T13:28:52.672Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:29:52.683Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:29:52.684Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:29:52.684Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:29:52.685Z]   │  Type: TEST_RESULT
+[2025-11-22T13:29:52.685Z]   │  From: TEST_AGENT
+[2025-11-22T13:29:52.685Z]   │  Status: COMPLETED
+[2025-11-22T13:29:52.685Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:29:52.685Z]   │  Result Status: PASS
+[2025-11-22T13:29:52.685Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:29:52.685Z]   │  Execution Time: 117ms
+[2025-11-22T13:29:52.686Z]   └─ End of message
+
+[2025-11-22T13:29:52.687Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:30:52.685Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:30:52.687Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:30:52.687Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:30:52.687Z]   │  Type: TEST_RESULT
+[2025-11-22T13:30:52.687Z]   │  From: TEST_AGENT
+[2025-11-22T13:30:52.687Z]   │  Status: COMPLETED
+[2025-11-22T13:30:52.687Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:30:52.688Z]   │  Result Status: PASS
+[2025-11-22T13:30:52.688Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:30:52.688Z]   │  Execution Time: 117ms
+[2025-11-22T13:30:52.688Z]   └─ End of message
+
+[2025-11-22T13:30:52.689Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:31:52.687Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:31:52.688Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:31:52.688Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:31:52.688Z]   │  Type: TEST_RESULT
+[2025-11-22T13:31:52.689Z]   │  From: TEST_AGENT
+[2025-11-22T13:31:52.689Z]   │  Status: COMPLETED
+[2025-11-22T13:31:52.689Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:31:52.689Z]   │  Result Status: PASS
+[2025-11-22T13:31:52.689Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:31:52.689Z]   │  Execution Time: 117ms
+[2025-11-22T13:31:52.689Z]   └─ End of message
+
+[2025-11-22T13:31:52.690Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:32:52.694Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:32:52.696Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:32:52.696Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:32:52.696Z]   │  Type: TEST_RESULT
+[2025-11-22T13:32:52.696Z]   │  From: TEST_AGENT
+[2025-11-22T13:32:52.696Z]   │  Status: COMPLETED
+[2025-11-22T13:32:52.697Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:32:52.697Z]   │  Result Status: PASS
+[2025-11-22T13:32:52.697Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:32:52.697Z]   │  Execution Time: 117ms
+[2025-11-22T13:32:52.697Z]   └─ End of message
+
+[2025-11-22T13:32:52.698Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:33:52.697Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:33:52.699Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:33:52.699Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:33:52.699Z]   │  Type: TEST_RESULT
+[2025-11-22T13:33:52.699Z]   │  From: TEST_AGENT
+[2025-11-22T13:33:52.699Z]   │  Status: COMPLETED
+[2025-11-22T13:33:52.699Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:33:52.699Z]   │  Result Status: PASS
+[2025-11-22T13:33:52.700Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:33:52.700Z]   │  Execution Time: 117ms
+[2025-11-22T13:33:52.700Z]   └─ End of message
+
+[2025-11-22T13:33:52.700Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:34:52.701Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:34:52.702Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:34:52.702Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:34:52.703Z]   │  Type: TEST_RESULT
+[2025-11-22T13:34:52.703Z]   │  From: TEST_AGENT
+[2025-11-22T13:34:52.703Z]   │  Status: COMPLETED
+[2025-11-22T13:34:52.703Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:34:52.703Z]   │  Result Status: PASS
+[2025-11-22T13:34:52.703Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:34:52.703Z]   │  Execution Time: 117ms
+[2025-11-22T13:34:52.703Z]   └─ End of message
+
+[2025-11-22T13:34:52.704Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:35:52.709Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:35:52.710Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:35:52.710Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:35:52.710Z]   │  Type: TEST_RESULT
+[2025-11-22T13:35:52.710Z]   │  From: TEST_AGENT
+[2025-11-22T13:35:52.710Z]   │  Status: COMPLETED
+[2025-11-22T13:35:52.711Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:35:52.711Z]   │  Result Status: PASS
+[2025-11-22T13:35:52.711Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:35:52.711Z]   │  Execution Time: 117ms
+[2025-11-22T13:35:52.711Z]   └─ End of message
+
+[2025-11-22T13:35:52.712Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:36:52.721Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:36:52.722Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:36:52.723Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:36:52.723Z]   │  Type: TEST_RESULT
+[2025-11-22T13:36:52.723Z]   │  From: TEST_AGENT
+[2025-11-22T13:36:52.723Z]   │  Status: COMPLETED
+[2025-11-22T13:36:52.723Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:36:52.723Z]   │  Result Status: PASS
+[2025-11-22T13:36:52.723Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:36:52.723Z]   │  Execution Time: 117ms
+[2025-11-22T13:36:52.723Z]   └─ End of message
+
+[2025-11-22T13:36:52.724Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:37:52.724Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:37:52.725Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:37:52.725Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:37:52.725Z]   │  Type: TEST_RESULT
+[2025-11-22T13:37:52.725Z]   │  From: TEST_AGENT
+[2025-11-22T13:37:52.726Z]   │  Status: COMPLETED
+[2025-11-22T13:37:52.726Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:37:52.726Z]   │  Result Status: PASS
+[2025-11-22T13:37:52.726Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:37:52.726Z]   │  Execution Time: 117ms
+[2025-11-22T13:37:52.726Z]   └─ End of message
+
+[2025-11-22T13:37:52.727Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:38:52.729Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:38:52.731Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:38:52.731Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:38:52.731Z]   │  Type: TEST_RESULT
+[2025-11-22T13:38:52.731Z]   │  From: TEST_AGENT
+[2025-11-22T13:38:52.731Z]   │  Status: COMPLETED
+[2025-11-22T13:38:52.732Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:38:52.732Z]   │  Result Status: PASS
+[2025-11-22T13:38:52.732Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:38:52.732Z]   │  Execution Time: 117ms
+[2025-11-22T13:38:52.732Z]   └─ End of message
+
+[2025-11-22T13:38:52.733Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:39:52.745Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:39:52.746Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:39:52.746Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:39:52.746Z]   │  Type: TEST_RESULT
+[2025-11-22T13:39:52.746Z]   │  From: TEST_AGENT
+[2025-11-22T13:39:52.747Z]   │  Status: COMPLETED
+[2025-11-22T13:39:52.747Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:39:52.747Z]   │  Result Status: PASS
+[2025-11-22T13:39:52.747Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:39:52.747Z]   │  Execution Time: 117ms
+[2025-11-22T13:39:52.747Z]   └─ End of message
+
+[2025-11-22T13:39:52.748Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:40:52.758Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:40:52.764Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:40:52.764Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:40:52.764Z]   │  Type: TEST_RESULT
+[2025-11-22T13:40:52.764Z]   │  From: TEST_AGENT
+[2025-11-22T13:40:52.764Z]   │  Status: COMPLETED
+[2025-11-22T13:40:52.764Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:40:52.764Z]   │  Result Status: PASS
+[2025-11-22T13:40:52.764Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:40:52.764Z]   │  Execution Time: 117ms
+[2025-11-22T13:40:52.764Z]   └─ End of message
+
+[2025-11-22T13:40:52.765Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:41:52.759Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:41:52.761Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:41:52.761Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:41:52.761Z]   │  Type: TEST_RESULT
+[2025-11-22T13:41:52.761Z]   │  From: TEST_AGENT
+[2025-11-22T13:41:52.761Z]   │  Status: COMPLETED
+[2025-11-22T13:41:52.761Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:41:52.761Z]   │  Result Status: PASS
+[2025-11-22T13:41:52.761Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:41:52.761Z]   │  Execution Time: 117ms
+[2025-11-22T13:41:52.761Z]   └─ End of message
+
+[2025-11-22T13:41:52.762Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:42:52.762Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:42:52.773Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:42:52.773Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:42:52.773Z]   │  Type: TEST_RESULT
+[2025-11-22T13:42:52.773Z]   │  From: TEST_AGENT
+[2025-11-22T13:42:52.773Z]   │  Status: COMPLETED
+[2025-11-22T13:42:52.773Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:42:52.773Z]   │  Result Status: PASS
+[2025-11-22T13:42:52.773Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:42:52.773Z]   │  Execution Time: 117ms
+[2025-11-22T13:42:52.773Z]   └─ End of message
+
+[2025-11-22T13:42:52.774Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:43:52.766Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:43:52.767Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:43:52.768Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:43:52.768Z]   │  Type: TEST_RESULT
+[2025-11-22T13:43:52.768Z]   │  From: TEST_AGENT
+[2025-11-22T13:43:52.768Z]   │  Status: COMPLETED
+[2025-11-22T13:43:52.768Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:43:52.768Z]   │  Result Status: PASS
+[2025-11-22T13:43:52.768Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:43:52.769Z]   │  Execution Time: 117ms
+[2025-11-22T13:43:52.769Z]   └─ End of message
+
+[2025-11-22T13:43:52.769Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:44:52.780Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:44:52.782Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:44:52.782Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:44:52.782Z]   │  Type: TEST_RESULT
+[2025-11-22T13:44:52.782Z]   │  From: TEST_AGENT
+[2025-11-22T13:44:52.783Z]   │  Status: COMPLETED
+[2025-11-22T13:44:52.783Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:44:52.783Z]   │  Result Status: PASS
+[2025-11-22T13:44:52.783Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:44:52.783Z]   │  Execution Time: 117ms
+[2025-11-22T13:44:52.783Z]   └─ End of message
+
+[2025-11-22T13:44:52.784Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:45:52.791Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:45:52.796Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:45:52.796Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:45:52.796Z]   │  Type: TEST_RESULT
+[2025-11-22T13:45:52.796Z]   │  From: TEST_AGENT
+[2025-11-22T13:45:52.797Z]   │  Status: COMPLETED
+[2025-11-22T13:45:52.797Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:45:52.797Z]   │  Result Status: PASS
+[2025-11-22T13:45:52.797Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:45:52.797Z]   │  Execution Time: 117ms
+[2025-11-22T13:45:52.797Z]   └─ End of message
+
+[2025-11-22T13:45:52.798Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:46:52.799Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:46:52.800Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:46:52.800Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:46:52.800Z]   │  Type: TEST_RESULT
+[2025-11-22T13:46:52.800Z]   │  From: TEST_AGENT
+[2025-11-22T13:46:52.800Z]   │  Status: COMPLETED
+[2025-11-22T13:46:52.800Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:46:52.800Z]   │  Result Status: PASS
+[2025-11-22T13:46:52.800Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:46:52.801Z]   │  Execution Time: 117ms
+[2025-11-22T13:46:52.801Z]   └─ End of message
+
+[2025-11-22T13:46:52.801Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:47:52.814Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:47:52.815Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:47:52.815Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:47:52.815Z]   │  Type: TEST_RESULT
+[2025-11-22T13:47:52.815Z]   │  From: TEST_AGENT
+[2025-11-22T13:47:52.815Z]   │  Status: COMPLETED
+[2025-11-22T13:47:52.815Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:47:52.816Z]   │  Result Status: PASS
+[2025-11-22T13:47:52.816Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:47:52.816Z]   │  Execution Time: 117ms
+[2025-11-22T13:47:52.816Z]   └─ End of message
+
+[2025-11-22T13:47:52.817Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:48:52.822Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:48:52.825Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:48:52.825Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:48:52.825Z]   │  Type: TEST_RESULT
+[2025-11-22T13:48:52.826Z]   │  From: TEST_AGENT
+[2025-11-22T13:48:52.826Z]   │  Status: COMPLETED
+[2025-11-22T13:48:52.826Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:48:52.826Z]   │  Result Status: PASS
+[2025-11-22T13:48:52.826Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:48:52.826Z]   │  Execution Time: 117ms
+[2025-11-22T13:48:52.826Z]   └─ End of message
+
+[2025-11-22T13:48:52.828Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:49:52.830Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:49:52.832Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:49:52.832Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:49:52.832Z]   │  Type: TEST_RESULT
+[2025-11-22T13:49:52.832Z]   │  From: TEST_AGENT
+[2025-11-22T13:49:52.832Z]   │  Status: COMPLETED
+[2025-11-22T13:49:52.832Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:49:52.832Z]   │  Result Status: PASS
+[2025-11-22T13:49:52.833Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:49:52.833Z]   │  Execution Time: 117ms
+[2025-11-22T13:49:52.833Z]   └─ End of message
+
+[2025-11-22T13:49:52.834Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:50:52.841Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:50:52.842Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:50:52.842Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:50:52.842Z]   │  Type: TEST_RESULT
+[2025-11-22T13:50:52.842Z]   │  From: TEST_AGENT
+[2025-11-22T13:50:52.842Z]   │  Status: COMPLETED
+[2025-11-22T13:50:52.843Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:50:52.843Z]   │  Result Status: PASS
+[2025-11-22T13:50:52.843Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:50:52.843Z]   │  Execution Time: 117ms
+[2025-11-22T13:50:52.843Z]   └─ End of message
+
+[2025-11-22T13:50:52.843Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:51:52.847Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:51:52.849Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:51:52.849Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:51:52.849Z]   │  Type: TEST_RESULT
+[2025-11-22T13:51:52.849Z]   │  From: TEST_AGENT
+[2025-11-22T13:51:52.849Z]   │  Status: COMPLETED
+[2025-11-22T13:51:52.850Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:51:52.850Z]   │  Result Status: PASS
+[2025-11-22T13:51:52.850Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:51:52.850Z]   │  Execution Time: 117ms
+[2025-11-22T13:51:52.850Z]   └─ End of message
+
+[2025-11-22T13:51:52.851Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:52:52.857Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:52:52.859Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:52:52.859Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:52:52.859Z]   │  Type: TEST_RESULT
+[2025-11-22T13:52:52.859Z]   │  From: TEST_AGENT
+[2025-11-22T13:52:52.859Z]   │  Status: COMPLETED
+[2025-11-22T13:52:52.859Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:52:52.859Z]   │  Result Status: PASS
+[2025-11-22T13:52:52.859Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:52:52.859Z]   │  Execution Time: 117ms
+[2025-11-22T13:52:52.859Z]   └─ End of message
+
+[2025-11-22T13:52:52.860Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:53:52.858Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:53:52.860Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:53:52.860Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:53:52.860Z]   │  Type: TEST_RESULT
+[2025-11-22T13:53:52.860Z]   │  From: TEST_AGENT
+[2025-11-22T13:53:52.861Z]   │  Status: COMPLETED
+[2025-11-22T13:53:52.861Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:53:52.861Z]   │  Result Status: PASS
+[2025-11-22T13:53:52.861Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:53:52.861Z]   │  Execution Time: 117ms
+[2025-11-22T13:53:52.861Z]   └─ End of message
+
+[2025-11-22T13:53:52.862Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:54:52.864Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:54:52.865Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:54:52.866Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:54:52.866Z]   │  Type: TEST_RESULT
+[2025-11-22T13:54:52.866Z]   │  From: TEST_AGENT
+[2025-11-22T13:54:52.866Z]   │  Status: COMPLETED
+[2025-11-22T13:54:52.866Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:54:52.866Z]   │  Result Status: PASS
+[2025-11-22T13:54:52.866Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:54:52.866Z]   │  Execution Time: 117ms
+[2025-11-22T13:54:52.866Z]   └─ End of message
+
+[2025-11-22T13:54:52.867Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:55:52.866Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:55:52.868Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:55:52.868Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:55:52.868Z]   │  Type: TEST_RESULT
+[2025-11-22T13:55:52.868Z]   │  From: TEST_AGENT
+[2025-11-22T13:55:52.868Z]   │  Status: COMPLETED
+[2025-11-22T13:55:52.868Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:55:52.868Z]   │  Result Status: PASS
+[2025-11-22T13:55:52.869Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:55:52.869Z]   │  Execution Time: 117ms
+[2025-11-22T13:55:52.869Z]   └─ End of message
+
+[2025-11-22T13:55:52.870Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:56:52.879Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:56:52.880Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:56:52.881Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:56:52.881Z]   │  Type: TEST_RESULT
+[2025-11-22T13:56:52.881Z]   │  From: TEST_AGENT
+[2025-11-22T13:56:52.881Z]   │  Status: COMPLETED
+[2025-11-22T13:56:52.881Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:56:52.881Z]   │  Result Status: PASS
+[2025-11-22T13:56:52.881Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:56:52.882Z]   │  Execution Time: 117ms
+[2025-11-22T13:56:52.882Z]   └─ End of message
+
+[2025-11-22T13:56:52.883Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:57:52.880Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:57:52.882Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:57:52.882Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:57:52.882Z]   │  Type: TEST_RESULT
+[2025-11-22T13:57:52.883Z]   │  From: TEST_AGENT
+[2025-11-22T13:57:52.883Z]   │  Status: COMPLETED
+[2025-11-22T13:57:52.883Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:57:52.883Z]   │  Result Status: PASS
+[2025-11-22T13:57:52.883Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:57:52.883Z]   │  Execution Time: 117ms
+[2025-11-22T13:57:52.883Z]   └─ End of message
+
+[2025-11-22T13:57:52.884Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:58:52.889Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:58:52.891Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:58:52.891Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:58:52.891Z]   │  Type: TEST_RESULT
+[2025-11-22T13:58:52.891Z]   │  From: TEST_AGENT
+[2025-11-22T13:58:52.891Z]   │  Status: COMPLETED
+[2025-11-22T13:58:52.891Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:58:52.892Z]   │  Result Status: PASS
+[2025-11-22T13:58:52.892Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:58:52.892Z]   │  Execution Time: 117ms
+[2025-11-22T13:58:52.892Z]   └─ End of message
+
+[2025-11-22T13:58:52.893Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T13:59:52.903Z] 
+🔍 Polling for new messages...
+[2025-11-22T13:59:52.904Z] 
+📬 Found 1 new message(s)
+[2025-11-22T13:59:52.904Z] 
+  ┌─ Message ID: 2
+[2025-11-22T13:59:52.905Z]   │  Type: TEST_RESULT
+[2025-11-22T13:59:52.905Z]   │  From: TEST_AGENT
+[2025-11-22T13:59:52.905Z]   │  Status: COMPLETED
+[2025-11-22T13:59:52.905Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T13:59:52.905Z]   │  Result Status: PASS
+[2025-11-22T13:59:52.905Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T13:59:52.905Z]   │  Execution Time: 117ms
+[2025-11-22T13:59:52.905Z]   └─ End of message
+
+[2025-11-22T13:59:52.906Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:00:52.906Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:00:52.907Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:00:52.908Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:00:52.908Z]   │  Type: TEST_RESULT
+[2025-11-22T14:00:52.908Z]   │  From: TEST_AGENT
+[2025-11-22T14:00:52.908Z]   │  Status: COMPLETED
+[2025-11-22T14:00:52.908Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:00:52.908Z]   │  Result Status: PASS
+[2025-11-22T14:00:52.908Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:00:52.908Z]   │  Execution Time: 117ms
+[2025-11-22T14:00:52.909Z]   └─ End of message
+
+[2025-11-22T14:00:52.909Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:01:52.911Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:01:52.913Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:01:52.913Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:01:52.913Z]   │  Type: TEST_RESULT
+[2025-11-22T14:01:52.913Z]   │  From: TEST_AGENT
+[2025-11-22T14:01:52.914Z]   │  Status: COMPLETED
+[2025-11-22T14:01:52.914Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:01:52.914Z]   │  Result Status: PASS
+[2025-11-22T14:01:52.914Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:01:52.914Z]   │  Execution Time: 117ms
+[2025-11-22T14:01:52.914Z]   └─ End of message
+
+[2025-11-22T14:01:52.916Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:02:52.918Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:02:52.920Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:02:52.920Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:02:52.920Z]   │  Type: TEST_RESULT
+[2025-11-22T14:02:52.921Z]   │  From: TEST_AGENT
+[2025-11-22T14:02:52.921Z]   │  Status: COMPLETED
+[2025-11-22T14:02:52.921Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:02:52.921Z]   │  Result Status: PASS
+[2025-11-22T14:02:52.921Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:02:52.921Z]   │  Execution Time: 117ms
+[2025-11-22T14:02:52.921Z]   └─ End of message
+
+[2025-11-22T14:02:52.922Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:03:52.919Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:03:52.920Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:03:52.920Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:03:52.920Z]   │  Type: TEST_RESULT
+[2025-11-22T14:03:52.920Z]   │  From: TEST_AGENT
+[2025-11-22T14:03:52.921Z]   │  Status: COMPLETED
+[2025-11-22T14:03:52.921Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:03:52.921Z]   │  Result Status: PASS
+[2025-11-22T14:03:52.921Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:03:52.921Z]   │  Execution Time: 117ms
+[2025-11-22T14:03:52.921Z]   └─ End of message
+
+[2025-11-22T14:03:52.922Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:04:52.923Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:04:52.925Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:04:52.925Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:04:52.925Z]   │  Type: TEST_RESULT
+[2025-11-22T14:04:52.925Z]   │  From: TEST_AGENT
+[2025-11-22T14:04:52.925Z]   │  Status: COMPLETED
+[2025-11-22T14:04:52.925Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:04:52.925Z]   │  Result Status: PASS
+[2025-11-22T14:04:52.926Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:04:52.926Z]   │  Execution Time: 117ms
+[2025-11-22T14:04:52.926Z]   └─ End of message
+
+[2025-11-22T14:04:52.927Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:05:52.923Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:05:52.924Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:05:52.924Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:05:52.925Z]   │  Type: TEST_RESULT
+[2025-11-22T14:05:52.925Z]   │  From: TEST_AGENT
+[2025-11-22T14:05:52.925Z]   │  Status: COMPLETED
+[2025-11-22T14:05:52.925Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:05:52.925Z]   │  Result Status: PASS
+[2025-11-22T14:05:52.925Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:05:52.925Z]   │  Execution Time: 117ms
+[2025-11-22T14:05:52.926Z]   └─ End of message
+
+[2025-11-22T14:05:52.927Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:06:52.937Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:06:52.939Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:06:52.939Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:06:52.939Z]   │  Type: TEST_RESULT
+[2025-11-22T14:06:52.940Z]   │  From: TEST_AGENT
+[2025-11-22T14:06:52.940Z]   │  Status: COMPLETED
+[2025-11-22T14:06:52.940Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:06:52.940Z]   │  Result Status: PASS
+[2025-11-22T14:06:52.940Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:06:52.940Z]   │  Execution Time: 117ms
+[2025-11-22T14:06:52.940Z]   └─ End of message
+
+[2025-11-22T14:06:52.942Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2
+[2025-11-22T14:07:52.943Z] 
+🔍 Polling for new messages...
+[2025-11-22T14:07:52.945Z] 
+📬 Found 1 new message(s)
+[2025-11-22T14:07:52.945Z] 
+  ┌─ Message ID: 2
+[2025-11-22T14:07:52.945Z]   │  Type: TEST_RESULT
+[2025-11-22T14:07:52.945Z]   │  From: TEST_AGENT
+[2025-11-22T14:07:52.946Z]   │  Status: COMPLETED
+[2025-11-22T14:07:52.946Z]   │  Created: Fri Nov 21 2025 15:19:48 GMT+0700 (Indochina Time)
+[2025-11-22T14:07:52.946Z]   │  Result Status: PASS
+[2025-11-22T14:07:52.946Z]   │  Tests: 7 executed, 7 passed, 0 failed
+[2025-11-22T14:07:52.946Z]   │  Execution Time: 117ms
+[2025-11-22T14:07:52.946Z]   └─ End of message
+
+[2025-11-22T14:07:52.947Z] 📊 Queue Stats - Dev Sent: 2, Dev Received: 1, Test Sent: 1, Test Received: 2

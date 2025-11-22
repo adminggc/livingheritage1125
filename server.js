@@ -1062,12 +1062,26 @@ app.delete('/api/admin/figures/:id', authenticateAdminApiKey, async (req, res) =
 app.post('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
-      const article = await newsRepo.create(req.body);
+      // Map admin panel fields to database fields
+      const dbData = {
+        title: req.body.title,
+        description: req.body.description,
+        short_description: req.body.description?.substring(0, 160) || '',
+        author: req.body.author || 'Living Heritage',
+        publication_date: new Date().toISOString(),
+        images: [],
+        featured_image: req.body.imageUrl || '',
+        content: req.body.content || '',
+        category: 'News',
+        slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
+      };
+
+      const article = await newsRepo.create(dbData);
       const transformed = transformNewsToJson(article);
 
       // Invalidate cache
       if (USE_CACHE) {
-        await cacheService.invalidateNews(req.body.language);
+        await cacheService.invalidateNews(req.body.language || 'vi');
       }
 
       res.status(201).json(transformed);
@@ -1103,7 +1117,21 @@ app.post('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
 app.put('/api/admin/news/:id', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
-      const article = await newsRepo.update(parseInt(req.params.id), req.body);
+      // Map admin panel fields to database fields
+      const dbData = {
+        title: req.body.title,
+        description: req.body.description,
+        short_description: req.body.description?.substring(0, 160) || '',
+        author: req.body.author || 'Living Heritage',
+        publication_date: req.body.publication_date || new Date().toISOString(),
+        images: req.body.images || [],
+        featured_image: req.body.imageUrl || '',
+        content: req.body.content || '',
+        category: req.body.category || 'News',
+        slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
+      };
+
+      const article = await newsRepo.update(parseInt(req.params.id), dbData);
       if (!article) {
         return res.status(404).json({ error: 'News article not found' });
       }
@@ -1112,7 +1140,7 @@ app.put('/api/admin/news/:id', authenticateAdminApiKey, async (req, res) => {
 
       // Invalidate cache
       if (USE_CACHE) {
-        await cacheService.invalidateNews(req.body.language);
+        await cacheService.invalidateNews(req.body.language || 'vi');
       }
 
       res.json(transformed);
