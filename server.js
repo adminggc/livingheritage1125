@@ -833,19 +833,23 @@ app.get('/api/admin/figures-en', async (req, res) => {
  */
 app.get('/api/admin/news', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const news = await newsRepo.findAll({ language: 'vi' });
+      const transformed = news.map(transformNewsToJson);
+
+      res.json({
+        news: transformed
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('news.json') || { news: [] };
+      res.json(data);
     }
-
-    const news = await newsRepo.findAll({ language: 'vi' });
-    const transformed = news.map(transformNewsToJson);
-
-    res.json({
-      news: transformed
-    });
   } catch (error) {
     console.error('Error getting admin news:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('news.json') || { news: [] };
+    res.json(data);
   }
 });
 
@@ -855,19 +859,23 @@ app.get('/api/admin/news', async (req, res) => {
  */
 app.get('/api/admin/news-en', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const news = await newsRepo.findAll({ language: 'en' });
+      const transformed = news.map(transformNewsToJson);
+
+      res.json({
+        news: transformed
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('news-en.json') || { news: [] };
+      res.json(data);
     }
-
-    const news = await newsRepo.findAll({ language: 'en' });
-    const transformed = news.map(transformNewsToJson);
-
-    res.json({
-      news: transformed
-    });
   } catch (error) {
     console.error('Error getting admin news-en:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('news-en.json') || { news: [] };
+    res.json(data);
   }
 });
 
@@ -877,19 +885,23 @@ app.get('/api/admin/news-en', async (req, res) => {
  */
 app.get('/api/admin/tips', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const tips = await tipsRepo.findAll({ language: 'vi' });
+      const transformed = tips.map(transformTipToJson);
+
+      res.json({
+        wellnessTips: transformed
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('wellness-tips.json') || { wellnessTips: [] };
+      res.json(data);
     }
-
-    const tips = await tipsRepo.findAll({ language: 'vi' });
-    const transformed = tips.map(transformTipToJson);
-
-    res.json({
-      wellnessTips: transformed
-    });
   } catch (error) {
     console.error('Error getting admin tips:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('wellness-tips.json') || { wellnessTips: [] };
+    res.json(data);
   }
 });
 
@@ -899,19 +911,23 @@ app.get('/api/admin/tips', async (req, res) => {
  */
 app.get('/api/admin/tips-en', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const tips = await tipsRepo.findAll({ language: 'en' });
+      const transformed = tips.map(transformTipToJson);
+
+      res.json({
+        wellnessTips: transformed
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
+      res.json(data);
     }
-
-    const tips = await tipsRepo.findAll({ language: 'en' });
-    const transformed = tips.map(transformTipToJson);
-
-    res.json({
-      wellnessTips: transformed
-    });
   } catch (error) {
     console.error('Error getting admin tips-en:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
+    res.json(data);
   }
 });
 
