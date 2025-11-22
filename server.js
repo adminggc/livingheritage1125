@@ -25,11 +25,24 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const USE_DATABASE = process.env.USE_DATABASE !== 'false';
 const USE_CACHE = process.env.USE_CACHE !== 'false';
+const ADMIN_API_KEY = process.env.ADMIN_API_KEY || 'dev-key-change-in-production';
 
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
+
+// Admin API Key Authentication Middleware
+const authenticateAdminApiKey = (req, res, next) => {
+  const providedKey = req.headers['x-api-key'];
+  if (!providedKey || providedKey !== ADMIN_API_KEY) {
+    return res.status(401).json({
+      error: 'Unauthorized - Valid X-API-Key header required',
+      message: 'Admin endpoints require authentication. Include X-API-Key header with valid API key.'
+    });
+  }
+  next();
+};
 
 // Logging middleware
 app.use((req, res, next) => {
@@ -774,7 +787,7 @@ app.get('/api/health', async (req, res) => {
  * GET /api/admin/figures
  * Get all Vietnamese heritage figures (including unpublished) for admin
  */
-app.get('/api/admin/figures', async (req, res) => {
+app.get('/api/admin/figures', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       // Get all figures regardless of published status
@@ -803,7 +816,7 @@ app.get('/api/admin/figures', async (req, res) => {
  * GET /api/admin/figures-en
  * Get all English heritage figures (including unpublished) for admin
  */
-app.get('/api/admin/figures-en', async (req, res) => {
+app.get('/api/admin/figures-en', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       const figures = await figuresRepo.findAll({ language: 'en' });
@@ -831,7 +844,7 @@ app.get('/api/admin/figures-en', async (req, res) => {
  * GET /api/admin/news
  * Get all Vietnamese news articles (including unpublished) for admin
  */
-app.get('/api/admin/news', async (req, res) => {
+app.get('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       const news = await newsRepo.findAll({ language: 'vi' });
@@ -857,7 +870,7 @@ app.get('/api/admin/news', async (req, res) => {
  * GET /api/admin/news-en
  * Get all English news articles (including unpublished) for admin
  */
-app.get('/api/admin/news-en', async (req, res) => {
+app.get('/api/admin/news-en', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       const news = await newsRepo.findAll({ language: 'en' });
@@ -883,7 +896,7 @@ app.get('/api/admin/news-en', async (req, res) => {
  * GET /api/admin/tips
  * Get all Vietnamese wellness tips (including unpublished) for admin
  */
-app.get('/api/admin/tips', async (req, res) => {
+app.get('/api/admin/tips', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       const tips = await tipsRepo.findAll({ language: 'vi' });
@@ -909,7 +922,7 @@ app.get('/api/admin/tips', async (req, res) => {
  * GET /api/admin/tips-en
  * Get all English wellness tips (including unpublished) for admin
  */
-app.get('/api/admin/tips-en', async (req, res) => {
+app.get('/api/admin/tips-en', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
       const tips = await tipsRepo.findAll({ language: 'en' });
