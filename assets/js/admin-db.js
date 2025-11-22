@@ -402,7 +402,7 @@ class LivingHeritageAdminDB {
           document.getElementById(titleId).value = profile.title || '';
           document.getElementById(categoryId).value = profile.category || '';
           document.getElementById(headerLetterId).value = profile.headerLetter || '';
-          document.getElementById(imageId).value = profile.imageUrl || '';
+          document.getElementById(imageId).value = profile.photoUrl || '';
           document.getElementById(smallImageId).value = profile.smallImageUrl || '';
           document.getElementById(heroImageId).value = profile.heroImageUrl || '';
           document.getElementById(summaryId).value = (profile.summary || []).join('\n');
@@ -483,18 +483,18 @@ class LivingHeritageAdminDB {
     }
 
     const profileData = {
-      full_name: document.getElementById(nameId).value,
+      fullName: document.getElementById(nameId).value,
       title: document.getElementById(titleId).value,
       category: document.getElementById(categoryId).value,
-      url_slug: this.generateSlug(document.getElementById(nameId).value) + '.html',
-      image_url: document.getElementById(imageId).value,
-      small_image_url: document.getElementById(smallImageId).value,
-      hero_image_url: document.getElementById(heroImageId).value,
+      urlSlug: this.generateSlug(document.getElementById(nameId).value) + '.html',
+      photoUrl: document.getElementById(imageId).value,
+      smallImageUrl: document.getElementById(smallImageId).value,
+      heroImageUrl: document.getElementById(heroImageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
       introduction: document.getElementById(introductionId).value,
       quote: document.getElementById(quoteId).value,
-      header_letter: document.getElementById(headerLetterId).value,
+      headerLetter: document.getElementById(headerLetterId).value,
       summary: (document.getElementById(summaryId).value || '').split('\n').filter(p => p.trim()),
       sections: [],
       highlights: highlights
@@ -580,7 +580,7 @@ class LivingHeritageAdminDB {
           document.getElementById(titleId).value = article.title || '';
           document.getElementById(descId).value = article.description || '';
           document.getElementById(contentId).value = article.content || '';
-          document.getElementById(imageId).value = article.featured_image || '';
+          document.getElementById(imageId).value = article.imageUrl || '';
           document.getElementById(publishedId).checked = article.published !== false;
         }
       } catch (error) {
@@ -609,10 +609,10 @@ class LivingHeritageAdminDB {
       title: document.getElementById(titleId).value,
       description: document.getElementById(descId).value,
       content: document.getElementById(contentId).value,
-      featured_image: document.getElementById(imageId).value,
+      imageUrl: document.getElementById(imageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
-      slug: this.generateSlug(document.getElementById(titleId).value),
+      urlSlug: this.generateSlug(document.getElementById(titleId).value),
       author: 'Living Heritage'
     };
 
@@ -792,11 +792,11 @@ class LivingHeritageAdminDB {
       title: document.getElementById(titleId).value,
       description: descField ? descField.value : '',
       content: document.getElementById(contentId).value,
-      image_url: document.getElementById(imageId).value,
-      hero_image_url: document.getElementById(heroImageId).value,
+      imageUrl: document.getElementById(imageId).value,
+      heroImageUrl: document.getElementById(heroImageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
-      url_slug: this.generateSlug(document.getElementById(titleId).value) + '.html'
+      urlSlug: this.generateSlug(document.getElementById(titleId).value) + '.html'
     };
 
     try {
