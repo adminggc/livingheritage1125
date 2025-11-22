@@ -35,6 +35,15 @@ class HeritageFigureRepository {
     return result.rows[0] || null;
   }
 
+  async findPublished(language) {
+    const result = await db.query(
+      'SELECT id, slug, name, header_letter, position, photo_url, short_bio, ' +
+      'bio, summary, sections, highlights, created_at, updated_at ' +
+      'FROM heritage_figures WHERE published = true ORDER BY created_at DESC'
+    );
+    return result.rows;
+  }
+
   async create(data) {
     const result = await db.query(
       'INSERT INTO heritage_figures ' +

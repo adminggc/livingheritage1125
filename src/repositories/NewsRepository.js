@@ -22,6 +22,15 @@ class NewsRepository {
     return result.rows[0] || null;
   }
 
+  async findPublished(language) {
+    const result = await db.query(
+      'SELECT id, slug, title, description, short_description, author, ' +
+      'publication_date, images, featured_image, content, category, ' +
+      'created_at, updated_at FROM news_articles WHERE published = true ORDER BY publication_date DESC'
+    );
+    return result.rows;
+  }
+
   async create(data) {
     const result = await db.query(
       'INSERT INTO news_articles (title, description, short_description, author, ' +

@@ -21,6 +21,14 @@ class BannerRepository {
     return result.rows[0] || null;
   }
 
+  async findPublished() {
+    const result = await db.query(
+      'SELECT id, title, image_url, link, position, is_active, ' +
+      'created_at, updated_at FROM banners WHERE is_active = true ORDER BY position ASC'
+    );
+    return result.rows;
+  }
+
   async create(data) {
     const result = await db.query(
       'INSERT INTO banners (title, image_url, link, position, is_active) ' +

@@ -22,6 +22,15 @@ class WellnessTipsRepository {
     return result.rows[0] || null;
   }
 
+  async findPublished(language) {
+    const result = await db.query(
+      'SELECT id, slug, title, short_description, category, image_url, ' +
+      'detailed_description, featured_image, created_at, updated_at ' +
+      'FROM wellness_tips WHERE published = true ORDER BY created_at DESC'
+    );
+    return result.rows;
+  }
+
   async create(data) {
     const result = await db.query(
       'INSERT INTO wellness_tips (title, short_description, category, image_url, ' +
