@@ -643,7 +643,7 @@ class LivingHeritageAdminDB {
   async loadNews(language = 'vi') {
     try {
       const endpoint = language === 'en' ? `${this.API_BASE}/admin/news-en` : `${this.API_BASE}/admin/news`;
-      const response = await fetch(endpoint);
+      const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
       const data = await response.json();
       const articles = data.news || [];
 
@@ -823,7 +823,7 @@ class LivingHeritageAdminDB {
   async loadTips(language = 'vi') {
     try {
       const endpoint = language === 'en' ? `${this.API_BASE}/admin/tips-en` : `${this.API_BASE}/admin/tips`;
-      const response = await fetch(endpoint);
+      const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
       const data = await response.json();
       const tips = data.wellnessTips || [];
 
