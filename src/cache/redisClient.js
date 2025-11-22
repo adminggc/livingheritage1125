@@ -11,6 +11,7 @@ class RedisClientStub {
   async connect() {
     // Stub implementation - pretend to connect
     console.log('⚠️  Redis cache disabled (stub mode)');
+    this.isConnected = false; // Keep disabled since we're not using it
     return true;
   }
 
@@ -28,6 +29,15 @@ class RedisClientStub {
 
   async disconnect() {
     // Stub - nothing to do
+    this.isConnected = false;
+  }
+
+  isHealthy() {
+    return false; // Redis stub is not healthy
+  }
+
+  async healthCheck() {
+    return { healthy: false, status: 'Redis stub - not connected' };
   }
 }
 

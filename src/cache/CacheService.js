@@ -18,6 +18,13 @@ class CacheService {
     // Stub - do nothing
     return true;
   }
+
+  async warmup(repos) {
+    // Stub - warm up cache with frequently accessed data
+    // In production, this would pre-load data into Redis
+    console.log('✓ Cache warmed up (stub mode - no actual caching)');
+    return true;
+  }
 }
 
 module.exports = new CacheService();
