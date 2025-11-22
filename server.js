@@ -818,23 +818,12 @@ app.get('/api/admin/figures', authenticateAdminApiKey, async (req, res) => {
  */
 app.get('/api/admin/figures-en', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (USE_DATABASE) {
-      const figures = await figuresRepo.findAll({ language: 'en' });
-      const transformed = figures.map(transformFigureToJson);
-      const categories = await figuresRepo.getCategories('en');
-
-      res.json({
-        heritageFigures: transformed,
-        heritageCategories: categories
-      });
-    } else {
-      // Fallback to JSON file
-      const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [], heritageCategories: [] };
-      res.json(data);
-    }
+    // English content always uses JSON files since it's newly extracted
+    const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [], heritageCategories: [] };
+    res.json(data);
   } catch (error) {
     console.error('Error getting admin figures-en:', error);
-    // If database fails, fallback to JSON
+    // Fallback to JSON
     const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [], heritageCategories: [] };
     res.json(data);
   }
@@ -872,21 +861,12 @@ app.get('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
  */
 app.get('/api/admin/news-en', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (USE_DATABASE) {
-      const news = await newsRepo.findAll({ language: 'en' });
-      const transformed = news.map(transformNewsToJson);
-
-      res.json({
-        news: transformed
-      });
-    } else {
-      // Fallback to JSON file
-      const data = readJsonFile('news-en.json') || { news: [] };
-      res.json(data);
-    }
+    // English content always uses JSON files since it's newly extracted
+    const data = readJsonFile('news-en.json') || { news: [] };
+    res.json(data);
   } catch (error) {
     console.error('Error getting admin news-en:', error);
-    // If database fails, fallback to JSON
+    // Fallback to JSON file
     const data = readJsonFile('news-en.json') || { news: [] };
     res.json(data);
   }
@@ -924,21 +904,12 @@ app.get('/api/admin/tips', authenticateAdminApiKey, async (req, res) => {
  */
 app.get('/api/admin/tips-en', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (USE_DATABASE) {
-      const tips = await tipsRepo.findAll({ language: 'en' });
-      const transformed = tips.map(transformTipToJson);
-
-      res.json({
-        wellnessTips: transformed
-      });
-    } else {
-      // Fallback to JSON file
-      const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
-      res.json(data);
-    }
+    // English content always uses JSON files since it's newly extracted
+    const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
+    res.json(data);
   } catch (error) {
     console.error('Error getting admin tips-en:', error);
-    // If database fails, fallback to JSON
+    // Fallback to JSON file
     const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
     res.json(data);
   }
