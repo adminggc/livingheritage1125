@@ -616,12 +616,16 @@ class LivingHeritageAdminDB {
       author: 'Living Heritage'
     };
 
+    console.log('Saving news with data:', newsData);
+
     try {
       const url = this.currentEditId
         ? `${this.API_BASE}/admin/news/${this.currentEditId}`
         : `${this.API_BASE}/admin/news`;
 
       const method = this.currentEditId ? 'PUT' : 'POST';
+
+      console.log(`Making ${method} request to ${url}`);
 
       const response = await fetch(url, {
         method,
@@ -632,9 +636,16 @@ class LivingHeritageAdminDB {
         body: JSON.stringify(newsData)
       });
 
+      console.log(`Response status: ${response.status}, ok: ${response.ok}`);
+
       if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+        const errorText = await response.text();
+        console.error('Error response:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
       }
+
+      const responseData = await response.json();
+      console.log('Success response:', responseData);
 
       this.closeAllModals();
       this.showNotification(`News article ${this.currentEditId ? 'updated' : 'created'} successfully!`, 'success');
@@ -642,7 +653,7 @@ class LivingHeritageAdminDB {
       this.loadDashboard();
     } catch (error) {
       console.error('Error saving news:', error);
-      this.showNotification('Failed to save news article', 'error');
+      this.showNotification(`Failed to save news article: ${error.message}`, 'error');
     }
   }
 
