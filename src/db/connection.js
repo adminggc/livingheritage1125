@@ -16,12 +16,10 @@ const connectionConfig = {
   connectionTimeoutMillis: 2000,
   application_name: 'livingheritage',
 
-  // SSL for production
-  ...(process.env.NODE_ENV === 'production' && {
-    ssl: {
-      rejectUnauthorized: false
-    }
-  })
+  // SSL configuration - always disable certificate validation for self-signed certs
+  ssl: {
+    rejectUnauthorized: false
+  }
 };
 
 let pool = null;
