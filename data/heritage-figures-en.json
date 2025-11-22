@@ -1,4 +1,156 @@
 {
-  "heritageFigures": [],
-  "heritageCategories": []
+  "heritageFigures": [
+    {
+      "id": 1,
+      "urlSlug": "bui-cong-duy",
+      "fullName": "Bui Cong Duy — People's Artist, Keeper of the Flame of Music",
+      "headerLetter": "B",
+      "position": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s class",
+      "photoUrl": "assets/media/people-heritage/bui-cong-duy-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/bui-cong-duy-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/bui-cong-duy-hero.png",
+      "summary": [
+        "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and quiet reflection."
+      ],
+      "introduction": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and quiet reflection.",
+      "bio": "Bui Cong Duy — People's Artist and renowned soloist, devoted teacher and guardian of Vietnam’s classical music tradition; a life of performance, pedagogy, and quiet reflection.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.564Z",
+      "updatedAt": "2025-11-22T12:24:48.564Z"
+    },
+    {
+      "id": 2,
+      "urlSlug": "nguyen-phuong-lam",
+      "fullName": "Nguyen Phuong Lam — Philanthropist & Advocate for Inner Transformation",
+      "headerLetter": "N",
+      "position": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transfor",
+      "photoUrl": "assets/media/people-heritage/nguyen-phuong-lam-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-phuong-lam-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-phuong-lam-hero.png",
+      "summary": [
+        "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia."
+      ],
+      "introduction": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia.",
+      "bio": "Nguyen Phuong Lam (born 1953) — entrepreneur, investor, and philanthropist focused on Inner Transformation for Systems Change across Vietnam and Southeast Asia.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.566Z",
+      "updatedAt": "2025-11-22T12:24:48.566Z"
+    },
+    {
+      "id": 3,
+      "urlSlug": "nguyen-tuong-bach",
+      "fullName": "Nguyen Tuong Bach — Author & Translator, A Bridge of Eastern and Western Wisdom",
+      "headerLetter": "N",
+      "position": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Wester",
+      "photoUrl": "assets/media/people-heritage/nguyen-tuong-bach-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-tuong-bach-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-tuong-bach-hero.png",
+      "summary": [
+        "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading voice in Vietnam’s contemporary spiritual life."
+      ],
+      "introduction": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading voice in Vietnam’s contemporary spiritual life.",
+      "bio": "Nguyen Tuong Bach — author, translator, and speaker known for harmonizing Eastern philosophy, Western scientific thinking, and profound inner insight. A leading voice in Vietnam’s contemporary spiritual life.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.566Z",
+      "updatedAt": "2025-11-22T12:24:48.566Z"
+    },
+    {
+      "id": 4,
+      "urlSlug": "nguyen-xuan-phuong",
+      "fullName": "Xuan Phuong — Journalist & Author, A Timeless Spirit of Vietnamese Womanhood",
+      "headerLetter": "X",
+      "position": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativ",
+      "photoUrl": "assets/media/people-heritage/nguyen-xuan-phuong-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-xuan-phuong-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-xuan-phuong-hero.png",
+      "summary": [
+        "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and extraordinary Vietnamese womanhood."
+      ],
+      "introduction": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and extraordinary Vietnamese womanhood.",
+      "bio": "Xuan Phuong — journalist, author, filmmaker and pioneer whose life spans nearly a century of creativity, courage, and resilience. A symbol of timeless youth and extraordinary Vietnamese womanhood.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.567Z",
+      "updatedAt": "2025-11-22T12:24:48.567Z"
+    },
+    {
+      "id": 5,
+      "urlSlug": "pham-hoang-nam",
+      "fullName": "Pham Hoang Nam — Director, Master of Visual Storytelling",
+      "headerLetter": "P",
+      "position": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative ",
+      "photoUrl": "assets/media/people-heritage/pham-hoang-nam-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/pham-hoang-nam-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/pham-hoang-nam-hero.png",
+      "summary": [
+        "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporary performing arts."
+      ],
+      "introduction": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporary performing arts.",
+      "bio": "Pham Hoang Nam — director, visual storyteller, and master of stage and lighting. A leading creative force shaping Vietnamese cinema, television, and contemporary performing arts.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.567Z",
+      "updatedAt": "2025-11-22T12:24:48.567Z"
+    },
+    {
+      "id": 6,
+      "urlSlug": "phan-toan-thang",
+      "fullName": "Phan Toan Thang — Pioneer of Stem Cell Science & Regenerative Medicine",
+      "headerLetter": "P",
+      "position": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer",
+      "photoUrl": "assets/media/people-heritage/phan-toan-thang-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/phan-toan-thang-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/phan-toan-thang-hero.png",
+      "summary": [
+        "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing transformative breakthroughs to regenerative and longevity medicine."
+      ],
+      "introduction": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing transformative breakthroughs to regenerative and longevity medicine.",
+      "bio": "Associate Professor – PhD – Doctor Phan Toan Thang — world-renowned Vietnamese scientist and pioneer in umbilical cord lining stem cells (CLSCs), contributing transformative breakthroughs to regenerative and longevity medicine.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.567Z",
+      "updatedAt": "2025-11-22T12:24:48.567Z"
+    },
+    {
+      "id": 7,
+      "urlSlug": "quoc-trung",
+      "fullName": "Quoc Trung — Musician & Cultural Innovator",
+      "headerLetter": "Q",
+      "position": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Easte",
+      "photoUrl": "assets/media/people-heritage/quoc-trung-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/quoc-trung-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/quoc-trung-hero.png",
+      "summary": [
+        "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemporary musical legacy."
+      ],
+      "introduction": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemporary musical legacy.",
+      "bio": "Quoc Trung — musician, producer, and founder of Monsoon Music Festival. A visionary who blends Eastern soul with world-class artistry, shaping Vietnam’s contemporary musical legacy.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.567Z",
+      "updatedAt": "2025-11-22T12:24:48.567Z"
+    },
+    {
+      "id": 8,
+      "urlSlug": "sir-niels-lan-doky",
+      "fullName": "Sir Niels Lan Doky — Knight of Jazz & World-Class Pianist",
+      "headerLetter": "S",
+      "position": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe ",
+      "photoUrl": "assets/media/people-heritage/niels-lan-doky-hero.png",
+      "smallImageUrl": "assets/media/people-heritage/niels-lan-doky-hero.png",
+      "heroImageUrl": "assets/media/people-heritage/niels-lan-doky-hero.png",
+      "summary": [
+        "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvisational mastery, and timeless musical legacy."
+      ],
+      "introduction": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvisational mastery, and timeless musical legacy.",
+      "bio": "Sir Niels Lan Doky — world-renowned jazz pianist of Vietnamese descent, knighted by Queen Margrethe II of Denmark. Celebrated globally for his artistry, improvisational mastery, and timeless musical legacy.",
+      "language": "en",
+      "published": true,
+      "createdAt": "2025-11-22T12:24:48.567Z",
+      "updatedAt": "2025-11-22T12:24:48.567Z"
+    }
+  ]
 }
