@@ -923,21 +923,37 @@ app.get('/api/admin/tips-en', authenticateAdminApiKey, async (req, res) => {
  * POST /api/admin/figures
  * Create a new heritage figure
  */
-app.post('/api/admin/figures', async (req, res) => {
+app.post('/api/admin/figures', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const figure = await figuresRepo.create(req.body);
+      const transformed = transformFigureToJson(figure);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateFigures(req.body.language);
+      }
+
+      res.status(201).json(transformed);
+    } else {
+      // JSON file mode - add to heritage-figures.json
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'heritage-figures-en.json' : 'heritage-figures.json';
+      const data = readJsonFile(filename) || { heritageFigures: [] };
+
+      const newId = Math.max(...(data.heritageFigures || []).map(f => f.id || 0), 0) + 1;
+      const figure = {
+        id: newId,
+        ...req.body,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+
+      data.heritageFigures.push(figure);
+      writeJsonFile(filename, data);
+
+      res.status(201).json({ success: true, id: newId, figure });
     }
-
-    const figure = await figuresRepo.create(req.body);
-    const transformed = transformFigureToJson(figure);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateFigures(req.body.language);
-    }
-
-    res.status(201).json(transformed);
   } catch (error) {
     console.error('Error creating figure:', error);
     res.status(500).json({ error: error.message });
@@ -948,25 +964,44 @@ app.post('/api/admin/figures', async (req, res) => {
  * PUT /api/admin/figures/:id
  * Update a heritage figure
  */
-app.put('/api/admin/figures/:id', async (req, res) => {
+app.put('/api/admin/figures/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const figure = await figuresRepo.update(parseInt(req.params.id), req.body);
+      if (!figure) {
+        return res.status(404).json({ error: 'Figure not found' });
+      }
+
+      const transformed = transformFigureToJson(figure);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateFigures(req.body.language);
+      }
+
+      res.json(transformed);
+    } else {
+      // JSON file mode - update in heritage-figures.json
+      const id = parseInt(req.params.id);
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'heritage-figures-en.json' : 'heritage-figures.json';
+      const data = readJsonFile(filename) || { heritageFigures: [] };
+
+      const figureIndex = (data.heritageFigures || []).findIndex(f => f.id === id);
+      if (figureIndex === -1) {
+        return res.status(404).json({ error: 'Figure not found' });
+      }
+
+      data.heritageFigures[figureIndex] = {
+        ...data.heritageFigures[figureIndex],
+        ...req.body,
+        id: id,
+        updatedAt: new Date().toISOString()
+      };
+
+      writeJsonFile(filename, data);
+      res.json({ success: true, figure: data.heritageFigures[figureIndex] });
     }
-
-    const figure = await figuresRepo.update(parseInt(req.params.id), req.body);
-    if (!figure) {
-      return res.status(404).json({ error: 'Figure not found' });
-    }
-
-    const transformed = transformFigureToJson(figure);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateFigures(req.body.language);
-    }
-
-    res.json(transformed);
   } catch (error) {
     console.error('Error updating figure:', error);
     res.status(500).json({ error: error.message });
@@ -977,23 +1012,43 @@ app.put('/api/admin/figures/:id', async (req, res) => {
  * DELETE /api/admin/figures/:id
  * Delete a heritage figure
  */
-app.delete('/api/admin/figures/:id', async (req, res) => {
+app.delete('/api/admin/figures/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
-    }
+    if (USE_DATABASE) {
+      const success = await figuresRepo.delete(parseInt(req.params.id));
+      if (!success) {
+        return res.status(404).json({ error: 'Figure not found' });
+      }
 
-    const success = await figuresRepo.delete(parseInt(req.params.id));
-    if (!success) {
-      return res.status(404).json({ error: 'Figure not found' });
-    }
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateFigures();
+      }
 
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateFigures();
-    }
+      res.json({ success: true });
+    } else {
+      // JSON file mode - delete from both heritage-figures.json and heritage-figures-en.json
+      const id = parseInt(req.params.id);
+      let deleted = false;
 
-    res.json({ success: true });
+      ['heritage-figures.json', 'heritage-figures-en.json'].forEach(filename => {
+        const data = readJsonFile(filename);
+        if (data && data.heritageFigures) {
+          const initialLength = data.heritageFigures.length;
+          data.heritageFigures = data.heritageFigures.filter(f => f.id !== id);
+          if (data.heritageFigures.length < initialLength) {
+            writeJsonFile(filename, data);
+            deleted = true;
+          }
+        }
+      });
+
+      if (!deleted) {
+        return res.status(404).json({ error: 'Figure not found' });
+      }
+
+      res.json({ success: true });
+    }
   } catch (error) {
     console.error('Error deleting figure:', error);
     res.status(500).json({ error: error.message });
@@ -1004,21 +1059,37 @@ app.delete('/api/admin/figures/:id', async (req, res) => {
  * POST /api/admin/news
  * Create a new news article
  */
-app.post('/api/admin/news', async (req, res) => {
+app.post('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const article = await newsRepo.create(req.body);
+      const transformed = transformNewsToJson(article);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateNews(req.body.language);
+      }
+
+      res.status(201).json(transformed);
+    } else {
+      // JSON file mode - add to news.json
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'news-en.json' : 'news.json';
+      const data = readJsonFile(filename) || { news: [] };
+
+      const newId = Math.max(...(data.news || []).map(n => n.id || 0), 0) + 1;
+      const article = {
+        id: newId,
+        ...req.body,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+
+      data.news.push(article);
+      writeJsonFile(filename, data);
+
+      res.status(201).json({ success: true, id: newId, article });
     }
-
-    const article = await newsRepo.create(req.body);
-    const transformed = transformNewsToJson(article);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateNews(req.body.language);
-    }
-
-    res.status(201).json(transformed);
   } catch (error) {
     console.error('Error creating news:', error);
     res.status(500).json({ error: error.message });
@@ -1029,25 +1100,44 @@ app.post('/api/admin/news', async (req, res) => {
  * PUT /api/admin/news/:id
  * Update a news article
  */
-app.put('/api/admin/news/:id', async (req, res) => {
+app.put('/api/admin/news/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const article = await newsRepo.update(parseInt(req.params.id), req.body);
+      if (!article) {
+        return res.status(404).json({ error: 'News article not found' });
+      }
+
+      const transformed = transformNewsToJson(article);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateNews(req.body.language);
+      }
+
+      res.json(transformed);
+    } else {
+      // JSON file mode - update in news.json
+      const id = parseInt(req.params.id);
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'news-en.json' : 'news.json';
+      const data = readJsonFile(filename) || { news: [] };
+
+      const articleIndex = (data.news || []).findIndex(n => n.id === id);
+      if (articleIndex === -1) {
+        return res.status(404).json({ error: 'News article not found' });
+      }
+
+      data.news[articleIndex] = {
+        ...data.news[articleIndex],
+        ...req.body,
+        id: id,
+        updatedAt: new Date().toISOString()
+      };
+
+      writeJsonFile(filename, data);
+      res.json({ success: true, article: data.news[articleIndex] });
     }
-
-    const article = await newsRepo.update(parseInt(req.params.id), req.body);
-    if (!article) {
-      return res.status(404).json({ error: 'News article not found' });
-    }
-
-    const transformed = transformNewsToJson(article);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateNews(req.body.language);
-    }
-
-    res.json(transformed);
   } catch (error) {
     console.error('Error updating news:', error);
     res.status(500).json({ error: error.message });
@@ -1058,23 +1148,43 @@ app.put('/api/admin/news/:id', async (req, res) => {
  * DELETE /api/admin/news/:id
  * Delete a news article
  */
-app.delete('/api/admin/news/:id', async (req, res) => {
+app.delete('/api/admin/news/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
-    }
+    if (USE_DATABASE) {
+      const success = await newsRepo.delete(parseInt(req.params.id));
+      if (!success) {
+        return res.status(404).json({ error: 'News article not found' });
+      }
 
-    const success = await newsRepo.delete(parseInt(req.params.id));
-    if (!success) {
-      return res.status(404).json({ error: 'News article not found' });
-    }
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateNews();
+      }
 
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateNews();
-    }
+      res.json({ success: true });
+    } else {
+      // JSON file mode - delete from both news.json and news-en.json
+      const id = parseInt(req.params.id);
+      let deleted = false;
 
-    res.json({ success: true });
+      ['news.json', 'news-en.json'].forEach(filename => {
+        const data = readJsonFile(filename);
+        if (data && data.news) {
+          const initialLength = data.news.length;
+          data.news = data.news.filter(n => n.id !== id);
+          if (data.news.length < initialLength) {
+            writeJsonFile(filename, data);
+            deleted = true;
+          }
+        }
+      });
+
+      if (!deleted) {
+        return res.status(404).json({ error: 'News article not found' });
+      }
+
+      res.json({ success: true });
+    }
   } catch (error) {
     console.error('Error deleting news:', error);
     res.status(500).json({ error: error.message });
@@ -1085,21 +1195,37 @@ app.delete('/api/admin/news/:id', async (req, res) => {
  * POST /api/admin/tips
  * Create a new wellness tip
  */
-app.post('/api/admin/tips', async (req, res) => {
+app.post('/api/admin/tips', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const tip = await tipsRepo.create(req.body);
+      const transformed = transformTipToJson(tip);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateTips(req.body.language);
+      }
+
+      res.status(201).json(transformed);
+    } else {
+      // JSON file mode - add to wellness-tips.json
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'wellness-tips-en.json' : 'wellness-tips.json';
+      const data = readJsonFile(filename) || { wellnessTips: [] };
+
+      const newId = Math.max(...(data.wellnessTips || []).map(t => t.id || 0), 0) + 1;
+      const tip = {
+        id: newId,
+        ...req.body,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+
+      data.wellnessTips.push(tip);
+      writeJsonFile(filename, data);
+
+      res.status(201).json({ success: true, id: newId, tip });
     }
-
-    const tip = await tipsRepo.create(req.body);
-    const transformed = transformTipToJson(tip);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateTips(req.body.language);
-    }
-
-    res.status(201).json(transformed);
   } catch (error) {
     console.error('Error creating tip:', error);
     res.status(500).json({ error: error.message });
@@ -1110,25 +1236,44 @@ app.post('/api/admin/tips', async (req, res) => {
  * PUT /api/admin/tips/:id
  * Update a wellness tip
  */
-app.put('/api/admin/tips/:id', async (req, res) => {
+app.put('/api/admin/tips/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const tip = await tipsRepo.update(parseInt(req.params.id), req.body);
+      if (!tip) {
+        return res.status(404).json({ error: 'Tip not found' });
+      }
+
+      const transformed = transformTipToJson(tip);
+
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateTips(req.body.language);
+      }
+
+      res.json(transformed);
+    } else {
+      // JSON file mode - update in wellness-tips.json
+      const id = parseInt(req.params.id);
+      const language = req.body.language || 'vi';
+      const filename = language === 'en' ? 'wellness-tips-en.json' : 'wellness-tips.json';
+      const data = readJsonFile(filename) || { wellnessTips: [] };
+
+      const tipIndex = (data.wellnessTips || []).findIndex(t => t.id === id);
+      if (tipIndex === -1) {
+        return res.status(404).json({ error: 'Tip not found' });
+      }
+
+      data.wellnessTips[tipIndex] = {
+        ...data.wellnessTips[tipIndex],
+        ...req.body,
+        id: id,
+        updatedAt: new Date().toISOString()
+      };
+
+      writeJsonFile(filename, data);
+      res.json({ success: true, tip: data.wellnessTips[tipIndex] });
     }
-
-    const tip = await tipsRepo.update(parseInt(req.params.id), req.body);
-    if (!tip) {
-      return res.status(404).json({ error: 'Tip not found' });
-    }
-
-    const transformed = transformTipToJson(tip);
-
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateTips(req.body.language);
-    }
-
-    res.json(transformed);
   } catch (error) {
     console.error('Error updating tip:', error);
     res.status(500).json({ error: error.message });
@@ -1139,23 +1284,43 @@ app.put('/api/admin/tips/:id', async (req, res) => {
  * DELETE /api/admin/tips/:id
  * Delete a wellness tip
  */
-app.delete('/api/admin/tips/:id', async (req, res) => {
+app.delete('/api/admin/tips/:id', authenticateAdminApiKey, async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
-    }
+    if (USE_DATABASE) {
+      const success = await tipsRepo.delete(parseInt(req.params.id));
+      if (!success) {
+        return res.status(404).json({ error: 'Tip not found' });
+      }
 
-    const success = await tipsRepo.delete(parseInt(req.params.id));
-    if (!success) {
-      return res.status(404).json({ error: 'Tip not found' });
-    }
+      // Invalidate cache
+      if (USE_CACHE) {
+        await cacheService.invalidateTips();
+      }
 
-    // Invalidate cache
-    if (USE_CACHE) {
-      await cacheService.invalidateTips();
-    }
+      res.json({ success: true });
+    } else {
+      // JSON file mode - delete from both wellness-tips.json and wellness-tips-en.json
+      const id = parseInt(req.params.id);
+      let deleted = false;
 
-    res.json({ success: true });
+      ['wellness-tips.json', 'wellness-tips-en.json'].forEach(filename => {
+        const data = readJsonFile(filename);
+        if (data && data.wellnessTips) {
+          const initialLength = data.wellnessTips.length;
+          data.wellnessTips = data.wellnessTips.filter(t => t.id !== id);
+          if (data.wellnessTips.length < initialLength) {
+            writeJsonFile(filename, data);
+            deleted = true;
+          }
+        }
+      });
+
+      if (!deleted) {
+        return res.status(404).json({ error: 'Tip not found' });
+      }
+
+      res.json({ success: true });
+    }
   } catch (error) {
     console.error('Error deleting tip:', error);
     res.status(500).json({ error: error.message });
