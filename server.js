@@ -776,22 +776,26 @@ app.get('/api/health', async (req, res) => {
  */
 app.get('/api/admin/figures', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      // Get all figures regardless of published status
+      const figures = await figuresRepo.findAll({ language: 'vi' });
+      const transformed = figures.map(transformFigureToJson);
+      const categories = await figuresRepo.getCategories('vi');
+
+      res.json({
+        heritageFigures: transformed,
+        heritageCategories: categories
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('heritage-figures.json') || { heritageFigures: [], heritageCategories: [] };
+      res.json(data);
     }
-
-    // Get all figures regardless of published status
-    const figures = await figuresRepo.findAll({ language: 'vi' });
-    const transformed = figures.map(transformFigureToJson);
-    const categories = await figuresRepo.getCategories('vi');
-
-    res.json({
-      heritageFigures: transformed,
-      heritageCategories: categories
-    });
   } catch (error) {
     console.error('Error getting admin figures:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('heritage-figures.json') || { heritageFigures: [], heritageCategories: [] };
+    res.json(data);
   }
 });
 
@@ -801,21 +805,25 @@ app.get('/api/admin/figures', async (req, res) => {
  */
 app.get('/api/admin/figures-en', async (req, res) => {
   try {
-    if (!USE_DATABASE) {
-      return res.status(503).json({ error: 'Database not available' });
+    if (USE_DATABASE) {
+      const figures = await figuresRepo.findAll({ language: 'en' });
+      const transformed = figures.map(transformFigureToJson);
+      const categories = await figuresRepo.getCategories('en');
+
+      res.json({
+        heritageFigures: transformed,
+        heritageCategories: categories
+      });
+    } else {
+      // Fallback to JSON file
+      const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [], heritageCategories: [] };
+      res.json(data);
     }
-
-    const figures = await figuresRepo.findAll({ language: 'en' });
-    const transformed = figures.map(transformFigureToJson);
-    const categories = await figuresRepo.getCategories('en');
-
-    res.json({
-      heritageFigures: transformed,
-      heritageCategories: categories
-    });
   } catch (error) {
     console.error('Error getting admin figures-en:', error);
-    res.status(500).json({ error: error.message });
+    // If database fails, fallback to JSON
+    const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [], heritageCategories: [] };
+    res.json(data);
   }
 });
 
