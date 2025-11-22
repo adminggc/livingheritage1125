@@ -8,7 +8,16 @@ class LivingHeritageAdminDB {
     this.currentUser = null;
     this.currentEditId = null;
     this.API_BASE = '/api';
+    this.ADMIN_API_KEY = 'Dd1zADF8rPT2vxigpYt2l0g8sUpmuQyF9xAtnLpzZvQ=';
     this.init();
+  }
+
+  // Get headers with API key for authenticated requests
+  getAuthHeaders() {
+    return {
+      'Content-Type': 'application/json',
+      'X-API-Key': this.ADMIN_API_KEY
+    };
   }
 
   // ===== HELPER METHODS =====
@@ -310,9 +319,9 @@ class LivingHeritageAdminDB {
   async loadDashboard() {
     try {
       const [viFigures, viNews, viTips] = await Promise.all([
-        fetch(`${this.API_BASE}/admin/figures`).then(r => r.json()),
-        fetch(`${this.API_BASE}/admin/news`).then(r => r.json()),
-        fetch(`${this.API_BASE}/admin/tips`).then(r => r.json())
+        fetch(`${this.API_BASE}/admin/figures`, { headers: this.getAuthHeaders() }).then(r => r.json()),
+        fetch(`${this.API_BASE}/admin/news`, { headers: this.getAuthHeaders() }).then(r => r.json()),
+        fetch(`${this.API_BASE}/admin/tips`, { headers: this.getAuthHeaders() }).then(r => r.json())
       ]);
 
       document.getElementById('statProfiles').textContent = viFigures.heritageFigures?.length || 0;
@@ -328,7 +337,7 @@ class LivingHeritageAdminDB {
   async loadProfiles(language = 'vi') {
     try {
       const endpoint = language === 'en' ? `${this.API_BASE}/admin/figures-en` : `${this.API_BASE}/admin/figures`;
-      const response = await fetch(endpoint);
+      const response = await fetch(endpoint, { headers: this.getAuthHeaders() });
       const data = await response.json();
       const profiles = data.heritageFigures || [];
 
@@ -525,7 +534,8 @@ class LivingHeritageAdminDB {
 
     try {
       const response = await fetch(`${this.API_BASE}/admin/figures/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: this.getAuthHeaders()
       });
 
       if (!response.ok) {
@@ -673,7 +683,8 @@ class LivingHeritageAdminDB {
 
     try {
       const response = await fetch(`${this.API_BASE}/admin/news/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: this.getAuthHeaders()
       });
 
       if (!response.ok) {
@@ -851,7 +862,8 @@ class LivingHeritageAdminDB {
 
     try {
       const response = await fetch(`${this.API_BASE}/admin/tips/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
+        headers: this.getAuthHeaders()
       });
 
       if (!response.ok) {
