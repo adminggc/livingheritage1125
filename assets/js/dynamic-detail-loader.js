@@ -18,7 +18,8 @@ class DetailPageLoader {
     const path = window.location.pathname;
 
     // Check if it's a wellness tip page
-    if (path.includes('wellness-tips') || document.body.classList.contains('tips-page')) {
+    if (path.includes('wellness-tips') || document.body.classList.contains('tips-page') ||
+        document.querySelector('.section-tips-content-body')) {
       return 'tips';
     }
 
