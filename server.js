@@ -85,20 +85,6 @@ function writeJsonFile(filename, data) {
   try {
     const filePath = path.join(dataDir, filename);
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-
-    // Auto-commit changes to git to persist them across deployments
-    if (process.env.AUTO_COMMIT !== 'false') {
-      const { execSync } = require('child_process');
-      try {
-        execSync(`git add data/${filename}`, { stdio: 'ignore' });
-        execSync(`git commit -m "Auto-save: Update ${filename} via admin panel" --no-verify`, { stdio: 'ignore' });
-        execSync(`git push railway-fork master --quiet`, { stdio: 'ignore', timeout: 10000 });
-        console.log(`✓ Auto-committed changes to ${filename}`);
-      } catch (gitError) {
-        console.log(`⚠ Could not auto-commit ${filename} (git error - this is OK in development)`);
-      }
-    }
-
     return true;
   } catch (error) {
     console.error(`Error writing ${filename}:`, error);
