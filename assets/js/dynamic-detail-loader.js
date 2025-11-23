@@ -177,10 +177,14 @@ class DetailPageLoader {
     const descEl = document.querySelector('.tip-description, .article-summary');
     if (descEl) descEl.textContent = tip.description || tip.summary || '';
 
-    // Content
+    // Content - use htmlContent if available (has full HTML), otherwise fall back to content
     const contentEl = document.querySelector('.tip-content, .article-content, .content-body');
-    if (contentEl && tip.content) {
-      contentEl.innerHTML = tip.content;
+    if (contentEl) {
+      if (tip.htmlContent) {
+        contentEl.innerHTML = tip.htmlContent;
+      } else if (tip.content) {
+        contentEl.innerHTML = tip.content;
+      }
     }
 
     // Benefits/Summary
@@ -231,10 +235,14 @@ class DetailPageLoader {
     const introEl = document.querySelector('.figure-introduction, .profile-intro, .introduction');
     if (introEl) introEl.textContent = figure.introduction || '';
 
-    // Biography
+    // Biography - use htmlBio if available (has full HTML), otherwise fall back to bio
     const bioEl = document.querySelector('.figure-bio, .profile-bio, .biography');
-    if (bioEl && figure.bio) {
-      bioEl.innerHTML = typeof figure.bio === 'string' ? figure.bio : figure.bio.join('\n');
+    if (bioEl) {
+      if (figure.htmlBio) {
+        bioEl.innerHTML = figure.htmlBio;
+      } else if (figure.bio) {
+        bioEl.innerHTML = typeof figure.bio === 'string' ? figure.bio : figure.bio.join('\n');
+      }
     }
 
     // Meta

@@ -802,10 +802,12 @@ class LivingHeritageAdminDB {
     const publishedId = language === 'en' ? 'tipPublishedEn' : 'tipPublished';
 
     const descField = document.getElementById(descId);
+    const contentValue = document.getElementById(contentId).value;
     const tipData = {
       title: document.getElementById(titleId).value,
       description: descField ? descField.value : '',
-      content: document.getElementById(contentId).value,
+      content: contentValue,
+      htmlContent: contentValue, // Also send as htmlContent for preservation
       imageUrl: document.getElementById(imageId).value,
       heroImageUrl: document.getElementById(heroImageId).value,
       language: language,
