@@ -107,7 +107,7 @@ class DetailPageLoader {
     if (!article) return false;
 
     // Title
-    const titleEl = document.querySelector('.news-title, h1.article-title, .article-header h1');
+    const titleEl = document.querySelector('.news-main-title, .news-title, h1.article-title, .article-header h1');
     if (titleEl) titleEl.textContent = article.title || '';
 
     // Featured image
@@ -117,23 +117,23 @@ class DetailPageLoader {
       imageEl.alt = article.title || 'Article image';
     }
 
-    // Description/Summary
-    const descEl = document.querySelector('.news-description, .article-summary, .description-text');
-    if (descEl) descEl.textContent = article.description || article.summary || '';
-
-    // Main content
+    // Main content - use htmlContent if available, otherwise use plain content
     const contentEl = document.querySelector('.news-text, .article-content, .content-body');
-    if (contentEl && article.content) {
-      contentEl.innerHTML = article.content;
+    if (contentEl) {
+      if (article.htmlContent) {
+        contentEl.innerHTML = article.htmlContent;
+      } else if (article.content) {
+        contentEl.innerHTML = article.content;
+      }
     }
 
-    // Author
+    // Author (optional)
     const authorEl = document.querySelector('.news-author, .article-author');
     if (authorEl && article.author) {
       authorEl.textContent = `By ${article.author}`;
     }
 
-    // Date
+    // Date (optional)
     const dateEl = document.querySelector('.news-date, .article-date, .published-date');
     if (dateEl && article.createdAt) {
       const date = new Date(article.createdAt).toLocaleDateString(

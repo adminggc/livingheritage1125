@@ -609,6 +609,7 @@ class LivingHeritageAdminDB {
       title: document.getElementById(titleId).value,
       description: document.getElementById(descId).value,
       content: document.getElementById(contentId).value,
+      htmlContent: document.getElementById(contentId).value, // Also send as htmlContent for preservation
       imageUrl: document.getElementById(imageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,
