@@ -579,7 +579,8 @@ class LivingHeritageAdminDB {
 
           document.getElementById(titleId).value = article.title || '';
           document.getElementById(descId).value = article.description || '';
-          document.getElementById(contentId).value = article.content || '';
+          // Use htmlContent if available (has full HTML), otherwise fall back to content
+          document.getElementById(contentId).value = article.htmlContent || article.content || '';
           document.getElementById(imageId).value = article.imageUrl || '';
           document.getElementById(publishedId).checked = article.published !== false;
         }
@@ -767,7 +768,8 @@ class LivingHeritageAdminDB {
 
           if (titleField) titleField.value = tip.title || '';
           if (descField && tip.description) descField.value = tip.description || '';
-          if (contentField) contentField.value = tip.content || '';
+          // Use htmlContent if available (has full HTML), otherwise fall back to content
+          if (contentField) contentField.value = tip.htmlContent || tip.content || '';
           if (imageField) imageField.value = tip.imageUrl || '';
           if (heroImageField) heroImageField.value = tip.heroImageUrl || '';
           if (publishedField) publishedField.checked = tip.published !== false;
