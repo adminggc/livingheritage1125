@@ -178,7 +178,7 @@ class DetailPageLoader {
     if (descEl) descEl.textContent = tip.description || tip.summary || '';
 
     // Content - use htmlContent if available (has full HTML), otherwise fall back to content
-    const contentEl = document.querySelector('.tip-content, .article-content, .content-body');
+    const contentEl = document.querySelector('.section-tips-content-body, .tip-content, .article-content, .content-body');
     if (contentEl) {
       if (tip.htmlContent) {
         contentEl.innerHTML = tip.htmlContent;
