@@ -709,8 +709,8 @@ app.get('/api/news/slug/:slug/en', async (req, res) => {
  */
 app.get('/api/tips/slug/:slug', async (req, res) => {
   try {
-    const data = readJsonFile('wellness-tips.json') || { tips: [] };
-    const tip = data.tips?.find(t => t.urlSlug === req.params.slug);
+    const data = readJsonFile('wellness-tips.json') || { wellnessTips: [] };
+    const tip = data.wellnessTips?.find(t => t.urlSlug === req.params.slug);
 
     if (!tip) {
       return res.status(404).json({ error: 'Wellness tip not found' });
@@ -729,8 +729,8 @@ app.get('/api/tips/slug/:slug', async (req, res) => {
  */
 app.get('/api/tips/slug/:slug/en', async (req, res) => {
   try {
-    const data = readJsonFile('wellness-tips-en.json') || { tips: [] };
-    const tip = data.tips?.find(t => t.urlSlug === req.params.slug);
+    const data = readJsonFile('wellness-tips-en.json') || { wellnessTips: [] };
+    const tip = data.wellnessTips?.find(t => t.urlSlug === req.params.slug);
 
     if (!tip) {
       return res.status(404).json({ error: 'Wellness tip not found' });
