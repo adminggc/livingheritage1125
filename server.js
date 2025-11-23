@@ -1062,29 +1062,51 @@ app.delete('/api/admin/figures/:id', authenticateAdminApiKey, async (req, res) =
 app.post('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
-      // Map admin panel fields to database fields
-      const dbData = {
-        title: req.body.title,
-        description: req.body.description,
-        short_description: req.body.description?.substring(0, 160) || '',
-        author: req.body.author || 'Living Heritage',
-        publication_date: new Date().toISOString(),
-        images: [],
-        featured_image: req.body.imageUrl || '',
-        content: req.body.content || '',
-        category: 'News',
-        slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
-      };
+      try {
+        // Map admin panel fields to database fields
+        const dbData = {
+          title: req.body.title,
+          description: req.body.description,
+          short_description: req.body.description?.substring(0, 160) || '',
+          author: req.body.author || 'Living Heritage',
+          publication_date: new Date().toISOString(),
+          images: [],
+          featured_image: req.body.imageUrl || '',
+          content: req.body.content || '',
+          category: 'News',
+          slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
+        };
 
-      const article = await newsRepo.create(dbData);
-      const transformed = transformNewsToJson(article);
+        const article = await newsRepo.create(dbData);
+        const transformed = transformNewsToJson(article);
 
-      // Invalidate cache
-      if (USE_CACHE) {
-        await cacheService.invalidateNews(req.body.language || 'vi');
+        // Invalidate cache
+        if (USE_CACHE) {
+          await cacheService.invalidateNews(req.body.language || 'vi');
+        }
+
+        res.status(201).json(transformed);
+      } catch (dbError) {
+        // Database error - fall back to JSON mode
+        console.warn('Database error, falling back to JSON mode:', dbError.message);
+
+        const language = req.body.language || 'vi';
+        const filename = language === 'en' ? 'news-en.json' : 'news.json';
+        const data = readJsonFile(filename) || { news: [] };
+
+        const newId = Math.max(...(data.news || []).map(n => n.id || 0), 0) + 1;
+        const article = {
+          id: newId,
+          ...req.body,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString()
+        };
+
+        data.news.push(article);
+        writeJsonFile(filename, data);
+
+        res.status(201).json({ success: true, id: newId, article });
       }
-
-      res.status(201).json(transformed);
     } else {
       // JSON file mode - add to news.json
       const language = req.body.language || 'vi';
@@ -1117,33 +1139,58 @@ app.post('/api/admin/news', authenticateAdminApiKey, async (req, res) => {
 app.put('/api/admin/news/:id', authenticateAdminApiKey, async (req, res) => {
   try {
     if (USE_DATABASE) {
-      // Map admin panel fields to database fields
-      const dbData = {
-        title: req.body.title,
-        description: req.body.description,
-        short_description: req.body.description?.substring(0, 160) || '',
-        author: req.body.author || 'Living Heritage',
-        publication_date: req.body.publication_date || new Date().toISOString(),
-        images: req.body.images || [],
-        featured_image: req.body.imageUrl || '',
-        content: req.body.content || '',
-        category: req.body.category || 'News',
-        slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
-      };
+      try {
+        // Map admin panel fields to database fields
+        const dbData = {
+          title: req.body.title,
+          description: req.body.description,
+          short_description: req.body.description?.substring(0, 160) || '',
+          author: req.body.author || 'Living Heritage',
+          publication_date: req.body.publication_date || new Date().toISOString(),
+          images: req.body.images || [],
+          featured_image: req.body.imageUrl || '',
+          content: req.body.content || '',
+          category: req.body.category || 'News',
+          slug: req.body.urlSlug || req.body.title?.toLowerCase().replace(/\s+/g, '-')
+        };
 
-      const article = await newsRepo.update(parseInt(req.params.id), dbData);
-      if (!article) {
-        return res.status(404).json({ error: 'News article not found' });
+        const article = await newsRepo.update(parseInt(req.params.id), dbData);
+        if (!article) {
+          return res.status(404).json({ error: 'News article not found' });
+        }
+
+        const transformed = transformNewsToJson(article);
+
+        // Invalidate cache
+        if (USE_CACHE) {
+          await cacheService.invalidateNews(req.body.language || 'vi');
+        }
+
+        res.json(transformed);
+      } catch (dbError) {
+        // Database error - fall back to JSON mode
+        console.warn('Database error, falling back to JSON mode:', dbError.message);
+
+        const id = parseInt(req.params.id);
+        const language = req.body.language || 'vi';
+        const filename = language === 'en' ? 'news-en.json' : 'news.json';
+        const data = readJsonFile(filename) || { news: [] };
+
+        const articleIndex = (data.news || []).findIndex(n => n.id === id);
+        if (articleIndex === -1) {
+          return res.status(404).json({ error: 'News article not found' });
+        }
+
+        data.news[articleIndex] = {
+          ...data.news[articleIndex],
+          ...req.body,
+          id: id,
+          updatedAt: new Date().toISOString()
+        };
+
+        writeJsonFile(filename, data);
+        res.json({ success: true, article: data.news[articleIndex] });
       }
-
-      const transformed = transformNewsToJson(article);
-
-      // Invalidate cache
-      if (USE_CACHE) {
-        await cacheService.invalidateNews(req.body.language || 'vi');
-      }
-
-      res.json(transformed);
     } else {
       // JSON file mode - update in news.json
       const id = parseInt(req.params.id);
