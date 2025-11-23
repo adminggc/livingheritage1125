@@ -660,6 +660,130 @@ app.post('/api/save-podcasts-en', async (req, res) => {
 });
 
 // ========================================
+// API ENDPOINTS - SINGLE ITEM LOOKUPS (by slug)
+// ========================================
+
+/**
+ * GET /api/news/slug/:slug
+ * Get a single news article by URL slug
+ */
+app.get('/api/news/slug/:slug', async (req, res) => {
+  try {
+    const data = readJsonFile('news.json') || { news: [] };
+    const article = data.news?.find(n => n.urlSlug === req.params.slug);
+
+    if (!article) {
+      return res.status(404).json({ error: 'News article not found' });
+    }
+
+    res.json(article);
+  } catch (error) {
+    console.error('Error fetching news by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/news/slug/:slug/en
+ * Get a single English news article by URL slug
+ */
+app.get('/api/news/slug/:slug/en', async (req, res) => {
+  try {
+    const data = readJsonFile('news-en.json') || { news: [] };
+    const article = data.news?.find(n => n.urlSlug === req.params.slug);
+
+    if (!article) {
+      return res.status(404).json({ error: 'News article not found' });
+    }
+
+    res.json(article);
+  } catch (error) {
+    console.error('Error fetching English news by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/tips/slug/:slug
+ * Get a single wellness tip by URL slug
+ */
+app.get('/api/tips/slug/:slug', async (req, res) => {
+  try {
+    const data = readJsonFile('wellness-tips.json') || { tips: [] };
+    const tip = data.tips?.find(t => t.urlSlug === req.params.slug);
+
+    if (!tip) {
+      return res.status(404).json({ error: 'Wellness tip not found' });
+    }
+
+    res.json(tip);
+  } catch (error) {
+    console.error('Error fetching tip by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/tips/slug/:slug/en
+ * Get a single English wellness tip by URL slug
+ */
+app.get('/api/tips/slug/:slug/en', async (req, res) => {
+  try {
+    const data = readJsonFile('wellness-tips-en.json') || { tips: [] };
+    const tip = data.tips?.find(t => t.urlSlug === req.params.slug);
+
+    if (!tip) {
+      return res.status(404).json({ error: 'Wellness tip not found' });
+    }
+
+    res.json(tip);
+  } catch (error) {
+    console.error('Error fetching English tip by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/figures/slug/:slug
+ * Get a single heritage figure by URL slug
+ */
+app.get('/api/figures/slug/:slug', async (req, res) => {
+  try {
+    const data = readJsonFile('heritage-figures.json') || { heritageFigures: [] };
+    const figure = data.heritageFigures?.find(f => f.urlSlug === req.params.slug);
+
+    if (!figure) {
+      return res.status(404).json({ error: 'Heritage figure not found' });
+    }
+
+    res.json(figure);
+  } catch (error) {
+    console.error('Error fetching figure by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+/**
+ * GET /api/figures/slug/:slug/en
+ * Get a single English heritage figure by URL slug
+ */
+app.get('/api/figures/slug/:slug/en', async (req, res) => {
+  try {
+    const data = readJsonFile('heritage-figures-en.json') || { heritageFigures: [] };
+    const figure = data.heritageFigures?.find(f => f.urlSlug === req.params.slug);
+
+    if (!figure) {
+      return res.status(404).json({ error: 'Heritage figure not found' });
+    }
+
+    res.json(figure);
+  } catch (error) {
+    console.error('Error fetching English figure by slug:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// ========================================
 // API ENDPOINTS - BANNERS
 // ========================================
 
