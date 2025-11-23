@@ -649,25 +649,23 @@
         </div>
 
         <div class="form-group">
-          <label for="tipCategory">Category</label>
-          <select id="tipCategory" name="category">
-            <option value="">Select a category</option>
-            <option value="Health">Health</option>
-            <option value="Wellness">Wellness</option>
-            <option value="Mindfulness">Mindfulness</option>
-            <option value="Nutrition">Nutrition</option>
-            <option value="Science">Science</option>
-          </select>
+          <label for="tipDescription">Description *</label>
+          <input type="text" id="tipDescription" name="description" placeholder="Brief description..." required>
         </div>
 
         <div class="form-group">
-          <label for="tipImage">Tip Image URL</label>
-          <input type="text" id="tipImage" name="image" placeholder="assets/media/tips/example.jpg or https://example.com/image.jpg">
+          <label for="tipImage">Featured Image URL</label>
+          <input type="text" id="tipImage" name="image" placeholder="assets/media/tips/example.jpg">
         </div>
 
         <div class="form-group">
-          <label for="tipContent">Content</label>
-          <textarea id="tipContent" name="content" placeholder="Tip content..."></textarea>
+          <label for="tipHeroImage">Hero Image URL</label>
+          <input type="text" id="tipHeroImage" name="heroImage" placeholder="assets/media/tips/hero-example.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="tipContent">Content (HTML supported)</label>
+          <textarea id="tipContent" name="content" placeholder="Tip content with HTML formatting..." rows="8"></textarea>
         </div>
 
         <div class="form-group">
@@ -930,29 +928,23 @@
         </div>
 
         <div class="form-group">
-          <label for="tipDescriptionEn">Description</label>
-          <textarea id="tipDescriptionEn" name="description" placeholder="Short description..." style="min-height: 60px;"></textarea>
+          <label for="tipDescriptionEn">Description *</label>
+          <input type="text" id="tipDescriptionEn" name="description" placeholder="Brief description..." required>
         </div>
 
         <div class="form-group">
-          <label for="tipCategoryEn">Category</label>
-          <select id="tipCategoryEn" name="category">
-            <option value="">Select a category</option>
-            <option value="Health">Health</option>
-            <option value="Wellness">Wellness</option>
-            <option value="Mental Health">Mental Health</option>
-            <option value="Science">Science</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="tipImageEn">Tip Image URL</label>
+          <label for="tipImageEn">Featured Image URL</label>
           <input type="text" id="tipImageEn" name="image" placeholder="assets/media/tips/example.jpg">
         </div>
 
         <div class="form-group">
-          <label for="tipContentEn">Content</label>
-          <textarea id="tipContentEn" name="content" placeholder="Tip content..." style="min-height: 120px;"></textarea>
+          <label for="tipHeroImageEn">Hero Image URL</label>
+          <input type="text" id="tipHeroImageEn" name="heroImage" placeholder="assets/media/tips/hero-example.jpg">
+        </div>
+
+        <div class="form-group">
+          <label for="tipContentEn">Content (HTML supported)</label>
+          <textarea id="tipContentEn" name="content" placeholder="Tip content with HTML formatting..." style="min-height: 120px;"></textarea>
         </div>
 
         <div class="form-group">
