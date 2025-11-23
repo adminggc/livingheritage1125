@@ -943,6 +943,103 @@ class LivingHeritageAdminDB {
       setTimeout(() => notification.remove(), 300);
     }, 3000);
   }
+
+  /**
+   * Download current data as JSON file for backup/version control
+   * @param {string} dataType - Type of data to export (news, tips, figures, podcasts, with optional -en suffix)
+   */
+  async downloadJSON(dataType) {
+    try {
+      // Show loading state
+      const button = document.querySelector(`#export${this.capitalizeType(dataType)}Btn`);
+      if (button) {
+        const originalText = button.innerHTML;
+        button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Exporting...';
+        button.disabled = true;
+
+        try {
+          // Determine API endpoint based on data type
+          const endpoint = `/api/admin/${dataType}`;
+
+          // Fetch data from API with authentication
+          const response = await fetch(endpoint, {
+            headers: this.getAuthHeaders()
+          });
+
+          if (!response.ok) {
+            throw new Error(`API Error: ${response.status} ${response.statusText}`);
+          }
+
+          const data = await response.json();
+
+          // Determine the proper JSON structure based on data type
+          let exportData;
+          if (dataType.includes('news')) {
+            exportData = { news: Array.isArray(data) ? data : (data.news || []) };
+          } else if (dataType.includes('tips')) {
+            exportData = { wellnessTips: Array.isArray(data) ? data : (data.wellnessTips || []) };
+          } else if (dataType.includes('figures')) {
+            exportData = { heritageFigures: Array.isArray(data) ? data : (data.heritageFigures || []) };
+          } else if (dataType.includes('podcasts')) {
+            exportData = { podcasts: Array.isArray(data) ? data : (data.podcasts || []) };
+          } else {
+            exportData = data;
+          }
+
+          // Create blob and trigger download
+          const jsonString = JSON.stringify(exportData, null, 2);
+          const blob = new Blob([jsonString], { type: 'application/json' });
+          const url = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.download = `${dataType}.json`;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(url);
+
+          // Show success message
+          this.showNotification(`${this.humanizeType(dataType)} exported successfully!`, 'success');
+        } finally {
+          // Restore button state
+          if (button) {
+            button.innerHTML = originalText;
+            button.disabled = false;
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Export error:', error);
+      this.showNotification(`Export failed: ${error.message}`, 'error');
+    }
+  }
+
+  /**
+   * Capitalize data type for button ID (e.g., 'tips' -> 'Tips')
+   */
+  capitalizeType(dataType) {
+    return dataType
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('');
+  }
+
+  /**
+   * Convert data type to human-readable format
+   */
+  humanizeType(dataType) {
+    const types = {
+      'news': 'News Articles (VI)',
+      'news-en': 'News Articles (EN)',
+      'tips': 'Wellness Tips (VI)',
+      'tips-en': 'Wellness Tips (EN)',
+      'figures': 'Heritage Figures (VI)',
+      'figures-en': 'Heritage Figures (EN)',
+      'podcasts': 'Podcasts (VI)',
+      'podcasts-en': 'Podcasts (EN)'
+    };
+    return types[dataType] || dataType;
+  }
 }
 
 // Initialize admin panel when DOM is ready

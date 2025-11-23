@@ -167,7 +167,45 @@
           <p><strong>Welcome to Living Heritage Admin Panel!</strong></p>
           <p style="margin: 10px 0; font-size: 14px; color: #666;">
             Use the sidebar menu to manage all content types. You can create, read, update, and delete articles, profiles, tips, and banners.
-            All data is stored locally in your browser.
+            All data is stored on the server and accessed via API.
+          </p>
+        </div>
+
+        <div class="admin-form" style="background: #fff3cd; border-left: 4px solid #ffc107; margin-top: 20px;">
+          <h3 style="color: var(--admin-primary); margin-bottom: 15px;">
+            <i class="fas fa-download"></i> Export & Backup Data
+          </h3>
+          <p style="margin: 0 0 15px 0; font-size: 14px; color: #666;">
+            Download current data as JSON files for backup or version control. After exporting, commit the files to your GitHub repository to persist changes across deployments.
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px;">
+            <button class="btn btn-secondary" id="exportNewsBtn" onclick="adminPanel.downloadJSON('news')">
+              <i class="fas fa-download"></i> Export News (VI)
+            </button>
+            <button class="btn btn-secondary" id="exportNewsEnBtn" onclick="adminPanel.downloadJSON('news-en')">
+              <i class="fas fa-download"></i> Export News (EN)
+            </button>
+            <button class="btn btn-secondary" id="exportTipsBtn" onclick="adminPanel.downloadJSON('tips')">
+              <i class="fas fa-download"></i> Export Wellness Tips (VI)
+            </button>
+            <button class="btn btn-secondary" id="exportTipsEnBtn" onclick="adminPanel.downloadJSON('tips-en')">
+              <i class="fas fa-download"></i> Export Wellness Tips (EN)
+            </button>
+            <button class="btn btn-secondary" id="exportFiguresBtn" onclick="adminPanel.downloadJSON('figures')">
+              <i class="fas fa-download"></i> Export Heritage Figures (VI)
+            </button>
+            <button class="btn btn-secondary" id="exportFiguresEnBtn" onclick="adminPanel.downloadJSON('figures-en')">
+              <i class="fas fa-download"></i> Export Heritage Figures (EN)
+            </button>
+            <button class="btn btn-secondary" id="exportPodcastsBtn" onclick="adminPanel.downloadJSON('podcasts')">
+              <i class="fas fa-download"></i> Export Podcasts (VI)
+            </button>
+            <button class="btn btn-secondary" id="exportPodcastsEnBtn" onclick="adminPanel.downloadJSON('podcasts-en')">
+              <i class="fas fa-download"></i> Export Podcasts (EN)
+            </button>
+          </div>
+          <p style="margin: 15px 0 0 0; font-size: 12px; color: #666; font-style: italic;">
+            💡 Workflow: Edit content above → Save → Export JSON → Commit to GitHub → Redeploy → Changes persist
           </p>
         </div>
       </div>
