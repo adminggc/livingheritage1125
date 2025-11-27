@@ -1,0 +1,78 @@
+/* ==== PC base (mặc định) = xxl ≥1400px ==== */
+/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
+
+.podcast-info {
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.podcast-title {
+  font-family: "Alumni Sans", sans-serif;
+  font-size: 27px;
+  font-weight: var(--fw-bold);
+  color: var(--dark-green);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+/* ≤1399.98 = xl & down */
+@media (max-width: 1399.98px) {
+  /* override chung cho ≤xl */
+}
+
+/* ≤1199.98 = lg & down */
+@media (max-width: 1199.98px) {
+  /* override chung cho ≤lg */
+}
+
+/* ≤991.98 = md & down (tablet & phone) */
+@media (max-width: 991.98px) {
+
+  /* override chung cho ≤md */
+  .podcast-title {
+    font-size: 25px;
+  }
+}
+
+/* ≤767.98 = sm & down (phone) */
+@media (max-width: 767.98px) {
+
+  /* override chung cho ≤sm */
+
+}
+
+/* ≤575.98 = xs (phone nhỏ) */
+@media (max-width: 575.98px) {
+  /* override chung cho ≤xs */
+}
+
+/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
+/* xxl only: ≥1400 */
+@media (min-width: 1400px) {
+  /* override riêng cho xxl nếu cần */
+}
+
+/* xl only: 1200–1399.98 */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* override chỉ xl */
+}
+
+/* lg only: 992–1199.98 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* override chỉ lg (laptop phổ biến) */
+}
+
+/* md only: 768–991.98 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* override chỉ md (tablet) */
+}
+
+/* sm only: 576–767.98 */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* override chỉ sm (phone lớn) */
+}

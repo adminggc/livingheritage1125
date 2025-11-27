@@ -1,0 +1,435 @@
+/* ==== PC base (mặc định) = xxl ≥1400px ==== */
+/* Viết style mặc định ở ngoài media (áp cho ≥1400px) */
+
+.news-header-section {
+  padding: 2rem 0 1rem 0;
+}
+
+.news-page-title {
+  color: var(--dark-green);
+  font-weight: var(--fw-bold);
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+  text-align: justify;
+}
+
+.news-main-section {
+  padding: 2rem 0;
+  color: var(--dark-green);
+}
+
+.news-main-image-wrapper {
+  margin-bottom: 2rem;
+}
+
+.news-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-main-title {
+  color: var(--dark-green);
+  font-size: 77px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.news-text-columns {
+  margin-top: 2rem;
+}
+
+.news-text {
+  color: var(--dark-green);
+  /* font-size: 26px;
+  font-weight: var(--fw-light);
+  letter-spacing: 1px;
+  line-height: 1.8;
+  text-align: justify; */
+  margin-bottom: 1.5rem;
+}
+
+.news-video-wrapper {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.news-video-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #1b361b 0%, #2d4d2d 100%);
+  background-image: url("../img/vi/news/news (1).png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+  filter: blur(3px);
+}
+
+.news-video-placeholder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(27, 54, 27, 0.3);
+  z-index: 1;
+}
+
+.news-play-button {
+  position: absolute;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.news-play-button:hover {
+  background-color: var(--white);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.news-play-button i {
+  color: var(--dark-green);
+  font-size: 32px;
+  margin-left: 4px;
+}
+
+.news-small-image-wrapper {
+  margin-top: 1.5rem;
+}
+
+.news-small-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news-bottom-section {
+  padding: 3rem 0 4rem 0;
+}
+
+.news-bottom-carousel-wrapper {
+  position: relative;
+  padding: 0;
+}
+
+/* Multi-carousel container for news bottom section */
+#newsBottomMultiCarousel {
+  cursor: grab;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#newsBottomMultiCarousel.dragging {
+  cursor: grabbing;
+}
+
+#newsBottomCarouselInner {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Desktop: 3 items per slide (33.33% each) */
+#newsBottomMultiCarousel .multi-carousel-item,
+#newsBottomMultiCarousel .clone {
+  box-sizing: border-box;
+  flex: 0 0 33.33333333333333%;
+  padding: 0 15px;
+  position: relative;
+}
+
+/* Carousel controls positioning - override art-culture-carousel-control */
+.news-bottom-carousel-wrapper .multi-carousel-control-prev,
+.news-bottom-carousel-wrapper .multi-carousel-control-next {
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  width: 40px;
+  z-index: 10;
+  opacity: 1;
+  padding: 0;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-prev {
+  left: -50px;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-next {
+  right: -50px;
+}
+
+.news-bottom-carousel-wrapper .multi-carousel-control-prev:hover:not(.disabled),
+.news-bottom-carousel-wrapper .multi-carousel-control-next:hover:not(.disabled) {
+  opacity: 0.8;
+}
+
+.news-bottom-carousel-wrapper .art-culture-carousel-control img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Desktop carousel controls positioning */
+@media (min-width: 768px) {
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev {
+    left: -50px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    right: -50px;
+  }
+}
+
+.news-bottom-card {
+  position: relative;
+}
+
+.news-bottom-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.news-bottom-content {
+  padding: 0;
+}
+
+.news-bottom-title {
+  color: var(--dark-green);
+  font-size: 24px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.news-bottom-subtitle {
+  color: var(--dark-green);
+  font-weight: var(--fw-light);
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-sidebar {
+  padding: 0 25px;
+}
+
+.news-bottom-section .col-md-4 {
+  padding: 0 15px;
+}
+
+.banner-image {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+}
+
+.article-figure {
+  max-width: 860px;
+  /* chiều rộng tối đa của ảnh trong bài */
+  margin: 2rem auto;
+  /* căn giữa theo container */
+  text-align: center;
+}
+
+.article-figure+.article-figure {
+  margin-top: 1.2rem;
+  /* khoảng cách giữa 2 ảnh nếu có */
+}
+
+.article-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  /* nếu bạn muốn crop để chiếm đầy khung, đổi height & dùng object-fit */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Caption style */
+.article-caption {
+  margin-top: 0.6rem;
+  color: var(--dark-green);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* === LỚP CHUNG (down): ghi đè dần từ lớn → nhỏ === */
+/* ≤1399.98 = xl & down */
+@media (max-width: 1399.98px) {
+  /* override chung cho ≤xl */
+}
+
+/* ≤1199.98 = lg & down */
+@media (max-width: 1199.98px) {
+
+  /* override chung cho ≤lg */
+  .news-main-title {
+    font-size: 66px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev,
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    top: 25%;
+  }
+}
+
+/* ≤991.98 = md & down (tablet & phone) */
+@media (max-width: 991.98px) {
+
+  /* override chung cho ≤md */
+  .news-main-title {
+    font-size: 55px;
+  }
+}
+
+/* ≤767.98 = sm & down (phone) */
+@media (max-width: 767.98px) {
+
+  /* override chung cho ≤sm */
+  .news-page-title {
+    font-size: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  .news-main-title {
+    font-size: 44px;
+  }
+
+  /* .news-text {
+    font-size: 16px;
+  } */
+
+  .news-bottom-title {
+    font-size: 20px;
+  }
+
+  .news-bottom-subtitle {
+    font-size: 14px;
+  }
+
+  .news-play-button {
+    width: 60px;
+    height: 60px;
+  }
+
+  .news-play-button i {
+    font-size: 24px;
+  }
+
+  .news-bottom-section {
+    padding: 1rem 0 4rem 0;
+  }
+
+  /* Mobile: 1 item per slide (100%) */
+  #newsBottomMultiCarousel .multi-carousel-item,
+  #newsBottomMultiCarousel .clone {
+    flex: 0 0 100%;
+    padding: 0 2rem;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev,
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .news-bottom-carousel-wrapper .art-culture-carousel-control img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-prev {
+    left: -15px;
+  }
+
+  .news-bottom-carousel-wrapper .multi-carousel-control-next {
+    right: -15px;
+  }
+
+  .news-main-section {
+    padding: 0rem 0 2rem 0;
+  }
+
+  .article-figure {
+    max-width: 100%;
+    margin: 1.2rem 0;
+  }
+
+  .article-caption {
+    padding: 0 1rem;
+    color: var(--dark-green);
+  }
+}
+
+/* ≤575.98 = xs (phone nhỏ) */
+@media (max-width: 575.98px) {
+
+  /* override chung cho ≤xs */
+  .news-main-title {
+    font-size: 33px;
+  }
+}
+
+/* === LỚP RIÊNG (range): chỉ áp cho đúng 1 band === */
+/* xxl only: ≥1400 */
+@media (min-width: 1400px) {
+  /* override riêng cho xxl nếu cần */
+}
+
+/* xl only: 1200–1399.98 */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  /* override chỉ xl */
+}
+
+/* lg only: 992–1199.98 */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* override chỉ lg (laptop phổ biến) */
+}
+
+/* md only: 768–991.98 */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* override chỉ md (tablet) */
+}
+
+/* sm only: 576–767.98 */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* override chỉ sm (phone lớn) */
+}

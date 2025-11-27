@@ -1,0 +1,313 @@
+{
+  "heritageFigures": [
+    {
+      "id": 1,
+      "urlSlug": "sir-niels-lan-doky.html",
+      "fullName": "SIR NIELS LAN DOKY",
+      "title": "Knight Of Jazz",
+      "imageUrl": "assets/media/people-heritage/niels-lan-doky-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/niels-lan-doky-small.png",
+      "heroImageUrl": "assets/media/people-heritage/niels-lan-doky-hero.png",
+      "category": "Music",
+      "published": true,
+      "headerLetter": "QUÝ",
+      "summary": [
+        "Rất khó để \"y phục xứng kỳ đức\", nhưng với Niels Lan Doky, danh xưng \"Hiệp sĩ\" đến như một lẽ tự nhiên. Gặp anh, ta thấy điều đó càng hiển nhiên. Sự nghiệp của anh là minh chứng cho tất cả những gì có thể định nghĩa về \"world-class\". Con người anh toát lên tinh hoa của một tư duy Bắc Âu đỉnh cao, hòa cùng nét hào hoa của một tư sản Đông phương.",
+        "Bởi thế, khi anh nhắc về cha, về Việt Nam, về phương Đông – tất cả đều vừa xa vợi, lại vừa gần gũi, như một nguồn cảm hứng nhưng cũng chính là máu thịt. Câu chuyện với anh là điệu jazz hòa cùng \"tiếng sáo thiên thai\", đưa ta tới cõi mênh mang của âm nhạc, của tình yêu và của tình người.",
+        "Ở nơi đó, Quý - Tinh hoa bao hàm cả giá trị nghệ thuật xuất sắc và tình thương mến bao la kết nối trái tim mọi con người."
+      ],
+      "introduction": "Niels Lan Doky (tên Việt: Đỗ Kỳ Lân, sinh năm 1963), một trong những nghệ sĩ piano jazz gốc Việt được thế giới ngưỡng mộ, mang hai dòng máu Việt – Đan Mạch. Báo chí quốc tế dành cho anh những lời ngợi ca đặc biệt: Swing Journal (Nhật Bản) gọi anh là \"nghệ sĩ piano xuất sắc nhất thế hệ\", báo The New York Times (Mỹ) nhận định âm nhạc của anh \"tươi mới và quyến rũ\", còn tờ El Diario (Tây Ban Nha) tôn vinh anh như \"một trong những nghệ sĩ piano châu Âu quan trọng nhất trong 50 năm qua\".",
+      "sections": [
+        {
+          "title": "Thành tựu & Tước vị",
+          "type": "text",
+          "content": "Được Nữ hoàng Đan Mạch Margrethe II phong tước Hiệp sĩ (2010), khẳng định vị thế trên bản đồ jazz thế giới."
+        },
+        {
+          "title": "Sự nghiệp & Đóng góp",
+          "type": "list",
+          "items": [
+            "Theo học tại Berklee College of Music (Mỹ) từ năm 1981.",
+            "Phát hành hơn 46 album qua nhiều thập kỷ sáng tạo.",
+            "Phong cách đặc trưng: Kết hợp tinh tế giữa sự trữ tình, lãng mạn của Bắc Âu và nhịp điệu phóng khoáng của jazz Mỹ.",
+            "Tạo dấu ấn đặc biệt với các album mang âm hưởng Á Đông như Asian Sessions (1999) và Haitek Haiku (2001).",
+            "Biểu diễn tại các sân khấu danh giá (Royal Albert Hall, Carnegie Hall, Blue Note Jazz Club).",
+            "Hợp tác với các huyền thoại nhạc jazz thế giới như Pat Metheny, Michael Brecker, Ray Brown.",
+            "Ngoài vai trò nghệ sĩ piano, ông còn là đạo diễn, tác giả và diễn giả quốc tế (TEDx Talks)."
+          ]
+        }
+      ],
+      "quote": "Trong âm nhạc của anh, ứng tấu là linh hồn. Anh chơi nhạc như đang trò chuyện, không khuôn mẫu, không lặp lại. Anh tin rằng \"Không có nốt nhạc sai,\" bởi vì jazz không tìm sự hoàn hảo mà tìm sự sống động trong từng khoảnh khắc. Khi đó, âm nhạc chỉ còn là cuộc đối thoại giữa con người với không gian và thời gian.",
+      "highlights": [
+        {
+          "question": "Nếu để lại một di sản cho thế hệ tương lai, anh sẽ chọn điều gì và vì sao?",
+          "answer": [
+            "Cả trong âm nhạc và đời sống, tôi sẽ nói rằng: đi theo con tim, để cuộc đời đưa bạn tới những miền chưa biết. Đừng sợ mắc lỗi - biến mỗi nốt nhạc sai thành một nốt nhạc hay bằng những gì bạn chơi sau đó. Đó chính là cốt tuỷ của ngẫu hứng và của cuộc đời."
+          ]
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "urlSlug": "quoc-trung.html",
+      "fullName": "QUỐC TRUNG",
+      "title": "Nhạc Sĩ",
+      "imageUrl": "assets/media/people-heritage/quoc-trung-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/quoc-trung-small.png",
+      "heroImageUrl": "assets/media/people-heritage/quoc-trung-hero.png",
+      "category": "Music",
+      "published": true,
+      "headerLetter": "TRUNG",
+      "summary": [
+        "Quốc Trung là một trong những nhạc sĩ tài năng nhất của Việt Nam, với sự kết hợp hoàn hảo giữa kỹ thuật cao siêu và cảm xúc sâu sắc.",
+        "Anh không chỉ là một nhạc sĩ xuất sắc mà còn là một giáo viên tâm huyết, truyền cảm hứng cho thế hệ trẻ yêu nhạc.",
+        "Sự đóng góp của anh cho nền âm nhạc Việt Nam là vô cùng to lớn, từ sáng tác đến giảng dạy và biểu diễn."
+      ],
+      "introduction": "QUỐC TRUNG là một nhạc sĩ tầm vóc quốc tế, được công nhận rộng rãi vì tài năng và đóng góp của mình trong lĩnh vực nhạc cổ điển.",
+      "sections": [
+        {
+          "title": "Sự nghiệp",
+          "type": "list",
+          "items": [
+            "Tốt nghiệp từ các trường âm nhạc danh tiếng trên thế giới",
+            "Biểu diễn tại các sân khấu quốc tế nổi tiếng",
+            "Đóng góp quan trọng trong phát triển nền âm nhạc Việt Nam"
+          ]
+        }
+      ],
+      "quote": "Trong âm nhạc của anh, cái đẹp gắn liền với sự tử tế, và sự sáng tạo luôn song hành cùng nhân cách. Đó là di sản tinh tế nhất mà anh để lại: tiêu chuẩn sống và làm nghề ở tầm thế giới, nhưng bắt đầu từ sự trung thực và tự trọng của từng nốt nhạc.",
+      "highlights": [
+        {
+          "question": "Tinh thần đóng vai trò quan trọng ra sao trong đời sống \"well-being\" của anh?",
+          "answer": [
+            "Sự kiên nhẫn và tĩnh lặng giờ không còn nữa, nên đời sống cũng kém lãng mạn hơn. Người ta không đọc sách dày hay tiểu thuyết mà chỉ thích lướt mấy giây trên TikTok, thông tin chớp nhoáng. Đôi khi tôi tự hỏi, hay là vì thời mình \"nhiễm\" cách sống của quý tộc phương Tây?",
+            "\"Tinh thần quý tộc ở đây\" là gì? Là phải galant, phải lãng mạn, thà chết chứ không làm những điều xấu xa, thà giữ danh dự còn hơn để bị hủy hoại. Giờ thì khác trước nhiều. Người ta bớt lãng mạn dù có rất nhiều điều kiện.",
+            "Trong cuộc sống, \"tinh thần quý tộc\" rất quan trọng. Nếu mình coi giá trị tinh thần là điều quý giá nhất trong đời sống và trải nghiệm thì \"tinh thần quý tộc\" chính là như vậy. Người ta sẽ yêu cái đẹp, yêu nghệ thuật, sống nhân văn, chính trực và lãng mạn."
+          ]
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "urlSlug": "pham-hoang-nam.html",
+      "fullName": "PHẠM HOÀNG NAM",
+      "title": "Đạo Diễn",
+      "imageUrl": "assets/media/people-heritage/pham-hoang-nam-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/pham-hoang-nam-small.png",
+      "heroImageUrl": "assets/media/people-heritage/pham-hoang-nam-hero.png",
+      "category": "Arts",
+      "published": true,
+      "headerLetter": "NAM",
+      "summary": [
+        "Phạm Hoàng Nam là một tổng đạo diễn tài ba, người đã để lại dấu ấn sâu đậm trong lĩnh vực sân khấu và điện ảnh Việt Nam.",
+        "Anh được biết đến với những sáng tạo táo bạo và tầm nhìn sâu sắc về nghệ thuật biểu diễn.",
+        "Những tác phẩm của anh đã được công nhận và tôn vinh ở cả trong nước và quốc tế."
+      ],
+      "introduction": "Phạm Hoàng Nam là một đạo diễn nổi tiếng, có nhiều đóng góp quan trọng cho nền điện ảnh và sân khấu Việt Nam.",
+      "sections": [
+        {
+          "title": "Những công trình tiêu biểu",
+          "type": "list",
+          "items": [
+            "Đạo diễn nhiều tác phẩm sân khấu nổi tiếng",
+            "Hợp tác với các nghệ sĩ hàng đầu",
+            "Tổ chức các sự kiện văn hóa quy mô lớn"
+          ]
+        }
+      ],
+      "quote": "Sâu nuôi tình yêu với nghệ thuật để tạo những tác phẩm có giá trị.",
+      "highlights": [],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 4,
+      "urlSlug": "bui-cong-duy.html",
+      "fullName": "BÙI CÔNG DUY",
+      "title": "Nghệ Sĩ Nhân Dân",
+      "imageUrl": "assets/media/people-heritage/bui-cong-duy-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/bui-cong-duy-small.png",
+      "heroImageUrl": "assets/media/people-heritage/bui-cong-duy-hero.png",
+      "category": "Music",
+      "published": true,
+      "headerLetter": "CÔNG",
+      "summary": [
+        "Nghĩ tới Bùi Công Duy là nghĩ đến một tài năng hiếm trong âm nhạc, với ngoại hình và nội tâm dễ được mến mộ. Anh đến với thành công sớm:những giải thưởng âm nhạc quốc tế, danh hiệu Nghệ sĩ Nhân dân khi mới ngoài bốn mươi tuổi, một cuộc \"hôn nhân nghệ thuật\", và đóng góp bền bỉ trong giảng dạy, đào tạo, ươm mầm.",
+        "Nhưng ở phía bên kia của thành công là áp lực của người luôn đi đầu, luôn phải làm người cầm đuốc – người giữ lửa. Ngọn lửa ấy vừa sưởi ấm, vừa đốt cháy.",
+        "Khi im bặt tiếng vỗ tay, Bùi Công Duy có \"thời gian\" và \"không gian\" cho riêng mình không – khoảng lặng nào để ngọn lửa tiếp tục cháy mà không tàn?",
+        "Công, nơi anh, là cống hiến nhưng cũng là khoảng lặng để chiêm nghiệm về nhân sinh."
+      ],
+      "introduction": "Bùi Công Duy (sinh năm 1981 tại Hà Nội) là một trong những nghệ sĩ violin xuất sắc nhất của Việt Nam, được giới chuyên môn quốc tế ví như \"viên ngọc sáng\" của nền âm nhạc cổ điển đương đại, góp phần quan trọng đưa âm nhạc cổ điển Việt Nam vươn tầm thế giới. Tên tuổi của anh gắn liền với nhiều sân khấu lớn tại Pháp, Đức, Ý, Nga, Nhật Bản, Na Uy, Đan Mạch, Mỹ, Phần Lan, Bulgaria, Singapore, Kazakhstan, Trung Quốc.…",
+      "sections": [
+        {
+          "title": "Học vấn & Nền tảng",
+          "type": "list",
+          "items": [
+            "Học tại Nhạc viện TP. Hồ Chí Minh và đi tu nghiệp tại Nhạc viện quốc gia mang tên Tchaikovsky (Moscow, Nga) – cái nôi đào tạo nên nhiều huyền thoại âm nhạc thế giới.",
+            "Năm 1997, giành Giải Nhất cuộc thi Tchaikovsky dành cho lứa tuổi trẻ – một trong những giải thưởng danh giá nhất của âm nhạc cổ điển toàn cầu.",
+            "Trở thành nghệ sĩ violin Việt Nam đầu tiên biểu diễn độc tấu cùng dàn nhạc Berliner Symphoniker tại phòng hòa nhạc Herbert von Karajan Hall (Berlin), nghệ sĩ violin Việt Nam đầu tiên và duy nhất 02 lần biểu diễn độc tấu cùng dàn nhạc giao hưởng cho tổng thống Ý Giorgio Napolitano, Sergio Mattarella và thủ tướng Ý Enrico Letta tại Phòng Cappella Paolina."
+          ]
+        },
+        {
+          "title": "Sự nghiệp & Đóng góp",
+          "type": "list",
+          "items": [
+            "Đảm nhận vai trò nghệ sĩ độc tấu trong các sự kiện ngoại giao cấp cao khi đi hợp tác quốc tế như Hòa nhạc Giao hưởng tại Berlin, các chương trình phục vụ IPU 32, APEC 2017, các chương trình Hòa nhạc đỉnh cao tháp tùng lãnh đạo cấp cao trong nước & quốc tế.",
+            "Biểu diễn trong các chương trình ngoại giao cấp cao chào đón nguyên thủ quốc gia tham gia hội đàm tại Việt Nam.",
+            "Đảm nhận vai trò Phó Giám đốc Học viện Âm nhạc Quốc gia Việt Nam - Vị phó giám đốc trẻ nhất trong lịch sử gần 70 năm của học viện."
+          ]
+        }
+      ],
+      "quote": "Thành công với anh không phải là danh hiệu hay tràng pháo tay, mà là khả năng duy trì và truyền tiếp. Mỗi thế hệ học trò, mỗi chương trình hòa nhạc, mỗi cộng đồng âm nhạc hàn lâm được hình thành đều là một phần của hành trình ấy. Thế nên anh từng nói: \"Điều khiến tôi có thể tự hào nhất có lẽ vẫn chưa diễn ra.\"",
+      "highlights": [
+        {
+          "question": "Điều gì từng khiến anh sợ hãi, sau lại trở thành cảm hứng cho anh?",
+          "answer": [
+            "Sợ nhất chắc là nghe lại chính mình chơi đàn! Lần nào tôi cũng tự hỏi sao mình đánh dở thế nhỉ? Chỗ này lẽ ra mình phải chơi tốt hơn. Và vì quá hiểu mình nên lúc nào cũng thấy đầy lỗi, đầy những điều chưa tốt bày ra.",
+            "Trong đời sống thì khác một chút vì thời gian không quay ngược được. Khúc nhạc đã tấu cũng không sửa được. Và không lần nào giống lần nào nên đấy mới là điều khiến tôi sợ hãi. Và mỗi lần như thế tôi đều tự nhủ lần sau mình sẽ làm tốt hơn.",
+            "Cứ như thế, trong người lúc nào cũng tồn tại cuộc tranh đấu ngấm ngầm giữa tôi và cây đàn. Thường thì tôi tự nhận mình là thua nhiều hơn thắng! Tôi chỉ thắng khi thuần phục được nó, nghĩa là chơi theo ý mình muốn nhưng thường nó sẽ đánh theo ý nó muốn."
+          ]
+        }
+      ],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-19T12:49:10.941Z"
+    },
+    {
+      "id": 5,
+      "urlSlug": "phan-toan-thang.html",
+      "fullName": "PHAN TOÀN THẮNG",
+      "title": "Phó Giáo Sư - Tiến Sĩ - Bác Sĩ",
+      "imageUrl": "assets/media/people-heritage/phan-toan-thang-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/phan-toan-thang-small.png",
+      "heroImageUrl": "assets/media/people-heritage/phan-toan-thang-hero.png",
+      "category": "Science",
+      "published": true,
+      "headerLetter": "THẮNG",
+      "summary": [
+        "Phó Giáo Sư Phan Toàn Thắng là một nhà khoa học nổi tiếng, với những đóng góp đáng kể trong lĩnh vực y học và nghiên cứu khoa học.",
+        "Với trình độ tiến sĩ và kinh nghiệm lâu năm, anh đã trở thành một trong những chuyên gia hàng đầu trong lĩnh vực của mình.",
+        "Anh không chỉ tập trung vào nghiên cứu mà còn cũng cấp y tế cho cộng đồng một cách tâm huyết."
+      ],
+      "introduction": "Phó Giáo Sư - Tiến Sĩ - Bác Sĩ Phan Toàn Thắng là một chuyên gia y khoa nổi bật với những công trình nghiên cứu đáng chú ý.",
+      "sections": [
+        {
+          "title": "Thành tựu học thuật",
+          "type": "list",
+          "items": [
+            "Tiến sĩ trong lĩnh vực y học",
+            "Phó Giáo Sư tại các trường đại học hàng đầu",
+            "Công bố nhiều bài nghiên cứu khoa học"
+          ]
+        }
+      ],
+      "quote": "Khoa học và y học vì sự phát triển của con người.",
+      "highlights": [],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 6,
+      "urlSlug": "nguyen-phuong-lam.html",
+      "fullName": "NGUYỄN PHƯƠNG LAM",
+      "title": "Nhà Hảo Tâm",
+      "imageUrl": "assets/media/people-heritage/nguyen-phuong-lam-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-phuong-lam-small.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-phuong-lam-hero.png",
+      "category": "Social & Business",
+      "published": true,
+      "headerLetter": "LAM",
+      "summary": [
+        "Nguyễn Phương Lam là một nhà hảo tâm nổi tiếng, người đã dành phần lớn cuộc đời mình để giúp đỡ những người kém may mắn.",
+        "Anh là một trong những doanh nhân thành công, nhưng danh tiếng của anh không chỉ nằm ở công sở mà còn ở những đóng góp xã hội.",
+        "Với tâm huyết và tấm lòng vàng, anh đã tạo ra những thay đổi tích cực trong cộng đồng."
+      ],
+      "introduction": "Nguyễn Phương Lam là một doanh nhân thành công và nhà hảo tâm tận tụy, với những công trình từ thiện đáng kể.",
+      "sections": [
+        {
+          "title": "Những công trình từ thiện",
+          "type": "list",
+          "items": [
+            "Thành lập các quỹ từ thiện hỗ trợ giáo dục",
+            "Xây dựng các cơ sở chăm sóc sức khỏe cộng đồng",
+            "Tổ chức các chương trình hỗ trợ người nghèo"
+          ]
+        }
+      ],
+      "quote": "Hảo tâm không phải là cho đi mà là sống có trách nhiệm với cộng đồng.",
+      "highlights": [],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 7,
+      "urlSlug": "nguyen-tuong-bach.html",
+      "fullName": "NGUYỄN TƯỜNG BÁCH",
+      "title": "Nhà Văn",
+      "imageUrl": "assets/media/people-heritage/nguyen-tuong-bach-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-tuong-bach-small.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-tuong-bach-hero.png",
+      "category": "Arts & Culture",
+      "published": true,
+      "headerLetter": "BÁCH",
+      "summary": [
+        "Nhà văn Nguyễn Tường Bách là một trong những tác giả nổi bật của Việt Nam, với những tác phẩm sâu sắc và ý nghĩa.",
+        "Anh được biết đến với phong cách viết độc đáo và cách kể chuyện có sức hút mạnh mẽ.",
+        "Các tác phẩm của anh đã được dịch và xuất bản ở nhiều nước trên thế giới."
+      ],
+      "introduction": "Nguyễn Tường Bách là một nhà văn tài năng, có những đóng góp quan trọng cho nền văn học Việt Nam.",
+      "sections": [
+        {
+          "title": "Những tác phẩm tiêu biểu",
+          "type": "list",
+          "items": [
+            "Viết nhiều tiểu thuyết nổi tiếng",
+            "Công bố các tác phẩm sinh động và có giá trị sâu sắc",
+            "Nhận được các giải thưởng văn học quốc tế"
+          ]
+        }
+      ],
+      "quote": "Văn học là chiếc cầu nối giữa những trái tim.",
+      "highlights": [],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    },
+    {
+      "id": 8,
+      "urlSlug": "nguyen-xuan-phuong.html",
+      "fullName": "NGUYỄN XUÂN PHƯỢNG",
+      "title": "Phóng Viên - Tác Giả",
+      "imageUrl": "assets/media/people-heritage/nguyen-xuan-phuong-portrait.png",
+      "smallImageUrl": "assets/media/people-heritage/nguyen-xuan-phuong-small.png",
+      "heroImageUrl": "assets/media/people-heritage/nguyen-xuan-phuong-hero.png",
+      "category": "Arts & Culture",
+      "published": true,
+      "headerLetter": "PHƯỢNG",
+      "summary": [
+        "Nguyễn Xuân Phượng là một phóng viên và tác giả có tiếng, người đã dành sự nghiệp để tìm kiếm sự thật và kể những câu chuyện có ý nghĩa.",
+        "Anh được biết đến với những bài viết sâu sắc, có tác động mạnh mẽ đến xã hội.",
+        "Công trình của anh đã góp phần nâng cao nhận thức cộng đồng về những vấn đề xã hội quan trọng."
+      ],
+      "introduction": "Nguyễn Xuân Phượng là một nhà báo và tác giả xuất sắc, với sự cống hiến lâu dài cho báo chí và văn học.",
+      "sections": [
+        {
+          "title": "Sự nghiệp báo chí",
+          "type": "list",
+          "items": [
+            "Công tác tại các cơ quan báo chí hàng đầu",
+            "Viết các bài investigative journalism có tác động",
+            "Xuất bản nhiều cuốn sách về các vấn đề xã hội"
+          ]
+        }
+      ],
+      "quote": "Báo chí là giọng nói của dân chúng.",
+      "highlights": [],
+      "createdAt": "2025-11-15T00:00:00Z",
+      "updatedAt": "2025-11-15T00:00:00Z"
+    }
+  ],
+  "heritageCategories": []
+}
