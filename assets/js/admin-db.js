@@ -562,6 +562,12 @@ class LivingHeritageAdminDB {
     this.currentEditId = id;
     this.currentEditLanguage = language;
 
+    // Clear Quill editor content when opening modal
+    const contentId = language === 'en' ? 'newsContentEn' : 'newsContent';
+    if (window.updateQuillContent) {
+      window.updateQuillContent(contentId, '');
+    }
+
     if (id) {
       document.getElementById('newsModalTitle').textContent = 'Edit News Article';
       try {

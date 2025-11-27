@@ -1030,13 +1030,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Store Quill editor instances
   window.quillEditors = {};
 
-  // Initialize Quill editors
+  // Initialize Quill editors (only once)
   const initQuillEditors = () => {
     // Vietnamese news editor
-    if (document.getElementById('newsContent')) {
-      if (window.quillEditors.newsContent) {
-        window.quillEditors.newsContent = null;
-      }
+    if (document.getElementById('newsContent') && !window.quillEditors.newsContent) {
       window.quillEditors.newsContent = new Quill('#newsContent', {
         theme: 'snow',
         height: 400,
@@ -1057,10 +1054,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // English news editor
-    if (document.getElementById('newsContentEn')) {
-      if (window.quillEditors.newsContentEn) {
-        window.quillEditors.newsContentEn = null;
-      }
+    if (document.getElementById('newsContentEn') && !window.quillEditors.newsContentEn) {
       window.quillEditors.newsContentEn = new Quill('#newsContentEn', {
         theme: 'snow',
         height: 400,
@@ -1081,34 +1075,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   };
 
-  // Initialize on page load
+  // Initialize on page load (only once)
   initQuillEditors();
-
-  // Reinitialize when modals open
-  const newsModal = document.getElementById('newsModal');
-  const newsModalEn = document.getElementById('newsModalEn');
-
-  const observer = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      if (mutation.attributeName === 'style') {
-        const newsModalVisible = newsModal.style.display !== 'none';
-        const newsModalEnVisible = newsModalEn.style.display !== 'none';
-
-        if (newsModalVisible || newsModalEnVisible) {
-          setTimeout(initQuillEditors, 100);
-        }
-      }
-    });
-  });
-
-  observer.observe(newsModal, { attributes: true });
-  observer.observe(newsModalEn, { attributes: true });
 
   // Helper function to set Quill content (expose globally for admin-db.js)
   window.updateQuillContent = function(editorId, content) {
     if (window.quillEditors[editorId]) {
-      if (content) {
+      // Use setContents with 'silent' mode to avoid triggering change events
+      if (content && content.trim()) {
         window.quillEditors[editorId].root.innerHTML = content;
+      } else {
+        // Clear the editor
+        window.quillEditors[editorId].setContents([]);
       }
     }
   };
@@ -1116,7 +1094,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Helper function to get Quill content
   window.getQuillContent = function(editorId) {
     if (window.quillEditors[editorId]) {
-      return window.quillEditors[editorId].root.innerHTML;
+      // Get HTML content from the editor
+      const html = window.quillEditors[editorId].root.innerHTML;
+      // Return empty string if only contains empty paragraph
+      return (html === '<p><br></p>' || html === '') ? '' : html;
     }
     return '';
   };
