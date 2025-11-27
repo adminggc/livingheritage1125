@@ -1,0 +1,220 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | Living Heritage</title>
+    <link href="assets/css/bootstrap.min.css?v=1" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <button id="new-article" class="btn btn-primary mb-3">New Article</button>
+        <div id="articles-list"></div>
+    </div>
+
+    <div class="modal fade" id="editor-modal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editor-title">Edit Article</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editor-form">
+                        <input type="hidden" id="slug">
+                        <div class="mb-3">
+                            <label for="slug-editor" class="form-label">Slug</label>
+                            <input type="text" class="form-control" id="slug-editor" required>
+                        </div>
+                        <hr>
+                        <h4>Vietnamese</h4>
+                        <div class="mb-3">
+                            <label for="title-vi" class="form-label">Title (VI)</label>
+                            <input type="text" class="form-control" id="title-vi" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="hero-image-url-vi" class="form-label">Hero Image URL (VI)</label>
+                            <input type="text" class="form-control" id="hero-image-url-vi">
+                        </div>
+                        <div class="mb-3">
+                            <label for="content-body-vi" class="form-label">Content (VI)</label>
+                            <textarea class="form-control" id="content-body-vi" rows="10"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cover-image-vi" class="form-label">Cover Image (VI)</label>
+                            <input type="text" class="form-control" id="cover-image-vi">
+                        </div>
+                        <hr>
+                        <h4>English</h4>
+                        <div class="mb-3">
+                            <label for="title-en" class="form-label">Title (EN)</label>
+                            <input type="text" class="form-control" id="title-en" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="hero-image-url-en" class="form-label">Hero Image URL (EN)</label>
+                            <input type="text" class="form-control" id="hero-image-url-en">
+                        </div>
+                        <div class="mb-3">
+                            <label for="content-body-en" class="form-label">Content (EN)</label>
+                            <textarea class="form-control" id="content-body-en" rows="10"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="cover-image-en" class="form-label">Cover Image (EN)</label>
+                            <input type="text" class="form-control" id="cover-image-en">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="save-article">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const articlesList = document.getElementById('articles-list');
+            const newArticleBtn = document.getElementById('new-article');
+            const editorModal = new bootstrap.Modal(document.getElementById('editor-modal'));
+            const editorForm = document.getElementById('editor-form');
+            const editorTitle = document.getElementById('editor-title');
+            const saveArticleBtn = document.getElementById('save-article');
+
+            let db = {};
+
+            function renderArticles() {
+                articlesList.innerHTML = '';
+                db.articles.forEach(article => {
+                    const articleEl = document.createElement('div');
+                    articleEl.classList.add('card', 'mb-3');
+                    articleEl.innerHTML = `
+                        <div class="card-body">
+                            <h5 class="card-title">${article.slug}</h5>
+                            <button class="btn btn-sm btn-primary edit-btn" data-slug="${article.slug}">Edit</button>
+                            <button class="btn btn-sm btn-danger delete-btn" data-slug="${article.slug}">Delete</button>
+                        </div>
+                    `;
+                    articlesList.appendChild(articleEl);
+                });
+            }
+
+            function openEditor(article) {
+                editorForm.reset();
+                if (article) {
+                    editorTitle.textContent = 'Edit Article';
+                    document.getElementById('slug').value = article.slug;
+                    document.getElementById('slug-editor').value = article.slug;
+                    document.getElementById('title-vi').value = article.vi.title;
+                    document.getElementById('hero-image-url-vi').value = article.vi.heroImageUrl;
+                    document.getElementById('content-body-vi').value = article.vi.contentBody;
+                    document.getElementById('cover-image-vi').value = article.vi.coverImage;
+                    document.getElementById('title-en').value = article.en.title;
+                    document.getElementById('hero-image-url-en').value = article.en.heroImageUrl;
+                    document.getElementById('content-body-en').value = article.en.contentBody;
+                    document.getElementById('cover-image-en').value = article.en.coverImage;
+                } else {
+                    editorTitle.textContent = 'New Article';
+                    document.getElementById('slug').value = '';
+                }
+                editorModal.show();
+            }
+
+            function saveArticle() {
+                const slug = document.getElementById('slug').value;
+                const newSlug = document.getElementById('slug-editor').value;
+                const articleData = {
+                    slug: newSlug,
+                    vi: {
+                        title: document.getElementById('title-vi').value,
+                        heroImageUrl: document.getElementById('hero-image-url-vi').value,
+                        contentBody: document.getElementById('content-body-vi').value,
+                        coverImage: document.getElementById('cover-image-vi').value
+                    },
+                    en: {
+                        title: document.getElementById('title-en').value,
+                        heroImageUrl: document.getElementById('hero-image-url-en').value,
+                        contentBody: document.getElementById('content-body-en').value,
+                        coverImage: document.getElementById('cover-image-en').value
+                    }
+                };
+
+                if (slug) { // Editing
+                    const index = db.articles.findIndex(a => a.slug === slug);
+                    db.articles[index] = articleData;
+                } else { // Creating
+                    db.articles.push(articleData);
+                }
+                
+                renderArticles();
+                editorModal.hide();
+                downloadDb();
+            }
+
+            function deleteArticle(slug) {
+                if (confirm('Are you sure you want to delete this article?')) {
+                    db.articles = db.articles.filter(a => a.slug !== slug);
+                    renderArticles();
+                    downloadDb();
+                }
+            }
+            
+            function downloadDb() {
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(db, null, 2));
+                const downloadAnchorNode = document.createElement('a');
+                downloadAnchorNode.setAttribute("href", dataStr);
+                downloadAnchorNode.setAttribute("download", "db.json");
+                document.body.appendChild(downloadAnchorNode);
+                downloadAnchorNode.click();
+                downloadAnchorNode.remove();
+            }
+
+            articlesList.addEventListener('click', function (e) {
+                if (e.target.classList.contains('edit-btn')) {
+                    const slug = e.target.dataset.slug;
+                    const article = db.articles.find(a => a.slug === slug);
+                    openEditor(article);
+                }
+                if (e.target.classList.contains('delete-btn')) {
+                    const slug = e.target.dataset.slug;
+                    deleteArticle(slug);
+                }
+            });
+
+            newArticleBtn.addEventListener('click', () => openEditor(null));
+            saveArticleBtn.addEventListener('click', saveArticle);
+
+            // Password prompt
+            const password = prompt('Enter password:');
+            if (password !== 'admin') {
+                alert('Incorrect password');
+                document.body.innerHTML = '<h1>Unauthorized</h1>';
+                return;
+            }
+
+            // Load initial data
+            fetch('db.json')
+                .then(response => response.json())
+                .then(data => {
+                    db = data;
+                    renderArticles();
+                });
+        });
+    </script>
+</body>
+
+</html>
