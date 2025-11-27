@@ -177,6 +177,66 @@ class LivingHeritageAdminDB {
       tipsFormEn.addEventListener('submit', (e) => this.saveTip(e));
     }
 
+    // Add News buttons
+    const addNewsBtn = document.getElementById('addNewsBtn');
+    if (addNewsBtn) {
+      addNewsBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openNewsModal(null, 'vi');
+      });
+    }
+
+    const addNewsBtnEn = document.getElementById('addNewsBtnEn');
+    if (addNewsBtnEn) {
+      addNewsBtnEn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openNewsModal(null, 'en');
+      });
+    }
+
+    // Add Profile buttons
+    const addProfileBtn = document.getElementById('addProfileBtn');
+    if (addProfileBtn) {
+      addProfileBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openProfileModal(null, 'vi');
+      });
+    }
+
+    const addProfileBtnEn = document.getElementById('addProfileBtnEn');
+    if (addProfileBtnEn) {
+      addProfileBtnEn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openProfileModal(null, 'en');
+      });
+    }
+
+    // Add Tips buttons
+    const addTipBtn = document.getElementById('addTipBtn');
+    if (addTipBtn) {
+      addTipBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openTipsModal(null, 'vi');
+      });
+    }
+
+    const addTipBtnEn = document.getElementById('addTipBtnEn');
+    if (addTipBtnEn) {
+      addTipBtnEn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openTipsModal(null, 'en');
+      });
+    }
+
+    // Add Banner button
+    const addBannerBtn = document.getElementById('addBannerBtn');
+    if (addBannerBtn) {
+      addBannerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.openBannerModal(null);
+      });
+    }
+
     // Add Q&A buttons for Heritage Figures (VI & EN)
     const addHighlightBtn = document.getElementById('addHighlightBtn');
     if (addHighlightBtn) {

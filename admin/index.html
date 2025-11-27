@@ -9,6 +9,22 @@
   <!-- Quill Rich Text Editor (Free, Open Source) -->
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <style>
+    /* Custom styling for Quill editor */
+    .ql-toolbar.ql-snow {
+      border: 1px solid #ddd;
+      border-bottom: none;
+    }
+    .ql-container.ql-snow {
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+    .ql-editor {
+      min-height: 300px;
+      max-height: 600px;
+      overflow-y: auto;
+    }
+  </style>
 </head>
 <body>
 
@@ -1030,26 +1046,68 @@ document.addEventListener('DOMContentLoaded', function() {
   // Store Quill editor instances
   window.quillEditors = {};
 
+  // Register YouTube embed handler
+  const blockEmbedHandler = {
+    match: function(url) {
+      return /^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie|vimeo)\.(com|be)\//.test(url);
+    },
+    embed: function(url) {
+      let id;
+      let type = 'youtube';
+
+      // YouTube URLs
+      if (/^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\//.test(url)) {
+        type = 'youtube';
+        if (url.includes('youtu.be/')) {
+          id = url.split('youtu.be/')[1].split('?')[0];
+        } else if (url.includes('youtube.com/watch')) {
+          id = url.split('v=')[1].split('&')[0];
+        } else if (url.includes('youtube.com/embed/')) {
+          id = url.split('embed/')[1].split('?')[0];
+        }
+      }
+      // Vimeo URLs
+      else if (/vimeo\.com\//.test(url)) {
+        type = 'vimeo';
+        id = url.split('vimeo.com/')[1].split('?')[0];
+      }
+
+      if (!id) return false;
+
+      if (type === 'youtube') {
+        return '<iframe class="ql-video" src="https://www.youtube.com/embed/' + id + '" allowfullscreen></iframe>';
+      } else if (type === 'vimeo') {
+        return '<iframe class="ql-video" src="https://player.vimeo.com/video/' + id + '" allowfullscreen></iframe>';
+      }
+      return false;
+    }
+  };
+
   // Initialize Quill editors (only once)
   const initQuillEditors = () => {
+    const toolbarConfig = [
+      ['bold', 'italic', 'underline', 'strike'],
+      ['blockquote', 'code-block'],
+      [{ 'header': 1 }, { 'header': 2 }],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'align': [] }],
+      ['link', 'image', 'video'],
+      ['clean']
+    ];
+
     // Vietnamese news editor
     if (document.getElementById('newsContent') && !window.quillEditors.newsContent) {
       window.quillEditors.newsContent = new Quill('#newsContent', {
         theme: 'snow',
-        height: 400,
         modules: {
-          toolbar: [
-            ['bold', 'italic', 'underline', 'strike'],
-            ['blockquote', 'code-block'],
-            [{ 'header': 1 }, { 'header': 2 }],
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'align': [] }],
-            ['link', 'image'],
-            ['clean']
-          ]
+          toolbar: toolbarConfig,
+          clipboard: {
+            matchVisual: false
+          }
         },
-        placeholder: 'Full article content (can be HTML)...'
+        formats: ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'header', 'list', 'color', 'background', 'align', 'link', 'image', 'video'],
+        placeholder: 'Full article content - use toolbar to add text, images, videos, links...'
       });
     }
 
@@ -1057,20 +1115,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('newsContentEn') && !window.quillEditors.newsContentEn) {
       window.quillEditors.newsContentEn = new Quill('#newsContentEn', {
         theme: 'snow',
-        height: 400,
         modules: {
-          toolbar: [
-            ['bold', 'italic', 'underline', 'strike'],
-            ['blockquote', 'code-block'],
-            [{ 'header': 1 }, { 'header': 2 }],
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'align': [] }],
-            ['link', 'image'],
-            ['clean']
-          ]
+          toolbar: toolbarConfig,
+          clipboard: {
+            matchVisual: false
+          }
         },
-        placeholder: 'Full article content (can be HTML)...'
+        formats: ['bold', 'italic', 'underline', 'strike', 'blockquote', 'code-block', 'header', 'list', 'color', 'background', 'align', 'link', 'image', 'video'],
+        placeholder: 'Full article content - use toolbar to add text, images, videos, links...'
       });
     }
   };
