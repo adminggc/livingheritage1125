@@ -585,10 +585,10 @@ class LivingHeritageAdminDB {
           document.getElementById(imageId).value = article.imageUrl || '';
           document.getElementById(publishedId).checked = article.published !== false;
 
-          // Update TinyMCE editor content after a short delay
+          // Update Quill editor content after a short delay
           setTimeout(() => {
-            if (window.updateTinyMCEContent) {
-              window.updateTinyMCEContent(contentId, contentValue);
+            if (window.updateQuillContent) {
+              window.updateQuillContent(contentId, contentValue);
             }
           }, 200);
         }
@@ -614,13 +614,10 @@ class LivingHeritageAdminDB {
     const imageId = language === 'en' ? 'newsImageEn' : 'newsImage';
     const publishedId = language === 'en' ? 'newsPublishedEn' : 'newsPublished';
 
-    // Get content from TinyMCE editor if available, otherwise from textarea
+    // Get content from Quill editor if available, otherwise from textarea
     let contentValue = document.getElementById(contentId).value;
-    const editor = tinymce.get(contentId);
-    if (editor) {
-      contentValue = editor.getContent();
-      // Also sync back to textarea
-      document.getElementById(contentId).value = contentValue;
+    if (window.getQuillContent) {
+      contentValue = window.getQuillContent(contentId) || contentValue;
     }
 
     const newsData = {

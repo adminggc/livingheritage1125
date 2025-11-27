@@ -6,8 +6,9 @@
   <title>Living Heritage - Admin Panel</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="../assets/css/admin.css" rel="stylesheet">
-  <!-- TinyMCE HTML Editor -->
-  <script src="https://cdn.tiny.cloud/1/zmwl5jtdng534843uuxvgd9y6h2s71x4qdrx438kjuqc1wks/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <!-- Quill Rich Text Editor (Free, Open Source) -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 </head>
 <body>
 
@@ -1024,69 +1025,69 @@
 
 <script src="../assets/js/admin-db.js"></script>
 <script>
-// Initialize TinyMCE for News Content Editors
+// Initialize Quill for News Content Editors
 document.addEventListener('DOMContentLoaded', function() {
-  // Configuration for TinyMCE
-  const tinymceConfig = {
-    selector: '#newsContent, #newsContentEn',
-    height: 500,
-    menubar: true,
-    plugins: [
-      'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
-      'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-      'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
-    ],
-    toolbar: 'undo redo | blocks | ' +
-      'bold italic forecolor | alignleft aligncenter ' +
-      'alignright alignjustify | bullist numlist outdent indent | ' +
-      'removeformat | image media link | code preview fullscreen | help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
-    images_upload_handler: function (blobInfo, success, failure) {
-      // For now, just return a placeholder or allow pasting image URLs
-      // In production, you'd upload to your server
-      const reader = new FileReader();
-      reader.onload = function() {
-        success(reader.result);
-      };
-      reader.readAsDataURL(blobInfo.blob());
-    },
-    automatic_uploads: false,
-    paste_data_images: true,
-    relative_urls: false,
-    remove_script_host: false,
-    convert_urls: true,
-    branding: false,
-    promotion: false,
-    setup: function(editor) {
-      // Update TinyMCE content when textarea value changes
-      editor.on('init', function() {
-        const textarea = editor.getElement();
-        if (textarea && textarea.value) {
-          editor.setContent(textarea.value);
-        }
+  // Store Quill editor instances
+  window.quillEditors = {};
+
+  // Initialize Quill editors
+  const initQuillEditors = () => {
+    // Vietnamese news editor
+    if (document.getElementById('newsContent')) {
+      if (window.quillEditors.newsContent) {
+        window.quillEditors.newsContent = null;
+      }
+      window.quillEditors.newsContent = new Quill('#newsContent', {
+        theme: 'snow',
+        height: 400,
+        modules: {
+          toolbar: [
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'header': 1 }, { 'header': 2 }],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'align': [] }],
+            ['link', 'image'],
+            ['clean']
+          ]
+        },
+        placeholder: 'Full article content (can be HTML)...'
+      });
+    }
+
+    // English news editor
+    if (document.getElementById('newsContentEn')) {
+      if (window.quillEditors.newsContentEn) {
+        window.quillEditors.newsContentEn = null;
+      }
+      window.quillEditors.newsContentEn = new Quill('#newsContentEn', {
+        theme: 'snow',
+        height: 400,
+        modules: {
+          toolbar: [
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ 'header': 1 }, { 'header': 2 }],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'align': [] }],
+            ['link', 'image'],
+            ['clean']
+          ]
+        },
+        placeholder: 'Full article content (can be HTML)...'
       });
     }
   };
 
-  // Initialize TinyMCE when modals open
+  // Initialize on page load
+  initQuillEditors();
+
+  // Reinitialize when modals open
   const newsModal = document.getElementById('newsModal');
   const newsModalEn = document.getElementById('newsModalEn');
 
-  const initTinyMCE = () => {
-    tinymce.remove('#newsContent');
-    tinymce.remove('#newsContentEn');
-    tinymce.init(tinymceConfig).then(function(editors) {
-      // After editors are initialized, sync content from textareas
-      editors.forEach(function(editor) {
-        const textarea = editor.getElement();
-        if (textarea && textarea.value) {
-          editor.setContent(textarea.value);
-        }
-      });
-    });
-  };
-
-  // Re-initialize when modal opens
   const observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
       if (mutation.attributeName === 'style') {
@@ -1094,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const newsModalEnVisible = newsModalEn.style.display !== 'none';
 
         if (newsModalVisible || newsModalEnVisible) {
-          setTimeout(initTinyMCE, 100);
+          setTimeout(initQuillEditors, 100);
         }
       }
     });
@@ -1103,15 +1104,21 @@ document.addEventListener('DOMContentLoaded', function() {
   observer.observe(newsModal, { attributes: true });
   observer.observe(newsModalEn, { attributes: true });
 
-  // Initial load
-  initTinyMCE();
-
-  // Helper function to update TinyMCE content (expose globally for admin-db.js)
-  window.updateTinyMCEContent = function(editorId, content) {
-    const editor = tinymce.get(editorId);
-    if (editor) {
-      editor.setContent(content || '');
+  // Helper function to set Quill content (expose globally for admin-db.js)
+  window.updateQuillContent = function(editorId, content) {
+    if (window.quillEditors[editorId]) {
+      if (content) {
+        window.quillEditors[editorId].root.innerHTML = content;
+      }
     }
+  };
+
+  // Helper function to get Quill content
+  window.getQuillContent = function(editorId) {
+    if (window.quillEditors[editorId]) {
+      return window.quillEditors[editorId].root.innerHTML;
+    }
+    return '';
   };
 });
 </script>
