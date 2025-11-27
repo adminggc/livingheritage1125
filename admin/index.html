@@ -1046,45 +1046,69 @@ document.addEventListener('DOMContentLoaded', function() {
   // Store Quill editor instances
   window.quillEditors = {};
 
-  // Register YouTube embed handler
-  const blockEmbedHandler = {
-    match: function(url) {
-      return /^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie|vimeo)\.(com|be)\//.test(url);
-    },
-    embed: function(url) {
-      let id;
-      let type = 'youtube';
+  // Helper function to extract YouTube/Vimeo ID from URL
+  const getVideoId = (url) => {
+    let id;
+    let type = 'youtube';
 
-      // YouTube URLs
-      if (/^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\//.test(url)) {
-        type = 'youtube';
-        if (url.includes('youtu.be/')) {
-          id = url.split('youtu.be/')[1].split('?')[0];
-        } else if (url.includes('youtube.com/watch')) {
-          id = url.split('v=')[1].split('&')[0];
-        } else if (url.includes('youtube.com/embed/')) {
-          id = url.split('embed/')[1].split('?')[0];
-        }
-      }
-      // Vimeo URLs
-      else if (/vimeo\.com\//.test(url)) {
-        type = 'vimeo';
-        id = url.split('vimeo.com/')[1].split('?')[0];
-      }
+    if (!url) return null;
 
-      if (!id) return false;
-
-      if (type === 'youtube') {
-        return '<iframe class="ql-video" src="https://www.youtube.com/embed/' + id + '" allowfullscreen></iframe>';
-      } else if (type === 'vimeo') {
-        return '<iframe class="ql-video" src="https://player.vimeo.com/video/' + id + '" allowfullscreen></iframe>';
+    // YouTube URLs
+    if (/^(https?:\/\/)?(www\.)?(youtube|youtu|youtube-nocookie)\.(com|be)\//.test(url)) {
+      type = 'youtube';
+      if (url.includes('youtu.be/')) {
+        id = url.split('youtu.be/')[1].split('?')[0];
+      } else if (url.includes('youtube.com/watch')) {
+        id = url.split('v=')[1] ? url.split('v=')[1].split('&')[0] : null;
+      } else if (url.includes('youtube.com/embed/')) {
+        id = url.split('embed/')[1].split('?')[0];
       }
-      return false;
     }
+    // Vimeo URLs
+    else if (/vimeo\.com\//.test(url)) {
+      type = 'vimeo';
+      id = url.split('vimeo.com/')[1] ? url.split('vimeo.com/')[1].split('?')[0] : null;
+    }
+
+    if (!id) return null;
+    return { type, id };
   };
 
   // Initialize Quill editors (only once)
   const initQuillEditors = () => {
+    // Custom video handler
+    const handleVideoClick = (editor) => {
+      const currentSelection = editor.getSelection();
+      const prompt = window.prompt(
+        'Enter YouTube or Vimeo URL:\n' +
+        '• YouTube: https://www.youtube.com/watch?v=VIDEO_ID\n' +
+        '• YouTube Short: https://youtu.be/VIDEO_ID\n' +
+        '• Vimeo: https://vimeo.com/VIDEO_ID'
+      );
+
+      if (prompt) {
+        const videoData = getVideoId(prompt);
+        if (videoData) {
+          let embedUrl;
+          if (videoData.type === 'youtube') {
+            embedUrl = 'https://www.youtube.com/embed/' + videoData.id;
+          } else if (videoData.type === 'vimeo') {
+            embedUrl = 'https://player.vimeo.com/video/' + videoData.id;
+          }
+
+          if (embedUrl) {
+            const range = currentSelection ? currentSelection.index : editor.getLength();
+            editor.insertEmbed(range, 'video', embedUrl);
+            editor.setSelection(range + 1);
+          } else {
+            alert('Invalid video URL');
+          }
+        } else {
+          alert('Could not extract video ID from URL. Please use a valid YouTube or Vimeo link.');
+        }
+      }
+    };
+
     const toolbarConfig = [
       ['bold', 'italic', 'underline', 'strike'],
       ['blockquote', 'code-block'],
@@ -1101,7 +1125,14 @@ document.addEventListener('DOMContentLoaded', function() {
       window.quillEditors.newsContent = new Quill('#newsContent', {
         theme: 'snow',
         modules: {
-          toolbar: toolbarConfig,
+          toolbar: {
+            container: toolbarConfig,
+            handlers: {
+              'video': function() {
+                handleVideoClick(window.quillEditors.newsContent);
+              }
+            }
+          },
           clipboard: {
             matchVisual: false
           }
@@ -1116,7 +1147,14 @@ document.addEventListener('DOMContentLoaded', function() {
       window.quillEditors.newsContentEn = new Quill('#newsContentEn', {
         theme: 'snow',
         modules: {
-          toolbar: toolbarConfig,
+          toolbar: {
+            container: toolbarConfig,
+            handlers: {
+              'video': function() {
+                handleVideoClick(window.quillEditors.newsContentEn);
+              }
+            }
+          },
           clipboard: {
             matchVisual: false
           }
