@@ -580,9 +580,17 @@ class LivingHeritageAdminDB {
           document.getElementById(titleId).value = article.title || '';
           document.getElementById(descId).value = article.description || '';
           // Use htmlContent if available (has full HTML), otherwise fall back to content
-          document.getElementById(contentId).value = article.htmlContent || article.content || '';
+          const contentValue = article.htmlContent || article.content || '';
+          document.getElementById(contentId).value = contentValue;
           document.getElementById(imageId).value = article.imageUrl || '';
           document.getElementById(publishedId).checked = article.published !== false;
+
+          // Update TinyMCE editor content after a short delay
+          setTimeout(() => {
+            if (window.updateTinyMCEContent) {
+              window.updateTinyMCEContent(contentId, contentValue);
+            }
+          }, 200);
         }
       } catch (error) {
         console.error('Error loading article:', error);
@@ -606,11 +614,20 @@ class LivingHeritageAdminDB {
     const imageId = language === 'en' ? 'newsImageEn' : 'newsImage';
     const publishedId = language === 'en' ? 'newsPublishedEn' : 'newsPublished';
 
+    // Get content from TinyMCE editor if available, otherwise from textarea
+    let contentValue = document.getElementById(contentId).value;
+    const editor = tinymce.get(contentId);
+    if (editor) {
+      contentValue = editor.getContent();
+      // Also sync back to textarea
+      document.getElementById(contentId).value = contentValue;
+    }
+
     const newsData = {
       title: document.getElementById(titleId).value,
       description: document.getElementById(descId).value,
-      content: document.getElementById(contentId).value,
-      htmlContent: document.getElementById(contentId).value, // Also send as htmlContent for preservation
+      content: contentValue,
+      htmlContent: contentValue, // Also send as htmlContent for preservation
       imageUrl: document.getElementById(imageId).value,
       language: language,
       published: document.getElementById(publishedId).checked,

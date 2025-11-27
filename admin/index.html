@@ -6,6 +6,8 @@
   <title>Living Heritage - Admin Panel</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="../assets/css/admin.css" rel="stylesheet">
+  <!-- TinyMCE HTML Editor -->
+  <script src="https://cdn.tiny.cloud/1/a2mk1n8oqcjozfwtkv2xxel53vuz8kdc3jqy61erula3awa9/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 <body>
 
@@ -536,8 +538,9 @@
         </div>
 
         <div class="form-group">
-          <label for="newsContent">Content (HTML)</label>
+          <label for="newsContent">Content (HTML) - Rich Editor</label>
           <textarea id="newsContent" name="content" placeholder="Full article content (can be HTML)..." style="min-height: 120px;"></textarea>
+          <small style="color: #666; font-size: 12px;">Use the toolbar above to format text, add images, links, etc.</small>
         </div>
 
         <div class="form-group">
@@ -814,8 +817,9 @@
         </div>
 
         <div class="form-group">
-          <label for="newsContentEn">Content (HTML)</label>
+          <label for="newsContentEn">Content (HTML) - Rich Editor</label>
           <textarea id="newsContentEn" name="content" style="min-height: 120px;"></textarea>
+          <small style="color: #666; font-size: 12px;">Use the toolbar above to format text, add images, links, etc.</small>
         </div>
 
         <div class="form-group">
@@ -1019,5 +1023,97 @@
 </div>
 
 <script src="../assets/js/admin-db.js"></script>
+<script>
+// Initialize TinyMCE for News Content Editors
+document.addEventListener('DOMContentLoaded', function() {
+  // Configuration for TinyMCE
+  const tinymceConfig = {
+    selector: '#newsContent, #newsContentEn',
+    height: 500,
+    menubar: true,
+    plugins: [
+      'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
+      'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
+      'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
+    ],
+    toolbar: 'undo redo | blocks | ' +
+      'bold italic forecolor | alignleft aligncenter ' +
+      'alignright alignjustify | bullist numlist outdent indent | ' +
+      'removeformat | image media link | code preview fullscreen | help',
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+    images_upload_handler: function (blobInfo, success, failure) {
+      // For now, just return a placeholder or allow pasting image URLs
+      // In production, you'd upload to your server
+      const reader = new FileReader();
+      reader.onload = function() {
+        success(reader.result);
+      };
+      reader.readAsDataURL(blobInfo.blob());
+    },
+    automatic_uploads: false,
+    paste_data_images: true,
+    relative_urls: false,
+    remove_script_host: false,
+    convert_urls: true,
+    branding: false,
+    promotion: false,
+    setup: function(editor) {
+      // Update TinyMCE content when textarea value changes
+      editor.on('init', function() {
+        const textarea = editor.getElement();
+        if (textarea && textarea.value) {
+          editor.setContent(textarea.value);
+        }
+      });
+    }
+  };
+
+  // Initialize TinyMCE when modals open
+  const newsModal = document.getElementById('newsModal');
+  const newsModalEn = document.getElementById('newsModalEn');
+
+  const initTinyMCE = () => {
+    tinymce.remove('#newsContent');
+    tinymce.remove('#newsContentEn');
+    tinymce.init(tinymceConfig).then(function(editors) {
+      // After editors are initialized, sync content from textareas
+      editors.forEach(function(editor) {
+        const textarea = editor.getElement();
+        if (textarea && textarea.value) {
+          editor.setContent(textarea.value);
+        }
+      });
+    });
+  };
+
+  // Re-initialize when modal opens
+  const observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === 'style') {
+        const newsModalVisible = newsModal.style.display !== 'none';
+        const newsModalEnVisible = newsModalEn.style.display !== 'none';
+
+        if (newsModalVisible || newsModalEnVisible) {
+          setTimeout(initTinyMCE, 100);
+        }
+      }
+    });
+  });
+
+  observer.observe(newsModal, { attributes: true });
+  observer.observe(newsModalEn, { attributes: true });
+
+  // Initial load
+  initTinyMCE();
+
+  // Helper function to update TinyMCE content (expose globally for admin-db.js)
+  window.updateTinyMCEContent = function(editorId, content) {
+    const editor = tinymce.get(editorId);
+    if (editor) {
+      editor.setContent(content || '');
+    }
+  };
+});
+</script>
 </body>
 </html>
