@@ -1,0 +1,11 @@
+google-generativeai
+langchain
+langchain-google-genai
+langchain-community
+neo4j
+requests
+streamlit
+python-dotenv
+pypdf
+langchain-experimental
+sentence-transformers

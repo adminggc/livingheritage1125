@@ -1,0 +1,6 @@
+@echo off
+echo Installing dependencies...
+pip install -r backend/requirements.txt
+echo Starting Streamlit App...
+streamlit run frontend/app.py
+pause
