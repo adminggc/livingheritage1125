@@ -1,0 +1,10 @@
+# Vercel ignore - exclude files not needed in deployment
+node_modules
+*.log
+.git
+.env.local
+data/odoo_kb.db
+data/qdrant/
+*-test.js
+test-*.js
+simple-*.js
